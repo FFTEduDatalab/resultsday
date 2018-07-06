@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="../../styles.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+</head>
+<body>
+  <select id="breakdown" autocomplete="off" onchange="breakdownChange(opt)">
+      <option value="coverage">Coverage</option>
+      <option value="age">Age</option>
+  </select>
+  <select id="options" autocomplete="off" onchange="optionChange()">
+    <option value="UK">UK</option>
+    <option value="EN">England</option>
+    <option value="WA">Wales</option>
+    <option value="NI">Northern Ireland</option>
+  </select>
+    <div id="container"></div>
+    <script>
+      var subject = "Chemistry";
+      var opt = "UK";
+      drawChart(opt)
+
+      function breakdownChange(opt) {
+        var e = document.getElementById("breakdown");
+        var breakdown= e.options[e.selectedIndex].text
+        console.log(breakdown)
+        if (breakdown == "Coverage") {
+          document.getElementById('options').options[0].text = "UK";
+          document.getElementById('options').options[0].value = "UK";
+          document.getElementById('options').options[0].selected = true;
+          document.getElementById('options').options[1].text = "England";
+          document.getElementById('options').options[1].value = "EN";
+          document.getElementById('options').options[2].text = "Wales";
+          document.getElementById('options').options[2].value = "WA";
+          document.getElementById('options').options[3].text = "Northern Ireland";
+          document.getElementById('options').options[3].value = "NI";
+        }
+        else if (breakdown == "Age") {
+          document.getElementById('options').options[0].text = "All ages";
+          document.getElementById('options').options[0].value = "UK";
+          document.getElementById('options').options[0].selected = true;
+          document.getElementById('options').options[1].text = "15-year-olds and younger";
+          document.getElementById('options').options[1].value = "15";
+          document.getElementById('options').options[2].text = "16-year-olds";
+          document.getElementById('options').options[2].value = "16";
+          document.getElementById('options').options[3].text = "17-year-olds and older";
+          document.getElementById('options').options[3].value = "17";
+        }
+        console.log(opt)
+        if(opt!="UK"){
+          opt = "UK"
+          console.log(opt)
+          drawChart(opt)
+        }
+      }
+
+      function optionChange() {
+        opt = document.getElementById("options").value
+        drawChart(opt)
+      }
+
+      function drawChart(opt) {
+        var js = document.createElement('script');
+        js.setAttribute('type', 'text/javascript');
+        js.src = "../../highcharts.js";
+        document.body.appendChild(js)
+      }
+
+    </script>
+</body>
+<html>
