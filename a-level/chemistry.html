@@ -25,6 +25,7 @@
     <script>
       var subject = "Chemistry";
       var opt = "UK";
+      var subtitleText = 'All ages, UK-wide'
       drawChart(opt)
 
       function optionChange() {
@@ -32,7 +33,33 @@
         drawChart(opt)
       }
 
+      function setSubtitle(opt) {
+          if (opt=='UK'){
+              subtitleText = 'All ages, UK-wide'
+          }
+          else if (opt=='EN') {
+              subtitleText = 'All ages, England'
+          }
+          else if (opt=='WA') {
+              subtitleText = 'All ages, Wales'
+          }
+          else if (opt=='NI') {
+              subtitleText = 'All ages, Northern Ireland'
+          }
+          else if (opt=='15') {
+              subtitleText = '15-year-olds and younger, UK-wide'
+          }
+          else if (opt=='16') {
+              subtitleText = '16-year-olds, UK-wide'
+          }
+          else if (opt=='17') {
+              subtitleText = '17-year-olds and older, UK-wide'
+          }
+          return subtitleText
+      }
+
       function drawChart(opt) {
+        setSubtitle(opt)
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
         js.src = "../../highcharts.js";

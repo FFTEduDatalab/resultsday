@@ -1,13 +1,4 @@
 Highcharts.setOptions({
-    // chart: {     -- not sure why this isn't correct, per https://www.highcharts.com/docs/getting-started/how-to-set-options#2, https://api.highcharts.com/highcharts/plotOptions.series
-    //     plotOptions: {
-    //         series: {
-    //             marker: {
-    //                 symbol: 'circle'
-    //             }
-    //         }
-    //     }
-    // },
     colors: ['#2daae1', '#e6007e', '#535353'],
     lang: {
       thousandsSep: ',',
@@ -57,7 +48,7 @@ Highcharts.chart('container', {
         text: 'A-Level entries in ' + subject.toLowerCase() + ', 2014-2018'
     },
     subtitle: {
-        text: 'Subtitle here'
+        text: subtitleText
     },
     data: {
         // enablePolling: true,
