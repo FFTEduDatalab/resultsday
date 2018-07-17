@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="../../styles.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <select id="breakdown" autocomplete="off">
+      <option value="coverage">Coverage</option>
+      <option value="age">Age</option>
+  </select>
+  <select id="options" autocomplete="off" onchange="optionChange()">
+    <option value="UK">UK</option>
+    <option value="EN">England</option>
+    <option value="WA">Wales</option>
+    <option value="NI">Northern Ireland</option>
+  </select>
+    <div id="entriesContainer" class="chartContainer"></div>
+    <div id="gradesContainer" class="chartContainer"></div>
+    <script>
+      var subject = "Maths";
+      var opt = "UK";
+      var subtitleText = 'All ages, UK-wide'
+      drawChart(opt)
+
+      function optionChange() {
+        opt = document.getElementById("options").value
+        drawChart(opt)
+      }
+
+      function setSubtitle(opt) {
+          if (opt=='UK'){
+              subtitleText = 'All ages, UK-wide'
+          }
+          else if (opt=='EN') {
+              subtitleText = 'All ages, England'
+          }
+          else if (opt=='WA') {
+              subtitleText = 'All ages, Wales'
+          }
+          else if (opt=='NI') {
+              subtitleText = 'All ages, Northern Ireland'
+          }
+          else if (opt=='15') {
+              subtitleText = '15-year-olds and younger, UK-wide'
+          }
+          else if (opt=='16') {
+              subtitleText = '16-year-olds, UK-wide'
+          }
+          else if (opt=='17') {
+              subtitleText = '17-year-olds and older, UK-wide'
+          }
+          return subtitleText
+      }
+
+      function drawChart(opt) {
+        setSubtitle(opt)
+        var js = document.createElement('script');
+        js.setAttribute('type', 'text/javascript');
+        js.src = "../../gcse.js";
+        document.body.appendChild(js)
+      }
+
+      $(document).ready(function () {
+        $("#breakdown").change(function () {
+          if(opt!="UK"){
+            opt = "UK"
+            drawChart(opt)
+          }
+          var breakdown = $(this).val();
+          if (breakdown == "coverage") {
+            $("#options").html("<option value='UK'>UK</option><option value='EN'>England</option><option value='WA'>Wales</option><option value='NI'>Northern Ireland</option>");
+          }
+          else if (breakdown == "age") {
+            $("#options").html("<option value='UK'>All ages</option><option value='15'>15-year-olds and younger</option><option value='16'>16-year-olds</option><option value='17'>17-year-olds and older</option>");
+          }
+        });
+      });
+
+    </script>
+</body>
+<html>

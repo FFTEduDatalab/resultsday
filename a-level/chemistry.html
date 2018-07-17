@@ -8,79 +8,99 @@
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="/theme.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-  <select id="breakdown" autocomplete="off">
-      <option value="coverage">Coverage</option>
-      <option value="age">Age</option>
-  </select>
-  <select id="options" autocomplete="off" onchange="optionChange()">
+  <select id="scopeSelector" autocomplete="off" onchange="optionChange()">
     <option value="UK">UK</option>
     <option value="EN">England</option>
     <option value="WA">Wales</option>
     <option value="NI">Northern Ireland</option>
   </select>
-    <div id="container"></div>
+  <div id="entriesChartContainer" class="chartContainer"></div>
+  <select id="gradesSelector" autocomplete="off" onchange="optionChange2()">
+      <option value="Selected">Selected grades</option>
+      <option value="All">All grades</option>
+  </select>
+  <select id="genderSelector" autocomplete="off" onchange="optionChange2()">
+      <option value="All students">All students</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+  </select>
+  <div id="gradesChartContainer" class="chartContainer"></div>
     <script>
       var subject = "Chemistry";
-      var opt = "UK";
-      var subtitleText = 'All ages, UK-wide'
-      drawChart(opt)
+      var scope = "UK";
+      var grades = "Selected"
+      var gender = "All students"
+      var entriesChartSubtitle
+      var gradesChartSubtitle
+      var coloursDict = {
+          'All students':'#535353',
+          'Male':'#2daae1',
+          'Female':'#96c11f'
+      }
+      var gradesChartColoursArray = []
+      gradesChartColoursArray.push(coloursDict['All students'])
+
+      Highcharts.setOptions(Highcharts.theme)
+
+      drawEntriesChart(scope, grades, gender)
+      drawGradesChart(scope, grades, gender)
 
       function optionChange() {
-        opt = document.getElementById("options").value
-        drawChart(opt)
+        scope = document.getElementById("scopeSelector").value
+        drawEntriesChart(scope, grades, gender)
+        drawGradesChart(scope, grades, gender)
       }
 
-      function setSubtitle(opt) {
-          if (opt=='UK'){
-              subtitleText = 'All ages, UK-wide'
-          }
-          else if (opt=='EN') {
-              subtitleText = 'All ages, England'
-          }
-          else if (opt=='WA') {
-              subtitleText = 'All ages, Wales'
-          }
-          else if (opt=='NI') {
-              subtitleText = 'All ages, Northern Ireland'
-          }
-          else if (opt=='15') {
-              subtitleText = '15-year-olds and younger, UK-wide'
-          }
-          else if (opt=='16') {
-              subtitleText = '16-year-olds, UK-wide'
-          }
-          else if (opt=='17') {
-              subtitleText = '17-year-olds and older, UK-wide'
-          }
-          return subtitleText
+      function optionChange2() {
+        grades = document.getElementById("gradesSelector").value
+        gender = document.getElementById("genderSelector").value
+        drawGradesChart(scope, grades, gender)
       }
 
-      function drawChart(opt) {
-        setSubtitle(opt)
+      function setChartSubtitles(scope, grades, gender) {
+          let scopeDict = {
+              'UK':', UK-wide',
+              'EN':', England',
+              'WA':', Wales',
+              'NI':', Northern Ireland'
+          }
+          let gradesDict = {
+              'Selected':', selected grades',
+              'All':', all grades'
+          }
+          let genderDict = {
+              'All students':'All students',
+              'Male':'Male students',
+              'Female':'Female students',
+          }
+          entriesChartSubtitle = 'All students' + scopeDict[scope]
+          gradesChartSubtitle = genderDict[gender] + scopeDict[scope] + gradesDict[grades]
+          return entriesChartSubtitle, gradesChartSubtitle
+      }
+
+      function drawEntriesChart(scope, grades, gender) {
+        setChartSubtitles(scope, grades, gender)
+        gradesChartColoursArray = []
+        gradesChartColoursArray.push(coloursDict[gender])
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
-        js.src = "../../highcharts.js";
+        js.src = "../../a_level_entries.js";
         document.body.appendChild(js)
       }
 
-      $(document).ready(function () {
-        $("#breakdown").change(function () {
-          if(opt!="UK"){
-            opt = "UK"
-            drawChart(opt)
-          }
-          var breakdown = $(this).val();
-          if (breakdown == "coverage") {
-            $("#options").html("<option value='UK'>UK</option><option value='EN'>England</option><option value='WA'>Wales</option><option value='NI'>Northern Ireland</option>");
-          }
-          else if (breakdown == "age") {
-            $("#options").html("<option value='UK'>All ages</option><option value='15'>15-year-olds and younger</option><option value='16'>16-year-olds</option><option value='17'>17-year-olds and older</option>");
-          }
-        });
-      });
+      function drawGradesChart(scope, grades, gender) {
+        setChartSubtitles(scope, grades, gender)
+        gradesChartColoursArray = []
+        gradesChartColoursArray.push(coloursDict[gender])
+        var js = document.createElement('script');
+        js.setAttribute('type', 'text/javascript');
+        js.src = "../../a_level_grades.js";
+        document.body.appendChild(js)
+      }
 
     </script>
 </body>

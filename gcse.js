@@ -45,7 +45,7 @@ Highcharts.setOptions({
 
 Highcharts.chart('entriesContainer', {
     title: {
-        text: 'A-Level entries in ' + subject.toLowerCase() + ', 2014-2018'
+        text: 'GCSE entries in ' + subject.toLowerCase() + ', 2014-2018'
     },
     subtitle: {
         text: subtitleText
@@ -54,7 +54,8 @@ Highcharts.chart('entriesContainer', {
         // enablePolling: true,
         startColumn:2,
         switchRowsAndColumns: true,
-        csvURL: window.location.origin + '/a-level.csv',
+        csvURL: window.location.origin + '/a-level/a-level.csv',
+        // csvURL: window.location.origin + '/gcse/gcse.csv',
         beforeParse: function (csv) {
             let arr = csv.split(/\n/)
             let len=arr.length
@@ -62,7 +63,7 @@ Highcharts.chart('entriesContainer', {
             if(len>0){
                 for(let i=0; i<len; i++){
                     let line=arr.shift()
-                    if (i==0 || (line.split(",")[0] == subject && line.split(",")[1] == opt )){
+                    if (i==0 || (line.split(",")[0] == subject && line.split(",")[1] == opt)){
                         newcsv=newcsv.concat(line,/\n/)
                     }
                 }
@@ -74,7 +75,7 @@ Highcharts.chart('entriesContainer', {
 
 // Highcharts.chart('gradesContainer', {
 //     title: {
-//         text: 'A-Level grades in ' + subject.toLowerCase() + ', 2014-2018'
+//         text: 'GCSE grades in ' + subject.toLowerCase() + ', 2014-2018'
 //     },
 //     subtitle: {
 //         text: subtitleText
@@ -83,7 +84,7 @@ Highcharts.chart('entriesContainer', {
 //         // enablePolling: true,
 //         startColumn:2,
 //         switchRowsAndColumns: true,
-//         csvURL: window.location.origin + '/a-level-grades.csv',
+//         csvURL: window.location.origin + '/gcse/gcse-grades.csv',
 //         beforeParse: function (csv) {
 //             let arr = csv.split(/\n/)
 //             let len=arr.length
@@ -91,7 +92,7 @@ Highcharts.chart('entriesContainer', {
 //             if(len>0){
 //                 for(let i=0; i<len; i++){
 //                     let line=arr.shift()
-//                     if (i==0 || (line.split(",")[0] == subject && line.split(",")[1] == opt )){
+//                     if (i==0 || (line.split(",")[0] == subject && line.split(",")[1] == opt)){
 //                         newcsv=newcsv.concat(line,/\n/)
 //                     }
 //                 }
