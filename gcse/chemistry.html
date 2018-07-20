@@ -12,6 +12,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+  <select id="breakdownSelector" autocomplete="off">
+      <option value="coverage">Coverage</option>
+      <option value="age">Age</option>
+  </select>
   <select id="scopeSelector" autocomplete="off" onchange="scopeChange()">
     <option value="UK">UK</option>
     <option value="EN">England</option>
@@ -30,7 +34,8 @@
   </select>
   <div id="gradesChartContainer" class="chartContainer"></div>
     <script>
-      var subject = "Chemistry";
+    var subject = "Chemistry";
+      var breakdown = "Coverage";
       var scope = "UK";
       var grades = "Selected"
       var gender = "All students"
@@ -59,14 +64,17 @@
         grades = document.getElementById("gradesSelector").value
         gender = document.getElementById("genderSelector").value
         drawGradesChart(scope, grades, gender)
-      }
+          }
 
       function setChartSubtitles(scope, grades, gender) {
           let scopeDict = {
               'UK':'UK-wide',
               'EN':'England',
               'WA':'Wales',
-              'NI':'Northern Ireland'
+              'NI':'Northern Ireland',
+              '15':'15-year-olds and younger',
+              '16':'16-year-olds',
+              '17':'17-year-olds and older'
           }
           let gradesDict = {
               'Selected':'selected grades',
@@ -77,10 +85,15 @@
               'Male':'Male students',
               'Female':'Female students',
           }
-          entriesChartSubtitle = 'All students, ' + scopeDict[scope]
+          if (['UK','EN','WA','NI'].indexOf(scope)!=-1) {
+              entriesChartSubtitle = 'All students, ' + scopeDict[scope]
+          }
+          else if (['15','16','17'].indexOf(scope)!=-1) {
+              entriesChartSubtitle = scopeDict[scope] + ', UK-wide'
+          }
           gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + gradesDict[grades]
           return entriesChartSubtitle, gradesChartSubtitle
-      }
+          }
 
       function drawEntriesChart(scope, grades, gender) {
         setChartSubtitles(scope, grades, gender)
@@ -88,7 +101,7 @@
         gradesChartColoursArray.push(coloursDict[gender])
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
-        js.src = "../../a_level_entries.js";
+        js.src = "../../gcse_entries.js";
         document.body.appendChild(js)
       }
 
@@ -98,9 +111,26 @@
         gradesChartColoursArray.push(coloursDict[gender])
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
-        js.src = "../../a_level_grades.js";
+        js.src = "../../gcse_grades.js";
         document.body.appendChild(js)
-      }
+    }
+
+      $(document).ready(function () {
+        $("#breakdownSelector").change(function () {
+          breakdown = $(this).val();
+          if (breakdown == "coverage") {
+            $("#scopeSelector").html("<option value='UK'>UK</option><option value='EN'>England</option><option value='WA'>Wales</option><option value='NI'>Northern Ireland</option>");
+          }
+          else if (breakdown == "age") {
+            $("#scopeSelector").html("<option value='UK'>All ages</option><option value='15'>15-year-olds and younger</option><option value='16'>16-year-olds</option><option value='17'>17-year-olds and older</option>");
+          }
+          if(scope!="UK"){
+              scope = "UK"
+              drawEntriesChart(scope, grades, gender)
+              drawGradesChart(scope, grades, gender)
+          }
+        });
+      });
 
     </script>
 </body>
