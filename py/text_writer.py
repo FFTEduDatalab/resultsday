@@ -1,5 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import json
+import os
+
 most_recent_year=2017
 level='A-Level'
+data_list=[]
+
+# Build object data for each subject
 subject='Chemistry'
 entries_subject_y0=71871.0
 entries_subject_yn=65403.0
@@ -50,4 +59,21 @@ text='Entries in ' + subject.lower() + ' have ' + entries_subject_change_sign + 
 
 Across the UK, a ''' + top_grades_comparison + ' proportion of students achieved the top grades in ' + subject.lower() + ' in ' + str(most_recent_year) + ' ' + top_grades_comparison_wording + ' all ' + level + ' subjects. A total of ' + str(top_grades_subject_yn) + '% of pupils achieved ' + top_grades + ' in ' + subject.lower() + ' compared to ' + str(top_grades_allsubjects_yn) + '% for all subjects.'
 
-print text
+data={
+    'subject':subject,
+    'facilitating_subject':True,
+    'reform_date_EN':2016,
+    'reform_date_WA':2016,
+    'reform_date_NI':2017,
+    'text':text
+}
+
+data_list.append(data)
+
+# Write data to json file
+os.chdir(os.path.dirname( __file__ ))
+os.chdir("..")
+os.chdir('a-level')
+
+with open('a-level-text.json', 'w') as outfile:
+    json.dump(data_list, outfile)

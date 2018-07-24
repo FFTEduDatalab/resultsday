@@ -1,3 +1,10 @@
 project_files/
+py/later/
+data/
 .dropbox
 desktop.ini
+a_level_cuts.py
+test.html
+test.json
+a-level-grades-test.json
+a-level-grades-test2.json
