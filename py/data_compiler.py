@@ -2,23 +2,46 @@
 #!/usr/bin/python
 
 import os
+import re
 import json
 from xlrd import open_workbook
-from xlwt import Workbook
 from collections import OrderedDict
 
-levels=OrderedDict([
-	('A-Level', 'C:\\Users\\pnye\\Dropbox\\resultsday\\data\\a-level'),
-	('AS-Level', 'C:\\Users\\pnye\\Dropbox\\resultsday\\data\\as-level'),
-	# ('GCSE', 'C:\\Users\\pnye\\Dropbox\\resultsday\\data\\gcse')
-])
+genders = ['Male','Female','All students']
+
+levels=[
+	{
+		'name':'A-Level',
+		'source':'data\\a-level',
+		'output':'a-level',
+		'grades':['A*','A','B','C','D','E','U']
+	},
+	{
+		'name':'AS-Level',
+		'source':'data\\as-level',
+		'output':'as-level',
+		'grades':['A','B','C','D','E','U']
+	},
+	# {
+	# 	'name':'GCSE',
+	# 	'source':'data\\gcse',
+	# 	'output':'gcse',
+	# 	'grades':['A/7','C/4','G/1','U']
+	# }
+]
+
+entries=OrderedDict([])
+entries_list=[]
+
+grades=OrderedDict([])
+grades_list=[]
 
 for level in levels:
-	os.chdir(levels[level])
-	grades=OrderedDict([])
-	entries=OrderedDict([])
-	grades_list=[]
-	entries_list=[]
+	os.chdir(os.path.dirname( __file__ ))
+	os.chdir('..')
+	os.chdir(level['source'])
+	row=OrderedDict([])
+	rows=[]
 	for file in os.listdir('.'):
 		if file.endswith(".xls") or file.endswith(".xlsx"):
 			filename=file.split(".")
@@ -28,56 +51,73 @@ for level in levels:
 				rb=open_workbook(file)
 				rbws=rb.sheet_by_index(0)
 				for rbrow in range(11,rbws.nrows):			# ditching 10 header rows
-					grades=OrderedDict.fromkeys(grades, None)
-					entries=OrderedDict.fromkeys(entries, None)
-					if rbws.cell(rbrow,0).value!='' and rbws.cell(rbrow,0).value[0]!='(':
-						subject=rbws.cell(rbrow,0).value.split("(")[0].strip()
-					if rbws.cell(rbrow,1).value in ['Male', 'Female', 'Male & Female']:		# ditches previous year's results, blank rows and table notes
-						grades['Subject']=subject
-						entries['Subject']=subject
-						grades['Coverage']=coverage
-						entries['Coverage']=coverage
-						grades['Year']=year
-						entries['Year']=year
-						grades['Gender']=rbws.cell(rbrow,1).value
-						if level=='A-Level':
-							grades['A*']=round(rbws.cell(rbrow,4).value,1)
-							grades['A']=round(rbws.cell(rbrow,5).value,1)
-							grades['B']=round(rbws.cell(rbrow,6).value,1)
-							grades['C']=round(rbws.cell(rbrow,7).value,1)
-							grades['D']=round(rbws.cell(rbrow,8).value,1)
-							grades['E']=round(rbws.cell(rbrow,9).value,1)
-							grades['U']=round(rbws.cell(rbrow,10).value,1)
-						elif level=='AS-Level':
-							grades['A']=round(rbws.cell(rbrow,4).value,1)
-							grades['B']=round(rbws.cell(rbrow,5).value,1)
-							grades['C']=round(rbws.cell(rbrow,6).value,1)
-							grades['D']=round(rbws.cell(rbrow,7).value,1)
-							grades['E']=round(rbws.cell(rbrow,8).value,1)
-							grades['U']=round(rbws.cell(rbrow,9).value,1)
-						if rbws.cell(rbrow,1).value=='Male':
-							entries['Male']=int(rbws.cell(rbrow,2).value)
-						if rbws.cell(rbrow,1).value=='Female':
-							entries['Female	']=int(rbws.cell(rbrow,2).value)
+					row=OrderedDict.fromkeys(row, None)
+					if rbws.cell(rbrow,0).value!='' and rbws.cell(rbrow,0).value[0]!='(':		# ditches blank rows and table notes
+						subject = re.match('[a-zA-Z]+[a-zA-Z ()]+(?![0-9])',rbws.cell(rbrow,0).value).group(0).strip()		# regex uses negative lookahead for numericss
+					if rbws.cell(rbrow,1).value in ['Male', 'Female', 'Male & Female']:		# ditches previous year's results
+						row['Subject']=subject
+						row['Coverage']=coverage
+						row['Year']=year
 						if rbws.cell(rbrow,1).value=='Male & Female':
-							entries['Male & Female']=int(rbws.cell(rbrow,2).value)
-						grades_list.append(grades)
-						entries_list.append(entries)
+							row['Gender']='All students'
+						else:
+							row['Gender']=rbws.cell(rbrow,1).value
+						i=4
+						row['Entries']=int(rbws.cell(rbrow,2).value)
+						for grade in level['grades']:
+							row[grade]=round(rbws.cell(rbrow,i).value,1)
+							i+=1
+						rows.append(row)
 			except Exception as ex:
 				print ex
 
+	for gender in genders:
+		for row in rows:
+			if row['Gender']==gender:
+				if any(entries['name']==gender and entries['Subject']==row['Subject'] and entries['Coverage']==row['Coverage'] for entries in entries_list)==True:
+					for entries in entries_list:
+						if entries['name']==gender and entries['Subject']==row['Subject'] and entries['Coverage']==row['Coverage']:
+							data_item=[row['Year'],row['Entries']]
+							entries['data'].append(data_item)
+							break
+				else:
+					entries=OrderedDict([])
+					entries['name']=gender
+					entries['Subject']=row['Subject']
+					entries['Coverage']=row['Coverage']
+					data_item=[row['Year'],row['Entries']]
+					entries['data']=[]
+					entries['data'].append(data_item)
+					entries_list.append(entries)
+
+	for grade in level['grades']:
+		for row in rows:
+			if any(grades['name']==grade and grades['Subject']==row['Subject'] and grades['Coverage']==row['Coverage'] and grades['Gender']==row['Gender'] for grades in grades_list)==True:
+				for grades in grades_list:
+					if grades['name']==grade and grades['Subject']==row['Subject'] and grades['Coverage']==row['Coverage'] and grades['Gender']==row['Gender']:
+						data_item=[row['Year'],row[grade]]
+						grades['data'].append(data_item)
+						break
+			else:
+				grades=OrderedDict([])
+				grades['name']=grade
+				grades['Subject']=row['Subject']
+				grades['Coverage']=row['Coverage']
+				grades['Gender']=row['Gender']
+				data_item=[row['Year'],row[grade]]
+				grades['data']=[]
+				grades['data'].append(data_item)
+				grades_list.append(grades)
+
 	os.chdir(os.path.dirname( __file__ ))
 	os.chdir('..')
-	if level in ['A-Level','AS-Level']:
-		os.chdir('a-level')
-	elif level=='GCSE':
-		os.chdir('gcse')
+	os.chdir(level['output'])
 
-	grades_file=level.lower()+'-grades.json'
-	entries_file=level.lower()+'-entries.json'
+	grades_filename=level['name'].lower()+'-grades.json'
+	entries_filename=level['name'].lower()+'-entries.json'
 
-	with open(grades_file, 'w') as outfile:
+	with open(grades_filename, 'w') as outfile:
 	    json.dump(grades_list, outfile)
 
-	with open(entries_file, 'w') as outfile:
+	with open(entries_filename, 'w') as outfile:
 	    json.dump(entries_list, outfile)

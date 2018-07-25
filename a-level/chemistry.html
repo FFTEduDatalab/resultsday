@@ -10,6 +10,7 @@
   <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="/theme.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="a-level-text.json"></script> -->
 </head>
 <body>
   <select id="scopeSelector" autocomplete="off" onchange="scopeChange()">
@@ -29,6 +30,23 @@
       <option value="Female">Female</option>
   </select>
   <div id="gradesChartContainer" class="chartContainer"></div>
+  <div id="textContainer"></div>
+  <!-- <script>
+    $(function () {
+        var people = [];
+        $.getJSON('a-level-text.json', function(data) {
+        // $.getJSON('test.json', function(data) {
+            // console.log('a-level-text.json')
+            console.log(data)
+            $.each(data.person, function(i, f) {
+                console.log(f)
+                // var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+                // "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+                // $(tblRow).appendTo("#userdata tbody");
+            });
+        });
+    });
+  </script> -->
     <script>
       var subject = "Chemistry";
       var scope = "UK";
@@ -49,11 +67,69 @@
       drawEntriesChart(scope, grades, gender)
       drawGradesChart(scope, grades, gender)
 
+      var entriesData=[]
+      var gradesData=[]
+
+      levels=[
+      	{
+      		'name':'A-Level',
+      		'grades_all':['A*','A','B','C','D','E','U'],
+          'grades_selected':['A*','A','C','E']
+      	},
+      	{
+      		'name':'AS-Level',
+      		'grades_all':['A','B','C','D','E','U'],
+          'grades_selected':['A','C','E']
+      	},
+      	{
+      	 	'name':'GCSE',
+      		'grades_all':['A/7','C/4','G/1','U'],
+          'grades_selected':['A/7','C/4','G/1','U']
+      	}
+      ]
+
+      function grabEntriesData() {
+              $.getJSON('a-level-entries.json', function(data) {
+                entriesData=[]
+                let len=data.length
+                if(len>0){
+                    for(let i=0; i<len; i++){
+                        var line=data.shift()
+                        if (line.Subject == subject && line.Coverage == scope){
+                          entriesData.push(line)
+                        }
+                    }
+  		          }
+              });
+          };
+
+      function grabGradesData() {
+        $.getJSON('a-level-grades.json', function(data) {
+          gradesData=[]
+          let grades_array=[]
+          if(grades == "Selected"){    // XXX: needs updating to handle AS-Level, GCSE grades
+            grades_array=levels[0]['grades_selected']
+          }
+          else if (grades == "All") {
+            grades_array=levels[0]['grades_all']
+          }
+          let len=data.length
+          if(len>0){
+              for(let i=0; i<len; i++){
+                  var line=data.shift()
+                  if (line.Subject == subject && line.Coverage == scope && grades_array.indexOf(line.name)!=-1 && line.Gender== gender){
+                    gradesData.push(line)
+                  }
+              }
+          }
+        });
+      };
+
       function scopeChange() {
-        scope = document.getElementById("scopeSelector").value
-        drawEntriesChart(scope, grades, gender)
-        drawGradesChart(scope, grades, gender)
-      }
+            scope = document.getElementById("scopeSelector").value
+            drawEntriesChart(scope, grades, gender)
+            drawGradesChart(scope, grades, gender)
+          }
 
       function gradeChartOptionChange() {
         grades = document.getElementById("gradesSelector").value
@@ -83,6 +159,7 @@
       }
 
       function drawEntriesChart(scope, grades, gender) {
+        grabEntriesData()
         setChartSubtitles(scope, grades, gender)
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])
@@ -93,7 +170,8 @@
       }
 
       function drawGradesChart(scope, grades, gender) {
-        setChartSubtitles(scope, grades, gender)
+        grabGradesData()
+		    setChartSubtitles(scope, grades, gender)
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])
         var js = document.createElement('script');
