@@ -55,9 +55,7 @@ elif level=='AS-Level':
 elif level=='GCSE':
     top_grades='grade C/4 or higher'
 
-text='Entries in ' + subject.lower() + ' have ' + entries_subject_change_sign + ' ' + entries_subject_change_scale + ' across the UK over the last ' + number_of_years + ' years. The ' + str(entries_subject_change) + '% change is ' + entries_change_comparison + ' the overall change, of ' + str(entries_allsubject_change) + '%, in all ' + level + ' entries over the last ' + number_of_years + ''' years.
-
-Across the UK, a ''' + top_grades_comparison + ' proportion of students achieved the top grades in ' + subject.lower() + ' in ' + str(most_recent_year) + ' ' + top_grades_comparison_wording + ' all ' + level + ' subjects. A total of ' + str(top_grades_subject_yn) + '% of pupils achieved ' + top_grades + ' in ' + subject.lower() + ' compared to ' + str(top_grades_allsubjects_yn) + '% for all subjects.'
+text='<p>Entries in ' + subject.lower() + ' have ' + entries_subject_change_sign + ' ' + entries_subject_change_scale + ' across the UK over the last ' + number_of_years + ' years. The ' + str(entries_subject_change) + '% change is ' + entries_change_comparison + ' the overall change, of ' + str(entries_allsubject_change) + '%, in all ' + level + ' entries over the last ' + number_of_years + ''' years.</p><p>Across the UK, a ''' + top_grades_comparison + ' proportion of students achieved the top grades in ' + subject.lower() + ' in ' + str(most_recent_year) + ' ' + top_grades_comparison_wording + ' all ' + level + ' subjects. A total of ' + str(top_grades_subject_yn) + '% of pupils achieved ' + top_grades + ' in ' + subject.lower() + ' compared to ' + str(top_grades_allsubjects_yn) + '% for all subjects.</p>'
 
 data={
     'subject':subject,

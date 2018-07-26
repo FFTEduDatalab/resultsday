@@ -10,7 +10,6 @@
   <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="/theme.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="a-level-text.json"></script> -->
 </head>
 <body>
   <select id="scopeSelector" autocomplete="off" onchange="scopeChange()">
@@ -31,23 +30,8 @@
   </select>
   <div id="gradesChartContainer" class="chartContainer"></div>
   <div id="textContainer"></div>
-  <!-- <script>
-    $(function () {
-        var people = [];
-        $.getJSON('a-level-text.json', function(data) {
-        // $.getJSON('test.json', function(data) {
-            // console.log('a-level-text.json')
-            console.log(data)
-            $.each(data.person, function(i, f) {
-                console.log(f)
-                // var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-                // "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-                // $(tblRow).appendTo("#userdata tbody");
-            });
-        });
-    });
-  </script> -->
     <script>
+      var level='A-Level'
       var subject = "Chemistry";
       var scope = "UK";
       var grades = "Selected"
@@ -88,36 +72,57 @@
       	}
       ]
 
-      function grabEntriesData() {
-              $.getJSON('a-level-entries.json', function(data) {
-                entriesData=[]
+        $(function () {
+            $.getJSON('a-level-text.json', function(data) {
                 let len=data.length
                 if(len>0){
                     for(let i=0; i<len; i++){
                         var line=data.shift()
-                        if (line.Subject == subject && line.Coverage == scope){
-                          entriesData.push(line)
+                        if (line.subject == subject){
+                          document.getElementById("textContainer").innerHTML=line.text
                         }
                     }
-  		          }
-              });
-          };
+                }
+            });
+        });
 
-      function grabGradesData() {
+        function readEntriesData() {
+            $.getJSON('a-level-entries.json', function(data) {
+              entriesData=[]
+              let len=data.length
+              console.log(data)
+              if(len>0){
+                  for(let i=0; i<len; i++){
+                      var line=data.shift()
+                      if (line.Subject == subject && line.Scope == scope){
+                        entriesData.push(line)
+                      }
+                  }
+		          }
+            });
+        };
+
+      function readLevelGrades(level) {
+        return levels.filter(function(levels) {
+          return levels.name == level
+        });
+      }
+
+      function readGradesData() {
         $.getJSON('a-level-grades.json', function(data) {
           gradesData=[]
           let grades_array=[]
-          if(grades == "Selected"){    // XXX: needs updating to handle AS-Level, GCSE grades
-            grades_array=levels[0]['grades_selected']
+          if(grades == "Selected"){
+            grades_array=readLevelGrades(level)[0]['grades_selected']
           }
           else if (grades == "All") {
-            grades_array=levels[0]['grades_all']
+            grades_array=readLevelGrades(level)[0]['grades_all']
           }
           let len=data.length
           if(len>0){
               for(let i=0; i<len; i++){
                   var line=data.shift()
-                  if (line.Subject == subject && line.Coverage == scope && grades_array.indexOf(line.name)!=-1 && line.Gender== gender){
+                  if (line.Subject == subject && line.Scope == scope && grades_array.indexOf(line.name)!=-1 && line.Gender== gender){
                     gradesData.push(line)
                   }
               }
@@ -142,7 +147,10 @@
               'UK':'UK-wide',
               'EN':'England',
               'WA':'Wales',
-              'NI':'Northern Ireland'
+              'NI':'Northern Ireland',
+              '15':'15-year-olds and younger',
+              '16':'16-year-olds',
+              '17':'17-year-olds and older'
           }
           let gradesDict = {
               'Selected':'selected grades',
@@ -159,7 +167,7 @@
       }
 
       function drawEntriesChart(scope, grades, gender) {
-        grabEntriesData()
+        readEntriesData()
         setChartSubtitles(scope, grades, gender)
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])
@@ -170,7 +178,7 @@
       }
 
       function drawGradesChart(scope, grades, gender) {
-        grabGradesData()
+        readGradesData()
 		    setChartSubtitles(scope, grades, gender)
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])

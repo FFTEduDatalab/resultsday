@@ -33,8 +33,10 @@
       <option value="Female">Female</option>
   </select>
   <div id="gradesChartContainer" class="chartContainer"></div>
+  <div id="textContainer"></div>
     <script>
-    var subject = "Chemistry";
+      var level='GCSE'
+      var subject = "Chemistry";
       var breakdown = "Coverage";
       var scope = "UK";
       var grades = "Selected"
@@ -54,17 +56,97 @@
       drawEntriesChart(scope, grades, gender)
       drawGradesChart(scope, grades, gender)
 
-      function scopeChange() {
-        scope = document.getElementById("scopeSelector").value
-        drawEntriesChart(scope, grades, gender)
-        drawGradesChart(scope, grades, gender)
+      var entriesData=[]
+      var gradesData=[]
+
+      levels=[
+      	{
+      		'name':'A-Level',
+      		'grades_all':['A*','A','B','C','D','E','U'],
+          'grades_selected':['A*','A','C','E']
+      	},
+      	{
+      		'name':'AS-Level',
+      		'grades_all':['A','B','C','D','E','U'],
+          'grades_selected':['A','C','E']
+      	},
+      	{
+      	 	'name':'GCSE',
+      		'grades_all':['A/7','C/4','G/1','U'],
+          'grades_selected':['A/7','C/4','G/1']
+      	}
+      ]
+
+        $(function () {
+            $.getJSON('gcse-text.json', function(data) {
+                let len=data.length
+                if(len>0){
+                    for(let i=0; i<len; i++){
+                        var line=data.shift()
+                        if (line.subject == subject){
+                          document.getElementById("textContainer").innerHTML=line.text
+                        }
+                    }
+                }
+            });
+        });
+
+        function readEntriesData() {
+            $.getJSON('gcse-entries.json', function(data) {
+              entriesData=[]
+              let len=data.length
+              console.log(data)
+              if(len>0){
+                  for(let i=0; i<len; i++){
+                      var line=data.shift()
+                      if (line.Subject == subject && line.Scope == scope){
+                        entriesData.push(line)
+                      }
+                  }
+		          }
+              console.log(entriesData)
+            });
+        };
+
+      function readLevelGrades(level) {
+        return levels.filter(function(levels) {
+          return levels.name == level
+        });
       }
+
+      function readGradesData() {
+        $.getJSON('gcse-grades.json', function(data) {
+          gradesData=[]
+          let grades_array=[]
+          if(grades == "Selected"){
+            grades_array=readLevelGrades(level)[0]['grades_selected']
+          }
+          else if (grades == "All") {
+            grades_array=readLevelGrades(level)[0]['grades_all']
+          }
+          let len=data.length
+          if(len>0){
+              for(let i=0; i<len; i++){
+                  var line=data.shift()
+                  if (line.Subject == subject && line.Scope == scope && grades_array.indexOf(line.name)!=-1 && line.Gender== gender){
+                    gradesData.push(line)
+                  }
+              }
+          }
+        });
+      };
+
+      function scopeChange() {
+            scope = document.getElementById("scopeSelector").value
+            drawEntriesChart(scope, grades, gender)
+            drawGradesChart(scope, grades, gender)
+          }
 
       function gradeChartOptionChange() {
         grades = document.getElementById("gradesSelector").value
         gender = document.getElementById("genderSelector").value
         drawGradesChart(scope, grades, gender)
-          }
+      }
 
       function setChartSubtitles(scope, grades, gender) {
           let scopeDict = {
@@ -85,17 +167,13 @@
               'Male':'Male students',
               'Female':'Female students',
           }
-          if (['UK','EN','WA','NI'].indexOf(scope)!=-1) {
-              entriesChartSubtitle = 'All students, ' + scopeDict[scope]
-          }
-          else if (['15','16','17'].indexOf(scope)!=-1) {
-              entriesChartSubtitle = scopeDict[scope] + ', UK-wide'
-          }
+          entriesChartSubtitle = 'All students, ' + scopeDict[scope]
           gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + gradesDict[grades]
           return entriesChartSubtitle, gradesChartSubtitle
-          }
+      }
 
       function drawEntriesChart(scope, grades, gender) {
+        readEntriesData()
         setChartSubtitles(scope, grades, gender)
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])
@@ -106,14 +184,15 @@
       }
 
       function drawGradesChart(scope, grades, gender) {
-        setChartSubtitles(scope, grades, gender)
+        readGradesData()
+		    setChartSubtitles(scope, grades, gender)
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
         js.src = "../../gcse_grades.js";
         document.body.appendChild(js)
-    }
+      }
 
       $(document).ready(function () {
         $("#breakdownSelector").change(function () {
