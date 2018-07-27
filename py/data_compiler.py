@@ -33,6 +33,11 @@ levels=[
 for level in levels:
 	os.chdir(os.path.dirname( __file__ ))
 	os.chdir('..')
+	os.chdir(level['output'])
+	with open(level['name'].lower()+'-subjects.json') as subjects_file:
+		subjects_data = json.load(subjects_file)
+	os.chdir(os.path.dirname( __file__ ))
+	os.chdir('..')
 	os.chdir(level['source'])
 	entries=OrderedDict([])
 	grades=OrderedDict([])
@@ -55,9 +60,13 @@ for level in levels:
 					for rbrow in range(11,rbws.nrows):			# ditching 10 header rows
 						row=OrderedDict.fromkeys(row, None)
 						if rbws.cell(rbrow,0).value!='' and rbws.cell(rbrow,0).value[0]!='(':		# ditches blank rows and table notes
-							subject_name = re.match('[^0-9]+[^()0-9]+[)]*',rbws.cell(rbrow,0).value).group(0).strip()		# regex uses negative lookahead for numericss
+							subject_name = re.match('[^0-9]+[^()0-9]+[)]*',rbws.cell(rbrow,0).value).group(0).strip()
+							for subject in subjects_data:
+								if any(subject_name.lower()==subj.lower() for subj in subject['subject_names'])==True:
+									alias=subject['alias']
+									break
 						if rbws.cell(rbrow,1).value in ['Male', 'Female', 'Male & Female']:		# ditches previous year's results
-							row['subject']=subject_name
+							row['alias']=alias
 							row['scope']=scope
 							row['year']=year
 							if rbws.cell(rbrow,1).value=='Male & Female':
@@ -81,16 +90,16 @@ for level in levels:
 	for gender in genders:
 		for row in rows:
 			if row['gender']==gender:
-				if any(entries['name']==gender and entries['subject']==row['subject'] and entries['scope']==row['scope'] for entries in entries_list)==True:
+				if any(entries['name']==gender and entries['alias']==row['alias'] and entries['scope']==row['scope'] for entries in entries_list)==True:
 					for entries in entries_list:
-						if entries['name']==gender and entries['subject']==row['subject'] and entries['scope']==row['scope']:
+						if entries['name']==gender and entries['alias']==row['alias'] and entries['scope']==row['scope']:
 							data_item=[row['year'],row['entries']]
 							entries['data'].append(data_item)
 							break
 				else:
 					entries=OrderedDict([])
 					entries['name']=gender
-					entries['subject']=row['subject']
+					entries['alias']=row['alias']
 					entries['scope']=row['scope']
 					data_item=[row['year'],row['entries']]
 					entries['data']=[]
@@ -99,16 +108,16 @@ for level in levels:
 
 	for grade in level['grades']:
 		for row in rows:
-			if any(grades['name']==grade and grades['subject']==row['subject'] and grades['scope']==row['scope'] and grades['gender']==row['gender'] for grades in grades_list)==True:
+			if any(grades['name']==grade and grades['alias']==row['alias'] and grades['scope']==row['scope'] and grades['gender']==row['gender'] for grades in grades_list)==True:
 				for grades in grades_list:
-					if grades['name']==grade and grades['subject']==row['subject'] and grades['scope']==row['scope'] and grades['gender']==row['gender']:
+					if grades['name']==grade and grades['alias']==row['alias'] and grades['scope']==row['scope'] and grades['gender']==row['gender']:
 						data_item=[row['year'],row[grade]]
 						grades['data'].append(data_item)
 						break
 			else:
 				grades=OrderedDict([])
 				grades['name']=grade
-				grades['subject']=row['subject']
+				grades['alias']=row['alias']
 				grades['scope']=row['scope']
 				grades['gender']=row['gender']
 				data_item=[row['year'],row[grade]]

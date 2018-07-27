@@ -1,100 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="../../styles.css">
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/series-label.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/export-data.js"></script>
-  <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="/theme.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta charset='utf-8'/>
+  <link rel='stylesheet' type='text/css' href='../../styles.css'>
+  <script src='https://code.highcharts.com/highcharts.js'></script>
+  <script src='https://code.highcharts.com/modules/series-label.js'></script>
+  <script src='https://code.highcharts.com/modules/exporting.js'></script>
+  <script src='https://code.highcharts.com/modules/export-data.js'></script>
+  <script src='https://code.highcharts.com/modules/data.js'></script>
+  <script src='/theme.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 </head>
 <body>
-  <select id="scopeSelector" autocomplete="off" onchange="scopeChange()">
-    <option value="UK">UK</option>
-    <option value="EN">England</option>
-    <option value="WA">Wales</option>
-    <option value="NI">Northern Ireland</option>
+  <!-- <select id='breakdownSelector' autocomplete='off'>
+      <option value='coverage'>Coverage</option>
+      <option value='age'>Age</option>
+  </select> -->
+  <select id='scopeSelector' autocomplete='off' onchange='scopeOptionChange()'>
+    <option value='UK'>UK</option>
+    <option value='EN'>England</option>
+    <option value='WA'>Wales</option>
+    <option value='NI'>Northern Ireland</option>
   </select>
-  <div id="entriesChartContainer" class="chartContainer"></div>
-  <select id="gradesSelector" autocomplete="off" onchange="gradeChartOptionChange()">
-      <option value="Selected">Selected grades</option>
-      <option value="All">All grades</option>
+  <div id='entriesChartContainer' class='chartContainer'></div>
+  <select id='gradesSelector' autocomplete='off' onchange='gradeChartOptionChange()'>
+      <option value='Selected'>Selected grades</option>
+      <option value='All'>All grades</option>
   </select>
-  <select id="genderSelector" autocomplete="off" onchange="gradeChartOptionChange()">
-      <option value="All students">All students</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
+  <select id='genderSelector' autocomplete='off' onchange='gradeChartOptionChange()'>
+      <option value='All students'>All students</option>
+      <option value='Male'>Male</option>
+      <option value='Female'>Female</option>
   </select>
-  <div id="gradesChartContainer" class="chartContainer"></div>
-  <div id="textContainer"></div>
+  <div id='gradesChartContainer' class='chartContainer'></div>
+  <div id='textContainer'></div>
     <script>
       var level='A-Level'
-      var subject = "Chemistry";
-      var scope = "UK";
-      var grades = "Selected"
-      var gender = "All students"
+      var alias = 'CHEM';
+      var subject = '';
+      var breakdown = 'Coverage';
+      var scope = 'UK';
+      var grades = 'Selected'
+      var gender = 'All students'
+      var entriesData=[]
+      var gradesData=[]
       var entriesChartSubtitle
       var gradesChartSubtitle
+      var gradesChartColoursArray = []
+      var subjectsJSON=''
+      var entriesJSON=''
+      var gradesJSON=''
+      var textJSON=''
+      var gradesAll=[]
+      var gradesSelected=[]
       var coloursDict = {
           'All students':'#535353',
           'Male':'#2daae1',
           'Female':'#96c11f'
       }
-      var gradesChartColoursArray = []
-      gradesChartColoursArray.push(coloursDict['All students'])
-
-      Highcharts.setOptions(Highcharts.theme)
-
-      drawEntriesChart(scope, grades, gender)
-      drawGradesChart(scope, grades, gender)
-
-      var entriesData=[]
-      var gradesData=[]
-
-      levels=[
+      var levels=[
       	{
       		'name':'A-Level',
-      		'grades_all':['A*','A','B','C','D','E','U'],
-          'grades_selected':['A*','A','C','E']
+          'subjectsJSON':'a-level-subjects.json',
+          'entriesJSON':'a-level-entries.json',
+          'gradesJSON':'a-level-grades.json',
+          'textJSON':'a-level-text.json',
+          'gradesAll':['A*','A','B','C','D','E','U'],
+          'gradesSelected':['A*','A','C','E']
       	},
       	{
       		'name':'AS-Level',
-      		'grades_all':['A','B','C','D','E','U'],
-          'grades_selected':['A','C','E']
+          'subjectsJSON':'as-level-subjects.json',
+          'entriesJSON':'as-level-entries.json',
+          'gradesJSON':'as-level-grades.json',
+          'textJSON':'as-level-text.json',
+      		'gradesAll':['A','B','C','D','E','U'],
+          'gradesSelected':['A','C','E']
       	},
       	{
       	 	'name':'GCSE',
-      		'grades_all':['A/7','C/4','G/1','U'],
-          'grades_selected':['A/7','C/4','G/1','U']
+          'subjectsJSON':'gcse-subjects.json',
+          'entriesJSON':'gcse-entries.json',
+          'gradesJSON':'gcse-grades.json',
+          'textJSON':'gcse-text.json',
+      		'gradesAll':['A/7','C/4','G/1','U'],
+          'gradesSelected':['A/7','C/4','G/1']
       	}
       ]
 
-        $(function () {
-            $.getJSON('a-level-text.json', function(data) {
-                let len=data.length
-                if(len>0){
-                    for(let i=0; i<len; i++){
-                        var line=data.shift()
-                        if (line.subject == subject){
-                          document.getElementById("textContainer").innerHTML=line.text
-                        }
-                    }
-                }
-            });
-        });
+      Highcharts.setOptions(Highcharts.theme)
 
-        function readEntriesData() {
-            $.getJSON('a-level-entries.json', function(data) {
-              entriesData=[]
+        $(function () {
+          gradesChartColoursArray.push(coloursDict['All students'])
+          let levelData=levels.filter(function(levels) {
+            return levels.name == level
+          })[0];
+          subjectsJSON=levelData.subjectsJSON
+          entriesJSON=levelData.entriesJSON
+          gradesJSON=levelData.gradesJSON
+          textJSON=levelData.textJSON
+          gradesAll=levelData.gradesAll
+          gradesSelected=levelData.gradesSelected
+          $.getJSON(subjectsJSON, function(data) {
               let len=data.length
-              console.log(data)
               if(len>0){
                   for(let i=0; i<len; i++){
                       var line=data.shift()
-                      if (line.Subject == subject && line.Scope == scope){
+                      if (line.alias == alias){
+                        subject=line.subject_name_clean
+                      }
+                  }
+              }
+          });
+          $.getJSON(textJSON, function(data) {
+              let len=data.length
+              if(len>0){
+                  for(let i=0; i<len; i++){
+                      var line=data.shift()
+                      if (line.alias == alias){
+                        document.getElementById('textContainer').innerHTML=line.text
+                      }
+                  }
+              }
+          });
+          drawEntriesChart()
+          drawGradesChart()
+        });
+
+        function readEntriesData() {
+            $.getJSON(entriesJSON, function(data) {
+              entriesData=[]
+              let len=data.length
+              if(len>0){
+                  for(let i=0; i<len; i++){
+                      var line=data.shift()
+                      if (line.alias == alias && line.scope == scope){
                         entriesData.push(line)
                       }
                   }
@@ -102,27 +142,21 @@
             });
         };
 
-      function readLevelGrades(level) {
-        return levels.filter(function(levels) {
-          return levels.name == level
-        });
-      }
-
       function readGradesData() {
-        $.getJSON('a-level-grades.json', function(data) {
+        $.getJSON(gradesJSON, function(data) {
           gradesData=[]
           let grades_array=[]
-          if(grades == "Selected"){
-            grades_array=readLevelGrades(level)[0]['grades_selected']
+          if(grades == 'Selected'){
+            grades_array=gradesSelected
           }
-          else if (grades == "All") {
-            grades_array=readLevelGrades(level)[0]['grades_all']
+          else if (grades == 'All') {
+            grades_array=gradesAll
           }
           let len=data.length
           if(len>0){
               for(let i=0; i<len; i++){
                   var line=data.shift()
-                  if (line.Subject == subject && line.Scope == scope && grades_array.indexOf(line.name)!=-1 && line.Gender== gender){
+                  if (line.alias == alias && line.scope == scope && grades_array.indexOf(line.name)!=-1 && line.gender== gender){
                     gradesData.push(line)
                   }
               }
@@ -130,19 +164,19 @@
         });
       };
 
-      function scopeChange() {
-            scope = document.getElementById("scopeSelector").value
-            drawEntriesChart(scope, grades, gender)
-            drawGradesChart(scope, grades, gender)
-          }
-
-      function gradeChartOptionChange() {
-        grades = document.getElementById("gradesSelector").value
-        gender = document.getElementById("genderSelector").value
-        drawGradesChart(scope, grades, gender)
+      function scopeOptionChange() {
+        scope = document.getElementById('scopeSelector').value
+        drawEntriesChart()
+        drawGradesChart()
       }
 
-      function setChartSubtitles(scope, grades, gender) {
+      function gradeChartOptionChange() {
+        grades = document.getElementById('gradesSelector').value
+        gender = document.getElementById('genderSelector').value
+        drawGradesChart()
+      }
+
+      function setChartSubtitles() {
           let scopeDict = {
               'UK':'UK-wide',
               'EN':'England',
@@ -166,27 +200,42 @@
           return entriesChartSubtitle, gradesChartSubtitle
       }
 
-      function drawEntriesChart(scope, grades, gender) {
+      function drawEntriesChart() {
         readEntriesData()
-        setChartSubtitles(scope, grades, gender)
+        setChartSubtitles()
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
-        js.src = "../../a_level_entries.js";
+        js.src = '../../entries_chart.js';
         document.body.appendChild(js)
       }
 
-      function drawGradesChart(scope, grades, gender) {
+      function drawGradesChart() {
         readGradesData()
-		    setChartSubtitles(scope, grades, gender)
+		    setChartSubtitles()
         gradesChartColoursArray = []
         gradesChartColoursArray.push(coloursDict[gender])
         var js = document.createElement('script');
         js.setAttribute('type', 'text/javascript');
-        js.src = "../../a_level_grades.js";
+        js.src = '../../grades_chart.js';
         document.body.appendChild(js)
       }
+
+      $('#breakdownSelector').change(function () {
+        breakdown = $(this).val();
+        if (breakdown == 'coverage') {
+          $('#scopeSelector').html('<option value="UK">UK</option><option value="EN">England</option><option value="WA">Wales</option><option value="NI">Northern Ireland</option>');
+        }
+        else if (breakdown == 'age') {
+          $('#scopeSelector').html('<option value="UK">All ages</option><option value="15">15-year-olds and younger</option><option value="16">16-year-olds</option><option value="17">17-year-olds and older</option>');
+        }
+        if(scope!='UK'){
+            scope = 'UK'
+            drawEntriesChart(scope, grades, gender)
+            drawGradesChart(scope, grades, gender)
+        }
+      });
 
     </script>
 </body>

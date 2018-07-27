@@ -9,7 +9,8 @@ level='A-Level'
 data_list=[]
 
 # Build object data for each subject
-subject='Chemistry'
+alias='CHEM'
+subject='Chemistry'     # XXX need to pull in from JSON
 entries_subject_y0=71871.0
 entries_subject_yn=65403.0
 entries_allsubjects_y0=6371871.0
@@ -58,7 +59,7 @@ elif level=='GCSE':
 text='<p>Entries in ' + subject.lower() + ' have ' + entries_subject_change_sign + ' ' + entries_subject_change_scale + ' across the UK over the last ' + number_of_years + ' years. The ' + str(entries_subject_change) + '% change is ' + entries_change_comparison + ' the overall change, of ' + str(entries_allsubject_change) + '%, in all ' + level + ' entries over the last ' + number_of_years + ''' years.</p><p>Across the UK, a ''' + top_grades_comparison + ' proportion of students achieved the top grades in ' + subject.lower() + ' in ' + str(most_recent_year) + ' ' + top_grades_comparison_wording + ' all ' + level + ' subjects. A total of ' + str(top_grades_subject_yn) + '% of pupils achieved ' + top_grades + ' in ' + subject.lower() + ' compared to ' + str(top_grades_allsubjects_yn) + '% for all subjects.</p>'
 
 data={
-    'subject':subject,
+    'alias':alias,
     'facilitating_subject':True,
     'reform_date_EN':2016,
     'reform_date_WA':2016,
