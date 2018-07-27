@@ -1,0 +1,308 @@
+[
+	{
+		"alias":"ARTD",
+		"subject_name_clean":"Art and design subjects",
+		"subject_names":["Art and Design subjects"],
+		"notes":""
+	},
+	{
+		"alias":"ASCH",
+		"subject_name_clean":"Additional science",
+		"subject_names":["Additional Science"],
+		"notes":""
+	},
+	{
+		"alias":"FSCI",
+		"subject_name_clean":"Further additional science",
+		"subject_names":["Additional Science (Further)"],
+		"notes":""
+	},
+	{
+		"alias":"BIOL",
+		"subject_name_clean":"Biology",
+		"subject_names":["Biology"],
+		"notes":""
+	},
+	{
+		"alias":"BUSC",
+		"subject_name_clean":"Business and communication systems",
+		"subject_names":["Business & Comm. Systems"],
+		"notes":""
+	},
+	{
+		"alias":"BUSS",
+		"subject_name_clean":"Business studies",
+		"subject_names":["Business Studies"],
+		"notes":""
+	},
+	{
+		"alias":"CHEM",
+		"subject_name_clean":"Chemistry",
+		"subject_names":["Chemistry"],
+		"notes":""
+	},
+	{
+		"alias":"CITI",
+		"subject_name_clean":"Citizenship studies",
+		"subject_names":["Citizenship Studies"],
+		"notes":""
+	},
+	{
+		"alias":"CLAS",
+		"subject_name_clean":"Classical subjects",
+		"subject_names":["Classical subjects"],
+		"notes":""
+	},
+	{
+		"alias":"COMP",
+		"subject_name_clean":"Computing",
+		"subject_names":["Computing"],
+		"notes":""
+	},
+	{
+		"alias":"CONS",
+		"subject_name_clean":"Construction",
+		"subject_names":["Construction"],
+		"notes":""
+	},
+	{
+		"alias":"DEST",
+		"subject_name_clean":"Design and technology",
+		"subject_names":["Design & Technology"],
+		"notes":""
+	},
+	{
+		"alias":"DRAM",
+		"subject_name_clean":"Drama",
+		"subject_names":["Drama"],
+		"notes":""
+	},
+	{
+		"alias":"ECON",
+		"subject_name_clean":"Economics",
+		"subject_names":["Economics"],
+		"notes":""
+	},
+	{
+		"alias":"ENGI",
+		"subject_name_clean":"Engineering",
+		"subject_names":["Engineering"],
+		"notes":""
+	},
+	{
+		"alias":"ENLA",
+		"subject_name_clean":"English",
+		"subject_names":["English"],
+		"notes":""
+	},
+	{
+		"alias":"ENLI",
+		"subject_name_clean":"English Literature",
+		"subject_names":["English Literature"],
+		"notes":""
+	},
+	{
+		"alias":"FREN",
+		"subject_name_clean":"French",
+		"subject_names":["French"],
+		"notes":""
+	},
+	{
+		"alias":"GEOG",
+		"subject_name_clean":"Geography",
+		"subject_names":["Geography"],
+		"notes":""
+	},
+	{
+		"alias":"GERM",
+		"subject_name_clean":"German",
+		"subject_names":["German"],
+		"notes":""
+	},
+	{
+		"alias":"HSOC",
+		"subject_name_clean":"Health and social care",
+		"subject_names":["Health & Social Care"],
+		"notes":""
+	},
+	{
+		"alias":"HIST",
+		"subject_name_clean":"History",
+		"subject_names":["History"],
+		"notes":""
+	},
+	{
+		"alias":"HOME",
+		"subject_name_clean":"Home economics",
+		"subject_names":["Home Economics"],
+		"notes":""
+	},
+	{
+		"alias":"HOSP",
+		"subject_name_clean":"Hospitality",
+		"subject_names":["Hospitality"],
+		"notes":""
+	},
+	{
+		"alias":"HUMA",
+		"subject_name_clean":"Humanities",
+		"subject_names":["Humanities"],
+		"notes":""
+	},
+	{
+		"alias":"ICTX",
+		"subject_name_clean":"ICT",
+		"subject_names":["ICT"],
+		"notes":""
+	},
+	{
+		"alias":"IRIS",
+		"subject_name_clean":"Irish",
+		"subject_names":["Irish"],
+		"notes":""
+	},
+	{
+		"alias":"LEIS",
+		"subject_name_clean":"Leisure and tourism",
+		"subject_names":["Leisure & Tourism"],
+		"notes":""
+	},
+	{
+		"alias":"MANU",
+		"subject_name_clean":"Manufacturing",
+		"subject_names":["Manufacturing"],
+		"notes":""
+	},
+	{
+		"alias":"MATH",
+		"subject_name_clean":"Mathematics",
+		"subject_names":["Mathematics"],
+		"notes":""
+	},
+	{
+		"alias":"MATN",
+		"subject_name_clean":"Mathematics: numeracy",
+		"subject_names":["Mathematics: Numeracy"],
+		"notes":"Mathematics:numeracy was a new qualification available in Wales in 2017. Data is therefore not available for earlier years."
+	},
+	{
+		"alias":"MATA",
+		"subject_name_clean":"Additional mathematics",
+		"subject_names":["Mathematics (Additional)"],
+		"notes":""
+	},
+	{
+		"alias":"MFTS",
+		"subject_name_clean":"Media/film/TV studies",
+		"subject_names":["Media / Film / TV Studies"],
+		"notes":""
+	},
+	{
+		"alias":"MUSI",
+		"subject_name_clean":"Music",
+		"subject_names":["Music"],
+		"notes":""
+	},
+	{
+		"alias":"PERF",
+		"subject_name_clean":"Performing/expressive arts",
+		"subject_names":["Performing / Expressive Arts"],
+		"notes":""
+	},
+	{
+		"alias":"PHED",
+		"subject_name_clean":"Physical education",
+		"subject_names":["Physical Education"],
+		"notes":""
+	},
+	{
+		"alias":"PHYS",
+		"subject_name_clean":"Physics",
+		"subject_names":["Physics"],
+		"notes":""
+	},
+	{
+		"alias":"PREP",
+		"subject_name_clean":"Preparation for life and work",
+		"subject_names":["Prep. For Life and Work"],
+		"notes":""
+	},
+	{
+		"alias":"RELS",
+		"subject_name_clean":"Religious studies",
+		"subject_names":["Religious Studies"],
+		"notes":""
+	},
+	{
+		"alias":"SCIE",
+		"subject_name_clean":"Science",
+		"subject_names":["Science"],
+		"notes":""
+	},
+	{
+		"alias":"SOCS",
+		"subject_name_clean":"Social science subjects",
+		"subject_names":["Social Science subjects"],
+		"notes":""
+	},
+	{
+		"alias":"SPAN",
+		"subject_name_clean":"Spanish",
+		"subject_names":["Spanish"],
+		"notes":""
+	},
+	{
+		"alias":"STAT",
+		"subject_name_clean":"Statistics",
+		"subject_names":["Statistics"],
+		"notes":""
+	},
+	{
+		"alias":"WELF",
+		"subject_name_clean":"Welsh: first language",
+		"subject_names":["Welsh: First Language"],
+		"notes":""
+	},
+	{
+		"alias":"WELS",
+		"subject_name_clean":"Welsh: second Language",
+		"subject_names":["Welsh: Second Language"],
+		"notes":""
+	},
+	{
+		"alias":"WELL",
+		"subject_name_clean":"Welsh literature",
+		"subject_names":["Welsh Literature"],
+		"notes":""
+	},
+	{
+		"alias":"OMFL",
+		"subject_name_clean":"Other modern languages",
+		"subject_names":["Other Modern Languages"],
+		"notes":""
+	},
+	{
+		"alias":"OSCI",
+		"subject_name_clean":"Other sciences",
+		"subject_names":["Other Sciences"],
+		"notes":""
+	},
+	{
+		"alias":"OTEC",
+		"subject_name_clean":"Other technology",
+		"subject_names":["Other Technology"],
+		"notes":""
+	},
+	{
+		"alias":"AOTH",
+		"subject_name_clean":"All other subjects",
+		"subject_names":["All Other subjects"],
+		"notes":""
+	},
+	{
+		"alias":"ALLS",
+		"subject_name_clean":"All subjects",
+		"subject_names":["All Subjects"],
+		"notes":""
+	}
+]

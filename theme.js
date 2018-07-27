@@ -15,7 +15,7 @@ Highcharts.theme = {
         enabled: false
     },
     xAxis: {
-        floor: 2014,
+        min: 2014,
         max: 2018,
         tickInterval: 1
     },

@@ -1,0 +1,242 @@
+[
+	{
+		"alias":"ARTD",
+		"subject_name_clean":"Art and design subjects",
+		"subject_names":["Art and Design subjects","Art & Design subjects"],
+		"notes":""
+	},
+	{
+		"alias":"BIOL",
+		"subject_name_clean":"Biology",
+		"subject_names":["Biology"],
+		"notes":""
+	},
+	{
+		"alias":"BUSS",
+		"subject_name_clean":"Business studies",
+		"subject_names":["Business Studies"],
+		"notes":""
+	},
+	{
+		"alias":"CHEM",
+		"subject_name_clean":"Chemistry",
+		"subject_names":["Chemistry"],
+		"notes":""
+	},
+	{
+		"alias":"CLAS",
+		"subject_name_clean":"Classical subjects",
+		"subject_names":["Classical subjects"],
+		"notes":""
+	},
+	{
+		"alias":"COMM",
+		"subject_name_clean":"Communication studies",
+		"subject_names":["Communication Studies"],
+		"notes":""
+	},
+	{
+		"alias":"COMP",
+		"subject_name_clean":"Computing",
+		"subject_names":["Computing"],
+		"notes":""
+	},
+	{
+		"alias":"CRIT",
+		"subject_name_clean":"Critical thinking",
+		"subject_names":["Critical Thinking"],
+		"notes":""
+	},
+	{
+		"alias":"DEST",
+		"subject_name_clean":"Design and technology",
+		"subject_names":["Design and Technology"],
+		"notes":""
+	},
+	{
+		"alias":"DRAM",
+		"subject_name_clean":"Drama",
+		"subject_names":["Drama"],
+		"notes":""
+	},
+	{
+		"alias":"ECON",
+		"subject_name_clean":"Economics",
+		"subject_names":["Economics"],
+		"notes":""
+	},
+	{
+		"alias":"ENLA",
+		"subject_name_clean":"English language",
+		"subject_names":["English Language"],
+		"notes":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+	},
+	{
+		"alias":"ENLI",
+		"subject_name_clean":"English literature",
+		"subject_names":["English Literature"],
+		"notes":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+	},
+	{
+		"alias":"ENLL",
+		"subject_name_clean":"English language and literature",
+		"subject_names":["English Language & Literature"],
+		"notes":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+	},
+	{
+		"alias":"FREN",
+		"subject_name_clean":"French",
+		"subject_names":["French"],
+		"notes":""
+	},
+	{
+		"alias":"GENS",
+		"subject_name_clean":"General studies",
+		"subject_names":["General Studies"],
+		"notes":""
+	},
+	{
+		"alias":"GEOG",
+		"subject_name_clean":"Geography",
+		"subject_names":["Geography"],
+		"notes":""
+	},
+	{
+		"alias":"GERM",
+		"subject_name_clean":"German",
+		"subject_names":["German"],
+		"notes":""
+	},
+	{
+		"alias":"HIST",
+		"subject_name_clean":"History",
+		"subject_names":["History"],
+		"notes":""
+	},
+	{
+		"alias":"ICTX",
+		"subject_name_clean":"ICT",
+		"subject_names":["ICT"],
+		"notes":""
+	},
+	{
+		"alias":"IRIS",
+		"subject_name_clean":"Irish",
+		"subject_names":["Irish"],
+		"notes":""
+	},
+	{
+		"alias":"LAWX",
+		"subject_name_clean":"Law",
+		"subject_names":["Law"],
+		"notes":""
+	},
+	{
+		"alias":"MATH",
+		"subject_name_clean":"Mathematics",
+		"subject_names":["Mathematics"],
+		"notes":""
+	},
+	{
+		"alias":"MATF",
+		"subject_name_clean":"Further mathematics",
+		"subject_names":["Mathematics (Further)"],
+		"notes":""
+	},
+	{
+		"alias":"MFTS",
+		"subject_name_clean":"Media/film/TV studies",
+		"subject_names":["Media / Film / TV Studies"],
+		"notes":""
+	},
+	{
+		"alias":"MUSI",
+		"subject_name_clean":"Music",
+		"subject_names":["Music"],
+		"notes":""
+	},
+	{
+		"alias":"PERF",
+		"subject_name_clean":"Performing/expressive arts",
+		"subject_names":["Performing / Expressive Arts"],
+		"notes":""
+	},
+	{
+		"alias":"PHED",
+		"subject_name_clean":"Physical education",
+		"subject_names":["Physical Education"],
+		"notes":""
+	},
+	{
+		"alias":"PHYS",
+		"subject_name_clean":"Physics",
+		"subject_names":["Physics"],
+		"notes":""
+	},
+	{
+		"alias":"POLS",
+		"subject_name_clean":"Political studies",
+		"subject_names":["Political Studies"],
+		"notes":""
+	},
+	{
+		"alias":"PSYC",
+		"subject_name_clean":"Psychology",
+		"subject_names":["Psychology"],
+		"notes":""
+	},
+	{
+		"alias":"RELS",
+		"subject_name_clean":"Religious studies",
+		"subject_names":["Religious Studies"],
+		"notes":""
+	},
+	{
+		"alias":"SOCI",
+		"subject_name_clean":"Sociology",
+		"subject_names":["Sociology"],
+		"notes":""
+	},
+	{
+		"alias":"SPAN",
+		"subject_name_clean":"Spanish",
+		"subject_names":["Spanish"],
+		"notes":""
+	},
+	{
+		"alias":"WELF",
+		"subject_name_clean":"Welsh: first language",
+		"subject_names":["Welsh First Language"],
+		"notes":"Comparable data is not available before 2017. Before this point, Welsh was recorded as a single subject, covering Welsh:first language and Welsh:second language."
+	},
+	{
+		"alias":"WELS",
+		"subject_name_clean":"Welsh: second language",
+		"subject_names":["Welsh Second Language"],
+		"notes":""
+	},
+	{
+		"alias":"OMFL",
+		"subject_name_clean":"Other modern languages",
+		"subject_names":["Other modern languages"],
+		"notes":""
+	},
+	{
+		"alias":"OSCI",
+		"subject_name_clean":"Other sciences",
+		"subject_names":["Other sciences"],
+		"notes":""
+	},
+	{
+		"alias":"AOTH",
+		"subject_name_clean":"All other subjects",
+		"subject_names":["All other subjects"],
+		"notes":""
+	},
+	{
+		"alias":"ALLS",
+		"subject_name_clean":"All subjects",
+		"subject_names":["All Subjects"],
+		"notes":""
+	}
+]
