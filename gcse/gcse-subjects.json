@@ -3,306 +3,832 @@
 		"alias":"ARTD",
 		"subject_name_clean":"Art and design subjects",
 		"subject_names":["Art and Design subjects"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"ASCH",
 		"subject_name_clean":"Additional science",
 		"subject_names":["Additional Science"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null
 	},
 	{
 		"alias":"FSCI",
 		"subject_name_clean":"Further additional science",
 		"subject_names":["Additional Science (Further)"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null
 	},
 	{
 		"alias":"BIOL",
 		"subject_name_clean":"Biology",
 		"subject_names":["Biology"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"BUSC",
 		"subject_name_clean":"Business and communication systems",
 		"subject_names":["Business & Comm. Systems"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"BUSS",
 		"subject_name_clean":"Business studies",
 		"subject_names":["Business Studies"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"CHEM",
 		"subject_name_clean":"Chemistry",
 		"subject_names":["Chemistry"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"CITI",
 		"subject_name_clean":"Citizenship studies",
 		"subject_names":["Citizenship Studies"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2018
+		},
+		"definition": null
 	},
 	{
 		"alias":"CLAS",
 		"subject_name_clean":"Classical subjects",
 		"subject_names":["Classical subjects"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"2018/2019",
+			"WA":"2018/2019",
+			"NI":"2018/2019"
+		},
+		"definition":"This includes Latin and Greek, which count in the EBacc, but also includes classical civilisation, which does not count in the EBacc. Reformed Latin and classical Greek GCSEs first awarded in 2018; reformed classical civilisation GCSE first awarded in 2019."
 	},
 	{
 		"alias":"COMP",
 		"subject_name_clean":"Computing",
 		"subject_names":["Computing"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2019,
+			"NI":2018
+		},
+		"definition": null
 	},
 	{
 		"alias":"CONS",
 		"subject_name_clean":"Construction",
 		"subject_names":["Construction"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"DEST",
 		"subject_name_clean":"Design and technology",
 		"subject_names":["Design & Technology"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"DRAM",
 		"subject_name_clean":"Drama",
 		"subject_names":["Drama"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"ECON",
 		"subject_name_clean":"Economics",
 		"subject_names":["Economics"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"ENGI",
 		"subject_name_clean":"Engineering",
 		"subject_names":["Engineering"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"ENLA",
-		"subject_name_clean":"English",
+		"subject_name_clean":"English language",
 		"subject_names":["English"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": true,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"ENLI",
-		"subject_name_clean":"English Literature",
+		"subject_name_clean":"English literature",
 		"subject_names":["English Literature"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": true,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2019
+		},
+		"definition": null
+	},
+	{
+		"alias":"FOOD",
+		"subject_name_clean":"Food and hygiene",
+		"subject_names":["Food and hygiene"],
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition":"Food and hygiene was a new qualification first available in 2018. Data is therefore not available for earlier years."
 	},
 	{
 		"alias":"FREN",
 		"subject_name_clean":"French",
 		"subject_names":["French"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"GEOG",
 		"subject_name_clean":"Geography",
 		"subject_names":["Geography"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2018
+		},
+		"definition": null
 	},
 	{
 		"alias":"GERM",
 		"subject_name_clean":"German",
 		"subject_names":["German"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"HSOC",
 		"subject_name_clean":"Health and social care",
 		"subject_names":["Health & Social Care"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Not reformed",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"HIST",
 		"subject_name_clean":"History",
 		"subject_names":["History"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"HOME",
 		"subject_name_clean":"Home economics",
 		"subject_names":["Home Economics"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Not reformed",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"HOSP",
 		"subject_name_clean":"Hospitality",
 		"subject_names":["Hospitality"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"HUMA",
 		"subject_name_clean":"Humanities",
 		"subject_names":["Humanities"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null
 	},
 	{
 		"alias":"ICTX",
 		"subject_name_clean":"ICT",
 		"subject_names":["ICT"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Not reformed",
+			"NI":"Being discontinued"
+		},
+		"definition": null
 	},
 	{
 		"alias":"IRIS",
 		"subject_name_clean":"Irish",
 		"subject_names":["Irish"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"LEIS",
 		"subject_name_clean":"Leisure and tourism",
 		"subject_names":["Leisure & Tourism"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"MANU",
 		"subject_name_clean":"Manufacturing",
 		"subject_names":["Manufacturing"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"MATH",
 		"subject_name_clean":"Mathematics",
 		"subject_names":["Mathematics"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": true,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"MATN",
 		"subject_name_clean":"Mathematics: numeracy",
 		"subject_names":["Mathematics: Numeracy"],
-		"notes":"Mathematics:numeracy was a new qualification available in Wales in 2017. Data is therefore not available for earlier years."
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2017
+		},
+		"definition":"Mathematics: numeracy was a new qualification available in Wales in 2017. Data is therefore not available for earlier years."
 	},
 	{
 		"alias":"MATA",
 		"subject_name_clean":"Additional mathematics",
 		"subject_names":["Mathematics (Additional)"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"MFTS",
 		"subject_name_clean":"Media/film/TV studies",
 		"subject_names":["Media / Film / TV Studies"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"MUSI",
 		"subject_name_clean":"Music",
 		"subject_names":["Music"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"PERF",
 		"subject_name_clean":"Performing/expressive arts",
 		"subject_names":["Performing / Expressive Arts"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null
 	},
 	{
 		"alias":"PHED",
 		"subject_name_clean":"Physical education",
 		"subject_names":["Physical Education"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"PHYS",
 		"subject_name_clean":"Physics",
 		"subject_names":["Physics"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"PREP",
 		"subject_name_clean":"Preparation for life and work",
 		"subject_names":["Prep. For Life and Work"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"RELS",
 		"subject_name_clean":"Religious studies",
 		"subject_names":["Religious Studies"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"SCIE",
 		"subject_name_clean":"Science",
 		"subject_names":["Science"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition":"XXX"
 	},
 	{
 		"alias":"SOCS",
 		"subject_name_clean":"Social science subjects",
 		"subject_names":["Social Science subjects"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"SPAN",
 		"subject_name_clean":"Spanish",
 		"subject_names":["Spanish"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"STAT",
 		"subject_name_clean":"Statistics",
 		"subject_names":["Statistics"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"WELF",
 		"subject_name_clean":"Welsh: first language",
 		"subject_names":["Welsh: First Language"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2017
+		},
+		"definition": null
 	},
 	{
 		"alias":"WELS",
 		"subject_name_clean":"Welsh: second language",
 		"subject_names":["Welsh: Second Language"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"WELL",
 		"subject_name_clean":"Welsh literature",
 		"subject_names":["Welsh Literature"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2017
+		},
+		"definition": null
 	},
 	{
 		"alias":"OMFL",
 		"subject_name_clean":"Other modern languages",
 		"subject_names":["Other Modern Languages"],
-		"notes":""
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"2019/2020",
+			"WA":"2019/2020",
+			"NI":"2019/2020"
+		},
+		"definition":"Reformed GCSEs in some other modern languages will be awarded for the first time in 2019, while in others they will be awarded for the first time in 2020."
 	},
 	{
 		"alias":"OSCI",
 		"subject_name_clean":"Other sciences",
 		"subject_names":["Other Sciences"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null
 	},
 	{
 		"alias":"OTEC",
 		"subject_name_clean":"Other technology",
 		"subject_names":["Other Technology"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null
 	},
 	{
 		"alias":"AOTH",
 		"subject_name_clean":"All other subjects",
 		"subject_names":["All Other subjects"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"2019/2020",
+			"WA":"2019/2020",
+			"NI":"2019/2020"
+		},
+		"definition": null
 	},
 	{
 		"alias":"ALLS",
 		"subject_name_clean":"All subjects",
 		"subject_names":["All Subjects"],
-		"notes":""
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Various",
+			"WA":"Various",
+			"NI":"Various"
+		},
+		"definition": null
 	}
 ]
