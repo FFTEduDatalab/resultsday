@@ -13,7 +13,8 @@
 			"WA":2017,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"BIOL",
@@ -29,7 +30,8 @@
 			"WA":2017,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"BUSS",
@@ -45,7 +47,8 @@
 			"WA":2017,
 			"NI":"2018/2019"
 		},
-		"definition":"In Northern Ireland this includes both business studies and professional business services. Reformed business studies A-Level first awarded in 2018 in Northern Ireland; reformed professional business services A-Level first awarded in 2019 in Northern Ireland."
+		"definition":"In Northern Ireland this includes both business studies and professional business services. Reformed business studies A-Level first awarded in 2018 in Northern Ireland; reformed professional business services A-Level first awarded in 2019 in Northern Ireland.",
+		"context": null
 	},
 	{
 		"alias":"CHEM",
@@ -61,7 +64,8 @@
 			"WA":2017,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"CLAS",
@@ -77,7 +81,8 @@
 			"WA":"2018/2019",
 			"NI":"2018/2019"
 		},
-		"definition":"This includes Latin and Greek, which are facilitating subjects, but also includes classical civilisation, which is not a facilitating subject. Reformed Latin and classical Greek A-Levels first awarded in 2018; reformed classical civilisation A-Level first awarded in 2019."
+		"definition":"This includes Latin and Greek, which are facilitating subjects, but also includes classical civilisation, which is not a facilitating subject. Reformed Latin and classical Greek A-Levels first awarded in 2018; reformed classical civilisation A-Level first awarded in 2019.",
+		"context": null
 	},
 	{
 		"alias":"COMM",
@@ -93,7 +98,8 @@
 			"WA":"Being discontinued",
 			"NI":"Being discontinued"
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"COMP",
@@ -109,7 +115,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"CRIT",
@@ -125,7 +132,8 @@
 			"WA":"Being discontinued",
 			"NI":"Being discontinued"
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"DEST",
@@ -141,7 +149,8 @@
 			"WA":2019,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"DRAM",
@@ -157,7 +166,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"ECON",
@@ -173,7 +183,8 @@
 			"WA":2017,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"ENLA",
@@ -189,7 +200,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>"
 	},
 	{
 		"alias":"ENLI",
@@ -205,7 +217,8 @@
 			"WA":2017,
 			"NI":2018
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>"
 	},
 	{
 		"alias":"ENLL",
@@ -221,7 +234,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>"
 	},
 	{
 		"alias":"FREN",
@@ -237,7 +251,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/'>instructed exam boards to increase the share of A-grades awarded in French, German and Spanish A-Levels by 1%, compared to what they would otherwise have awarded</a>. This was done to equalise what was considered to be overly harsh grading.</p>"
 	},
 	{
 		"alias":"GENS",
@@ -253,7 +268,8 @@
 			"WA":"Being discontinued",
 			"NI":"Being discontinued"
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"GEOG",
@@ -269,7 +285,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"GERM",
@@ -285,7 +302,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/'>instructed exam boards to increase the share of A-grades awarded in French, German and Spanish A-Levels by 1%, compared to what they would otherwise have awarded</a>. This was done to equalise what was considered to be overly harsh grading.</p>"
 	},
 	{
 		"alias":"HIST",
@@ -301,7 +319,8 @@
 			"WA":2017,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"ICTX",
@@ -317,7 +336,8 @@
 			"WA":"Not reformed",
 			"NI":"Not reformed"
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"IRIS",
@@ -333,7 +353,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"LAWX",
@@ -349,7 +370,8 @@
 			"WA":2019,
 			"NI":2019
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"MATH",
@@ -365,7 +387,8 @@
 			"WA":2019,
 			"NI":2020
 		},
-		"definition":"The reformed maths A-level in England can be first awarded in 2018 after one year of study, but the majority of students will not take the reformed qualification until 2019."
+		"definition":"The reformed maths A-level in England can be first awarded in 2018 after one year of study, but the majority of students will not take the reformed qualification until 2019.",
+		"context": null
 	},
 	{
 		"alias":"MATF",
@@ -381,7 +404,8 @@
 			"WA":2019,
 			"NI":2019
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"MFTS",
@@ -397,7 +421,8 @@
 			"WA":2019,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"MUSI",
@@ -413,7 +438,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"PERF",
@@ -429,7 +455,8 @@
 			"WA":"Being discontinued",
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"PHED",
@@ -445,7 +472,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"PHYS",
@@ -461,7 +489,8 @@
 			"WA":2017,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"POLS",
@@ -477,7 +506,8 @@
 			"WA":2019,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"PSYC",
@@ -493,7 +523,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"RELS",
@@ -509,7 +540,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"SOCI",
@@ -525,7 +557,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"SPAN",
@@ -541,7 +574,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/'>instructed exam boards to increase the share of A-grades awarded in French, German and Spanish A-Levels by 1%, compared to what they would otherwise have awarded</a>. This was done to equalise what was considered to be overly harsh grading.</p>"
 	},
 	{
 		"alias":"WELF",
@@ -557,7 +591,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, Welsh was recorded as a single subject, covering Welsh: first language and Welsh: second language."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, Welsh was recorded as a single subject, covering Welsh: first language and Welsh: second language.<p>"
 	},
 	{
 		"alias":"WELS",
@@ -573,7 +608,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"OMFL",
@@ -589,7 +625,8 @@
 			"WA":"2019/2020",
 			"NI":"2019/2020"
 		},
-		"definition":"Reformed A-Levels in some other modern languages will be awarded for the first time in 2019, while in others they will be awarded for the first time in 2020."
+		"definition":"Reformed A-Levels in some other modern languages will be awarded for the first time in 2019, while in others they will be awarded for the first time in 2020.",
+		"context": null
 	},
 	{
 		"alias":"OSCI",
@@ -605,7 +642,8 @@
 			"WA":2019,
 			"NI":2019
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"AOTH",
@@ -621,7 +659,8 @@
 			"WA":"2019/2020",
 			"NI":"2019/2020"
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	},
 	{
 		"alias":"ALLS",
@@ -637,6 +676,7 @@
 			"WA":"Various",
 			"NI":"Various"
 		},
-		"definition": null
+		"definition": null,
+		"context": null
 	}
 ]

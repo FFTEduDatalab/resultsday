@@ -13,7 +13,8 @@
 			"WA":2016,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"BIOL",
@@ -29,7 +30,8 @@
 			"WA":2016,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"BUSS",
@@ -45,7 +47,8 @@
 			"WA":2016,
 			"NI":"2017/2018"
 		},
-		"definition":"In Northern Ireland this includes both business studies and professional business services. Reformed business studies AS-Level first awarded in 2017 in Northern Ireland; reformed professional business services AS-Level first awarded in 2018 in Northern Ireland."
+		"definition":"In Northern Ireland this includes both business studies and professional business services. Reformed business studies AS-Level first awarded in 2017 in Northern Ireland; reformed professional business services AS-Level first awarded in 2018 in Northern Ireland.",
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"CHEM",
@@ -61,7 +64,8 @@
 			"WA":2016,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"CLAS",
@@ -77,7 +81,8 @@
 			"WA":"2017/2018",
 			"NI":"2017/2018"
 		},
-		"definition":"This includes Latin and Greek, which are facilitating subjects, but also includes classical civilisation, which is not a facilitating subject. Reformed Latin and classical Greek AS-Levels first awarded in 2017; reformed classical civilisation AS-Level first awarded in 2018."
+		"definition":"This includes Latin and Greek, which are facilitating subjects, but also includes classical civilisation, which is not a facilitating subject. Reformed Latin and classical Greek AS-Levels first awarded in 2017; reformed classical civilisation AS-Level first awarded in 2018.",
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"COMM",
@@ -93,7 +98,8 @@
 			"WA":"Being discontinued",
 			"NI":"Being discontinued"
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"COMP",
@@ -109,7 +115,8 @@
 			"WA":2016,
 			"NI":2016
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"CRIT",
@@ -125,7 +132,8 @@
 			"WA":"Being discontinued",
 			"NI":"Being discontinued"
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"DEST",
@@ -141,7 +149,8 @@
 			"WA":2018,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"DRAM",
@@ -157,7 +166,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"ECON",
@@ -173,7 +183,8 @@
 			"WA":2016,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"ENLA",
@@ -189,7 +200,8 @@
 			"WA":2016,
 			"NI":2016
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"ENLI",
@@ -205,7 +217,8 @@
 			"WA":2016,
 			"NI":2017
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"ENLL",
@@ -221,7 +234,8 @@
 			"WA":2016,
 			"NI":2016
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"FREN",
@@ -237,7 +251,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"GENS",
@@ -253,7 +268,8 @@
 			"WA":"Being discontinued",
 			"NI":"Being discontinued"
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"GEOG",
@@ -269,7 +285,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"GERM",
@@ -285,7 +302,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"HIST",
@@ -301,7 +319,8 @@
 			"WA":2016,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"ICTX",
@@ -317,7 +336,8 @@
 			"WA":"Not reformed",
 			"NI":"Not reformed"
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"IRIS",
@@ -333,7 +353,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"LAWX",
@@ -349,7 +370,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"MATH",
@@ -365,7 +387,8 @@
 			"WA":2018,
 			"NI":2019
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"MATF",
@@ -381,7 +404,8 @@
 			"WA":2018,
 			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"MFTS",
@@ -397,7 +421,8 @@
 			"WA":2018,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"MUSI",
@@ -413,7 +438,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"PERF",
@@ -429,7 +455,8 @@
 			"WA":"Being discontinued",
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"PHED",
@@ -445,7 +472,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"PHYS",
@@ -461,7 +489,8 @@
 			"WA":2016,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"POLS",
@@ -477,7 +506,8 @@
 			"WA":2018,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"PSYC",
@@ -493,7 +523,8 @@
 			"WA":2016,
 			"NI":2016
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"RELS",
@@ -509,7 +540,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"SOCI",
@@ -525,7 +557,8 @@
 			"WA":2016,
 			"NI":2016
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"SPAN",
@@ -541,7 +574,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"WELF",
@@ -557,7 +591,8 @@
 			"WA":2016,
 			"NI":2016
 		},
-		"definition":"Comparable data is not available before 2017. Before this point, Welsh was recorded as a single subject, covering Welsh: first language and Welsh: second language."
+		"definition": null,
+		"context": "<p>Comparable data is not available before 2017. Before this point, Welsh was recorded as a single subject, covering Welsh: first language and Welsh: second language.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"WELS",
@@ -573,7 +608,8 @@
 			"WA":2017,
 			"NI":2017
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"OMFL",
@@ -589,7 +625,8 @@
 			"WA":"2018/2019",
 			"NI":"2018/2019"
 		},
-		"definition":"Reformed AS-Levels in some other modern languages will be awarded for the first time in 2018, while in others they will be awarded for the first time in 2019."
+		"definition":"Reformed AS-Levels in some other modern languages will be awarded for the first time in 2018, while in others they will be awarded for the first time in 2019.",
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"OSCI",
@@ -601,11 +638,12 @@
 			"facil": false
 		},
 		"reform_year":{
-			"EN":2019,
-			"WA":2019,
-			"NI":2019
+			"EN":2018,
+			"WA":2018,
+			"NI":2018
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"AOTH",
@@ -617,11 +655,12 @@
 			"facil": false
 		},
 		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2018
+			"EN":"2018/2019",
+			"WA":"2018/2019",
+			"NI":"2018/2019"
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias":"ALLS",
@@ -637,6 +676,7 @@
 			"WA":"Various",
 			"NI":"Various"
 		},
-		"definition": null
+		"definition": null,
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	}
 ]
