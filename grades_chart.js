@@ -1,6 +1,6 @@
 Highcharts.chart('gradesChartContainer', {
     title: {
-        text: level + ' grades in ' + subject.toLowerCase() + ', 2014-2018'
+        text: level + ' grades in ' + subject + ', 2014-2018'
     },
     subtitle: {
         text: gradesChartSubtitle

@@ -132,12 +132,12 @@
               entriesData=[]
               let len=data.length
               if(len>0){
-                  for(let i=0; i<len; i++){
-                      var line=data.shift()
-                      if (line.alias == alias && line.scope == scope){
-                        entriesData.push(line)
-                      }
+                for(let i=0; i<len; i++){
+                  var line=data.shift()
+                  if (line.alias == alias && line.scope == scope){
+                    entriesData.push(line)
                   }
+                }
 		          }
             });
         };

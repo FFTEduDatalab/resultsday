@@ -50,9 +50,9 @@ for level in levels:
 		if source_file.endswith('.xls') or source_file.endswith('.xlsx'):
 			filename=source_file.split('.')[0]
 			filename_split=filename.split('_')
-			if level['name']!='GCSE' or (level['name']=='GCSE' and filename_split[3]!='91'):
+			year=int(filename_split[1])
+			if level['name']!='GCSE' or (level['name']=='GCSE' and ((year<2017 and filename_split[3]=='ag') or (year>=2017 and filename_split[3]=='keygrades'))):		# need to only pick up one file, or else will have e.g. two 2017 entries figures where a subject features in a key grades file and the A*-G grades file 
 				print filename
-				year=int(filename_split[1])
 				scope=filename_split[2].upper()
 				try:
 					rb=open_workbook(source_file)
