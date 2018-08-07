@@ -37,8 +37,13 @@ Highcharts.theme = {
     exporting: {
           buttons: {
               contextButton: {
-                  menuItems: ['printChart', 'separator', 'downloadPNG', 'downloadJPEG', 'separator', 'downloadCSV', 'downloadXLS']
+                  menuItems: ['printChart', 'separator', 'downloadPNG', 'downloadJPEG', 'separator', 'downloadCSV']
               }
           }
-      }
+      },
+	credits:{
+		href: 'http://results.ffteducationdatalab.org.uk',
+		align: 'left',
+		text: 'Source: FFT Education Datalab analysis of JCQ data. Funded by the Nuffield Foundation.'
+	}
 };
