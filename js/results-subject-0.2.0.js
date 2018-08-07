@@ -130,8 +130,11 @@ $(function () {
 			}
 		}
 	});
-	drawEntriesChart()
-	drawGradesChart()
+	// drawEntriesChart()
+	// drawGradesChart()
+	readEntriesData()
+	readGradesData()
+	setChartSubtitles()
 });
 
 function readEntriesData() {
@@ -143,8 +146,9 @@ function readEntriesData() {
 			var line=data.shift()
 			if (line.alias == alias && line.scope == scope){
 				entriesData.push(line)
-		  }
+			}
 		}
+		drawEntriesChart()
 		}
 	});
 };
@@ -167,6 +171,7 @@ function readGradesData() {
 				gradesData.push(line)
 	        }
 	    }
+		drawGradesChart()
 	}
   });
 };
@@ -201,8 +206,8 @@ function setChartSubtitles() {
 }
 
 function drawEntriesChart() {
-	readEntriesData()
-	setChartSubtitles()
+	// readEntriesData()
+	// setChartSubtitles()
 	gradesChartColoursArray = []
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
@@ -212,8 +217,8 @@ function drawEntriesChart() {
 }
 
 function drawGradesChart() {
-	readGradesData()
-	setChartSubtitles()
+	// readGradesData()
+	// setChartSubtitles()
 	gradesChartColoursArray = []
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
@@ -233,19 +238,28 @@ $('#breakdownSelector').change(function () {
 	$('#scopeSelector').formSelect()		// re-initialise Materialize select input
 	if(scope!='UK'){
 		scope = 'UK'
-		drawEntriesChart(scope, grades, gender)
-		drawGradesChart(scope, grades, gender)
+		// drawEntriesChart(scope, grades, gender)
+		// drawGradesChart(scope, grades, gender)
+		readEntriesData(scope, grades, gender)
+		readGradesData(scope, grades, gender)
+		setChartSubtitles()
 	}
 });
 
 function scopeOptionChange() {
 	scope = document.getElementById('scopeSelector').value
-	drawEntriesChart()
-	drawGradesChart()
+	// drawEntriesChart()
+	// drawGradesChart()
+	console.log(scope)
+	readEntriesData()
+	readGradesData()
+	setChartSubtitles()
 }
 
 function gradeChartOptionChange() {
 	grades = document.getElementById('gradesSelector').value
 	gender = document.getElementById('genderSelector').value
-	drawGradesChart()
+	// drawGradesChart()
+	readGradesData()
+	setChartSubtitles()
 }
