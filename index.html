@@ -7,81 +7,9 @@
 </head>
 <body>
   <ul>
-    <li>A-Level</li>
-      <ul>
-        <div id='alevelListContainer' class='subjectListContainer'></div>
-      </ul>
-    <li>AS-Level</li>
-      <ul>
-        <div id='aslevelListContainer' class='subjectListContainer'></div>
-      </ul>
-    <li>GCSE</li>
-      <ul>
-        <div id='gcseListContainer' class='subjectListContainer'></div>
-      </ul>
+    <li><a href='a-level.html'>A-Level</a></li>
+    <li><a href='as-level.html'>AS-Level</a></li>
+    <li><a href='gcse.html'>GCSE</a></li>
   </ul>
-  <script>
-    var levels=[
-    	{
-				'name':'A-Level',
-        'subjectsJSON':'a-level-subjects.json',
-        'entriesJSON':'a-level-entries.json',
-        'gradesJSON':'a-level-grades.json',
-        'textJSON':'a-level-text.json',
-        'gradesAll':['A*','A','B','C','D','E','U'],
-        'gradesSelected':['A*','A','C','E']
-    	},
-    	{
-				'name':'AS-Level',
-        'subjectsJSON':'as-level-subjects.json',
-        'entriesJSON':'as-level-entries.json',
-        'gradesJSON':'as-level-grades.json',
-        'textJSON':'as-level-text.json',
-				'gradesAll':['A','B','C','D','E','U'],
-        'gradesSelected':['A','C','E']
-    	},
-    	{
-	 			'name':'GCSE',
-        'subjectsJSON':'gcse-subjects.json',
-        'entriesJSON':'gcse-entries.json',
-        'gradesJSON':'gcse-grades.json',
-        'textJSON':'gcse-text.json',
-				'gradesAll':['A/7','C/4','G/1','U'],
-        'gradesSelected':['A/7','C/4','G/1']
-    	}
-    ]
-
-    var name
-    var i
-    var j
-    var l = levels.length
-
-    $(function () {		// needs to be done in two stages like this, as otherwise inner for loop always runs off final i value under js asynchonicity
-      for (i = 0; i < l; i++) {
-          subjectsJSON=levels[i].subjectsJSON
-          name=levels[i].name.toLowerCase()
-          $.getJSON(name + '/' + subjectsJSON, jsonCallback(i));
-      }
-    });
-
-    function jsonCallback(item) {
-      return function(data) {
-		let len=data.length
-        for (j = 0; j < len; j++) {
-          var line=data.shift()
-          if (item==0){
-            document.getElementById('alevelListContainer').innerHTML=document.getElementById('alevelListContainer').innerHTML + '<li><a href="a-level/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.html">' + line.subject_name_clean + '</a></li>'
-          }
-          else if (item==1){
-            document.getElementById('aslevelListContainer').innerHTML=document.getElementById('aslevelListContainer').innerHTML + '<li><a href="as-level/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.html">' + line.subject_name_clean + '</a></li>'
-          }
-          else if (item==2){
-            document.getElementById('gcseListContainer').innerHTML=document.getElementById('gcseListContainer').innerHTML + '<li><a href="gcse/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.html">' + line.subject_name_clean + '</a></li>'
-          }
-        }
-      };
-    }
-
-  </script>
 </body>
 <html>
