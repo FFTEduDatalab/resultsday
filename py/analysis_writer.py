@@ -10,20 +10,20 @@ from collections import OrderedDict
 levels=[
 	{
 		'name':'A-Level',
-		'source':'data\\a-level',
-		'output':'a-level',
+		'source':'data\\source\\a-level',
+		'output':'data\\output\\a-level',
 		'grades':['A*','A','B','C','D','E','U']
 	},
 	{
 		'name':'AS-Level',
-		'source':'data\\as-level',
-		'output':'as-level',
+		'source':'data\\source\\as-level',
+		'output':'data\\output\\as-level',
 		'grades':['A','B','C','D','E','U']
 	},
 	{
 		'name':'GCSE',
-		'source':'data\\gcse',
-		'output':'gcse',
+		'source':'data\\source\\gcse',
+		'output':'data\\output\\gcse',
 		'grades':['A/7','C/4','G/1','U']
 	}
 ]
@@ -44,7 +44,6 @@ for level in levels:
 		texts=OrderedDict([])
 		texts['alias']=alias
 		texts['subject_name_clean']=subject['subject_name_clean']
-		texts['notes']=subject['notes']
 		for entries in entries_data:
 			if entries['name']=='All students' and entries['alias']==alias and entries['scope']=='UK':
 				texts['y0']=entries['data'][0][0]
@@ -71,7 +70,7 @@ for level in levels:
 	    number_of_years='four'
 	elif allsubjects_yn==2018:
 	    number_of_years='five'
-	allsubjects_entries_change=round((allsubjects_entries_yn-allsubjects_entries_y0)*1.0/allsubjects_entries_y0*100,1)		# XXX
+	allsubjects_entries_change=round((allsubjects_entries_yn-allsubjects_entries_y0)*1.0/allsubjects_entries_y0*100,1)
 	for texts in texts_list:
 		texts['analysis']=''
 		if texts.get('y0') is not None:		# analysis only written for subjects for which we have entries and grades data (i.e. not new subjects which have only been added to subjects data file)
@@ -88,9 +87,9 @@ for level in levels:
 			    subject_entries_change_scale='a little '
 			elif subject_entries_change==0:
 				subject_entries_change_scale=''
-			if (subject_entries_change-allsubjects_entries_change)>5:
+			if abs(subject_entries_change-allsubjects_entries_change)>5:
 			    entries_change_comparison='greater than'
-			elif (subject_entries_change-allsubjects_entries_change)<-5:
+			elif abs(subject_entries_change-allsubjects_entries_change)<-5:
 			    entries_change_comparison='smaller than'
 			elif abs(subject_entries_change-allsubjects_entries_change)<=5:
 			    entries_change_comparison='broadly in line with'
@@ -118,7 +117,6 @@ for level in levels:
 	for texts in texts_list:
 		texts_redux={key:texts[key] for key in ['alias','analysis']}
 		texts_list_redux.append(texts_redux)
-	print texts_list_redux
 
 	# write to json file
 	os.chdir(os.path.dirname( __file__ ))

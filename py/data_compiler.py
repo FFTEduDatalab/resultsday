@@ -12,20 +12,20 @@ genders = ['Male','Female','All students']
 levels=[
 	{
 		'name':'A-Level',
-		'source':'data\\a-level',
-		'output':'a-level',
+		'source':'data\\source\\a-level',
+		'output':'data\\output\\a-level',
 		'grades':['A*','A','B','C','D','E','U']
 	},
 	{
 		'name':'AS-Level',
-		'source':'data\\as-level',
-		'output':'as-level',
+		'source':'data\\source\\as-level',
+		'output':'data\\output\\as-level',
 		'grades':['A','B','C','D','E','U']
 	},
 	{
 		'name':'GCSE',
-		'source':'data\\gcse',
-		'output':'gcse',
+		'source':'data\\source\\gcse',
+		'output':'data\\output\\gcse',
 		'grades':['A/7','C/4','G/1','U']
 	}
 ]
@@ -51,7 +51,7 @@ for level in levels:
 			filename=source_file.split('.')[0]
 			filename_split=filename.split('_')
 			year=int(filename_split[1])
-			if level['name']!='GCSE' or (level['name']=='GCSE' and ((year<2017 and filename_split[3]=='ag') or (year>=2017 and filename_split[3]=='keygrades'))):		# need to only pick up one file, or else will have e.g. two 2017 entries figures where a subject features in a key grades file and the A*-G grades file 
+			if level['name']!='GCSE' or (level['name']=='GCSE' and ((year<2017 and filename_split[3]=='ag') or (year>=2017 and filename_split[3]=='keygrades'))):		# need to only pick up one file, or else will have e.g. two 2017 entries figures where a subject features in a key grades file and the A*-G grades file
 				print filename
 				scope=filename_split[2].upper()
 				try:

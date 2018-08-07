@@ -1,4 +1,9 @@
 Highcharts.theme = {
+	chart: {
+		style: {
+			fontFamily: 'Arial'
+		}
+	},
     colors: ['#2daae1', '#96c11f', '#535353'],
     lang: {
       thousandsSep: ',',

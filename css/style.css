@@ -1,0 +1,60 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.fft-pink {
+	background-color: #e6007e !important;
+}
+
+.fft-blue {
+	background-color: #2daae1 !important;
+}
+
+.fft-green {
+	background-color: #96c11f !important;
+}
+
+.fft-pink-text {
+	color: #e6007e !important;
+}
+
+.fft-blue-text {
+	color: #2daae1 !important;
+}
+
+.fft-green-text {
+	color: #96c11f !important;
+}
+
+nav {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+nav .brand-logo,
+nav ul a {
+	color: #535353;
+}
+
+nav .brand-logo {
+	font-size: inherit;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+	color: #e6007e;
+}
+
+.select-wrapper input.select-dropdown:focus {
+	border-bottom: #e6007e 1px solid;
+}
+
+/* .chartContainer {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto
+} */

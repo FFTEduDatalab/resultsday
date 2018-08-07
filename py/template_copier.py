@@ -11,20 +11,20 @@ from collections import OrderedDict
 levels=[
 	{
 		'name':'A-Level',
-		'source':'data\\a-level',
-		'output':'a-level',
+		'source':'data\\source\\a-level',
+		'output':'data\\output\\a-level',
 		'grades':['A*','A','B','C','D','E','U']
 	},
 	{
 		'name':'AS-Level',
-		'source':'data\\as-level',
-		'output':'as-level',
+		'source':'data\\source\\as-level',
+		'output':'data\\output\\as-level',
 		'grades':['A','B','C','D','E','U']
 	},
 	{
 		'name':'GCSE',
-		'source':'data\\gcse',
-		'output':'gcse',
+		'source':'data\\source\\gcse',
+		'output':'data\\output\\gcse',
 		'grades':['A/7','C/4','G/1','U']
 	}
 ]
@@ -41,7 +41,7 @@ for level in levels:
 	os.chdir(level['output'])
 	with open(level['name'].lower()+'-subjects.json') as subjects_file:
 		subjects_data = json.load(subjects_file)
-	os.chdir('..')
+	os.chdir('../../..')
 	os.chdir('templates')
 	for subject in subjects_data:
 		subject_name_url=re.sub('\W+', '-', subject['subject_name_clean']).lower()

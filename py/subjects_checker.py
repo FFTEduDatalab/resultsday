@@ -12,20 +12,20 @@ genders = ['Male','Female','All students']
 levels=[
 	{
 		'name':'A-Level',
-		'source':'data\\a-level',
-		'output':'a-level',
+		'source':'data\\source\\a-level',
+		'output':'data\\output\\a-level',
 		'grades':['A*','A','B','C','D','E','U']
 	},
 	{
 		'name':'AS-Level',
-		'source':'data\\as-level',
-		'output':'as-level',
+		'source':'data\\source\\as-level',
+		'output':'data\\output\\as-level',
 		'grades':['A','B','C','D','E','U']
 	},
 	{
 		'name':'GCSE',
-		'source':'data\\gcse',
-		'output':'gcse',
+		'source':'data\\source\\gcse',
+		'output':'data\\output\\gcse',
 		'grades':['A/7','C/4','G/1','U']
 	}
 ]
@@ -49,7 +49,7 @@ for level in levels:
 			filename_split=filename.split('_')
 			year=int(filename_split[1])
 			scope=filename_split[2].upper()
-			if year==2017:		# XXX
+			if year==2017:						# XXX
 				rb=open_workbook(source_file)
 				rbws=rb.sheet_by_index(0)
 				for rbrow in range(11,rbws.nrows):			# ditching 10 header rows

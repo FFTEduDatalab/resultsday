@@ -63,7 +63,7 @@ $(function () {
   textJSON=levelData.textJSON
   gradesAll=levelData.gradesAll
   gradesSelected=levelData.gradesSelected
-  $.getJSON(subjectsJSON, function(data) {
+  $.getJSON('../data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(data) {
       let len=data.length
       if(len>0){
         for(let i=0; i<len; i++){
@@ -99,7 +99,7 @@ $(function () {
 							}
 							else {
 								document.getElementById('p8dblFlagImg').src = '../../img/p8dblFlagImgGrey.png';
-								document.getEle	mentById('p8dblFlagImg').tooltip = 'This subject is not double-counted in <a href="https://www.gov.uk/government/publications/progress-8-school-performance-measure">Progress 8</a> calculations (England only)'
+								document.getElementById('p8dblFlagImg').tooltip = 'This subject is not double-counted in <a href="https://www.gov.uk/government/publications/progress-8-school-performance-measure">Progress 8</a> calculations (England only)'
 							}
 						}
 						reformYear=line.reform_year
@@ -111,7 +111,7 @@ $(function () {
       }
   });
 	// $('.tooltipped').tooltip();
-  $.getJSON(textJSON, function(data) {
+  $.getJSON('../data/output/' + level.toLowerCase() + '/' + textJSON, function(data) {
       let len=data.length
       if(len>0){
           for(let i=0; i<len; i++){
@@ -128,7 +128,7 @@ $(function () {
 });
 
 function readEntriesData() {
-    $.getJSON(entriesJSON, function(data) {
+    $.getJSON('../data/output/' + level.toLowerCase() + '/' + entriesJSON, function(data) {
       entriesData=[]
       let len=data.length
       if(len>0){
@@ -143,7 +143,7 @@ function readEntriesData() {
 };
 
 function readGradesData() {
-  $.getJSON(gradesJSON, function(data) {
+  $.getJSON('../data/output/' + level.toLowerCase() + '/' + gradesJSON, function(data) {
     gradesData=[]
     let grades_array=[]
     if(grades == 'Selected'){
@@ -196,7 +196,12 @@ function setChartSubtitles() {
         'Female':'Female students',
     }
     entriesChartSubtitle = 'All students, ' + scopeDict[scope]
-    gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + gradesDict[grades]
+		if (level=='GCSE'){
+			gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + 'key grades'
+		}
+		else{
+			gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + gradesDict[grades]
+		}
     return entriesChartSubtitle, gradesChartSubtitle
 }
 
