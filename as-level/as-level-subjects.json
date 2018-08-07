@@ -3,6 +3,7 @@
 		"alias":"ARTD",
 		"subject_name_clean":"Art and design subjects",
 		"subject_names":["Art and Design subjects","Art & Design subjects"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -20,6 +21,7 @@
 		"alias":"BIOL",
 		"subject_name_clean":"Biology",
 		"subject_names":["Biology"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -37,6 +39,7 @@
 		"alias":"BUSS",
 		"subject_name_clean":"Business studies",
 		"subject_names":["Business Studies"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -54,6 +57,7 @@
 		"alias":"CHEM",
 		"subject_name_clean":"Chemistry",
 		"subject_names":["Chemistry"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -71,6 +75,7 @@
 		"alias":"CLAS",
 		"subject_name_clean":"Classical subjects",
 		"subject_names":["Classical subjects"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -88,6 +93,7 @@
 		"alias":"COMM",
 		"subject_name_clean":"Communication studies",
 		"subject_names":["Communication Studies"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -105,6 +111,7 @@
 		"alias":"COMP",
 		"subject_name_clean":"Computing",
 		"subject_names":["Computing"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -122,6 +129,7 @@
 		"alias":"CRIT",
 		"subject_name_clean":"Critical thinking",
 		"subject_names":["Critical Thinking"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -139,6 +147,7 @@
 		"alias":"DEST",
 		"subject_name_clean":"Design and technology",
 		"subject_names":["Design and Technology"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -156,6 +165,7 @@
 		"alias":"DRAM",
 		"subject_name_clean":"Drama",
 		"subject_names":["Drama"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -173,6 +183,7 @@
 		"alias":"ECON",
 		"subject_name_clean":"Economics",
 		"subject_names":["Economics"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -190,6 +201,7 @@
 		"alias":"ENLA",
 		"subject_name_clean":"English language",
 		"subject_names":["English Language"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -207,6 +219,7 @@
 		"alias":"ENLI",
 		"subject_name_clean":"English literature",
 		"subject_names":["English Literature"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -224,6 +237,7 @@
 		"alias":"ENLL",
 		"subject_name_clean":"English language and literature",
 		"subject_names":["English Language & Literature"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -241,6 +255,7 @@
 		"alias":"FREN",
 		"subject_name_clean":"French",
 		"subject_names":["French"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -258,6 +273,7 @@
 		"alias":"GENS",
 		"subject_name_clean":"General studies",
 		"subject_names":["General Studies"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -275,6 +291,7 @@
 		"alias":"GEOG",
 		"subject_name_clean":"Geography",
 		"subject_names":["Geography"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -292,6 +309,7 @@
 		"alias":"GERM",
 		"subject_name_clean":"German",
 		"subject_names":["German"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -309,6 +327,7 @@
 		"alias":"HIST",
 		"subject_name_clean":"History",
 		"subject_names":["History"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -326,6 +345,7 @@
 		"alias":"ICTX",
 		"subject_name_clean":"ICT",
 		"subject_names":["ICT"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -343,6 +363,7 @@
 		"alias":"IRIS",
 		"subject_name_clean":"Irish",
 		"subject_names":["Irish"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -360,6 +381,7 @@
 		"alias":"LAWX",
 		"subject_name_clean":"Law",
 		"subject_names":["Law"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -377,6 +399,7 @@
 		"alias":"MATH",
 		"subject_name_clean":"Mathematics",
 		"subject_names":["Mathematics"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -394,6 +417,7 @@
 		"alias":"MATF",
 		"subject_name_clean":"Further mathematics",
 		"subject_names":["Mathematics (Further)"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -411,6 +435,7 @@
 		"alias":"MFTS",
 		"subject_name_clean":"Media/film/TV studies",
 		"subject_names":["Media / Film / TV Studies"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -428,6 +453,7 @@
 		"alias":"MUSI",
 		"subject_name_clean":"Music",
 		"subject_names":["Music"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -445,6 +471,7 @@
 		"alias":"PERF",
 		"subject_name_clean":"Performing/expressive arts",
 		"subject_names":["Performing / Expressive Arts"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -462,6 +489,7 @@
 		"alias":"PHED",
 		"subject_name_clean":"Physical education",
 		"subject_names":["Physical Education"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -479,6 +507,7 @@
 		"alias":"PHYS",
 		"subject_name_clean":"Physics",
 		"subject_names":["Physics"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -496,6 +525,7 @@
 		"alias":"POLS",
 		"subject_name_clean":"Political studies",
 		"subject_names":["Political Studies"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -513,6 +543,7 @@
 		"alias":"PSYC",
 		"subject_name_clean":"Psychology",
 		"subject_names":["Psychology"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -530,6 +561,7 @@
 		"alias":"RELS",
 		"subject_name_clean":"Religious studies",
 		"subject_names":["Religious Studies"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -547,6 +579,7 @@
 		"alias":"SOCI",
 		"subject_name_clean":"Sociology",
 		"subject_names":["Sociology"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -564,6 +597,7 @@
 		"alias":"SPAN",
 		"subject_name_clean":"Spanish",
 		"subject_names":["Spanish"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -581,6 +615,7 @@
 		"alias":"WELF",
 		"subject_name_clean":"Welsh: first language",
 		"subject_names":["Welsh First Language"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -598,6 +633,7 @@
 		"alias":"WELS",
 		"subject_name_clean":"Welsh: second language",
 		"subject_names":["Welsh Second Language"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -615,6 +651,7 @@
 		"alias":"OMFL",
 		"subject_name_clean":"Other modern languages",
 		"subject_names":["Other modern languages"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -632,6 +669,7 @@
 		"alias":"OSCI",
 		"subject_name_clean":"Other sciences",
 		"subject_names":["Other sciences"],
+		"sort_order": 0,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -649,6 +687,7 @@
 		"alias":"AOTH",
 		"subject_name_clean":"All other subjects",
 		"subject_names":["All other subjects"],
+		"sort_order": 1,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
@@ -666,6 +705,7 @@
 		"alias":"ALLS",
 		"subject_name_clean":"All subjects",
 		"subject_names":["All Subjects"],
+		"sort_order": -1,
 		"flags":{
 			"ebacc": null,
 			"p8dbl": null,
