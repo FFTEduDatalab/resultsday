@@ -48,11 +48,11 @@ $(function () {
 	level=levelData.name
 	document.getElementById('levelNameContainer').innerHTML=level
 	if (level=='A-Level' || level=='AS-Level'){
-		$('#breakdownSelector').hide()
+		$('#bSelector').hide()
 		$('#gcseFlagContainer').hide()
 	}
 	if (level=='GCSE'){
-		$('#gradesSelector').hide()
+		$('#gSelector').hide()
 		$('#alevelFlagContainer').hide()
 	}
 	gradesChartColoursArray=[]
@@ -136,52 +136,40 @@ $(function () {
 
 function readEntriesData() {
     $.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function(data) {
-      entriesData=[]
-      let len=data.length
-      if(len>0){
-        for(let i=0; i<len; i++){
-          var line=data.shift()
-          if (line.alias == alias && line.scope == scope){
-            entriesData.push(line)
-          }
-        }
-      }
-    });
+		entriesData=[]
+		let len=data.length
+		if(len>0){
+		for(let i=0; i<len; i++){
+			var line=data.shift()
+			if (line.alias == alias && line.scope == scope){
+				entriesData.push(line)
+		  }
+		}
+		}
+	});
 };
 
 function readGradesData() {
-  $.getJSON('/data/output/' + level.toLowerCase() + '/' + gradesJSON, function(data) {
-    gradesData=[]
-    let grades_array=[]
-    if(grades == 'Selected'){
-      grades_array=gradesSelected
-    }
-    else if (grades == 'All') {
-      grades_array=gradesAll
-    }
-    let len=data.length
-    if(len>0){
-        for(let i=0; i<len; i++){
-            var line=data.shift()
-            if (line.alias == alias && line.scope == scope && grades_array.indexOf(line.name)!=-1 && line.gender== gender){
-              gradesData.push(line)
-            }
-        }
-    }
+	$.getJSON('/data/output/' + level.toLowerCase() + '/' + gradesJSON, function(data) {
+		gradesData=[]
+		let grades_array=[]
+		if(grades == 'Selected'){
+			grades_array=gradesSelected
+		}
+		else if (grades == 'All') {
+			grades_array=gradesAll
+		}
+		let len=data.length
+		if(len>0){
+	    for(let i=0; i<len; i++){
+	        var line=data.shift()
+	        if (line.alias == alias && line.scope == scope && grades_array.indexOf(line.name)!=-1 && line.gender== gender){
+				gradesData.push(line)
+	        }
+	    }
+	}
   });
 };
-
-function scopeOptionChange() {
-  scope = document.getElementById('scopeSelector').value
-  drawEntriesChart()
-  drawGradesChart()
-}
-
-function gradeChartOptionChange() {
-  grades = document.getElementById('gradesSelector').value
-  gender = document.getElementById('genderSelector').value
-  drawGradesChart()
-}
 
 function setChartSubtitles() {
     let scopeDict = {
@@ -213,25 +201,25 @@ function setChartSubtitles() {
 }
 
 function drawEntriesChart() {
-  readEntriesData()
-  setChartSubtitles()
-  gradesChartColoursArray = []
-  gradesChartColoursArray.push(coloursDict[gender])
-  var js = document.createElement('script');
-  js.setAttribute('type', 'text/javascript');
-  js.src = '/js/entries_chart.js';
-  document.body.appendChild(js)
+	readEntriesData()
+	setChartSubtitles()
+	gradesChartColoursArray = []
+	gradesChartColoursArray.push(coloursDict[gender])
+	var js = document.createElement('script');
+	js.setAttribute('type', 'text/javascript');
+	js.src = '/js/entries_chart.js';
+	document.body.appendChild(js)
 }
 
 function drawGradesChart() {
-  readGradesData()
-  setChartSubtitles()
-  gradesChartColoursArray = []
-  gradesChartColoursArray.push(coloursDict[gender])
-  var js = document.createElement('script');
-  js.setAttribute('type', 'text/javascript');
-  js.src = '/js/grades_chart.js';
-  document.body.appendChild(js)
+	readGradesData()
+	setChartSubtitles()
+	gradesChartColoursArray = []
+	gradesChartColoursArray.push(coloursDict[gender])
+	var js = document.createElement('script');
+	js.setAttribute('type', 'text/javascript');
+	js.src = '/js/grades_chart.js';
+	document.body.appendChild(js)
 }
 
 $('#breakdownSelector').change(function () {
@@ -242,10 +230,22 @@ $('#breakdownSelector').change(function () {
 	else if (breakdown == 'age') {
 		$('#scopeSelector').html('<option value="UK">All ages</option><option value="15">15-year-olds and younger</option><option value="16">16-year-olds</option><option value="17">17-year-olds and older</option>');
 	}
-	$('#scopeSelector').formSelect()
+	$('#scopeSelector').formSelect()		// re-initialise Materialize select input
 	if(scope!='UK'){
 		scope = 'UK'
 		drawEntriesChart(scope, grades, gender)
 		drawGradesChart(scope, grades, gender)
 	}
 });
+
+function scopeOptionChange() {
+	scope = document.getElementById('scopeSelector').value
+	drawEntriesChart()
+	drawGradesChart()
+}
+
+function gradeChartOptionChange() {
+	grades = document.getElementById('gradesSelector').value
+	gender = document.getElementById('genderSelector').value
+	drawGradesChart()
+}
