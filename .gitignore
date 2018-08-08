@@ -1,7 +1,6 @@
 project_files/
-data/
-a-level/
-as-level/
-gcse/
+/a-level/
+/as-level/
+/gcse/
 .dropbox
 desktop.ini

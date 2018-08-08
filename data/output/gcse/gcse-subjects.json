@@ -1,0 +1,938 @@
+[
+	{
+		"alias":"ARTD",
+		"subject_name_clean":"Art and design subjects",
+		"subject_names":["Art and Design subjects"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"ASCH",
+		"subject_name_clean":"Additional science",
+		"subject_names":["Additional Science"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"FSCI",
+		"subject_name_clean":"Further additional science",
+		"subject_names":["Additional Science (Further)"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"BIOL",
+		"subject_name_clean":"Biology",
+		"subject_names":["Biology"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>The end of science and additional science GCSEs in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"BUSC",
+		"subject_name_clean":"Business and communication systems",
+		"subject_names":["Business & Comm. Systems"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"BUSS",
+		"subject_name_clean":"Business studies",
+		"subject_names":["Business Studies"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"CHEM",
+		"subject_name_clean":"Chemistry",
+		"subject_names":["Chemistry"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>The end of science and additional science GCSEs in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"CITI",
+		"subject_name_clean":"Citizenship studies",
+		"subject_names":["Citizenship Studies"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2018
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"CLAS",
+		"subject_name_clean":"Classical subjects",
+		"subject_names":["Classical subjects"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"2018/2019",
+			"WA":"2018/2019",
+			"NI":"2018/2019"
+		},
+		"definition":"This includes Latin and Greek, which count in the EBacc, but also includes classical civilisation, which does not count in the EBacc. Reformed Latin and classical Greek GCSEs first awarded in 2018; reformed classical civilisation GCSE first awarded in 2019.",
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"COMP",
+		"subject_name_clean":"Computing",
+		"subject_names":["Computing"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2019,
+			"NI":2018
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"CONS",
+		"subject_name_clean":"Construction",
+		"subject_names":["Construction"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"DEST",
+		"subject_name_clean":"Design and technology",
+		"subject_names":["Design & Technology"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>New GCSEs in food and hygiene are reported separately, where previously food technology was reported within design and technology.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"DRAM",
+		"subject_name_clean":"Drama",
+		"subject_names":["Drama"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"ECON",
+		"subject_name_clean":"Economics",
+		"subject_names":["Economics"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"ENGI",
+		"subject_name_clean":"Engineering",
+		"subject_names":["Engineering"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"ENLA",
+		"subject_name_clean":"English language",
+		"subject_names":["English"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": true,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>In England, entries in English language increased markedly in 2017 <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/'>as the alternative IGCSE English language qualification ceased to count in school league tables</a>.</p><p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) have been required to resit English language GCSE as part of their post-16 studies.</p><p>In Wales, a reformed English language GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"ENLI",
+		"subject_name_clean":"English literature",
+		"subject_names":["English Literature"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": true,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>In England, entries in English literature increased markedly in 2017 for two reasons. Firstly, <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/'>the alternative IGCSE English literature qualification ceased to count in school league tables. Secondly, for the first time in 2017, to count fully in Progress 8, the secondary school accountability measure, pupils had to take separate English language and English literature GCSEs.</a>.</p><p>In Wales, in 2017, a substantial proportion of pupils had previously entered English literature in Year 10. A move away from this is expected to increase Year 11 entries in 2018.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"FOOD",
+		"subject_name_clean":"Food and hygiene",
+		"subject_names":["Food and hygiene"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>Food and hygiene is a new qualification first available in 2018. Data is therefore not available for earlier years.</p>"
+	},
+	{
+		"alias":"FREN",
+		"subject_name_clean":"French",
+		"subject_names":["French"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"GEOG",
+		"subject_name_clean":"Geography",
+		"subject_names":["Geography"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2018
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"GERM",
+		"subject_name_clean":"German",
+		"subject_names":["German"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"HSOC",
+		"subject_name_clean":"Health and social care",
+		"subject_names":["Health & Social Care"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"HIST",
+		"subject_name_clean":"History",
+		"subject_names":["History"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"HOME",
+		"subject_name_clean":"Home economics",
+		"subject_names":["Home Economics"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"HOSP",
+		"subject_name_clean":"Hospitality",
+		"subject_names":["Hospitality"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"HUMA",
+		"subject_name_clean":"Humanities",
+		"subject_names":["Humanities"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"ICTX",
+		"subject_name_clean":"ICT",
+		"subject_names":["ICT"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":2019,
+			"NI":"Being discontinued"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"IRIS",
+		"subject_name_clean":"Irish",
+		"subject_names":["Irish"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Not approved for use in England",
+			"WA":"Not approved for use in Wales",
+			"NI":2019
+		},
+		"definition": null,
+		"context": null
+	},
+	{
+		"alias":"LEIS",
+		"subject_name_clean":"Leisure and tourism",
+		"subject_names":["Leisure & Tourism"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"MANU",
+		"subject_name_clean":"Manufacturing",
+		"subject_names":["Manufacturing"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"MATH",
+		"subject_name_clean":"Mathematics",
+		"subject_names":["Mathematics"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": true,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) have been required to resit maths GCSE as part of their post-16 studies.</p><p>In Wales, a reformed maths GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"MATN",
+		"subject_name_clean":"Mathematics: numeracy",
+		"subject_names":["Mathematics: Numeracy"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Not approved for use in England",
+			"WA":2017,
+			"NI":"Not approved for use in Northern Ireland"
+		},
+		"definition":"Mathematics: numeracy was a new qualification available in Wales in 2017. Data is therefore not available for earlier years.",
+		"context": "<p>As a new subject in 2017, this subject would not have been available to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to be lower.</p>"
+	},
+	{
+		"alias":"MATA",
+		"subject_name_clean":"Additional mathematics",
+		"subject_names":["Mathematics (Additional)"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"MFTS",
+		"subject_name_clean":"Media/film/TV studies",
+		"subject_names":["Media / Film / TV Studies"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"MUSI",
+		"subject_name_clean":"Music",
+		"subject_names":["Music"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"PERF",
+		"subject_name_clean":"Performing/expressive arts",
+		"subject_names":["Performing / Expressive Arts"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"PHED",
+		"subject_name_clean":"Physical education",
+		"subject_names":["Physical Education"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"PHYS",
+		"subject_name_clean":"Physics",
+		"subject_names":["Physics"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context": "<p>The end of science and additional science GCSEs in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"PREP",
+		"subject_name_clean":"Preparation for life and work",
+		"subject_names":["Prep. For Life and Work"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"RELS",
+		"subject_name_clean":"Religious studies",
+		"subject_names":["Religious Studies"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"SCIE",
+		"subject_name_clean":"Science",
+		"subject_names":["Science"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": "<p>In England and Wales, a combined, double award science GCSE replaces separate science and additional science GCSEs in 2018. Entry numbers are shown doubled, reflecting this change.</p><p>Single award science remains available in Northern Ireland.</p>",
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"SOCS",
+		"subject_name_clean":"Social science subjects",
+		"subject_names":["Social Science subjects"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": "This includes subjects such as psychology and sociology.",
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"SPAN",
+		"subject_name_clean":"Spanish",
+		"subject_names":["Spanish"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"STAT",
+		"subject_name_clean":"Statistics",
+		"subject_names":["Statistics"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"WELF",
+		"subject_name_clean":"Welsh: first language",
+		"subject_names":["Welsh: First Language"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Not approved for use in England",
+			"WA":2017,
+			"NI":"Not approved for use in Northern Ireland"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"WELS",
+		"subject_name_clean":"Welsh: second language",
+		"subject_names":["Welsh: Second Language"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Not approved for use in England",
+			"WA":2019,
+			"NI":"Not approved for use in Northern Ireland"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"WELL",
+		"subject_name_clean":"Welsh literature",
+		"subject_names":["Welsh Literature"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2017,
+			"WA":2017,
+			"NI":2017
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"OMFL",
+		"subject_name_clean":"Other modern languages",
+		"subject_names":["Other Modern Languages"],
+		"sort_order": 1,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"2019/2020",
+			"WA":"2019/2020",
+			"NI":"2019/2020"
+		},
+		"definition": "This includes all languages except French, German, Irish, Spanish and Welsh. Reformed GCSEs in some other modern languages will be awarded for the first time in 2019, while in others they will be awarded for the first time in 2020.",
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"OSCI",
+		"subject_name_clean":"Other sciences",
+		"subject_names":["Other Sciences"],
+		"sort_order": 1,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Being discontinued",
+			"WA":"Being discontinued",
+			"NI":"Being discontinued"
+		},
+		"definition": "This includes all science subjects except biology, chemistry, physics, science and additional science.",
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"OTEC",
+		"subject_name_clean":"Other technology",
+		"subject_names":["Other Technology"],
+		"sort_order": 1,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
+		},
+		"definition": "This includes technology-based subjects other than design and technology.",
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"AOTH",
+		"subject_name_clean":"All other subjects",
+		"subject_names":["All Other subjects"],
+		"sort_order": 2,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"2019/2020",
+			"WA":"2019/2020",
+			"NI":"2019/2020"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"ALLS",
+		"subject_name_clean":"All subjects",
+		"subject_names":["All Subjects"],
+		"sort_order": -1,
+		"flags":{
+			"ebacc": false,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":"Various",
+			"WA":"Various",
+			"NI":"Various"
+		},
+		"definition": null,
+		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This has had the effect of disincentivising Year 10 entries in 2018.</p>"
+	}
+]
