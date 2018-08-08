@@ -40,7 +40,10 @@ Highcharts.theme = {
             }
         }
     },
-    exporting: {
+    tooltip: {
+        valueDecimals: 1
+    },
+	exporting: {
           buttons: {
               contextButton: {
                   menuItems: ['printChart', 'separator', 'downloadPNG', 'downloadJPEG', 'separator', 'downloadCSV']
