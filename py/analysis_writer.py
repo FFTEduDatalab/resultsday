@@ -57,7 +57,7 @@ for level in levels:
 					allsubjects_entries_yn=entries['data'][-1][1]
 				break
 		for grades in grades_data:
-			if (grades['name']=='C' or grades['name']=='C/4') and grades['alias']==alias and grades['scope']=='UK' and grades['gender']=='All students':
+			if (grades['name']=='A' or grades['name']=='C/4') and grades['alias']==alias and grades['scope']=='UK' and grades['gender']=='All students':
 				texts['top_grades_y0']=grades['data'][0][1]
 				texts['top_grades_yn']=grades['data'][-1][1]
 				if alias=='ALLS':
@@ -83,16 +83,12 @@ for level in levels:
 			    subject_entries_change_sign='stayed the same'
 			if abs(subject_entries_change)>=20:
 			    subject_entries_change_scale='sharply '
-			elif abs(subject_entries_change)<20 and subject_entries_change!=0:
+			elif 5<=abs(subject_entries_change)<20:
+				subject_entries_change_scale=''
+			elif abs(subject_entries_change)<5:
 			    subject_entries_change_scale='a little '
 			elif subject_entries_change==0:
 				subject_entries_change_scale=''
-			if abs(subject_entries_change-allsubjects_entries_change)>5:
-			    entries_change_comparison='greater than'
-			elif abs(subject_entries_change-allsubjects_entries_change)<-5:
-			    entries_change_comparison='smaller than'
-			elif abs(subject_entries_change-allsubjects_entries_change)<=5:
-			    entries_change_comparison='broadly in line with'
 			if (texts['top_grades_yn']-allsubjects_top_grades_yn)>2.5:
 			    top_grades_comparison='greater'
 			    top_grades_comparison_wording='compared to'
@@ -103,13 +99,16 @@ for level in levels:
 			    top_grades_comparison='broadly similar'
 			    top_grades_comparison_wording='as did so across'
 			if level['name']=='A-Level':
-			    top_grades='A*-C grades'
+				metric='the top grades'
+				top_grades='A*-A grades'
 			elif level['name']=='AS-Level':
-			    top_grades='A-C grades'
+				metric='the top grades'
+				top_grades='A grades'
 			elif level['name']=='GCSE':
-			    top_grades='grade C/4 or higher'
+				metric='good passes'
+				top_grades='grade C/4 or higher'
 			if texts['alias']!='ALLS':
-				texts['analysis']='<p>Entries in <em>' + texts['subject_name_clean'] + '</em> have ' + subject_entries_change_sign + ' ' + subject_entries_change_scale + 'across the UK over the last ' + number_of_years + ' years. The ' + str(subject_entries_change) + '% change is ' + entries_change_comparison + ' the overall change, of ' + str(allsubjects_entries_change) + '%, in all ' + level['name'] + ' entries over the last ' + number_of_years + ''' years.</p><p>Across the UK, a ''' + top_grades_comparison + ' proportion of students achieved the top grades in <em>' + texts['subject_name_clean'] + '</em> in ' + str(texts['yn']) + ' ' + top_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['top_grades_yn']) + '% of pupils achieved ' + top_grades + ' in <em>' + texts['subject_name_clean'] + '</em> compared to ' + str(allsubjects_top_grades_yn) + '% for all subjects.</p>'
+				texts['analysis']='<p>Entries in <em>' + texts['subject_name_clean'] + '</em> have ' + subject_entries_change_sign + ' ' + subject_entries_change_scale + 'across the UK over the last ' + number_of_years + ' years. The ' + str(subject_entries_change) + '% change compared to a change of ' + str(allsubjects_entries_change) + '% in all ' + level['name'] + ' entries over the last ' + number_of_years + ''' years.</p><p>Across the UK, a ''' + top_grades_comparison + ' proportion of students achieved ' + metric + ' in <em>' + texts['subject_name_clean'] + '</em> in ' + str(texts['yn']) + ' ' + top_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['top_grades_yn']) + '% of pupils achieved ' + top_grades + ' in <em>' + texts['subject_name_clean'] + '</em> compared to ' + str(allsubjects_top_grades_yn) + '% for all subjects.</p>'
 			else:
 				texts['analysis']='<p>Entries in <em>' + texts['subject_name_clean'] + '</em> have ' + subject_entries_change_sign + ' by ' + str(abs(subject_entries_change)) + '% across the UK over the last ' + number_of_years + ' years. Across the UK, ' + str(texts['top_grades_yn']) + '% of pupils achieved ' + top_grades + ' in <em>' + texts['subject_name_clean'] + '</em> in ' + str(texts['yn']) + '.</p>'
 
