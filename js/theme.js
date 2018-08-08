@@ -29,15 +29,16 @@ Highcharts.theme = {
           enabled: false
         },
         min: 0,
+		allowDecimals: false,
         labels: {   // Use thousands separator for four-digit numbers too
-            	formatter: function () {
-                	var label = this.axis.defaultLabelFormatter.call(this);
-                    if (/^[0-9]{4}$/.test(label)) {
-                    	return Highcharts.numberFormat(this.value, 0);
-                    }
-                    return label;
+        	formatter: function () {
+            	var label = this.axis.defaultLabelFormatter.call(this);
+                if (/^[0-9]{4}$/.test(label)) {
+                	return Highcharts.numberFormat(this.value, 0);
                 }
+                return label;
             }
+        }
     },
     exporting: {
           buttons: {

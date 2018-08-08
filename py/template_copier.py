@@ -35,7 +35,7 @@ for level in levels:
 	path=os.getcwd()
 	os.chdir('templates')
 	# level pages
-	copy('level_page_template.html', path + '/' + level['name'].lower() + '.html')
+	copy('level_page_template.php', path + '/' + level['name'].lower() + '.php')
 	# subject pages
 	os.chdir('..')
 	os.chdir(level['output'])
@@ -45,4 +45,4 @@ for level in levels:
 	os.chdir('templates')
 	for subject in subjects_data:
 		subject_name_url=re.sub('\W+', '-', subject['subject_name_clean']).lower()
-		copy('subject_page_template.html', path + '/' + level['name'].lower() + '/' + subject_name_url + '.html')
+		copy('subject_page_template.php', path + '/' + level['name'].lower() + '/' + subject_name_url + '.php')

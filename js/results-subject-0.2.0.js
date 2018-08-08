@@ -112,7 +112,7 @@ $(function () {
 				reformYear=line.reform_year
 				document.getElementById('definitionContainer').innerHTML=document.getElementById('definitionContainer').innerHTML+definition
 				document.getElementById('contextContainer').innerHTML=document.getElementById('contextContainer').innerHTML+context
-				document.getElementById('reformYearContainer').innerHTML='<p>EN: ' + reformYear.EN +'</p><p>WA: ' + reformYear.WA +'</p><p>NI: ' + reformYear.NI +'</p>'
+				document.getElementById('reformYearContainer').innerHTML='<ul><li><em>Reform date</em></li><li>England: ' + reformYear.EN +'</li><li>Wales: ' + reformYear.WA +'</li><li>Northern Ireland: ' + reformYear.NI +'</li></ul>'
 				}
 	        }
     	}
@@ -130,8 +130,6 @@ $(function () {
 			}
 		}
 	});
-	// drawEntriesChart()
-	// drawGradesChart()
 	readEntriesData()
 	readGradesData()
 	setChartSubtitles()
@@ -206,8 +204,6 @@ function setChartSubtitles() {
 }
 
 function drawEntriesChart() {
-	// readEntriesData()
-	// setChartSubtitles()
 	gradesChartColoursArray = []
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
@@ -217,8 +213,6 @@ function drawEntriesChart() {
 }
 
 function drawGradesChart() {
-	// readGradesData()
-	// setChartSubtitles()
 	gradesChartColoursArray = []
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
@@ -238,8 +232,6 @@ $('#breakdownSelector').change(function () {
 	$('#scopeSelector').formSelect()		// re-initialise Materialize select input
 	if(scope!='UK'){
 		scope = 'UK'
-		// drawEntriesChart(scope, grades, gender)
-		// drawGradesChart(scope, grades, gender)
 		readEntriesData(scope, grades, gender)
 		readGradesData(scope, grades, gender)
 		setChartSubtitles()
@@ -248,9 +240,6 @@ $('#breakdownSelector').change(function () {
 
 function scopeOptionChange() {
 	scope = document.getElementById('scopeSelector').value
-	// drawEntriesChart()
-	// drawGradesChart()
-	console.log(scope)
 	readEntriesData()
 	readGradesData()
 	setChartSubtitles()
@@ -259,7 +248,6 @@ function scopeOptionChange() {
 function gradeChartOptionChange() {
 	grades = document.getElementById('gradesSelector').value
 	gender = document.getElementById('genderSelector').value
-	// drawGradesChart()
 	readGradesData()
 	setChartSubtitles()
 }
