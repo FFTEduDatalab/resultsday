@@ -61,29 +61,31 @@ for level in levels:
 						row=OrderedDict.fromkeys(row, None)
 						if rbws.cell(rbrow,0).value!='' and rbws.cell(rbrow,0).value[0]!='(':		# ditches blank rows and table notes
 							subject_name = re.match('[^0-9]+[^()0-9]+[)]*',rbws.cell(rbrow,0).value).group(0).strip()
+							alias=''
 							for subject in subjects_data:
 								if any(subject_name.lower()==subj.lower() for subj in subject['subject_names'])==True:
 									alias=subject['alias']
 									break
-						if rbws.cell(rbrow,1).value in ['Male', 'Female', 'Male & Female']:		# ditches previous year's results
-							row['alias']=alias
-							row['scope']=scope
-							row['year']=year
-							if rbws.cell(rbrow,1).value=='Male & Female':
-								row['gender']='All students'
-							else:
-								row['gender']=rbws.cell(rbrow,1).value
-							row['entries']=int(rbws.cell(rbrow,2).value)
-							if level['name']!='GCSE' or (level['name']=='GCSE' and filename_split[3]=='keygrades'):		# A-Level, AS-Level and GCSE key grades files
-								rbcol=4
-								for grade in level['grades']:
-									row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
-									rbcol+=1
-							elif level['name']=='GCSE' and filename_split[3]=='ag':		# GCSE all grades files
-								rbcols=[5,7,11,12]		# columns where A, C, G, U values are held
-								for grade, rbcol in zip(level['grades'], rbcols):
-									row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
-							rows.append(row)
+						if alias!='':
+							if rbws.cell(rbrow,1).value in ['Male', 'Female', 'Male & Female']:		# ditches previous year's results
+								row['alias']=alias
+								row['scope']=scope
+								row['year']=year
+								if rbws.cell(rbrow,1).value=='Male & Female':
+									row['gender']='All students'
+								else:
+									row['gender']=rbws.cell(rbrow,1).value
+								row['entries']=int(rbws.cell(rbrow,2).value)
+								if level['name']!='GCSE' or (level['name']=='GCSE' and filename_split[3]=='keygrades'):		# A-Level, AS-Level and GCSE key grades files
+									rbcol=4
+									for grade in level['grades']:
+										row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
+										rbcol+=1
+								elif level['name']=='GCSE' and filename_split[3]=='ag':		# GCSE all grades files
+									rbcols=[5,7,11,12]		# columns where A, C, G, U values are held
+									for grade, rbcol in zip(level['grades'], rbcols):
+										row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
+								rows.append(row)
 				except Exception as ex:
 					print ex
 
