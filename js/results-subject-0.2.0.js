@@ -50,11 +50,14 @@ $(function () {
 	if (level=='A-Level' || level=='AS-Level'){
 		$('#bSelector').hide()
 		$('#gcseFlagContainer').hide()
+		toast_text='A-Level and AS-Level data for 2018 is available at 9.30am on Thursday 23 August and will be added at that point'
 	}
 	if (level=='GCSE'){
 		$('#gSelector').hide()
 		$('#alevelFlagContainer').hide()
+		toast_text='GCSE data for 2018 is available at 9.30am on Thursday 23 August and will be added at that point'
 	}
+	M.toast({html: toast_text, displayLength: 'infinity', inDuration:0})
 	gradesChartColoursArray=[]
 	gradesChartColoursArray.push(coloursDict['All students'])
 	subjectsJSON=levelData.subjectsJSON
@@ -134,6 +137,12 @@ $(function () {
 	readEntriesData()
 	readGradesData()
 	setChartSubtitles()
+});
+
+$(document).on('click', '#toast-container .toast', function() {
+    $(this).fadeOut(function(){
+        $(this).remove();
+    });
 });
 
 function readEntriesData() {

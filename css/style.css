@@ -58,3 +58,25 @@ nav .brand-logo {
 	height: 400px;
 	margin: 0 auto
 } */
+
+#toast-container {
+	bottom: 0%;
+	top: unset;
+	right: unset;
+	min-width: 100%;
+}
+
+#toast-container .toast {
+  cursor: pointer;
+	background-color: #ea51a5;
+}
+
+#toast-container .toast::after {
+  font-family: 'Material Icons';
+  content: "close";
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  float: right;
+  padding-left: 3rem;
+}
