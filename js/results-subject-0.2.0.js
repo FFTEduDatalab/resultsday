@@ -145,6 +145,10 @@ $(document).on('click', '#toast-container .toast', function() {
     });
 });
 
+function goBack() {
+    window.history.back();
+}
+
 function readEntriesData() {
     $.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function(data) {
 		entriesData=[]

@@ -80,3 +80,11 @@ nav .brand-logo {
   float: right;
   padding-left: 3rem;
 }
+
+.btn-flat {
+  text-transform: none;
+}
+
+#contextContainer {
+	background-color: #EFA2CC
+}

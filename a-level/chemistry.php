@@ -3,6 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col m9 s12">
+				<a class="btn-flat" onclick="goBack()">< Back</a>
 				<h1><span id='subjectNameContainer'></span> | <span id='levelNameContainer'></span></h1>
 			</div>
 		</div>
@@ -64,7 +65,7 @@
 				<ul class="collection">
 				  <li class="collection-item" id="analysisContainer"></li>
 				  <li class="collection-item" id="definitionContainer"></li>
-				  <li class="collection-item" id="contextContainer"></li>
+					<li class="collection-item" id="contextContainer"><i class="material-icons">info_outline</i></li>
 				</ul>
 			</div>
 		</div>
