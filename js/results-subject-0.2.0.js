@@ -70,6 +70,7 @@ $(function () {
 	          var line=data.shift()
 	          if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject){
 	            subject=line.subject_name_clean
+							subject_lc=line.subject_name_clean_lc
 				document.getElementById('subjectNameContainer').innerHTML=subject
 				alias=line.alias
 				definition=line.definition
