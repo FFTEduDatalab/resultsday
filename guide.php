@@ -1,4 +1,4 @@
-<?php include 'inc/header-0.1.1.php';?>
+<?php include 'inc/header.php';?>
 
 <script>
 	function runScripts() {
@@ -56,4 +56,4 @@
 	</div>
   </div>
 
-<?php include 'inc/footer-0.1.0.php';?>
+<?php include 'inc/footer.php';?>
