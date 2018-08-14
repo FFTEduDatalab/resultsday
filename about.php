@@ -13,14 +13,13 @@
 		</div>
 		<div class="row">
 			<div class="col s12">
-				<h3>Background</h3>
+				<h3 id='background'>Background</h3>
 				<p>This microsite provides analysis of national GCSE and A-Level results in England, Wales and Northern Ireland from 2014 to 2018. The data has been sourced from the Joint Council for Qualifications. The <a href="#nuffield">Nuffield Foundation</a> has provided funding for the development of the site.</p>
 
-				<p>There has been substantial policy change at both Key Stage 4 and Key Stage 5 during this time. All three nations have reviewed their curriculum and adopted different approaches in response. These changes affect comparisons between the three nations and comparisons over time within each nation, and this site is designed to make this .</p>
-				<h5 id='2018'>2018 data</h5>
-				<p>Data for 2018 will be added to the site at <strong>9.30am on Thursday 16 August 2018</strong> for A-Levels and AS-Levels, and at <strong>9.30 on Thursday 23 August 2018</strong> for GCSEs.</p>
+				<p>There has been substantial policy change at both Key Stage 4 and Key Stage 5 during this time. All three nations have reviewed their curriculum and adopted different approaches in response. These changes affect comparisons between the three nations, and comparisons over time within each nation - this site is designed to highlight where these changes are having an impact.</p>
+				<p><em><a href='guide.php'>Read the guide to using this site</a></em></p>
 
-				<h3>Sources</h3>
+				<h3 id='sources'>Sources</h3>
 				<h5>Exam entries and grades awarded</h5>
 				<p>JCQ (<a href='https://www.jcq.org.uk/examination-results/gcses' target="_blank">GCSE</a>, <a href='https://www.jcq.org.uk/examination-results/a-levels' target="_blank">AS-/A-Level</a>)</p>
 				<p>Exam entry and attainment data is sourced from the Joint Council for Qualifications (JCQ), a membership organisation for the eight largest awarding organisations in the UK.</p>
@@ -41,7 +40,7 @@
 				<h5>Facilitating subjects</h5>
 				<p>Russell Group (<a href='https://russellgroup.ac.uk/for-students/school-and-college-in-the-uk/subject-choices-at-school-and-college/' target="_blank">eligible subjects</a>)</p>
 
-				<h3>Credits</h3>
+				<h3 id='credits'>Credits</h3>
 				<ul class='browser-default'>
 					<li>Funding: Nuffield Foundation</li>
 					<li>Design: Geoff Solomon, Philip Nye</li>
