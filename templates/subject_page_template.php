@@ -1,4 +1,4 @@
-<?php include '../inc/header.php';?>
+<?php include '../inc/header-0.1.0.php';?>
 <div class="section grey lighten-4">
 	<div class="container">
 		<div class="row">
@@ -75,4 +75,4 @@
 	</div>
 </div>
 <script src='/js/results-subject-0.1.0.js'></script>
-<?php include '../inc/footer.php';?>
+<?php include '../inc/footer-0.1.0.php';?>
