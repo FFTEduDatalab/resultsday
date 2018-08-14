@@ -30,9 +30,9 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
-			"NI":"Being discontinued"
+			"EN":"Discontinued, 2017",
+			"WA":"Discontinued, 2017",
+			"NI":"Being discontinued, 2018"
 		},
 		"definition": null,
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
@@ -49,9 +49,9 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
-			"NI":"Being discontinued"
+			"EN":"Discontinued, 2017",
+			"WA":"Discontinued, 2017",
+			"NI":"Being discontinued, 2018"
 		},
 		"definition": null,
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
@@ -73,7 +73,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context": "<p>The end of science and additional science GCSEs in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context": "<p>The end of science and additional science GCSEs in England and Wales 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"BUSC",
@@ -87,8 +87,8 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2018",
 			"NI":2019
 		},
 		"definition": null,
@@ -130,7 +130,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context": "<p>The end of science and additional science GCSEs in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context": "<p>The end of science and additional science GCSEs in England and Wales in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"CITI",
@@ -186,7 +186,7 @@
 			"WA":2019,
 			"NI":2018
 		},
-		"definition": null,
+		"definition": "In England, in 2018 students’ grades will be based entirely on performance in examinations following concerns over security arrangements for proposed assessment tasks.",
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
@@ -201,12 +201,12 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Not approved for use in England",
+			"WA":"Not approved for use in Wales",
 			"NI":2019
 		},
 		"definition": null,
-		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context":null
 	},
 	{
 		"alias":"DEST",
@@ -300,8 +300,8 @@
 			"WA":2017,
 			"NI":2019
 		},
-		"definition": null,
-		"context": "<p>In England, entries in English language increased markedly in 2017 <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/'>as the alternative IGCSE English language qualification ceased to count in school league tables</a>.</p><p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) have been required to resit English language GCSE as part of their post-16 studies.</p><p>In Wales, a reformed English language GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"definition": "<p>Up to 2016, a combined English GCSE was available, covering both English language and English literature. Entry numbers are included here, along with entries in English language GCSE. Since 2017, only separate English language and English literature GCSEs are available.</p><p>In England, since 2017, a separate grade is awarded for spoken language. This is graded as pass, merit, distinction or not classified, and the grade awarded does not contribute to an entrant's English language grade.</p>",
+		"context": "<p>In England, entries in English language increased markedly in 2017 <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/'>as the alternative IGCSE English language qualification ceased to count in school league tables</a>.</p><p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) have been required to resit English language GCSE as part of their post-16 studies, leading to the number of post-16 entries increasing greatly.</p><p>In Wales, a reformed English language GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"ENLI",
@@ -410,8 +410,8 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2020",
 			"NI":2019
 		},
 		"definition": null,
@@ -448,8 +448,8 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2020",
 			"NI":2019
 		},
 		"definition": null,
@@ -467,8 +467,8 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2018",
 			"NI":2019
 		},
 		"definition": null,
@@ -486,9 +486,9 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
-			"NI":"Being discontinued"
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2018",
+			"NI":"Being discontinued, 2018"
 		},
 		"definition": null,
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
@@ -505,9 +505,9 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
+			"EN":"Being discontinued, 2018",
 			"WA":2019,
-			"NI":"Being discontinued"
+			"NI":"Being discontinued, 2018"
 		},
 		"definition": null,
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
@@ -543,8 +543,8 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2018",
 			"NI":2019
 		},
 		"definition": null,
@@ -562,8 +562,8 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2018",
 			"NI":2019
 		},
 		"definition": null,
@@ -586,7 +586,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context": "<p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) have been required to resit maths GCSE as part of their post-16 studies.</p><p>In Wales, a reformed maths GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context": "<p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) have been required to resit maths GCSE as part of their post-16 studies. The number of post-16 entries has increased greatly - something masked by a decline in entries by those aged 15 or less when only total (all age) entry numbers are considered.</p><p>In Wales, a reformed maths GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"MATN",
@@ -619,8 +619,8 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
+			"EN":"Not approved for use in England",
+			"WA":"Not approved for use in Wales",
 			"NI":2019
 		},
 		"definition": null,
@@ -676,9 +676,9 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
-			"NI":"Being discontinued"
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2018",
+			"NI":"Being discontinued, 2018"
 		},
 		"definition": null,
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
@@ -719,7 +719,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context": "<p>The end of science and additional science GCSEs in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context": "<p>The end of science and additional science GCSEs in England and Wales in 2017 is believed to have prompted a number of schools to have reconsidered their science entry choices, impacting on the number of entries in the single sciences.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"PREP",
@@ -775,7 +775,7 @@
 			"WA":2018,
 			"NI":2019
 		},
-		"definition": "<p>In England and Wales, a combined, double award science GCSE replaces separate science and additional science GCSEs in 2018. Entry numbers are shown doubled, reflecting this change.</p><p>Single award science remains available in Northern Ireland.</p>",
+		"definition": "<p>In England and Wales, a combined, double award science GCSE replaces <em>science</em> and <em>additional science</em> GCSEs in 2018. Entry numbers are shown doubled, reflecting this change.</p><p>Single award science remains available in Northern Ireland.</p>",
 		"context":"<p>In England and Wales, entries in science decreased sharply in 2017 as a result of a large fall in the number of Year 10 entries. The replacement of science and additional science GCSEs with a double award qualification in 2018 means that students who sat science GCSE in 2017 would not be able to sit additional science in 2018. In England, their single award science qualification would also not count in school league tables in 2018.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
@@ -794,7 +794,7 @@
 			"WA":2019,
 			"NI":2019
 		},
-		"definition": "This includes subjects such as psychology and sociology.",
+		"definition": "This includes psychology, sociology and law GCSEs. Law GCSE is being discontinued.",
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
@@ -885,9 +885,9 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":2017,
+			"EN":"Not approved for use in England",
 			"WA":2017,
-			"NI":2017
+			"NI":"Not approved for use in Northern Ireland"
 		},
 		"definition": null,
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
@@ -923,9 +923,9 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"Being discontinued",
-			"WA":"Being discontinued",
-			"NI":"Being discontinued"
+			"EN":2019,
+			"WA":2019,
+			"NI":2019
 		},
 		"definition": "This includes all science subjects except biology, chemistry, physics, science and additional science.",
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
@@ -961,11 +961,11 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"2019/2020",
-			"WA":"2019/2020",
-			"NI":"2019/2020"
+			"EN":"Being discontinued, 2018",
+			"WA":"Being discontinued, 2018",
+			"NI":"2019"
 		},
-		"definition": null,
+		"definition": "This consists of catering studies and general studies, together with a small number of other low-entry subjects.",
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
@@ -975,8 +975,8 @@
 		"subject_names":["All Subjects"],
 		"sort_order": -1,
 		"flags":{
-			"ebacc": false,
-			"p8dbl": false,
+			"ebacc": null,
+			"p8dbl": null,
 			"facil": null
 		},
 		"reform_year":{
