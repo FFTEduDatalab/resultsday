@@ -9,7 +9,8 @@
 		<div class="row">
 			<div class="col s12">
 			    <ul>
-			    	<h4><div id='subjectListContainer'></div><h4>
+					<h5><li>Explore subjects and groups of subjects:</li></h5>
+			    	<h5><div id='subjectListContainer'></div><h5>
 			    </ul>
 			</div>
 		</div>
