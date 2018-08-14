@@ -9,8 +9,9 @@
 		<div class="row">
 			<div class="col s12">
 			    <ul>
-					<h5><li>Explore subjects and groups of subjects:</li></h5>
-			    	<h5><div id='subjectListContainer'></div><h5>
+					<h5><li>Explore trends in national entry and attainment data between 2014 and 2018 in:</h5></li>
+					<!-- <h5><li><em>Choose a subject</em>:</li></h5> -->
+			    	<h5><li><div id='subjectListContainer'></div></li><h5>
 			    </ul>
 			</div>
 		</div>

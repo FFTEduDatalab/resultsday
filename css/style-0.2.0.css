@@ -104,7 +104,7 @@ nav .brand-logo {
 
 #toast-container .toast {
 	cursor: pointer;
-	background-color: #ea51a5 !important;
+	background-color: #e6007e !important;
 }
 
 #toast-container .toast::after {
@@ -121,12 +121,26 @@ nav .brand-logo {
 	text-transform: none;
 }
 
-#contextContainer {
-	background-color: #EFA2CC
+#contextBox {
+	background-color: #ea51a5
 }
 
 .collapsible-header {
 	background-color: #f3f3f3 !important;
+}
+
+h6 {
+	font-style: italic
+}
+
+a {
+	color: #e6007e
+}
+
+#contextBox a {
+	color: #ffffff;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
 }
 
 /* RSS feed */

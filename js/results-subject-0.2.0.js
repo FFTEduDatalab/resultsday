@@ -97,7 +97,7 @@ $(function () {
 				}
 				context=line.context
 				if (context==null){
-					$('#contextContainer').hide()
+					$('#contextBox').hide()
 				}
 				flags=line.flags
 				if (level=='A-Level' || level=='AS-Level'){

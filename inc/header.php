@@ -6,7 +6,7 @@
 	<title>GCSE and A-Level results analysis - FFT Education Datalab</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="/css/style-0.1.0.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="/css/style-0.2.0.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://code.highcharts.com/highcharts.js"></script>
