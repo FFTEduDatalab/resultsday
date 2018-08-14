@@ -16,65 +16,30 @@
 				<h3>Background</h3>
 				<p>This microsite provides analysis of national GCSE and A-Level results in England, Wales and Northern Ireland from 2014 to 2018. The data has been sourced from the Joint Council for Qualifications. The <a href="#nuffield">Nuffield Foundation</a> has provided funding for the development of the site.</p>
 
-				<p>There has been substantial policy change at both Key Stage 4 and Key Stage 5 during this time. All three nations have reviewed their curriculum and adopted different approaches in response. These changes, summarised below, affect comparisons between the three nations and comparisons over time within each nation.</p>
+				<p>There has been substantial policy change at both Key Stage 4 and Key Stage 5 during this time. All three nations have reviewed their curriculum and adopted different approaches in response. These changes affect comparisons between the three nations and comparisons over time within each nation, and this site is designed to make this .</p>
 				<h5 id='2018'>2018 data</h5>
-				<p>Data for 2018 is not yet available, but will be added to the site once it becomes available. A-Level and AS-Level data will be available at <strong>9.30am on Thursday 16 August</strong> and GCSE data will be available at <strong>9.30 on Thursday 23 August</strong>.</p>
-				<h3>Technical guidance</h3>
-				A document, setting out in detail the data on which this site is based, together with key information needed to interpret data presented <a href='/technical_documentation.pdf'>can be found here</a> [PDF].
-				<h3>The data</h3>
-				<p>The data for the microsite is sourced from the Joint Council for Qualifications (JCQ), a membership organisation for the eight largest awarding organisations in the UK.</p>
+				<p>Data for 2018 will be added to the site at <strong>9.30am on Thursday 16 August 2018</strong> for A-Levels and AS-Levels, and at <strong>9.30 on Thursday 23 August 2018</strong> for GCSEs.</p>
 
-				<p>Each year, JCQ collates the aggregate results of A-Levels and GCSEs delivered by its members and publishes them on its website. UK-wide results are published for male and female students, and all students.</p>
+				<h3>Sources</h3>
+				<h5>Exam entries and grades awarded</h5>
+				<p>JCQ (<a href='https://www.jcq.org.uk/examination-results/gcses' target="_blank">GCSE</a>, <a href='https://www.jcq.org.uk/examination-results/a-levels' target="_blank">AS-/A-Level</a>)</p>
+				<p>Exam entry and attainment data is sourced from the Joint Council for Qualifications (JCQ), a membership organisation for the eight largest awarding organisations in the UK.</p>
 
-				<p>The published data is provisional. Results may subsequently change due to appeals and remarks. Comparisons to previous years are similarly based on provisional results.</p>
+				<p>Each year in August, JCQ publishes the aggregate results of A-Levels and GCSEs delivered by its members. The data published is provisional - results may subsequently change due to appeals and remarks. Comparisons to previous years on this site are similarly based on provisional results.</p>
 
-				<p>Sources are given below:</p>
+				<h5>Dates of reform</h5>
+				<p>England: Ofqual (<a href='https://www.gov.uk/government/publications/get-the-facts-gcse-and-a-level-reform/get-the-facts-gcse-reform' target="_blank">GCSE</a>, <a href='https://www.gov.uk/government/publications/get-the-facts-gcse-and-a-level-reform/get-the-facts-as-and-a-level-reform' target="_blank">AS-/A-Level</a>)</p>
+				<p>Wales: Qualifications Wales (<a href='http://qualificationswales.org/english/qualifications/gcses-and-a-levels/gq-reform/what-subjects-are-available/' target="_blank">GCSE and AS-/A-Level</a>)</p>
+				<p>Northern Ireland: Council for the Curriculum, Examinations and Assessment (<a href='http://ccea.org.uk/regulation/qualsni/changes_gcses'>GCSE</a>, <a href='http://ccea.org.uk/regulation/qualsni/changes_levels'>AS-/A-Level</a>)</p>
 
-				<em>Exam entries and grades awarded, JCQ</em>
-				<ul class='browser-default'>
-					<li><a href='https://www.jcq.org.uk/examination-results/gcses' target="_blank">GCSE</a></li>
-					<li><a href='https://www.jcq.org.uk/examination-results/a-levels' target="_blank">A-Level</a></li>
-				</ul>
+				<h5>EBacc subjects (England only)</h5>
+				<p>Department for Education (<a href='https://www.gov.uk/government/publications/english-baccalaureate-eligible-qualifications' target="_blank">eligible qualifications</a>)</p>
 
-				<em>Dates of reform</em>
-				<ul class='browser-default'>
-					<li>England, Ofqual</li>
-					<ul class='browser-default'>
-						<li><a href='https://www.gov.uk/government/publications/get-the-facts-gcse-and-a-level-reform/get-the-facts-gcse-reform' target="_blank">GCSE</a></li>
-						<li><a href='https://www.gov.uk/government/publications/get-the-facts-gcse-and-a-level-reform/get-the-facts-as-and-a-level-reform' target="_blank">A-Level</a></li>
-					</ul>
-					<li>Wales, Qualifications Wales</li>
-					<ul class='browser-default'>
-						<li><a href='http://qualificationswales.org/english/qualifications/gcses-and-a-levels/gq-reform/what-subjects-are-available/' target="_blank">GCSE, A-Level</a></li>
-					</ul>
-					<li>Northern Ireland, Council for the Curriculum, Examinations and Assessment</li>
-					<ul class='browser-default'>
-						<li><a href='http://ccea.org.uk/regulation/qualsni/changes_gcses'>GCSE</a></li>
-						<li><a href='http://ccea.org.uk/regulation/qualsni/changes_levels'>A-Level</a></li>
-					</ul>
-				</ul>
+				<h5>Progress 8 subjects (England only)</h5>
+				<p>Department for Education (<a href='https://www.gov.uk/government/publications/progress-8-school-performance-measure' target="_blank">double-weighted subjects</a>)</p>
 
-				<em>EBacc subjects, Department for Education</em>
-				<ul class='browser-default'>
-					<li><a href='https://www.gov.uk/government/publications/english-baccalaureate-eligible-qualifications' target="_blank">EBacc eligible qualifications</a></li>
-				</ul>
-
-				<em>Progress 8 subjects, Department for Education</em>
-				<ul class='browser-default'>
-					<li><a href='https://www.gov.uk/government/publications/progress-8-school-performance-measure' target="_blank">Double-counted subjects</a></li>
-				</ul>
-
-				<em>Facilitating subjects, Russell Group</em>
-				<ul class='browser-default'>
-					<li><a href='https://russellgroup.ac.uk/for-students/school-and-college-in-the-uk/subject-choices-at-school-and-college/' target="_blank">Eligible subjects</a></li>
-				</ul>
-
-				<h3>FAQ</h3>
-				<h6>Which qualifications feature in the data?</h6>
-				<p>Subjects featured in the data presented on this site are A-Levels, AS-Levels, full course GCSEs and full course vocational GCSEs awarded by one of the award bodies that make up JCQ. Qualifications such as IGCSEs (international GCSEs) do not therefore feature in the data.</p>
-				<h6>Why doesn’t Scotland feature in the data?</h6>
-				<p>The education systems of England, Wales and Northern Ireland are broadly similar, with students take a range of qualifications and public examinations, primarily GCSEs, at age 16. Scotland has a distinct system with students typically taking National 5 qualifications, which are considered to be equivalent to GCSEs, at age 16. Results are not available from JCQ.</p>
-
+				<h5>Facilitating subjects</h5>
+				<p>Russell Group (<a href='https://russellgroup.ac.uk/for-students/school-and-college-in-the-uk/subject-choices-at-school-and-college/' target="_blank">eligible subjects</a>)</p>
 
 				<h3>Credits</h3>
 				<ul class='browser-default'>
