@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-	<title>GCSE and A-Level Results - FFT Education Datalab</title>
+	<title>GCSE and A-Level results analysis - FFT Education Datalab</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="/css/style-0.1.0.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -15,6 +15,14 @@
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/data.js"></script>
 	<script src="/js/theme-0.1.0.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-59588201-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 </head>
 <body>
 	<div class="container" id="logo-container" style="padding-top: 20px">
