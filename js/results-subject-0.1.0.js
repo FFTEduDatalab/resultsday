@@ -1,5 +1,5 @@
-var level, alias, subject, flags, reformYear, definition, context, analysis, entriesData, gradesData, entriesChartSubtitle, gradesChartSubtitle, gradesChartColoursArray, subjectsJSON, entriesJSON, gradesJSON, textJSON, gradesAll, gradesSelected
-var breakdown = 'Coverage';
+var level, alias, subject, flags, reformYear, definition, context, analysis, entriesData, gradesData, entriesChartSubtitle, gradesChartSubtitle, gradesChartColoursArray, subjectsJSON, entriesJSON, gradesJSON, textJSON, gradesAll, gradesSelected, yMax
+var breakdown = 'geography';
 var scope = 'UK';
 var grades = 'Selected'
 var gender = 'All students'
@@ -15,8 +15,8 @@ var levels=[
 	    'entriesJSON':'a-level-entries.json',
 	    'gradesJSON':'a-level-grades.json',
 	    'textJSON':'a-level-text.json',
-	    'gradesAll':['A*','A','B','C','D','E','U'],
-	    'gradesSelected':['A*','A','C','E']
+	    'gradesAll':['A*','A or above','B or above','C or above','D or above','E or above','U or above'],
+	    'gradesSelected':['A*','A or above','C or above','E or above']
 	},
 	{
 		'name':'AS-Level',
@@ -24,8 +24,8 @@ var levels=[
 	    'entriesJSON':'as-level-entries.json',
 	    'gradesJSON':'as-level-grades.json',
 	    'textJSON':'as-level-text.json',
-		'gradesAll':['A','B','C','D','E','U'],
-	    'gradesSelected':['A','C','E']
+		'gradesAll':['A','B or above','C or above','D or above','E or above','U or above'],
+	    'gradesSelected':['A','C or above','E or above']
 	},
 	{
 		'name':'GCSE',
@@ -33,8 +33,8 @@ var levels=[
 	    'entriesJSON':'gcse-entries.json',
 	    'gradesJSON':'gcse-grades.json',
 	    'textJSON':'gcse-text.json',
-		'gradesAll':['A/7','C/4','G/1','U'],
-	    'gradesSelected':['A/7','C/4','G/1']
+		'gradesAll':['A/7 or above','C/4 or above','G/1 or above','U or above'],
+	    'gradesSelected':['A/7 or above','C/4 or above','G/1 or above']
 	}
 ]
 
@@ -47,10 +47,11 @@ $(function () {
 	})[0];
 	level=levelData.name
 	document.getElementById('levelNameContainer').innerHTML=level
+	var d = new Date();
 	if (level=='A-Level' || level=='AS-Level'){
 		$('#bSelector').hide()
 		$('#gcseFlagContainer').hide()
-		toast_text='A-Level and AS-Level data for 2018 is available at 9.30am on Thursday 23 August and will be added at that point'
+		toast_text='A-Level and AS-Level data for 2018 is available at 9.30am on Thursday 16 August and will be added at that point'
 	}
 	if (level=='GCSE'){
 		$('#gSelector').hide()
@@ -58,6 +59,16 @@ $(function () {
 		toast_text='GCSE data for 2018 is available at 9.30am on Thursday 23 August and will be added at that point'
 	}
 	M.toast({html: toast_text, displayLength: 'infinity', inDuration:0})
+	if (level=='A-Level' || level=='AS-Level'){
+		if (d.getFullYear()>2018 || (d.getFullYear()==2018 && d.getMonth()>7 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()>16 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()>9 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
+			$('#toast-container').hide()
+		}
+	}
+	if (level=='GCSE'){
+		if (d.getFullYear()>2018 || (d.getFullYear()==2018 && d.getMonth()>7 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()>23 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==23 & d.getHours()>9 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==23 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
+			$('#toast-container').hide()
+		}
+	}
 	gradesChartColoursArray=[]
 	gradesChartColoursArray.push(coloursDict['All students'])
 	subjectsJSON=levelData.subjectsJSON
@@ -73,9 +84,13 @@ $(function () {
 	          var line=data.shift()
 	          if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject){
 	            subject=line.subject_name_clean
-							subject_lc=line.subject_name_clean_lc
+					subject_lc=line.subject_name_clean_lc
 				document.getElementById('subjectNameContainer').innerHTML=subject
 				alias=line.alias
+				if (alias=='ALLS'){
+					$('#gcseFlagContainer').hide()
+					$('#alevelFlagContainer').hide()
+				}
 				definition=line.definition
 				if (definition==null){
 					$('#definitionContainer').hide()
@@ -106,11 +121,16 @@ $(function () {
 					}
 					if (flags.p8dbl==true){
 						document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgPink.png';
-						document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is double-counted in Progress 8 calculations (England only)')
+						if (alias=='ENLA' || alias=='ENLI'){
+							document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject can be double-weighted in Progress 8 calculations - see the explanatory guide for full details (England only)')
+						}
+						else if (alias=='MATH') {
+							document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is double-weighted in Progress 8 calculations (England only)')
+						}
 					}
 					else {
 						document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgGrey.png';
-						document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is not double-counted in Progress 8 calculations (England only)')
+						document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is not double-weighted in Progress 8 calculations (England only)')
 					}
 				}
 				reformYear=line.reform_year
@@ -153,12 +173,28 @@ function readEntriesData() {
     $.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function(data) {
 		entriesData=[]
 		let len=data.length
+		let dataMax		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain geography/age bracket, to avoid a floating x-axis
 		if(len>0){
 		for(let i=0; i<len; i++){
 			var line=data.shift()
 			if (line.alias == alias && line.scope == scope){
 				entriesData.push(line)
+				if (line.name =='All students'){
+					let dataLen=line.data.length
+					dataMax=0
+					for(let j=0; j<dataLen; j++){
+						if(line.data[j][1]>dataMax){
+							dataMax=line.data[j][1]
+						}
+					}
+				}
 			}
+		}
+		if (dataMax==0){
+			yMax = 10
+		}
+		else {
+			yMax = null
 		}
 		drawEntriesChart()
 		}
@@ -222,7 +258,7 @@ function drawEntriesChart() {
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/entries_chart.js';
+	js.src = '/js/entries-chart-0.1.0.js';
 	document.body.appendChild(js)
 }
 
@@ -231,13 +267,13 @@ function drawGradesChart() {
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/grades_chart.js';
+	js.src = '/js/grades-chart-0.1.0.js';
 	document.body.appendChild(js)
 }
 
 $('#breakdownSelector').change(function () {
 	breakdown = $(this).val();
-	if (breakdown == 'coverage') {
+	if (breakdown == 'geography') {
 		$('#scopeSelector').html('<option value="UK">UK</option><option value="EN">England</option><option value="WA">Wales</option><option value="NI">Northern Ireland</option>');
 	}
 	else if (breakdown == 'age') {

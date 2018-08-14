@@ -7,7 +7,8 @@ Highcharts.theme = {
     colors: ['#2daae1', '#96c11f', '#535353'],
     lang: {
       thousandsSep: ',',
-      numericSymbols: null
+      numericSymbols: null,
+	  contextButtonTitle: 'Menu'
     },
     plotOptions: {
         series: {
@@ -40,19 +41,15 @@ Highcharts.theme = {
             }
         }
     },
-    tooltip: {
-        valueDecimals: 1
-    },
 	exporting: {
           buttons: {
-              contextButton: {
-                  menuItems: ['printChart', 'separator', 'downloadPNG', 'downloadJPEG', 'separator', 'downloadCSV']
-              }
+				contextButton: {
+					menuItems: ['printChart', 'separator', 'downloadPNG', 'downloadJPEG', 'separator', 'downloadCSV']
+				}
           }
       },
 	credits:{
 		href: 'http://results.ffteducationdatalab.org.uk',
-		align: 'left',
 		text: 'Source: FFT Education Datalab analysis of JCQ data. Funded by the Nuffield Foundation.'
 	}
 };
