@@ -12,19 +12,19 @@ levels=[
 		'name':'A-Level',
 		'source':'data\\source\\a-level',
 		'output':'data\\output\\a-level',
-		'grades':['A*','A','B','C','D','E','U']
+		'grades':['A*','A or above','B or above','C or above','D or above','E or above','U or above']
 	},
 	{
 		'name':'AS-Level',
 		'source':'data\\source\\as-level',
 		'output':'data\\output\\as-level',
-		'grades':['A','B','C','D','E','U']
+		'grades':['A','B or above','C or above','D or above','E or above','U or above']
 	},
 	{
 		'name':'GCSE',
 		'source':'data\\source\\gcse',
 		'output':'data\\output\\gcse',
-		'grades':['A/7','C/4','G/1','U']
+		'grades':['A/7 or above','C/4 or above','G/1 or above','U or above']
 	}
 ]
 
@@ -69,7 +69,7 @@ for level in levels:
 			if (grades['name']=='A' or grades['name']=='C/4') and grades['alias']==alias and grades['scope']=='UK' and grades['gender']=='All students':
 				texts['highlighted_grades_y0']=grades['data'][0][1]
 				texts['highlighted_grades_yn']=grades['data'][-1][1]
-				texts['allsubjects_highlighted_grades_yn']=allsubjects_grades['data'][-yn_y0][0]
+				texts['allsubjects_highlighted_grades_yn']=allsubjects_grades['data'][-1][1]
 				break
 		texts_list.append(texts)
 
