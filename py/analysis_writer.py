@@ -44,7 +44,7 @@ for level in levels:
 			allsubjects_entries=entries
 			break
 	for grades in grades_data:
-		if (grades['name']=='A' or grades['name']=='C/4') and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']=='ALLS':
+		if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='C/4 or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']=='ALLS':
 			allsubjects_grades=grades
 			break
 	for subject in subjects_data:		# not done using zip, as files being read are of different lengths
@@ -66,7 +66,7 @@ for level in levels:
 				texts['allsubjects_entries_yn']=allsubjects_entries['data'][-1][1]
 				break
 		for grades in grades_data:
-			if (grades['name']=='A' or grades['name']=='C/4') and grades['alias']==alias and grades['scope']=='UK' and grades['gender']=='All students':
+			if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='C/4 or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']==alias:
 				texts['highlighted_grades_y0']=grades['data'][0][1]
 				texts['highlighted_grades_yn']=grades['data'][-1][1]
 				texts['allsubjects_highlighted_grades_yn']=allsubjects_grades['data'][-1][1]
