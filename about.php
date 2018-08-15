@@ -45,7 +45,7 @@
 					<li>Funding: Nuffield Foundation</li>
 					<li>Design: Geoff Solomon, Philip Nye</li>
 					<li>Data, blogposts: Philip Nye, Dave Thomson</li>
-					<li>User testing: Kat Cole (The Beacon School), Kathryn Cruickshanks (St Ursula’s School), Paddy McGrath (London Academy), Amy Sippitt (Full Fact), Jerry Wright (City College Norwich) and others</li>
+					<li>User testing: Kat Cole (The Beacon School), Kathryn Cruickshanks (St Ursula’s School), Paddy McGrath (London Academy), Amy Sippitt (Full Fact), Steve Wren (Tadcaster Grammar School), Jerry White (City College Norwich) and others</li>
 				</ul>
 
 				<h3 id='nuffield'>The Nuffield Foundation</h3>
