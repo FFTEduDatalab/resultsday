@@ -44,12 +44,15 @@ for level in levels:
 		with open(level['name'].lower()+'-grades.json') as grades_file:
 			grades_data = json.load(grades_file)
 		for nation in nations:
-			for subject in subjects_data:		# not done using zip, as files being read are of different lengths
+			for subject in subjects_data:
 				alias=subject['alias']
 				row=OrderedDict([])
 				row['alias']=alias
 				row['subject_name_clean']=subject['subject_name_clean']
 				row['nation']=nation
+				row['reform_year_EN']=subject['reform_year']['EN']
+				row['reform_year_WA']=subject['reform_year']['WA']
+				row['reform_year_NI']=subject['reform_year']['NI']
 				data=[]
 				for entries in entries_data:
 					if entries['name']=='All students' and entries['alias']==alias and entries['scope']==nation:
@@ -57,8 +60,8 @@ for level in levels:
 						for data_item in data:
 							if data_item[0]==2015:
 								row['entries_2015']=data_item[1]
-							if data_item[0]==2017:
-								row['entries_2017']=data_item[1]
+							if data_item[0]==2018:
+								row['entries_2018']=data_item[1]
 						break
 				data=[]
 				for grades in grades_data:
@@ -70,14 +73,14 @@ for level in levels:
 									row['A_2015']=data_item[1]
 								elif grades['name']=='C or above':
 									row['C_2015']=data_item[1]
-							if data_item[0]==2017:
+							if data_item[0]==2018:
 								if grades['name']=='A':
-									row['A_2017']=data_item[1]
+									row['A_2018']=data_item[1]
 								elif grades['name']=='C or above':
-									row['C_2017']=data_item[1]
+									row['C_2018']=data_item[1]
 				row_list.append(row)
 		keys = row_list[0].keys()
-		with open('2015_2017.csv', 'wb') as output_file:
+		with open('2015_2018.csv', 'wb') as output_file:
 			dict_writer = csv.DictWriter(output_file, keys)
 			dict_writer.writeheader()
 			dict_writer.writerows(row_list)

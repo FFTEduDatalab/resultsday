@@ -49,7 +49,7 @@ for level in levels:
 			filename_split=filename.split('_')
 			year=int(filename_split[1])
 			scope=filename_split[2].upper()
-			if year==2017:						# XXX
+			if year==2018:						# XXX
 				rb=open_workbook(source_file)
 				rbws=rb.sheet_by_index(0)
 				for rbrow in range(11,rbws.nrows):			# ditching 10 header rows
