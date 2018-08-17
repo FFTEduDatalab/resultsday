@@ -12,5 +12,8 @@ Highcharts.chart('gradesChartContainer', {
     tooltip: {
         valueDecimals: 1
     },
-    series: gradesData
+    series: gradesData,
+		exporting: {
+			filename: (level + '-' + subject + '-' + scope + '-' + gender + '-' + grades + '-grades').replace(/\W+/g, '-').toLowerCase()
+		}
 });

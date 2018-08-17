@@ -8,5 +8,8 @@ Highcharts.chart('entriesChartContainer', {
     series: entriesData,
     yAxis: {
         max: yMax
+	},
+	exporting: {
+		filename: (level + '-' + subject + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
 	}
 });
