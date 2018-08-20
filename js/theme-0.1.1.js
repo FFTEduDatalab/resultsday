@@ -1,9 +1,20 @@
 Highcharts.theme = {
 	chart: {
 		style: {
-			fontFamily: 'Arial'
+			fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 		},
 		height:500
+	},
+	title: {
+		style: {
+			fontSize:'18px'
+		}
+	},
+	subtitle: {
+		style: {
+			fontSize:'16px',
+			color:'#333333'
+		},
 	},
     colors: ['#2daae1', '#96c11f', '#535353'],
     lang: {

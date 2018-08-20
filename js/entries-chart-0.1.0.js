@@ -3,7 +3,7 @@ Highcharts.chart('entriesChartContainer', {
         text: level + ' entries in ' + subject_lc + ', 2014-2018'
     },
     subtitle: {
-        text: entriesChartSubtitle + '<br>Number of entries'
+        text: entriesChartSubtitle + '<br><em>Number of entries</em>'
     },
     series: entriesData,
     yAxis: {

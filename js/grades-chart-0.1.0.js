@@ -3,7 +3,7 @@ Highcharts.chart('gradesChartContainer', {
         text: level + ' grades in ' + subject_lc + ', 2014-2018'
     },
     subtitle: {
-        text: gradesChartSubtitle + '<br>Cumulative percentage attaining grade'
+        text: gradesChartSubtitle + '<br><em>Cumulative percentage attaining grade</em>'
     },
     colors: gradesChartColoursArray,
     yAxis: {
