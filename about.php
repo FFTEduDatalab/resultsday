@@ -55,7 +55,7 @@
 
 				<p>The Foundation’s student programmes – Nuffield Research Placements and Q-Step – provide opportunities for individual students, particularly those from disadvantaged backgrounds, to develop their skills and confidence in quantitative and scientific methods.</p>
 
-				<p>The Nuffield Foundation has funded this project, but the collation and interpretation of the data has been the responsibility of the FFT Education Datalab team. <a href='https://www.nuffieldfoundation.org' target="_blank">www.nuffieldfoundation.org</a> | <a href='https://www.twitter.com/NuffieldFound' target="_blank">@NuffieldFound</a></p>
+				<p>The Nuffield Foundation has funded this project, but the collation and interpretation of the data has been the responsibility of the FFT Education Datalab team. <a href='https://www.nuffieldfoundation.org' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield site', 'Nuffield site');">www.nuffieldfoundation.org</a> | <a href='https://www.twitter.com/NuffieldFound' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield Twitter', 'Nuffield Twitter');">@NuffieldFound</a></p>
 
 			</div>
 		</div>

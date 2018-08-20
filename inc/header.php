@@ -26,7 +26,7 @@
 <body>
 	<div class="container" id="logo-container" style="padding-top: 20px">
 		<a href="/" class="logo-datalab"><img src="/img/logo_fft_education_datalab.png" /></a>
-		<a href="http://www.nuffieldfoundation.org/" target="_blank" class="logo-nuffield"><img src="/img/logo_nuffield.png"></a>
+		<a href="http://www.nuffieldfoundation.org/" target="_blank" class="logo-nuffield" onclick="ga('send', 'event', 'Outbound link', 'Nuffield site', 'Nuffield site');"><img src="/img/logo_nuffield.png"></a>
 	</div>
 	<nav class="white nav-extended" role="navigation">
 		<div class="nav-wrapper container">

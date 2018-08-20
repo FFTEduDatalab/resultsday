@@ -21,7 +21,7 @@
 			<h5 class="white-text">Links</h5>
 			<ul>
 				<li><a class="white-text" href="https://ffteducationdatalab.org.uk" target="_blank">FFT Education Datalab</a> // <a class="white-text" href="https://twitter.com/FFTEduDatalab" target="_blank">@FFTEduDatalab</a></li>
-				<li><a class="white-text" href="http://www.nuffieldfoundation.org/" target="_blank">Nuffield Foundation</a> // <a class="white-text" href="https://twitter.com/nuffieldfound" target="_blank">@NuffieldFound</a></li>
+				<li><a class="white-text" href="http://www.nuffieldfoundation.org/" target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield site', 'Nuffield site');">Nuffield Foundation</a> // <a class="white-text" href="https://twitter.com/nuffieldfound" target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield Twitter', 'Nuffield Twitter');">@NuffieldFound</a></li>
 			</ul>
 	    </div>
 	  </div>
