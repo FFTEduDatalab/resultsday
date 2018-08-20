@@ -35,9 +35,12 @@ for level in levels:
 	path=os.getcwd()
 	os.chdir('templates')
 	# level pages
-	copy('level_page_template.php', path + '/' + level['name'].lower() + '.php')
+	copy('level_page_template.php', path + '\\' + level['name'].lower() + '.php')
 	# subject pages
 	os.chdir('..')
+	path=os.getcwd()
+	if not os.path.exists(path + '\\' + level['name'].lower()):
+		os.makedirs(path + '\\' + level['name'].lower())
 	os.chdir(level['output'])
 	with open(level['name'].lower()+'-subjects.json') as subjects_file:
 		subjects_data = json.load(subjects_file)
