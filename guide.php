@@ -52,6 +52,7 @@
 				<h5 id='reform_date'>Reform date (all subject pages)</h5>
 				<p>For each subject or group of subjects, a reform date is given on the right-hand side of the page.</p>
 				<p>Reform dates relate to the date when most students in a given home nation will be entered for reformed versions of the qualifications. Some students may enter qualifications offered by an exam board in a home nation other than the one in which they are taking their examinations.</p>
+				<p>Where a subject is listed as being discontinued, the discontinuation data listed is the final year in which first-time entries are possible. There can still be entries the following year, where resits are taken.</p>
 
 				<h5 id='reform_date'>Definitions (certain subjects only)</h5>
 				<p>The first of up to three boxes of text on subject pages provides definitional information. Note that this text box only appears where such a definition is required.</p>
