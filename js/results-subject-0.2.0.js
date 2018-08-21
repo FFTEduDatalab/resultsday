@@ -42,7 +42,6 @@ var levels=[
 var addthis_config = addthis_config||{};
 
 $(function () {
-
 	Highcharts.setOptions(Highcharts.theme)
 	addthis_config.data_track_addressbar = false;		// remove addthis address bar and click tracking code
 	addthis_config.data_track_clickback = false;		// "		"
@@ -93,7 +92,6 @@ $(function () {
 	          if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject){
 	            subject=line.subject_name_clean
 				subject_lc=line.subject_name_clean_lc
-				console.log(subject_lc)
 				document.getElementById('subjectNameContainer').innerHTML=subject
 				alias=line.alias
 				if (alias=='ALLS'){
@@ -184,7 +182,16 @@ $(document).on('click', '#toast-container .toast', function() {
 });
 
 function goBack() {
-    window.history.back();
+	urlLevel=window.location.href.split('/')[3].split('.')[0]
+	if (urlLevel=='a-level'){
+		window.location.href='/a-level.php';
+	}
+	else if (urlLevel=='as-level') {
+		window.location.href='/as-level.php';
+	}
+	else if (urlLevel=='gcse') {
+		window.location.href='/gcse.php';
+	}
 }
 
 function readEntriesData() {
