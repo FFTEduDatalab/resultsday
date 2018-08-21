@@ -19,6 +19,7 @@
 
 				<h5 id='2018'>2018 data</h5>
 				<p>Data for 2018 will be added to the site at <strong>9.30am on Thursday 16 August 2018</strong> for A-Levels and AS-Levels, and at <strong>9.30 on Thursday 23 August 2018</strong> for GCSEs.</p>
+				<!-- &nbsp -->
 
 				<h3 id='what-each-page-shows'>What each page shows</h3>
 
@@ -62,6 +63,8 @@
 
 				<h5>Context (certain subjects only)</h5>
 				<p><i class="material-icons">warning</i> Indicated by this symbol, the bottom text box on subject pages provides key context needed to understand the other information presented on the page. Note that this text box only appears where such contextual information exists.</p>
+				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				&nbsp
 
 				<h3 id='general-guidance'>General guidance on interpretation</h3>
 
@@ -79,10 +82,11 @@
 				<p>For A-Levels and AS-Levels, where there has been no change in grading structure since 2014, only certain grades are shown on charts - <em>selected grades</em> is the terminology used - though users are able to choose to view <em>all grades</em>.<p>
 
 				<h5>Technical guidance</h5>
-				A document, setting out in detail the data on which this site is based, together with key information needed to interpret data presented <a href='/technical_documentation.pdf'>can be found here</a> [PDF].
+				<p>A document, setting out in detail the data on which this site is based, together with key information needed to interpret data presented <a href='/technical_documentation.pdf'>can be found here</a> [PDF].</p>
+				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				&nbsp
 
 				<h3 id='faq'>FAQ</h3>
-
 				<h5>Which qualifications feature in the data?</h5>
 				<p>Subjects featured in the data presented on this site are A-Levels, AS-Levels, full course GCSEs and full course vocational GCSEs awarded by one of the award bodies that make up JCQ. Qualifications such as IGCSEs (international GCSEs) do not therefore feature in the data.</p>
 
@@ -91,6 +95,8 @@
 
 				<h5 id='scotland'>Why doesn’t Scotland feature in the data?</h5>
 				<p>The education systems of England, Wales and Northern Ireland are broadly similar, with students take a range of qualifications and public examinations, primarily GCSEs, at age 16. Scotland has a distinct system with students typically taking National 5 qualifications, which are considered to be equivalent to GCSEs, at age 16. Results are not available from JCQ.</p>
+				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				&nbsp
 			</div>
 		</div>
 	</div>

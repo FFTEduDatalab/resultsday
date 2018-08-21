@@ -18,6 +18,7 @@
 
 				<p>There has been substantial policy change at both Key Stage 4 and Key Stage 5 during this time. All three nations have reviewed their curriculum and adopted different approaches in response. These changes affect comparisons between the three nations, and comparisons over time within each nation - this site is designed to highlight where these changes are having an impact.</p>
 				<p><em><a href='guide.php'>Read the guide to using this site</a></em></p>
+				<!-- &nbsp -->
 
 				<h3 id='sources'>Sources</h3>
 				<h5>Exam entries and grades awarded</h5>
@@ -39,6 +40,8 @@
 
 				<h5>Facilitating subjects</h5>
 				<p>Russell Group (<a href='https://russellgroup.ac.uk/for-students/school-and-college-in-the-uk/subject-choices-at-school-and-college/' target="_blank">eligible subjects</a>)</p>
+				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				&nbsp
 
 				<h3 id='credits'>Credits</h3>
 				<ul class='browser-default'>
@@ -47,6 +50,8 @@
 					<li>Data, blogposts: Philip Nye, Dave Thomson</li>
 					<li>User testing: Kat Cole (The Beacon School), Kathryn Cruickshanks (St Ursula’s School), Paddy McGrath (London Academy), Amy Sippitt (Full Fact), Steve Wren (Tadcaster Grammar School), Jerry White (City College Norwich) and others</li>
 				</ul>
+				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				&nbsp
 
 				<h3 id='nuffield'>The Nuffield Foundation</h3>
 				<p>The Nuffield Foundation funds research, analysis, and student programmes that advance educational opportunity and social well-being across the United Kingdom. It is an independent charitable trust established in 1943 by William Morris, Lord Nuffield, the founder of Morris Motors.</p>
@@ -56,6 +61,8 @@
 				<p>The Foundation’s student programmes – Nuffield Research Placements and Q-Step – provide opportunities for individual students, particularly those from disadvantaged backgrounds, to develop their skills and confidence in quantitative and scientific methods.</p>
 
 				<p>The Nuffield Foundation has funded this project, but the collation and interpretation of the data has been the responsibility of the FFT Education Datalab team. <a href='https://www.nuffieldfoundation.org' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield site', 'Nuffield site');">www.nuffieldfoundation.org</a> | <a href='https://www.twitter.com/NuffieldFound' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield Twitter', 'Nuffield Twitter');">@NuffieldFound</a></p>
+				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				&nbsp
 
 			</div>
 		</div>
