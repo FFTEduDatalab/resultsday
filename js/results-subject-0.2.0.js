@@ -1,4 +1,6 @@
 var level, alias, subject, subject_lc, flags, reformYear, definition, context, analysis, entriesData, gradesData, entriesChartSubtitle, gradesChartSubtitle, gradesChartColoursArray, subjectsJSON, entriesJSON, gradesJSON, textJSON, gradesAll, gradesSelected, yMax, addthis_share
+var yearMin=2014
+var yearMax=2017
 var breakdown = 'geography';
 var scope = 'UK';
 var grades = 'Selected'
@@ -40,6 +42,7 @@ var levels=[
 var addthis_config = addthis_config||{};
 
 $(function () {
+
 	Highcharts.setOptions(Highcharts.theme)
 	addthis_config.data_track_addressbar = false;		// remove addthis address bar and click tracking code
 	addthis_config.data_track_clickback = false;		// "		"
@@ -65,11 +68,13 @@ $(function () {
 	if (level=='A-Level' || level=='AS-Level'){
 		if (d.getFullYear()>2018 || (d.getFullYear()==2018 && d.getMonth()>7 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()>16 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()>9 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
 			$('#toast-container').hide()
+			yearMax=2018
 		}
 	}
 	if (level=='GCSE'){
 		if (d.getFullYear()>2018 || (d.getFullYear()==2018 && d.getMonth()>7 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()>23 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==23 & d.getHours()>9 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==23 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
 			$('#toast-container').hide()
+			yearMax=2018
 		}
 	}
 	gradesChartColoursArray=[]

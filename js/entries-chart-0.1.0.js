@@ -1,12 +1,17 @@
 Highcharts.chart('entriesChartContainer', {
     title: {
-        text: level + ' entries in ' + subject_lc + ', 2014-2018'
+        text: level + ' entries in ' + subject_lc + ', ' + yearMin + '-' + yearMax
     },
     subtitle: {
         text: entriesChartSubtitle + '<br><em>Number of entries</em>'
     },
     series: entriesData,
-    yAxis: {
+    xAxis: {		// set here rather than in theme, so can be set dynamically
+        min: yearMin,
+        max: yearMin+4,
+        tickInterval: 1
+    },
+	yAxis: {		// "		"
         max: yMax
 	},
 	exporting: {

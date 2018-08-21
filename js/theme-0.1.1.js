@@ -32,11 +32,6 @@ Highcharts.theme = {
     legend: {
         enabled: false
     },
-    xAxis: {
-        min: 2014,
-        max: 2018,
-        tickInterval: 1
-    },
     yAxis: {
         title: {
           enabled: false
