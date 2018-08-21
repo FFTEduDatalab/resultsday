@@ -1,4 +1,4 @@
-var level, alias, subject, flags, reformYear, definition, context, analysis, entriesData, gradesData, entriesChartSubtitle, gradesChartSubtitle, gradesChartColoursArray, subjectsJSON, entriesJSON, gradesJSON, textJSON, gradesAll, gradesSelected, yMax
+var level, alias, subject, subject_lc, flags, reformYear, definition, context, analysis, entriesData, gradesData, entriesChartSubtitle, gradesChartSubtitle, gradesChartColoursArray, subjectsJSON, entriesJSON, gradesJSON, textJSON, gradesAll, gradesSelected, yMax, addthis_share
 var breakdown = 'geography';
 var scope = 'UK';
 var grades = 'Selected'
@@ -37,9 +37,12 @@ var levels=[
 	    'gradesSelected':['A/7 or above','C/4 or above','G/1 or above']
 	}
 ]
+var addthis_config = addthis_config||{};
 
 $(function () {
 	Highcharts.setOptions(Highcharts.theme)
+	addthis_config.data_track_addressbar = false;		// remove addthis address bar and click tracking code
+	addthis_config.data_track_clickback = false;		// "		"
 	urlLevel=window.location.href.split('/')[3].split('.')[0]
 	urlSubject=window.location.href.split('/')[4].split('.')[0]
 	let levelData=levels.filter(function(levels) {
@@ -84,7 +87,8 @@ $(function () {
 	          var line=data.shift()
 	          if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject){
 	            subject=line.subject_name_clean
-					subject_lc=line.subject_name_clean_lc
+				subject_lc=line.subject_name_clean_lc
+				console.log(subject_lc)
 				document.getElementById('subjectNameContainer').innerHTML=subject
 				alias=line.alias
 				if (alias=='ALLS'){
@@ -139,6 +143,15 @@ $(function () {
 				document.getElementById('reformYearContainer').innerHTML='<ul><li><em>Reform date</em></li><li>England: ' + reformYear.EN +'</li><li>Wales: ' + reformYear.WA +'</li><li>Northern Ireland: ' + reformYear.NI +'</li></ul>'
 				}
 	        }
+			addthis_share = {
+				title: level + ' results day 2018: Entry and attainment trends in ' + subject_lc,
+				description: 'GCSE and A-Level results analysis - FFT Education Datalab',
+				passthrough : {
+					twitter: {
+						via: 'ffteducationdatalab @nuffieldfound',
+					}
+				}
+			}
     	}
 	});
 	$('.tooltipped').tooltip();

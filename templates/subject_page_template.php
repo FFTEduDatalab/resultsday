@@ -74,6 +74,14 @@
 					</li>
 				</ul>
 			</div>
+			<div class="col l4 s12">
+				<ul class="collection">
+					<li class="collection-item">
+						<p>Share what you've learnt:</p>
+						<div class="addthis_inline_share_toolbox"></div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
