@@ -74,7 +74,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col l4 s12">
+			<div class="col l4 s12 right">
 				<ul class="collection">
 					<li class="collection-item">
 						<p>Share what you've learnt:</p>
