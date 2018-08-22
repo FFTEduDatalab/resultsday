@@ -163,11 +163,11 @@
 			"facil": null
 		},
 		"reform_year":{
-			"EN":"2018/2019",
-			"WA":"2018/2019",
-			"NI":"2018/2019"
+			"EN":"2018/2019/2020",
+			"WA":"2018/2019/2020",
+			"NI":"2018/2019/2020"
 		},
-		"definition":"This includes Latin and Greek, which count in the EBacc, but also includes classical civilisation, which does not count in the EBacc. Reformed Latin and classical Greek GCSEs first awarded in 2018; reformed classical civilisation GCSE first awarded in 2019.",
+		"definition":"This consists of Latin, classical Greek, biblical Hebrew, ancient history and classical civilisation. All count in the EBacc, bar classical civilisation. Reformed Latin and classical Greek GCSEs first awarded in 2018; reformed ancient history and classical civilisation GCSEs first awarded in 2019; reformed biblical Hebrew GCSE first awarded in 2020.",
 		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
@@ -301,7 +301,7 @@
 			"NI":2019
 		},
 		"definition": "<p>Up to 2016, a combined English GCSE was available, covering both English language and English literature. Entry numbers are included here, along with entries in English language GCSE. Since 2017, only separate English language and English literature GCSEs are available.</p><p>In England, since 2017, a separate grade is awarded for spoken language. This is graded as pass, merit, distinction or not classified, and the grade awarded does not contribute to an entrant's English language grade.</p>",
-		"context": "<p>In England, entries in English language increased markedly in 2017 <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/'>as the alternative IGCSE English language qualification ceased to count in school league tables</a>.</p><p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) have been required to resit English language GCSE as part of their post-16 studies, leading to the number of post-16 entries increasing greatly.</p><p>In Wales, a reformed English language GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context": "<p>In England, entries in English language increased markedly in 2017 <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/' target='_blank'>as the alternative IGCSE English language qualification ceased to count in school league tables</a>.</p><p>In England, since 2015, pupils who achieved a grade D (pre-2017)/grade 3 (2017 onwards) in English language and who did not achieve higher than a grade D/3 in English literature have been required to resit English language GCSE as part of their post-16 studies, leading to the number of post-16 entries increasing greatly.</p><p>In Wales, a reformed English language GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"ENLI",
@@ -320,7 +320,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context": "<p>In England, entries in English literature increased markedly in 2017 for two reasons. Firstly, <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/'>the alternative IGCSE English literature qualification ceased to count in school league tables. Secondly, for the first time in 2017, to count fully in Progress 8, the secondary school accountability measure, pupils had to take separate English language and English literature GCSEs.</a>.</p><p>In Wales, in 2017, a substantial proportion of pupils had previously entered English literature in Year 10. A move away from this is expected to increase Year 11 entries in 2018.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context": "<p>In England, entries in English literature increased markedly in 2017 for two reasons. Firstly, <a href='https://ffteducationdatalab.org.uk/2017/08/gcse-results-day-2017-the-key-trends-in-entries-and-results/' target='_blank'>the alternative IGCSE English literature qualification ceased to count in school league tables. Secondly, for the first time in 2017, to count fully in Progress 8, the secondary school accountability measure, pupils had to take separate English language and English literature GCSEs.</a>.</p><p>In Wales, in 2017, a substantial proportion of pupils had previously entered English literature in Year 10. A move away from this is expected to increase Year 11 entries in 2018.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"FOOD",
@@ -852,7 +852,7 @@
 			"NI":"Not approved for use in Northern Ireland"
 		},
 		"definition": null,
-		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context":"<p>In Wales, a reformed Welsh: first language GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This is believed to have had the effect of inflating the number of Year 11 entries in 2017, with entries in 2018 expected to return to a lower level.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"WELS",
@@ -890,7 +890,7 @@
 			"NI":"Not approved for use in Northern Ireland"
 		},
 		"definition": null,
-		"context":"<p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context":"<p>In Wales, a reformed Welsh literature GCSE was first available in 2017, and would not therefore have been accessible to Year 10 students the previous year. This may have had the effect of inflating the number of Year 11 entries in 2017.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"OMFL",

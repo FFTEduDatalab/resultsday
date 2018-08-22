@@ -91,7 +91,7 @@
 			"WA":"2018/2019/2020",
 			"NI":"2018/2019/2020"
 		},
-		"definition":"This includes Latin and Greek, which are facilitating subjects, but also includes other subjects such as ancient history and biblical Hebrew which are not facilitating subjects. Reformed Latin and classical Greek A-Levels first awarded in 2018; other subjects first awarded in 2019 or 2020.",
+		"definition":"This consists of Latin and classical Greek, which are facilitating subjects, and ancient history, biblical Hebrew and classical civilisation, which are not facilitating subjects. Reformed Latin and classical Greek A-Levels first awarded in 2018; reformed ancient history and classical civilisation A-Levels first awarded in 2019; reformed biblical Hebrew A-Level first awarded in 2020.",
 		"context": null
 	},
 	{
@@ -282,7 +282,7 @@
 			"NI":2018
 		},
 		"definition": null,
-		"context": "<p>In summer 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/'>agreed with exam boards an adjustment to the grade A statistical predictions that are used to guide the setting of grade boundaries in A-Level French, German and Spanish</a>. This was done to take account of native speakers in these languages, following work by Ofqual. The impact of this is factored into the final mix of grades that were awarded.</p>"
+		"context": "<p>In summer 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/' target='_blank'>agreed with exam boards an adjustment to the grade A statistical predictions that are used to guide the setting of grade boundaries in A-Level French, German and Spanish</a>. This was done to take account of native speakers in these languages, following work by Ofqual. The impact of this is factored into the final mix of grades that were awarded.</p>"
 	},
 	{
 		"alias":"GENS",
@@ -339,7 +339,7 @@
 			"NI":2018
 		},
 		"definition": null,
-		"context": "<p>In summer 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/'>agreed with exam boards an adjustment to the grade A statistical predictions that are used to guide the setting of grade boundaries in A-Level French, German and Spanish</a>. This was done to take account of native speakers in these languages, following work by Ofqual. The impact of this is factored into the final mix of grades that were awarded.</p>"
+		"context": "<p>In summer 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/' target='_blank'>agreed with exam boards an adjustment to the grade A statistical predictions that are used to guide the setting of grade boundaries in A-Level French, German and Spanish</a>. This was done to take account of native speakers in these languages, following work by Ofqual. The impact of this is factored into the final mix of grades that were awarded.</p>"
 	},
 	{
 		"alias":"HIST",
@@ -643,7 +643,7 @@
 			"NI":2018
 		},
 		"definition": null,
-		"context": "<p>In summer 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/'>agreed with exam boards an adjustment to the grade A statistical predictions that are used to guide the setting of grade boundaries in A-Level French, German and Spanish</a>. This was done to take account of native speakers in these languages, following work by Ofqual. The impact of this is factored into the final mix of grades that were awarded.</p>"
+		"context": "<p>In summer 2017 the exams regulator, Ofqual, <a href='https://ffteducationdatalab.org.uk/2017/08/a-level-results-day-2017-a-look-at-changing-grade-distributions/' target='_blank'>agreed with exam boards an adjustment to the grade A statistical predictions that are used to guide the setting of grade boundaries in A-Level French, German and Spanish</a>. This was done to take account of native speakers in these languages, following work by Ofqual. The impact of this is factored into the final mix of grades that were awarded.</p>"
 	},
 	{
 		"alias":"WELF",
@@ -657,9 +657,9 @@
 			"facil": false
 		},
 		"reform_year":{
-			"EN":2017,
+			"EN":"Not approved for use in England",
 			"WA":2017,
-			"NI":2017
+			"NI":"Not approved for use in Northern Ireland"
 		},
 		"definition": null,
 		"context": "<p>Comparable data is not available before 2017. Before this point, Welsh was recorded as a single subject, covering Welsh: first language and Welsh: second language.<p>"
@@ -676,7 +676,7 @@
 			"facil": false
 		},
 		"reform_year":{
-			"EN":2018,
+			"EN":"Not approved for use in England",
 			"WA":2018,
 			"NI":2018
 		},
@@ -695,11 +695,11 @@
 			"facil": true
 		},
 		"reform_year":{
-			"EN":"2019/2020",
-			"WA":"2019/2020",
-			"NI":"2019/2020"
+			"EN":"2019/2020/being discontinued, 2018",
+			"WA":"2019/2020/being discontinued, 2018",
+			"NI":"2019/2020/being discontinued, 2018"
 		},
-		"definition": "This includes all languages except French, German, Irish, Spanish and Welsh. Reformed A-Levels in some other modern languages will be awarded for the first time in 2019, while in others they will be awarded for the first time in 2020.",
+		"definition": "<p>This consists of all modern languages except French, German, Irish, Spanish and Welsh - namely Arabic, Bengali, Chinese, Dutch, Gujurati, Italian, Japanese, modern Greek, modern Hebrew, Panjabi, Persian, Polish, Portuguese, Russian, Turkish and Urdu.</p><p>Reformed A-Levels in some languages will be awarded for the first time in 2019, while in others they will be awarded for the first time in 2020. Dutch A-Level is being discontinued in 2018.</p>",
 		"context": null
 	},
 	{
