@@ -155,3 +155,9 @@ a {
 	line-height: 110%;
 	margin: 1.0933333333rem 0 0.656rem 0;
 }
+
+/* addthis social sharing buttons */
+.at-label {
+	font-size: 11px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}

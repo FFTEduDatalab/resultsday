@@ -50,16 +50,16 @@
 			<div class="col l4 s12">
 				<ul class="collection">
 					<li class="collection-item" id='gcseFlagContainer'>
-						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information (opens in new tab)' href='/guide.php#subject_flags' target="_blank">info_outline</a></div>
+						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information (opens in new tab)' href='/guide.php?v=20180822#subject_flags' target="_blank">info_outline</a></div>
 						<img id='ebaccFlagImg' src='/img/ebaccFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This subject does not count in the English Baccalaureate (England only)'>
 						<img id='p8dblFlagImg' src='/img/p8dblFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This subject is not double-counted in Progress 8 calculations (England only)'>
 					</li>
 					<li class="collection-item" id='alevelFlagContainer'>
-						<div align='right'><a class="material-icons" href='/guide.php#subject_flags' target="_blank">info_outline</a></div>
+						<div align='right'><a class="material-icons" href='/guide.php?v=20180822#subject_flags' target="_blank">info_outline</a></div>
 						<img id='facilFlagImg' src='/img/facilFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This is not a facilitating subject'>
 					</li>
 					<li class="collection-item">
-						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information (opens in new tab)' href='/guide.php#reform_date' target="_blank">info_outline</a></div>
+						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information (opens in new tab)' href='/guide.php?v=20180822#reform_date' target="_blank">info_outline</a></div>
 						<div id='reformYearContainer'></div>
 					</li>
 				</ul>
@@ -85,5 +85,5 @@
 		</div>
 	</div>
 </div>
-<script src='/js/results-subject-0.2.0.js'></script>
+<script src='/js/results-subject.js?v=20180822'></script>
 <?php include '../inc/footer.php';?>

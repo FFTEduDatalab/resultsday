@@ -3,7 +3,8 @@ Highcharts.theme = {
 		style: {
 			fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 		},
-		height:500
+		height:500,
+		spacingBottom: 25
 	},
 	title: {
 		style: {

@@ -13,28 +13,28 @@ var coloursDict = {
 var levels=[
 	{
 		'name':'A-Level',
-	    'subjectsJSON':'a-level-subjects.json',
-	    'entriesJSON':'a-level-entries.json',
-	    'gradesJSON':'a-level-grades.json',
-	    'textJSON':'a-level-text.json',
+	    'subjectsJSON':'a-level-subjects.json?v=20180822',
+	    'entriesJSON':'a-level-entries.json?v=20180822',
+	    'gradesJSON':'a-level-grades.json?v=20180822',
+	    'textJSON':'a-level-text.json?v=20180822',
 	    'gradesAll':['A*','A or above','B or above','C or above','D or above','E or above','U or above'],
 	    'gradesSelected':['A*','A or above','C or above','E or above']
 	},
 	{
 		'name':'AS-Level',
-	    'subjectsJSON':'as-level-subjects.json',
-	    'entriesJSON':'as-level-entries.json',
-	    'gradesJSON':'as-level-grades.json',
-	    'textJSON':'as-level-text.json',
+	    'subjectsJSON':'as-level-subjects.json?v=20180822',
+	    'entriesJSON':'as-level-entries.json?v=20180822',
+	    'gradesJSON':'as-level-grades.json?v=20180822',
+	    'textJSON':'as-level-text.json?v=20180822',
 		'gradesAll':['A','B or above','C or above','D or above','E or above','U or above'],
 	    'gradesSelected':['A','C or above','E or above']
 	},
 	{
 		'name':'GCSE',
-	    'subjectsJSON':'gcse-subjects.json',
-	    'entriesJSON':'gcse-entries.json',
-	    'gradesJSON':'gcse-grades.json',
-	    'textJSON':'gcse-text.json',
+	    'subjectsJSON':'gcse-subjects.json?v=20180822',
+	    'entriesJSON':'gcse-entries.json?v=20180822',
+	    'gradesJSON':'gcse-grades.json?v=20180822',
+	    'textJSON':'gcse-text.json?v=20180822',
 		'gradesAll':['A/7 or above','C/4 or above','G/1 or above','U or above'],
 	    'gradesSelected':['A/7 or above','C/4 or above','G/1 or above']
 	}
@@ -184,13 +184,13 @@ $(document).on('click', '#toast-container .toast', function() {
 function goBack() {
 	urlLevel=window.location.href.split('/')[3].split('.')[0]
 	if (urlLevel=='a-level'){
-		window.location.href='/a-level.php';
+		window.location.href='/a-level.php?v=20180822';
 	}
 	else if (urlLevel=='as-level') {
-		window.location.href='/as-level.php';
+		window.location.href='/as-level.php?v=20180822';
 	}
 	else if (urlLevel=='gcse') {
-		window.location.href='/gcse.php';
+		window.location.href='/gcse.php?v=20180822';
 	}
 }
 
@@ -283,7 +283,7 @@ function drawEntriesChart() {
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/entries-chart-0.1.0.js';
+	js.src = '/js/entries-chart.js?v=20180822';
 	document.body.appendChild(js)
 }
 
@@ -292,7 +292,7 @@ function drawGradesChart() {
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/grades-chart-0.1.0.js';
+	js.src = '/js/grades-chart.js?v=20180822';
 	document.body.appendChild(js)
 }
 

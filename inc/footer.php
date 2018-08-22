@@ -11,7 +11,7 @@
 	<div class="container">
 	  <div class="row">
 	    <div class="col l6 s12">
-			<h5 class="white-text"><a href='/about.php' class="white-text">About</a></h5>
+			<h5 class="white-text"><a href='/about.php?v=20180822' class="white-text">About</a></h5>
 			<ul>
 				<li>Built by FFT Education Datalab, part of FFT.</li>
 				<li>Project funded by the Nuffield Foundation.</li>
@@ -34,7 +34,7 @@
 	</div>
 	</footer>
 	<script src="/js/materialize.min.js"></script>
-	<script src="/js/init-0.1.0.js"></script>
+	<script src="/js/init.js?v=20180822"></script>
 	<script>
 		if (typeof runScripts === 'function') {
 			runScripts();

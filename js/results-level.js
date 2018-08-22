@@ -1,28 +1,28 @@
 var levels=[
 	{
 		'name':'A-Level',
-	    'subjectsJSON':'a-level-subjects.json',
-	    'entriesJSON':'a-level-entries.json',
-	    'gradesJSON':'a-level-grades.json',
-	    'textJSON':'a-level-text.json',
+	    'subjectsJSON':'a-level-subjects.json?v=20180822',
+	    'entriesJSON':'a-level-entries.json?v=20180822',
+	    'gradesJSON':'a-level-grades.json?v=20180822',
+	    'textJSON':'a-level-text.json?v=20180822',
 	    'gradesAll':['A*','A','B','C','D','E','U'],
 	    'gradesSelected':['A*','A','C','E']
 	},
 	{
 		'name':'AS-Level',
-	    'subjectsJSON':'as-level-subjects.json',
-	    'entriesJSON':'as-level-entries.json',
-	    'gradesJSON':'as-level-grades.json',
-	    'textJSON':'as-level-text.json',
+	    'subjectsJSON':'as-level-subjects.json?v=20180822',
+	    'entriesJSON':'as-level-entries.json?v=20180822',
+	    'gradesJSON':'as-level-grades.json?v=20180822',
+	    'textJSON':'as-level-text.json?v=20180822',
 		'gradesAll':['A','B','C','D','E','U'],
 	    'gradesSelected':['A','C','E']
 	},
 	{
 		'name':'GCSE',
-	    'subjectsJSON':'gcse-subjects.json',
-	    'entriesJSON':'gcse-entries.json',
-	    'gradesJSON':'gcse-grades.json',
-	    'textJSON':'gcse-text.json',
+	    'subjectsJSON':'gcse-subjects.json?v=20180822',
+	    'entriesJSON':'gcse-entries.json?v=20180822',
+	    'gradesJSON':'gcse-grades.json?v=20180822',
+	    'textJSON':'gcse-text.json?v=20180822',
 		'gradesAll':['A/7','C/4','G/1','U'],
 	    'gradesSelected':['A/7','C/4','G/1']
 	}
@@ -73,7 +73,7 @@ function jsonCallback(item) {
 		let len=data.length
 		for (j = 0; j < len; j++) {
 		  var line=data.shift()
-		  document.getElementById('subjectListContainer').innerHTML=document.getElementById('subjectListContainer').innerHTML + '<li><a href="' + name + '/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php">' + line.subject_name_clean + '</a></li>'
+		  document.getElementById('subjectListContainer').innerHTML=document.getElementById('subjectListContainer').innerHTML + '<li><a href="' + name + '/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180822">' + line.subject_name_clean + '</a></li>'
 		}
   };
 }
