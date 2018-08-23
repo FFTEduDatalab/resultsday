@@ -75,18 +75,18 @@ for level in levels:
 
 	# write analysis
 	for texts in texts_list:
-		allsubjects_entries_change=round((texts['allsubjects_entries_yn']-texts['allsubjects_entries_y0'])*1.0/texts['allsubjects_entries_y0']*100,1)
-		if texts['years']==2:		# one year handled separately below
-			number_of_years='two'
-		elif texts['years']==3:
-			number_of_years='three'
-		elif texts['years']==4:
-			number_of_years='four'
-		elif texts['years']==5:
-			number_of_years='five'
 		texts['analysis']=''
 		if texts.get('y0') is not None:		# analysis only written for subjects for which we have entries and grades data (i.e. not new subjects which have only been added to subjects data file)
+			allsubjects_entries_change=round((texts['allsubjects_entries_yn']-texts['allsubjects_entries_y0'])*1.0/texts['allsubjects_entries_y0']*100,1)
 			subject_entries_change=round((texts['entries_yn']-texts['entries_y0'])*1.0/texts['entries_y0']*100.0,1)
+			if texts['years']==2:		# one year handled separately below
+				number_of_years='two'
+			elif texts['years']==3:
+				number_of_years='three'
+			elif texts['years']==4:
+				number_of_years='four'
+			elif texts['years']==5:
+				number_of_years='five'
 			if subject_entries_change>0:
 			    subject_entries_change_sign='increased'
 			elif subject_entries_change<0:
