@@ -91,7 +91,7 @@
 				<p>Subjects featured in the data presented on this site are A-Levels, AS-Levels, full course GCSEs and full course vocational GCSEs awarded by one of the award bodies that make up JCQ. Qualifications such as IGCSEs (international GCSEs) do not therefore feature in the data.</p>
 
 				<h5>What data sources are used?</h5>
-				<p>Entry and attainment data is provisional data published by the JCQ. Full details of sources used, including sourcing for other information, can be found on the <a href='about.php?v=20180822'>About page</a>.</p>
+				<p>Entry and attainment data is provisional data published by the JCQ. Full details of sources used, including sourcing for other information, can be found on the <a href='about.php?v=20180823'>About page</a>.</p>
 
 				<h5 id='scotland'>Why doesn’t Scotland feature in the data?</h5>
 				<p>The education systems of England, Wales and Northern Ireland are broadly similar, with students take a range of qualifications and public examinations, primarily GCSEs, at age 16. Scotland has a distinct system with students typically taking National 5 qualifications, which are considered to be equivalent to GCSEs, at age 16. Results are not available from JCQ.</p>

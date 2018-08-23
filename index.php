@@ -8,7 +8,7 @@
 		</div>
 		<div class="row">
 			<div class="col s12">
-				<h4>Explore trends in national <a href="a-level.php?v=20180822">A-Level</a>, <a href="as-level.php?v=20180822">AS-Level</a> and <a href="gcse.php?v=20180822">GCSE</a> entry and results data from 2014 to 2017. Data for 2018 will be added <a href="/guide.php?v=20180822#2018">on A-/AS-Level and GCSE results days</a>.</h4>
+				<h4>Explore trends in national <a href="a-level.php?v=20180823">A-Level</a>, <a href="as-level.php?v=20180823">AS-Level</a> and <a href="gcse.php?v=20180823">GCSE</a> entry and results data from 2014 to 2017. Data for 2018 will be added <a href="/guide.php?v=20180823#2018">on A-/AS-Level and GCSE results days</a>.</h4>
 			</div>
 		</div>
 		<div class="row">		<!-- feed item title: <h4> tag with class feed-item-title; feed item excerpt: <p> tag with class feed-item-desc -->
