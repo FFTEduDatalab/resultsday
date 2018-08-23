@@ -9594,6 +9594,801 @@
     },
     {
         "name": "Male",
+        "alias": "ARTD",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                51342
+            ],
+            [
+                2018,
+                52491
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "ASCH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                175658
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "FSCI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                6988
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "BIOL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                63860
+            ],
+            [
+                2018,
+                79384
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "BUSC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                3988
+            ],
+            [
+                2018,
+                3938
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "BUSS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                49042
+            ],
+            [
+                2018,
+                48646
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "CHEM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                64627
+            ],
+            [
+                2018,
+                77709
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "CITI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                6434
+            ],
+            [
+                2018,
+                6646
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "CLAS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                6246
+            ],
+            [
+                2018,
+                6589
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "COMP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                50157
+            ],
+            [
+                2018,
+                55420
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "CONS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "DEST",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                90041
+            ],
+            [
+                2018,
+                76073
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "DRAM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                22876
+            ],
+            [
+                2018,
+                20804
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "ECON",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                3461
+            ],
+            [
+                2018,
+                3433
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "ENGI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                5560
+            ],
+            [
+                2018,
+                3840
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "ENLA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                265874
+            ],
+            [
+                2018,
+                264542
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "ENLI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                260367
+            ],
+            [
+                2018,
+                249913
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "FOOD",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                17042
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "FREN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                48049
+            ],
+            [
+                2018,
+                47449
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "GEOG",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                120255
+            ],
+            [
+                2018,
+                127123
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "GERM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                19508
+            ],
+            [
+                2018,
+                19950
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "HSOC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1082
+            ],
+            [
+                2018,
+                966
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "HIST",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                111562
+            ],
+            [
+                2018,
+                112894
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "HOME",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                2382
+            ],
+            [
+                2018,
+                140
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "HOSP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                812
+            ],
+            [
+                2018,
+                918
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "HUMA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                914
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "ICTX",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                34925
+            ],
+            [
+                2018,
+                26438
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "IRIS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "LEIS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1242
+            ],
+            [
+                2018,
+                731
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "MANU",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                73
+            ],
+            [
+                2018,
+                23
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "MATH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                268927
+            ],
+            [
+                2018,
+                267505
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "MATN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "MATA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "MFTS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                21628
+            ],
+            [
+                2018,
+                21161
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "MUSI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                16736
+            ],
+            [
+                2018,
+                15260
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "PERF",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1975
+            ],
+            [
+                2018,
+                608
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "PHED",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                70197
+            ],
+            [
+                2018,
+                53548
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "PHYS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                64738
+            ],
+            [
+                2018,
+                77238
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "PREP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "RELS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                109079
+            ],
+            [
+                2018,
+                97361
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "SCIE",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                139221
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "SCID",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                367860
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "SOCS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                10079
+            ],
+            [
+                2018,
+                10001
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "SPAN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                35086
+            ],
+            [
+                2018,
+                37083
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "STAT",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                6060
+            ],
+            [
+                2018,
+                5858
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "WELF",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "WELS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                5
+            ],
+            [
+                2018,
+                2
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "WELL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "OMFL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                8567
+            ],
+            [
+                2018,
+                8660
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "OSCI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1851
+            ],
+            [
+                2018,
+                1304
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "OTEC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "AOTH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                11860
+            ],
+            [
+                2018,
+                1518
+            ]
+        ]
+    },
+    {
+        "name": "Male",
+        "alias": "ALLS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                2233335
+            ],
+            [
+                2018,
+                2268069
+            ]
+        ]
+    },
+    {
+        "name": "Male",
         "alias": "FOOD",
         "scope": "EN",
         "data": [
@@ -19275,6 +20070,801 @@
     },
     {
         "name": "Female",
+        "alias": "ARTD",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                104908
+            ],
+            [
+                2018,
+                106123
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "ASCH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                177182
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "FSCI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                6992
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "BIOL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                64883
+            ],
+            [
+                2018,
+                78678
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "BUSC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                3311
+            ],
+            [
+                2018,
+                3079
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "BUSS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                33779
+            ],
+            [
+                2018,
+                33309
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "CHEM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                65267
+            ],
+            [
+                2018,
+                77125
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "CITI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                7636
+            ],
+            [
+                2018,
+                8011
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "CLAS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                6336
+            ],
+            [
+                2018,
+                7061
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "COMP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                12613
+            ],
+            [
+                2018,
+                14093
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "CONS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "DEST",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                59185
+            ],
+            [
+                2018,
+                37773
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "DRAM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                37151
+            ],
+            [
+                2018,
+                35660
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "ECON",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1526
+            ],
+            [
+                2018,
+                1532
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "ENGI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                627
+            ],
+            [
+                2018,
+                434
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "ENLA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                263255
+            ],
+            [
+                2018,
+                259235
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "ENLI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                260444
+            ],
+            [
+                2018,
+                249751
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "FOOD",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                28816
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "FREN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                69395
+            ],
+            [
+                2018,
+                67411
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "GEOG",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                106977
+            ],
+            [
+                2018,
+                110835
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "GERM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                21088
+            ],
+            [
+                2018,
+                21652
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "HSOC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                16510
+            ],
+            [
+                2018,
+                11367
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "HIST",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                123557
+            ],
+            [
+                2018,
+                127464
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "HOME",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                17037
+            ],
+            [
+                2018,
+                8418
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "HOSP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1183
+            ],
+            [
+                2018,
+                1299
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "HUMA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                727
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "ICTX",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                22012
+            ],
+            [
+                2018,
+                15094
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "IRIS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                2
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "LEIS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1530
+            ],
+            [
+                2018,
+                858
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "MANU",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                47
+            ],
+            [
+                2018,
+                27
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "MATH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                263303
+            ],
+            [
+                2018,
+                260910
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "MATN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "MATA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "MFTS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                19873
+            ],
+            [
+                2018,
+                18476
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "MUSI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                20289
+            ],
+            [
+                2018,
+                19029
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "PERF",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                11368
+            ],
+            [
+                2018,
+                7524
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "PHED",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                37349
+            ],
+            [
+                2018,
+                29925
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "PHYS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                65691
+            ],
+            [
+                2018,
+                76203
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "PREP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "RELS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                128114
+            ],
+            [
+                2018,
+                114450
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "SCIE",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                133358
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "SCID",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                362730
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "SOCS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                23745
+            ],
+            [
+                2018,
+                23838
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "SPAN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                46687
+            ],
+            [
+                2018,
+                49025
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "STAT",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                4589
+            ],
+            [
+                2018,
+                4376
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "WELF",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "WELS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                4
+            ],
+            [
+                2018,
+                2
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "WELL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "OMFL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                9308
+            ],
+            [
+                2018,
+                10116
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "OSCI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                926
+            ],
+            [
+                2018,
+                513
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "OTEC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "AOTH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                15896
+            ],
+            [
+                2018,
+                1237
+            ]
+        ]
+    },
+    {
+        "name": "Female",
+        "alias": "ALLS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                2265660
+            ],
+            [
+                2018,
+                2283459
+            ]
+        ]
+    },
+    {
+        "name": "Female",
         "alias": "FOOD",
         "scope": "EN",
         "data": [
@@ -28951,6 +30541,801 @@
             [
                 2018,
                 13278
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ARTD",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                156250
+            ],
+            [
+                2018,
+                158614
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ASCH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                352840
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "FSCI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                13980
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "BIOL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                128743
+            ],
+            [
+                2018,
+                158062
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "BUSC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                7299
+            ],
+            [
+                2018,
+                7017
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "BUSS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                82821
+            ],
+            [
+                2018,
+                81955
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "CHEM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                129894
+            ],
+            [
+                2018,
+                154834
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "CITI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                14070
+            ],
+            [
+                2018,
+                14657
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "CLAS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                12582
+            ],
+            [
+                2018,
+                13650
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "COMP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                62770
+            ],
+            [
+                2018,
+                69513
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "CONS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "DEST",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                149226
+            ],
+            [
+                2018,
+                113846
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "DRAM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                60027
+            ],
+            [
+                2018,
+                56464
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ECON",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                4987
+            ],
+            [
+                2018,
+                4965
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ENGI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                6187
+            ],
+            [
+                2018,
+                4274
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ENLA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                529129
+            ],
+            [
+                2018,
+                523777
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ENLI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                520811
+            ],
+            [
+                2018,
+                499664
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "FOOD",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                45858
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "FREN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                117444
+            ],
+            [
+                2018,
+                114860
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "GEOG",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                227232
+            ],
+            [
+                2018,
+                237958
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "GERM",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                40596
+            ],
+            [
+                2018,
+                41602
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "HSOC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                17592
+            ],
+            [
+                2018,
+                12333
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "HIST",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                235119
+            ],
+            [
+                2018,
+                240358
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "HOME",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                19419
+            ],
+            [
+                2018,
+                8558
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "HOSP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1995
+            ],
+            [
+                2018,
+                2217
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "HUMA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                1641
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ICTX",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                56937
+            ],
+            [
+                2018,
+                41532
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "IRIS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                3
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "LEIS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                2772
+            ],
+            [
+                2018,
+                1589
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "MANU",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                120
+            ],
+            [
+                2018,
+                50
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "MATH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                532230
+            ],
+            [
+                2018,
+                528415
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "MATN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "MATA",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "MFTS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                41501
+            ],
+            [
+                2018,
+                39637
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "MUSI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                37025
+            ],
+            [
+                2018,
+                34289
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "PERF",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                13343
+            ],
+            [
+                2018,
+                8132
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "PHED",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                107546
+            ],
+            [
+                2018,
+                83473
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "PHYS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                130429
+            ],
+            [
+                2018,
+                153441
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "PREP",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "RELS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                237193
+            ],
+            [
+                2018,
+                211811
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "SCIE",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                272579
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "SCID",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                730590
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "SOCS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                33824
+            ],
+            [
+                2018,
+                33839
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "SPAN",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                81773
+            ],
+            [
+                2018,
+                86108
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "STAT",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                10649
+            ],
+            [
+                2018,
+                10234
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "WELF",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "WELS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                9
+            ],
+            [
+                2018,
+                4
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "WELL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "OMFL",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                17875
+            ],
+            [
+                2018,
+                18776
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "OSCI",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                2777
+            ],
+            [
+                2018,
+                1817
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "OTEC",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                0
+            ],
+            [
+                2018,
+                0
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "AOTH",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                27756
+            ],
+            [
+                2018,
+                2755
+            ]
+        ]
+    },
+    {
+        "name": "All students",
+        "alias": "ALLS",
+        "scope": "EN16",
+        "data": [
+            [
+                2017,
+                4498995
+            ],
+            [
+                2018,
+                4551528
             ]
         ]
     },
