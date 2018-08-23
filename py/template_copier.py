@@ -9,18 +9,18 @@ from xlrd import open_workbook
 from collections import OrderedDict
 
 levels=[
-	# {
-	# 	'name':'A-Level',
-	# 	'source':'data\\source\\a-level',
-	# 	'output':'data\\output\\a-level',
-	# 	'grades':['A*','A or above','B or above','C or above','D or above','E or above','U or above']
-	# },
-	# {
-	# 	'name':'AS-Level',
-	# 	'source':'data\\source\\as-level',
-	# 	'output':'data\\output\\as-level',
-	# 	'grades':['A','B or above','C or above','D or above','E or above','U or above']
-	# },
+	{
+		'name':'A-Level',
+		'source':'data\\source\\a-level',
+		'output':'data\\output\\a-level',
+		'grades':['A*','A or above','B or above','C or above','D or above','E or above','U or above']
+	},
+	{
+		'name':'AS-Level',
+		'source':'data\\source\\as-level',
+		'output':'data\\output\\as-level',
+		'grades':['A','B or above','C or above','D or above','E or above','U or above']
+	},
 	{
 		'name':'GCSE',
 		'source':'data\\source\\gcse',

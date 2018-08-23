@@ -9,18 +9,18 @@ from xlrd import open_workbook
 from collections import OrderedDict
 
 levels=[
-	# {
-	# 	'name':'A-Level',
-	# 	'source':'data\\source\\a-level',
-	# 	'output':'data\\output\\a-level',
-	# 	'grades':['A*','A or above','B or above','C or above','D or above','E or above','U or above']
-	# },
-	# {
-	# 	'name':'AS-Level',
-	# 	'source':'data\\source\\as-level',
-	# 	'output':'data\\output\\as-level',
-	# 	'grades':['A','B or above','C or above','D or above','E or above','U or above']
-	# },
+	{
+		'name':'A-Level',
+		'source':'data\\source\\a-level',
+		'output':'data\\output\\a-level',
+		'grades':['A*','A or above','B or above','C or above','D or above','E or above','U or above']
+	},
+	{
+		'name':'AS-Level',
+		'source':'data\\source\\as-level',
+		'output':'data\\output\\as-level',
+		'grades':['A','B or above','C or above','D or above','E or above','U or above']
+	},
 	{
 		'name':'GCSE',
 		'source':'data\\source\\gcse',
@@ -119,14 +119,12 @@ for level in levels:
 		with open(level['name'].lower()+'-grades.json') as grades_file:
 			grades_data = json.load(grades_file)
 		for subject in subjects_data:
-			if '2018' in str(subject['reform_year']['EN']) and subject['reform_year']['EN']!='Being discontinued, 2018':
-			# if subject['flags']['ebacc']==False:
-				age='16'
+			if subject['flags']['ebacc']==True:
+				scope='EN16'
 				alias=subject['alias']
 				row=OrderedDict([])
 				row['alias']=alias
 				row['subject_name_clean']=subject['subject_name_clean']
-				row['age']=age
 				row['entries_2017']=''
 				row['entries_2018']=''
 				row['A_2017']=''
@@ -135,7 +133,7 @@ for level in levels:
 				row['C_2018']=''
 				data=[]
 				for entries in entries_data:
-					if entries['name']=='All students' and entries['alias']==alias and entries['scope']==age:
+					if entries['name']=='All students' and entries['alias']==alias and entries['scope']==scope:
 						data=entries['data']
 						for data_item in data:
 							if data_item[0]==2017:
@@ -145,7 +143,7 @@ for level in levels:
 						break
 				data=[]
 				for grades in grades_data:
-					if (grades['name']=='A/7 or above' or grades['name']=='C/4 or above') and grades['scope']==age and grades['gender']=='All students' and grades['alias']==alias:
+					if (grades['name']=='A/7 or above' or grades['name']=='C/4 or above') and grades['scope']==scope and grades['gender']=='All students' and grades['alias']==alias:
 						data=grades['data']
 						for data_item in data:
 							if data_item[0]==2017:
@@ -159,4 +157,3 @@ for level in levels:
 								elif grades['name']=='C/4 or above':
 									row['C_2018']=data_item[1]
 				print row['alias'], row['entries_2017'], row['entries_2018'], row['C_2017'], row['C_2018']
-				# print row
