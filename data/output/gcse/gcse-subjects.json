@@ -225,7 +225,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context": "<p>New GCSEs in food and hygiene are reported separately, where previously food technology was reported within design and technology.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context": "<p>New GCSEs in food preparation and nutrition are reported separately, where previously food technology was reported within design and technology.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"DRAM",
@@ -324,9 +324,9 @@
 	},
 	{
 		"alias":"FOOD",
-		"subject_name_clean":"Food and hygiene",
-		"subject_name_clean_lc":"food and hygiene",
-		"subject_names":["Food and hygiene"],
+		"subject_name_clean":"Food preparation and nutrition",
+		"subject_name_clean_lc":"food preparation and nutrition",
+		"subject_names":["Food Preparation & Nutrition"],
 		"sort_order": 0,
 		"flags":{
 			"ebacc": false,
@@ -339,7 +339,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context": "<p>New food and hygiene GCSEs are available in England and Wales in 2018. Data is therefore not available for earlier years.</p>"
+		"context": "<p>New food preparation and nutrition GCSEs are available in England and Wales in 2018. Data is therefore not available for earlier years.</p>"
 	},
 	{
 		"alias":"FREN",
@@ -453,7 +453,7 @@
 			"NI":2019
 		},
 		"definition": null,
-		"context":"<p>New food and hygiene GCSEs are available in England and Wales in 2018.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+		"context":"<p>New food preparation and nutrition GCSEs are available in England and Wales in 2018.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
 		"alias":"HOSP",
@@ -775,8 +775,27 @@
 			"WA":2018,
 			"NI":2019
 		},
-		"definition": "<p>In England and Wales, a combined, double award science GCSE replaces <em>science</em> and <em>additional science</em> GCSEs in 2018. Entry numbers are shown doubled, reflecting this change.</p><p>Single award science remains available in Northern Ireland.</p>",
+		"definition": "<p>In England and Wales, a combined, double award science GCSE replaces <em>science</em> and <em>additional science</em> GCSEs in 2018. This is reported on separately.</p><p>Single award science remains available in Northern Ireland.</p>",
 		"context":"<p>In England and Wales, entries in science decreased sharply in 2017 as a result of a large fall in the number of Year 10 entries. The replacement of science and additional science GCSEs with a double award qualification in 2018 means that students who sat science GCSE in 2017 would not be able to sit additional science in 2018. In England, their single award science qualification would also not count in school league tables in 2018.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries will be counted. This is expected to have had the effect of disincentivising Year 10 entries in 2018.</p>"
+	},
+	{
+		"alias":"SCID",
+		"subject_name_clean":"Science: double award",
+		"subject_name_clean_lc":"science: double award",
+		"subject_names":["Science: double award"],
+		"sort_order": 0,
+		"flags":{
+			"ebacc": true,
+			"p8dbl": false,
+			"facil": null
+		},
+		"reform_year":{
+			"EN":2018,
+			"WA":2018,
+			"NI":2019
+		},
+		"definition": "<p>In England and Wales, a combined, double award science GCSE replaces <em>science</em> and <em>additional science</em> GCSEs in 2018. Entry numbers are shown doubled. Data is not available for earlier years, as the qualification did not exist.</p>",
+		"context": null
 	},
 	{
 		"alias":"SOCS",
