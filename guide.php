@@ -16,9 +16,6 @@
 				<p>The site provides teachers, parents, students, policymakers and indeed anyone with an interest in national A-Level, AS-Level and GCSE results with analysis of entries and attainment between 2014 and 2018. Data is provided for England, Wales and Northern Ireland, as well as the UK as whole.</p>
 
 				<p><em><a href='#scotland'>Why doesn't Scotland feature in the data?</a></em></p>
-
-				<h5 id='2018'>2018 data</h5>
-				<p>Data for 2018 will be added to the site at <strong>9.30am on Thursday 16 August 2018</strong> for A-Levels and AS-Levels, and at <strong>9.30 on Thursday 23 August 2018</strong> for GCSEs.</p>
 				<!-- &nbsp -->
 
 				<h3 id='what-each-page-shows'>What each page shows</h3>
