@@ -33,9 +33,9 @@ PSYC,Psychology,UK,2016,2016,2016,103476,19893,12.4,11.9,53.7,49.5
 RELS,Religious studies,UK,2017,2017,2017,40067,8454,21.7,20.3,69.4,65.9
 SOCI,Sociology,UK,2016,2016,2016,57589,14235,14.1,14.8,56.0,55.5
 SPAN,Spanish,UK,2017,2017,2017,14009,2549,27.2,27.8,72.1,75.4
-WELF,Welsh: first language,UK,2016,2016,2016,,277,,22.4,,76.2
-WELS,Welsh: second language,UK,2017,2017,2017,,482,,14.7,,58.9
-OMFL,Other modern languages,UK,2018/2019,2018/2019,2018/2019,10086,6085,55.0,59.9,88.5,89.5
+WELF,Welsh: first language,UK,Not approved for use in England,2016,Not approved for use in Northern Ireland,,277,,22.4,,76.2
+WELS,Welsh: second language,UK,Not approved for use in England,2017,2017,,482,,14.7,,58.9
+OMFL,Other modern languages,UK,"2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018",10086,6085,55.0,59.9,88.5,89.5
 OSCI,Other sciences,UK,2018,2018,2018,5667,2234,21.3,16.7,63.7,61.9
 AOTH,All other subjects,UK,2018,2018,2018,22898,5838,10.7,16.3,49.8,59.4
 ALLS,All subjects,UK,Various,Various,Various,1385901,346126,20.2,27.5,62.6,66.3
@@ -73,9 +73,9 @@ PSYC,Psychology,EN,2016,2016,2016,99563,16573,12.5,11.3,53.9,48.2
 RELS,Religious studies,EN,2017,2017,2017,34830,4248,21.3,18.2,68.7,61.0
 SOCI,Sociology,EN,2016,2016,2016,54132,11285,14.1,13.9,56.1,54.4
 SPAN,Spanish,EN,2017,2017,2017,12912,1558,27.1,28.0,71.5,68.6
-WELF,Welsh: first language,EN,2016,2016,2016,,0,,0.0,,0.0
-WELS,Welsh: second language,EN,2017,2017,2017,,1,,100.0,,100.0
-OMFL,Other modern languages,EN,2018/2019,2018/2019,2018/2019,9703,5569,54.6,59.3,88.4,89.6
+WELF,Welsh: first language,EN,Not approved for use in England,2016,Not approved for use in Northern Ireland,,0,,0.0,,0.0
+WELS,Welsh: second language,EN,Not approved for use in England,2017,2017,,1,,100.0,,100.0
+OMFL,Other modern languages,EN,"2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018",9703,5569,54.6,59.3,88.4,89.6
 OSCI,Other sciences,EN,2018,2018,2018,5027,1183,21.8,24.3,64.2,69.5
 AOTH,All other subjects,EN,2018,2018,2018,21065,4543,10.0,13.3,48.3,55.5
 ALLS,All subjects,EN,Various,Various,Various,1286125,260710,20.1,28.7,62.3,65.6
@@ -113,9 +113,9 @@ PSYC,Psychology,WA,2016,2016,2016,2964,2646,7.0,15.2,44.6,56.3
 RELS,Religious studies,WA,2017,2017,2017,2535,1776,16.1,17.1,66.1,57.4
 SOCI,Sociology,WA,2016,2016,2016,2159,1923,11.0,17.3,51.5,58.0
 SPAN,Spanish,WA,2017,2017,2017,277,220,23.8,28.6,61.7,70.5
-WELF,Welsh: first language,WA,2016,2016,2016,,277,,22.4,,76.2
-WELS,Welsh: second language,WA,2017,2017,2017,,481,,14.6,,58.8
-OMFL,Other modern languages,WA,2018/2019,2018/2019,2018/2019,251,211,65.7,58.3,90.0,83.4
+WELF,Welsh: first language,WA,Not approved for use in England,2016,Not approved for use in Northern Ireland,,277,,22.4,,76.2
+WELS,Welsh: second language,WA,Not approved for use in England,2017,2017,,481,,14.6,,58.8
+OMFL,Other modern languages,WA,"2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018",251,211,65.7,58.3,90.0,83.4
 OSCI,Other sciences,WA,2018,2018,2018,494,255,14.6,16.1,52.8,45.1
 AOTH,All other subjects,WA,2018,2018,2018,507,156,8.7,13.5,42.6,51.3
 ALLS,All subjects,WA,Various,Various,Various,52771,42915,16.2,20.4,57.5,61.9
@@ -153,9 +153,9 @@ PSYC,Psychology,NI,2016,2016,2016,949,530,15.5,14.9,61.9,53.4
 RELS,Religious studies,NI,2017,2017,2017,2702,2406,31.6,26.5,81.6,80.8
 SOCI,Sociology,NI,2016,2016,2016,1298,965,17.8,20.1,58.6,64.1
 SPAN,Spanish,NI,2017,2017,2017,820,750,29.6,27.6,86.0,91.1
-WELF,Welsh: first language,NI,2016,2016,2016,,0,,0.0,,0.0
-WELS,Welsh: second language,NI,2017,2017,2017,,0,,0.0,,0.0
-OMFL,Other modern languages,NI,2018/2019,2018/2019,2018/2019,132,136,62.1,75.7,91.7,91.9
+WELF,Welsh: first language,NI,Not approved for use in England,2016,Not approved for use in Northern Ireland,,0,,0.0,,0.0
+WELS,Welsh: second language,NI,Not approved for use in England,2017,2017,,0,,0.0,,0.0
+OMFL,Other modern languages,NI,"2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018","2018/2019/being discontinued, 2018",132,136,62.1,75.7,91.7,91.9
 OSCI,Other sciences,NI,2018,2018,2018,146,791,25.3,5.3,83.6,55.6
 AOTH,All other subjects,NI,2018,2018,2018,1326,1086,24.0,29.7,76.0,76.7
 ALLS,All subjects,NI,Various,Various,Various,47005,40325,27.2,27.3,75.8,75.7
