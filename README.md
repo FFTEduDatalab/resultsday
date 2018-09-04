@@ -29,11 +29,11 @@ Data files are shaped in the format required for use in [Highcharts](https://www
 1. `subjects_checker.py`
 	1. Update script to look at most recent year for which data is available (see line marked `XXX`)
 	1. Run
-	1. (If required) update `-subject.json` files
-	1. (If required) re-run
+	1. (If required) Update `-subject.json` files
+	1. (If required) Re-run
 1. Run `data_compiler.py`
 1. Run `analysis_writer.py`
-1. Run `extract_generator.py`
+1. (If required) Run `extract_generator.py`
 
 ## Licence
 * Python scripts are made available here under the MIT licence - see the `LICENSE` file for full details.
