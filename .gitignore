@@ -1,17 +1,17 @@
-/css/
-/img/
-/inc/
-/js/
-/templates/
-/a-level/
-/as-level/
-/gcse/
+-- /css/
+-- /img/
+-- /inc/
+-- /js/
+-- /templates/
+-- /a-level/
+-- /as-level/
+-- /gcse/
 .dropbox
-*.php
-*.png
-*.pdf
-template_copier.py
-versioning_updater.py
+-- *.php
+-- *.png
+-- *.pdf
+-- template_copier.py
+-- versioning_updater.py
 2015_2018.csv
 README_EXTRA.MD
 desktop.ini

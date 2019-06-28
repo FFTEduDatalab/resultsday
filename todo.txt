@@ -1,0 +1,84 @@
+-- front-end
+	-- all
+		-- newsletter pop-up prompt?
+		-- SEO
+		-- meta tags for e.g. Twitter cards
+		-- add noscript message
+		-- accessibility
+			-- load the accessibility module
+					-- navar menu remains on the side even after switching from a small screen to a large screen
+	-- header
+		-- subjects dropdown?
+		-- search box?
+		-- A-Level/AS-Level dropdown glitch: fix line heights
+	-- home page
+		-- reduce the text size to help with readability
+		-- RSS issue
+			-- see files in ‘RSS files’
+				-- index.html + getrss.php:
+	 				-- PHP implementation
+					-- has the same issue as using bloople: RSS feed takes 30/40 minutes to update once something has been posted
+
+				-- test.php
+					-- JavaScript implementation
+					--cross-origin policy blocks loading, even on results.ffteducationdatalab.org.uk (possibly because this is actually hosted at datalabresults.kinsta.com)
+	-- level pages
+		-- bold/emphasise all subjects
+		-- two views
+			-- alphabetical order
+			-- subject groups (e.g. sciences, languages)
+		-- improve presentation (e.g. smaller font, spacing, listed in columns across)
+	-- subject page
+		-- A-Level, AS-Level
+			-- fix subject flags more information link tooltip (not displaying)
+		-- improved highlighting where a subject is only available in one home nation
+		-- better contextual information on population size
+		-- dropdowns
+			-- improve highlighting of how dropdowns work together?
+			-- page recentering after using dropdowns
+		-- charts
+			-- set chart titles dynamically (2017 v 2018 as final year)
+			-- GCSE
+				-- display A*-G/9-1 data (‘all grades’) when viewing specific nations?
+			-- line labelling on charts sometimes out of line
+			-- logos as chart credits
+			-- clearer way of showing chart menu
+		-- data table next to chart?
+		-- fix social sharing links presentation
+		-- switching between
+			-- A-Level, AS-Level
+			-- subjects (e.g. sciences)
+			-- (NB: would also need to rename back button/revert it to actually being a back button)
+		-- links to blogposts that reference particular subjects?
+		-- data release cookie (‘GCSE data for 2018 is available at...’)
+	-- guide, about pages
+		-- improve back to top buttons
+		-- expand ‘Why doesn’t Scotland feature in the data?’ section to cover AS-/A-Level too
+	-- footer
+		-- spot something wrong banner
+	-- downloads page
+		-- all entries and grades
+		-- groups of subjects (e.g. sciences)
+		-- user-defined groups?
+
+-- data
+	-- all
+		-- minify json files?
+		-- XXX remove facilitating subjects flag?
+	-- entries, grades
+		-- GCSE
+			-- home nation x age data
+-- handling of new C* grade in NI
+	-- grades
+		-- add A*-G/9-1 data? (NB: size of JSON files needs to be considered)
+	-- subjects
+		-- break context out by home nation
+	-- subjects, text
+		-- integrate context information with text descriptions?
+	-- text
+		-- separate text descriptions for each home nation being viewed
+		-- change references to ‘across the UK’ where subject is only available/entered in one nation
+		-- state figures (as tooltip?) on which percentage changes are based
+	-- additional
+		-- data by county?
+		-- information on subject entry profile (disadvantage, prior attainment)
