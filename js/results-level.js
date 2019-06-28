@@ -35,45 +35,46 @@ var j
 var l = levels.length
 
 $(function () {		// needs to be done in two stages like this, as otherwise inner for loop always runs off final i value under js asynchonicity
-  level = window.location.href.split('/')[3].split('.')[0]
+	level = window.location.href.split('/')[3].split('.')[0]
 	for (i = 0; i < l; i++) {
 		if (level==levels[i].name.toLowerCase()){
 			name=levels[i].name.toLowerCase()
 			document.getElementById('levelNameContainer').innerHTML=levels[i].name
 			subjectsJSON=levels[i].subjectsJSON
-			$.getJSON('data/output/' + name + '/' + subjectsJSON, jsonCallback(i));
+			$.getJSON('data/output/' + name + '/' + subjectsJSON, jsonCallback());
 		}
-  }
+	}
 });
 
-function jsonCallback(item) {
-  return function(data) {
+function jsonCallback() {
+
+	return function(data) {
 		function order(a,b) {
-		  if (a.sort_order < b.sort_order){
+			if (a.sort_order < b.sort_order){
 				return -2;
 			}
-		  else if (a.sort_order > b.sort_order){
+			else if (a.sort_order > b.sort_order){
 				return 2;
 			}
-		  else {
+			else {
 				if (a.subject_name_clean.toLowerCase() < b.subject_name_clean.toLowerCase()){
 					return -1;
 				}
-			  else if (a.subject_name_clean.toLowerCase() > b.subject_name_clean.toLowerCase()){
+				else if (a.subject_name_clean.toLowerCase() > b.subject_name_clean.toLowerCase()){
 					return 1;
 				}
 				else {
 					return 0;
 				}
-		  }
+			}
 		}
 
 		data.sort(order);
 
 		let len=data.length
 		for (j = 0; j < len; j++) {
-		  var line=data.shift()
-		  document.getElementById('subjectListContainer').innerHTML=document.getElementById('subjectListContainer').innerHTML + '<li><a href="' + name + '/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + line.subject_name_clean + '</a></li>'
+			var line=data.shift()
+			document.getElementById('subjectListContainer').innerHTML=document.getElementById('subjectListContainer').innerHTML + '<li><a href="' + name + '/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + line.subject_name_clean + '</a></li>'
 		}
-  };
+	};
 }
