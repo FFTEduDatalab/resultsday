@@ -1,760 +1,776 @@
 [
 	{
-		"alias":"ARTD",
-		"subject_name_clean":"Art and design subjects",
-		"subject_name_clean_lc":"art and design subjects",
-		"subject_names":["Art and Design subjects","Art & Design subjects"],
+		"alias": "ARTD",
+		"subject_name_clean": "Art and design subjects",
+		"subject_name_clean_lc": "art and design subjects",
+		"subject_names": ["Art and Design subjects","Art & Design subjects"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2017
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"BIOL",
-		"subject_name_clean":"Biology",
-		"subject_name_clean_lc":"biology",
-		"subject_names":["Biology"],
+		"alias": "BIOL",
+		"subject_name_clean": "Biology",
+		"subject_name_clean_lc": "biology",
+		"subject_names": ["Biology"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["CHEM","PHYS"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2017
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"BUSS",
-		"subject_name_clean":"Business studies",
-		"subject_name_clean_lc":"business studies",
-		"subject_names":["Business Studies"],
+		"alias": "BUSS",
+		"subject_name_clean": "Business studies",
+		"subject_name_clean_lc": "business studies",
+		"subject_names": ["Business Studies"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":"2017/2018"
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": "2017/2018"
 		},
-		"definition":"In Northern Ireland this includes both business studies and professional business services. Reformed business studies AS-Level first awarded in 2017 in Northern Ireland; reformed professional business services AS-Level first awarded in 2018 in Northern Ireland.",
+		"definition": "In Northern Ireland this includes both business studies and professional business services. Reformed business studies AS-Level first awarded in 2017 in Northern Ireland; reformed professional business services AS-Level first awarded in 2018 in Northern Ireland.",
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"CHEM",
-		"subject_name_clean":"Chemistry",
-		"subject_name_clean_lc":"chemistry",
-		"subject_names":["Chemistry"],
+		"alias": "CHEM",
+		"subject_name_clean": "Chemistry",
+		"subject_name_clean_lc": "chemistry",
+		"subject_names": ["Chemistry"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["BIOL","PHYS"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2017
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"CLAS",
-		"subject_name_clean":"Classical subjects",
-		"subject_name_clean_lc":"classical subjects",
-		"subject_names":["Classical subjects"],
+		"alias": "CLAS",
+		"subject_name_clean": "Classical subjects",
+		"subject_name_clean_lc": "classical subjects",
+		"subject_names": ["Classical subjects"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":"2017/2018",
-			"WA":"2017/2018",
-			"NI":"2017/2018"
+		"reform_year": {
+			"EN": "2017/2018",
+			"WA": "2017/2018",
+			"NI": "2017/2018"
 		},
-		"definition":"This consists of Latin and classical Greek, which are facilitating subjects, and ancient history and classical civilisation, which are not facilitating subjects. Reformed Latin and classical Greek AS-Levels first awarded in 2017; reformed ancient history and classical civilisation AS-Levels first awarded in 2018.",
+		"definition": "This consists of Latin and classical Greek, which are facilitating subjects, and ancient history and classical civilisation, which are not facilitating subjects. Reformed Latin and classical Greek AS-Levels first awarded in 2017; reformed ancient history and classical civilisation AS-Levels first awarded in 2018.",
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"COMM",
-		"subject_name_clean":"Communication studies",
-		"subject_name_clean_lc":"communication studies",
-		"subject_names":["Communication Studies"],
+		"alias": "COMM",
+		"subject_name_clean": "Communication studies",
+		"subject_name_clean_lc": "communication studies",
+		"subject_names": ["Communication Studies"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Discontinued, 2017",
-			"WA":"Discontinued, 2017",
-			"NI":"Discontinued, 2017"
+		"reform_year": {
+			"EN": "Discontinued, 2017",
+			"WA": "Discontinued, 2017",
+			"NI": "Discontinued, 2017"
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"COMP",
-		"subject_name_clean":"Computing",
-		"subject_name_clean_lc":"computing",
-		"subject_names":["Computing"],
+		"alias": "COMP",
+		"subject_name_clean": "Computing",
+		"subject_name_clean_lc": "computing",
+		"subject_names": ["Computing"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2016
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2016
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"CRIT",
-		"subject_name_clean":"Critical thinking",
-		"subject_name_clean_lc":"critical thinking",
-		"subject_names":["Critical Thinking"],
+		"alias": "CRIT",
+		"subject_name_clean": "Critical thinking",
+		"subject_name_clean_lc": "critical thinking",
+		"subject_names": ["Critical Thinking"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Discontinued, 2017",
-			"WA":"Discontinued, 2017",
-			"NI":"Discontinued, 2017"
+		"reform_year": {
+			"EN": "Discontinued, 2017",
+			"WA": "Discontinued, 2017",
+			"NI": "Discontinued, 2017"
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"DEST",
-		"subject_name_clean":"Design and technology",
-		"subject_name_clean_lc":"design and technology",
-		"subject_names":["Design and Technology"],
+		"alias": "DEST",
+		"subject_name_clean": "Design and technology",
+		"subject_name_clean_lc": "design and technology",
+		"subject_names": ["Design and Technology"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2017
+		"reform_year": {
+			"EN": 2018,
+			"WA": 2018,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"DRAM",
-		"subject_name_clean":"Drama",
-		"subject_name_clean_lc":"drama",
-		"subject_names":["Drama"],
+		"alias": "DRAM",
+		"subject_name_clean": "Drama",
+		"subject_name_clean_lc": "drama",
+		"subject_names": ["Drama"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"ECON",
-		"subject_name_clean":"Economics",
-		"subject_name_clean_lc":"economics",
-		"subject_names":["Economics"],
+		"alias": "ECON",
+		"subject_name_clean": "Economics",
+		"subject_name_clean_lc": "economics",
+		"subject_names": ["Economics"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2017
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"ENLA",
-		"subject_name_clean":"English language",
-		"subject_name_clean_lc":"English language",
-		"subject_names":["English Language"],
+		"alias": "ENLA",
+		"subject_name_clean": "English language",
+		"subject_name_clean_lc": "English language",
+		"subject_names": ["English Language"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["ENLI","ENLL"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2016
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2016
 		},
 		"definition": null,
 		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"ENLI",
-		"subject_name_clean":"English literature",
-		"subject_name_clean_lc":"English literature",
-		"subject_names":["English Literature"],
+		"alias": "ENLI",
+		"subject_name_clean": "English literature",
+		"subject_name_clean_lc": "English literature",
+		"subject_names": ["English Literature"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["ENLA","ENLL"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2017
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"ENLL",
-		"subject_name_clean":"English language and literature",
-		"subject_name_clean_lc":"English language and literature",
-		"subject_names":["English Language & Literature"],
+		"alias": "ENLL",
+		"subject_name_clean": "English language and literature",
+		"subject_name_clean_lc": "English language and literature",
+		"subject_names": ["English Language & Literature"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["ENLA","ENLI"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2016
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2016
 		},
 		"definition": null,
 		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"FREN",
-		"subject_name_clean":"French",
-		"subject_name_clean_lc":"French",
-		"subject_names":["French"],
+		"alias": "FREN",
+		"subject_name_clean": "French",
+		"subject_name_clean_lc": "French",
+		"subject_names": ["French"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["GERM","SPAN","OMFL"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"GENS",
-		"subject_name_clean":"General studies",
-		"subject_name_clean_lc":"general studies",
-		"subject_names":["General Studies"],
+		"alias": "GENS",
+		"subject_name_clean": "General studies",
+		"subject_name_clean_lc": "general studies",
+		"subject_names": ["General Studies"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Discontinued, 2017",
-			"WA":"Discontinued, 2017",
-			"NI":"Discontinued, 2017"
+		"reform_year": {
+			"EN": "Discontinued, 2017",
+			"WA": "Discontinued, 2017",
+			"NI": "Discontinued, 2017"
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"GEOG",
-		"subject_name_clean":"Geography",
-		"subject_name_clean_lc":"geography",
-		"subject_names":["Geography"],
+		"alias": "GEOG",
+		"subject_name_clean": "Geography",
+		"subject_name_clean_lc": "geography",
+		"subject_names": ["Geography"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["HIST"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"GERM",
-		"subject_name_clean":"German",
-		"subject_name_clean_lc":"German",
-		"subject_names":["German"],
+		"alias": "GERM",
+		"subject_name_clean": "German",
+		"subject_name_clean_lc": "German",
+		"subject_names": ["German"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["FREN","SPAN","OMFL"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"HIST",
-		"subject_name_clean":"History",
-		"subject_name_clean_lc":"history",
-		"subject_names":["History"],
+		"alias": "HIST",
+		"subject_name_clean": "History",
+		"subject_name_clean_lc": "history",
+		"subject_names": ["History"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["GEOG"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2017
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"ICTX",
-		"subject_name_clean":"ICT",
-		"subject_name_clean_lc":"ICT",
-		"subject_names":["ICT"],
+		"alias": "ICTX",
+		"subject_name_clean": "ICT",
+		"subject_name_clean_lc": "ICT",
+		"subject_names": ["ICT"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Discontinued, 2017",
-			"WA":2018,
-			"NI":"Discontinued, 2017"
+		"reform_year": {
+			"EN": "Discontinued, 2017",
+			"WA": 2018,
+			"NI": "Discontinued, 2017"
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"IRIS",
-		"subject_name_clean":"Irish",
-		"subject_name_clean_lc":"Irish",
-		"subject_names":["Irish"],
+		"alias": "IRIS",
+		"subject_name_clean": "Irish",
+		"subject_name_clean_lc": "Irish",
+		"subject_names": ["Irish"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Being discontinued, 2018",
-			"WA":"Not approved for use in Wales",
-			"NI":2017
+		"reform_year": {
+			"EN": "Being discontinued, 2018",
+			"WA": "Not approved for use in Wales",
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"LAWX",
-		"subject_name_clean":"Law",
-		"subject_name_clean_lc":"law",
-		"subject_names":["Law"],
+		"alias": "LAWX",
+		"subject_name_clean": "Law",
+		"subject_name_clean_lc": "law",
+		"subject_names": ["Law"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2018
+		"reform_year": {
+			"EN": 2018,
+			"WA": 2018,
+			"NI": 2018
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"MATH",
-		"subject_name_clean":"Mathematics",
-		"subject_name_clean_lc":"mathematics",
-		"subject_names":["Mathematics"],
+		"alias": "MATH",
+		"subject_name_clean": "Mathematics",
+		"subject_name_clean_lc": "mathematics",
+		"subject_names": ["Mathematics"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["MATF"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2019
+		"reform_year": {
+			"EN": 2018,
+			"WA": 2018,
+			"NI": 2019
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"MATF",
-		"subject_name_clean":"Further mathematics",
-		"subject_name_clean_lc":"further mathematics",
-		"subject_names":["Mathematics (Further)"],
+		"alias": "MATF",
+		"subject_name_clean": "Further mathematics",
+		"subject_name_clean_lc": "further mathematics",
+		"subject_names": ["Mathematics (Further)"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["MATH"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2018
+		"reform_year": {
+			"EN": 2018,
+			"WA": 2018,
+			"NI": 2018
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"MFTS",
-		"subject_name_clean":"Media/film/TV studies",
-		"subject_name_clean_lc":"media/film/TV studies",
-		"subject_names":["Media / Film / TV Studies"],
+		"alias": "MFTS",
+		"subject_name_clean": "Media/film/TV studies",
+		"subject_name_clean_lc": "media/film/TV studies",
+		"subject_names": ["Media / Film / TV Studies"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2017
+		"reform_year": {
+			"EN": 2018,
+			"WA": 2018,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"MUSI",
-		"subject_name_clean":"Music",
-		"subject_name_clean_lc":"music",
-		"subject_names":["Music"],
+		"alias": "MUSI",
+		"subject_name_clean": "Music",
+		"subject_name_clean_lc": "music",
+		"subject_names": ["Music"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"PERF",
-		"subject_name_clean":"Performing/expressive arts",
-		"subject_name_clean_lc":"performing/expressive arts",
-		"subject_names":["Performing / Expressive Arts"],
+		"alias": "PERF",
+		"subject_name_clean": "Performing/expressive arts",
+		"subject_name_clean_lc": "performing/expressive arts",
+		"subject_names": ["Performing / Expressive Arts"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Discontinued, 2017",
-			"WA":"Discontinued, 2017",
-			"NI":2017
+		"reform_year": {
+			"EN": "Discontinued, 2017",
+			"WA": "Discontinued, 2017",
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"PHED",
-		"subject_name_clean":"Physical education",
-		"subject_name_clean_lc":"physical education",
-		"subject_names":["Physical Education"],
+		"alias": "PHED",
+		"subject_name_clean": "Physical education",
+		"subject_name_clean_lc": "physical education",
+		"subject_names": ["Physical Education"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"PHYS",
-		"subject_name_clean":"Physics",
-		"subject_name_clean_lc":"physics",
-		"subject_names":["Physics"],
+		"alias": "PHYS",
+		"subject_name_clean": "Physics",
+		"subject_name_clean_lc": "physics",
+		"subject_names": ["Physics"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["BIOL","CHEM"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2017
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"POLS",
-		"subject_name_clean":"Political studies",
-		"subject_name_clean_lc":"political studies",
-		"subject_names":["Political Studies"],
+		"alias": "POLS",
+		"subject_name_clean": "Political studies",
+		"subject_name_clean_lc": "political studies",
+		"subject_names": ["Political Studies"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2017
+		"reform_year": {
+			"EN": 2018,
+			"WA": 2018,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"PSYC",
-		"subject_name_clean":"Psychology",
-		"subject_name_clean_lc":"psychology",
-		"subject_names":["Psychology"],
+		"alias": "PSYC",
+		"subject_name_clean": "Psychology",
+		"subject_name_clean_lc": "psychology",
+		"subject_names": ["Psychology"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2016
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2016
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"RELS",
-		"subject_name_clean":"Religious studies",
-		"subject_name_clean_lc":"religious studies",
-		"subject_names":["Religious Studies"],
+		"alias": "RELS",
+		"subject_name_clean": "Religious studies",
+		"subject_name_clean_lc": "religious studies",
+		"subject_names": ["Religious Studies"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"SOCI",
-		"subject_name_clean":"Sociology",
-		"subject_name_clean_lc":"sociology",
-		"subject_names":["Sociology"],
+		"alias": "SOCI",
+		"subject_name_clean": "Sociology",
+		"subject_name_clean_lc": "sociology",
+		"subject_names": ["Sociology"],
 		"sort_order": 0,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2016,
-			"WA":2016,
-			"NI":2016
+		"reform_year": {
+			"EN": 2016,
+			"WA": 2016,
+			"NI": 2016
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"SPAN",
-		"subject_name_clean":"Spanish",
-		"subject_name_clean_lc":"Spanish",
-		"subject_names":["Spanish"],
+		"alias": "SPAN",
+		"subject_name_clean": "Spanish",
+		"subject_name_clean_lc": "Spanish",
+		"subject_names": ["Spanish"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["FREN","GERM","OMFL"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":2017,
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": 2017,
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"WELF",
-		"subject_name_clean":"Welsh: first language",
-		"subject_name_clean_lc":"Welsh: first language",
-		"subject_names":["Welsh First Language"],
+		"alias": "WELF",
+		"subject_name_clean": "Welsh: first language",
+		"subject_name_clean_lc": "Welsh: first language",
+		"subject_names": ["Welsh First Language"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["WELS"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Not approved for use in England",
-			"WA":2016,
-			"NI":"Not approved for use in Northern Ireland"
+		"reform_year": {
+			"EN": "Not approved for use in England",
+			"WA": 2016,
+			"NI": "Not approved for use in Northern Ireland"
 		},
 		"definition": null,
 		"context": "<p>Comparable data is not available before 2017. Before this point, Welsh was recorded as a single subject, covering Welsh: first language and Welsh: second language.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"WELS",
-		"subject_name_clean":"Welsh: second language",
-		"subject_name_clean_lc":"Welsh: second language",
-		"subject_names":["Welsh Second Language"],
+		"alias": "WELS",
+		"subject_name_clean": "Welsh: second language",
+		"subject_name_clean_lc": "Welsh: second language",
+		"subject_names": ["Welsh Second Language"],
 		"sort_order": 0,
-		"flags":{
+		"related_subjects": ["WELF"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"Not approved for use in England",
-			"WA":2017,
-			"NI":2017
+		"reform_year": {
+			"EN": "Not approved for use in England",
+			"WA": 2017,
+			"NI": 2017
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"OMFL",
-		"subject_name_clean":"Other modern languages",
-		"subject_name_clean_lc":"other modern languages",
-		"subject_names":["Other modern languages"],
+		"alias": "OMFL",
+		"subject_name_clean": "Other modern languages",
+		"subject_name_clean_lc": "other modern languages",
+		"subject_names": ["Other modern languages"],
 		"sort_order": 1,
-		"flags":{
+		"related_subjects": ["FREN","GERM","SPAN"],
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": true
 		},
-		"reform_year":{
-			"EN":"2018/2019/being discontinued, 2018",
-			"WA":"2018/2019/being discontinued, 2018",
-			"NI":"2018/2019/being discontinued, 2018"
+		"reform_year": {
+			"EN": "2018/2019/being discontinued, 2018",
+			"WA": "2018/2019/being discontinued, 2018",
+			"NI": "2018/2019/being discontinued, 2018"
 		},
 		"definition": "<p>This consists of all modern languages except French, German, Irish, Spanish and Welsh - namely Arabic, Bengali, Chinese, Dutch, Gujurati, Italian, Japanese, modern Greek, modern Hebrew, Panjabi, Persian, Polish, Portuguese, Russian, Turkish and Urdu.</p><p>Reformed A-Levels in some languages will be awarded for the first time in 2019, while in others they will be awarded for the first time in 2020. Dutch AS-Level is being discontinued in 2018.</p>",
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"OSCI",
-		"subject_name_clean":"Other sciences",
-		"subject_name_clean_lc":"other sciences",
-		"subject_names":["Other sciences"],
+		"alias": "OSCI",
+		"subject_name_clean": "Other sciences",
+		"subject_name_clean_lc": "other sciences",
+		"subject_names": ["Other sciences"],
 		"sort_order": 1,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":2018,
-			"WA":2018,
-			"NI":2018
+		"reform_year": {
+			"EN": 2018,
+			"WA": 2018,
+			"NI": 2018
 		},
 		"definition": "This includes all science subjects except biology, chemistry and physics.",
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"AOTH",
-		"subject_name_clean":"All other subjects",
-		"subject_name_clean_lc":"all other subjects",
-		"subject_names":["All other subjects"],
+		"alias": "AOTH",
+		"subject_name_clean": "All other subjects",
+		"subject_name_clean_lc": "all other subjects",
+		"subject_names": ["All other subjects"],
 		"sort_order": 2,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": false
 		},
-		"reform_year":{
-			"EN":"2018",
-			"WA":"2018",
-			"NI":"2018"
+		"reform_year": {
+			"EN": "2018",
+			"WA": "2018",
+			"NI": "2018"
 		},
 		"definition": "This covers a range of subjects not reported on separately, including philosophy and accounting.",
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
-		"alias":"ALLS",
-		"subject_name_clean":"All subjects",
-		"subject_name_clean_lc":"all subjects",
-		"subject_names":["All Subjects"],
+		"alias": "ALLS",
+		"subject_name_clean": "All subjects",
+		"subject_name_clean_lc": "all subjects",
+		"subject_names": ["All Subjects"],
 		"sort_order": -1,
-		"flags":{
+		"flags": {
 			"ebacc": null,
 			"p8dbl": null,
 			"facil": null
 		},
-		"reform_year":{
-			"EN":"Various",
-			"WA":"Various",
-			"NI":"Various"
+		"reform_year": {
+			"EN": "Various",
+			"WA": "Various",
+			"NI": "Various"
 		},
 		"definition": null,
 		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers across subjects that have been reformed. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
