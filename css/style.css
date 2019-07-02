@@ -144,6 +144,20 @@ a {
 	text-decoration-style: dotted;
 }
 
+/* Subject pages */
+#related-subjects-banner .container h5 {
+	text-align: right;
+}
+
+#related-subjects-banner .container .row {
+	margin-bottom: 0px;
+}
+
+#related-subjects-banner .container .row h5 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
 /* RSS feed */
 .rss2html-note {
 	display: none
@@ -164,6 +178,15 @@ a {
 }
 
 /* footer.php */
+#report-banner .container .row {
+	margin-bottom: 0px;
+}
+
+#report-banner .container .row h5 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
 .footer-copyright .row {
 	margin-bottom: 0px;
 }

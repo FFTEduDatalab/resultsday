@@ -1,45 +1,67 @@
-var level, alias, subject, subject_lc, flags, reformYear, definition, context, analysis, entriesData, gradesData, entriesChartSubtitle, gradesChartSubtitle, gradesChartColoursArray, subjectsJSON, entriesJSON, gradesJSON, textJSON, gradesAll, gradesSelected, yMax, addthis_share
-var yearMin=2014
-var yearMax=2017
-var breakdown = 'geography';
-var scope = 'UK';
-var grades = 'Selected'
-var gender = 'All students'
-var coloursDict = {
+var level,
+	alias,
+	subject,
+	subject_lc,
+	flags,
+	reformYear,
+	definition,
+	context,
+	relatedSubjects,
+	analysis,
+	entriesData,
+	gradesData,
+	entriesChartSubtitle,
+	gradesChartSubtitle,
+	gradesChartColoursArray,
+	subjectsJSON,
+	entriesJSON,
+	gradesJSON,
+	textJSON,
+	gradesAll,
+	gradesSelected,
+	yMax,
+	addthis_share,
+	addthis_config = addthis_config||{},
+	yearMin = 2014,
+	yearMax = 2017,
+	breakdown = 'geography',
+	scope = 'UK',
+	grades = 'Selected',
+	gender = 'All students',
+	coloursDict = {
     'All students':'#535353',
     'Male':'#2daae1',
     'Female':'#96c11f'
-}
-var levels=[
-	{
-		'name':'A-Level',
-	    'subjectsJSON':'a-level-subjects.json?v=20180904',
-	    'entriesJSON':'a-level-entries.json?v=20180904',
-	    'gradesJSON':'a-level-grades.json?v=20180904',
-	    'textJSON':'a-level-text.json?v=20180904',
-	    'gradesAll':['A*','A or above','B or above','C or above','D or above','E or above','U or above'],
-	    'gradesSelected':['A*','A or above','C or above','E or above']
 	},
-	{
-		'name':'AS-Level',
-	    'subjectsJSON':'as-level-subjects.json?v=20180904',
-	    'entriesJSON':'as-level-entries.json?v=20180904',
-	    'gradesJSON':'as-level-grades.json?v=20180904',
-	    'textJSON':'as-level-text.json?v=20180904',
-		'gradesAll':['A','B or above','C or above','D or above','E or above','U or above'],
-	    'gradesSelected':['A','C or above','E or above']
-	},
-	{
-		'name':'GCSE',
-	    'subjectsJSON':'gcse-subjects.json?v=20180904',
-	    'entriesJSON':'gcse-entries.json?v=20180904',
-	    'gradesJSON':'gcse-grades.json?v=20180904',
-	    'textJSON':'gcse-text.json?v=20180904',
-		'gradesAll':['A/7 or above','C/4 or above','G/1 or above','U or above'],
-	    'gradesSelected':['A/7 or above','C/4 or above','G/1 or above']
-	}
-]
-var addthis_config = addthis_config||{};
+	levels=[
+		{
+			'name':'A-Level',
+		    'subjectsJSON':'a-level-subjects.json?v=20180904',
+		    'entriesJSON':'a-level-entries.json?v=20180904',
+		    'gradesJSON':'a-level-grades.json?v=20180904',
+		    'textJSON':'a-level-text.json?v=20180904',
+		    'gradesAll':['A*','A or above','B or above','C or above','D or above','E or above','U or above'],
+		    'gradesSelected':['A*','A or above','C or above','E or above']
+		},
+		{
+			'name':'AS-Level',
+		    'subjectsJSON':'as-level-subjects.json?v=20180904',
+		    'entriesJSON':'as-level-entries.json?v=20180904',
+		    'gradesJSON':'as-level-grades.json?v=20180904',
+		    'textJSON':'as-level-text.json?v=20180904',
+			'gradesAll':['A','B or above','C or above','D or above','E or above','U or above'],
+		    'gradesSelected':['A','C or above','E or above']
+		},
+		{
+			'name':'GCSE',
+		    'subjectsJSON':'gcse-subjects.json?v=20180904',
+		    'entriesJSON':'gcse-entries.json?v=20180904',
+		    'gradesJSON':'gcse-grades.json?v=20180904',
+		    'textJSON':'gcse-text.json?v=20180904',
+			'gradesAll':['A/7 or above','C/4 or above','G/1 or above','U or above'],
+		    'gradesSelected':['A/7 or above','C/4 or above','G/1 or above']
+		}
+	];
 
 $(function () {
 	Highcharts.setOptions(Highcharts.theme)
@@ -89,62 +111,83 @@ $(function () {
 		let len=data.length
 		if(len>0){
 	        for(let i=0; i<len; i++){
-	          var line=data.shift()
-	          if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject){
-	            subject=line.subject_name_clean
-				subject_lc=line.subject_name_clean_lc
-				document.getElementById('subjectNameContainer').innerHTML=subject
-				alias=line.alias
-				if (alias=='ALLS'){
-					$('#gcseFlagContainer').hide()
-					$('#alevelFlagContainer').hide()
-				}
-				definition=line.definition
-				if (definition==null){
-					$('#definitionContainer').hide()
-				}
-				context=line.context
-				if (context==null){
-					$('#contextBox').hide()
-				}
-				flags=line.flags
-				if (level=='A-Level' || level=='AS-Level'){
-					if (flags.facil==true){
-						document.getElementById('facilFlagImg').src = '/img/facilFlagImgPink.png';
-						document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is a facilitating subject')
+				var line=data.shift()
+				if (line.subject_name_clean_lc.replace(/\W+/g, '-') == urlSubject){
+		            subject=line.subject_name_clean
+					subject_lc=line.subject_name_clean_lc
+					document.getElementById('subjectNameContainer').innerHTML=subject
+					alias=line.alias
+					if (alias=='ALLS'){
+						$('#gcseFlagContainer').hide()
+						$('#alevelFlagContainer').hide()
+					}
+					definition=line.definition
+					if (definition==null){
+						$('#definitionContainer').hide()
+					}
+					context=line.context
+					if (context==null){
+						$('#contextBox').hide()
+					}
+					relatedSubjects=line.related_subjects
+					if (relatedSubjects==null){
+						$('#related-subjects-banner').hide()
 					}
 					else {
-						document.getElementById('facilFlagImg').src = '/img/facilFlagImgGrey.png';
-						document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is not a facilitating subject')
+						relatedSubjects.forEach(function(relatedAlias, index, array){		// pass the array index and the array itself as well as the array value - relatedAlias - to allow us to check if something is the final element of the array
+							$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(dataRelated) {
+								for(let j=0; j<len; j++){
+									var lineRelated = dataRelated.shift()
+									if (lineRelated.alias == relatedAlias) {
+										if ( index != array.length - 1 ) {		// final element
+											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/gcse/' + lineRelated.subject_name_clean_lc.replace(/\W+/g, '-') + '.php?v=20180904">' + lineRelated.subject_name_clean + '</a>,'
+										}
+										else {
+											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/gcse/' + lineRelated.subject_name_clean_lc.replace(/\W+/g, '-') + '.php?v=20180904">' + lineRelated.subject_name_clean + '</a>'
+										}
+									}
+								}
+							});
+						});
 					}
-				}
-				else if (level=='GCSE'){
-					if (flags.ebacc==true){
-						document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgPink.png';
-						document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject counts in the English Baccalaureate (England only)')
-					}
-					else {
-						document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgGrey.png';
-						document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject does not count in the English Baccalaureate (England only)')
-					}
-					if (flags.p8dbl==true){
-						document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgPink.png';
-						if (alias=='ENLA' || alias=='ENLI'){
-							document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject can be double-weighted in Progress 8 calculations - see the explanatory guide for full details (England only)')
+					flags=line.flags
+					if (level=='A-Level' || level=='AS-Level'){
+						if (flags.facil==true){
+							document.getElementById('facilFlagImg').src = '/img/facilFlagImgPink.png';
+							document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is a facilitating subject')
 						}
-						else if (alias=='MATH') {
-							document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is double-weighted in Progress 8 calculations (England only)')
+						else {
+							document.getElementById('facilFlagImg').src = '/img/facilFlagImgGrey.png';
+							document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is not a facilitating subject')
 						}
 					}
-					else {
-						document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgGrey.png';
-						document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is not double-weighted in Progress 8 calculations (England only)')
+					else if (level=='GCSE'){
+						if (flags.ebacc==true){
+							document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgPink.png';
+							document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject counts in the English Baccalaureate (England only)')
+						}
+						else {
+							document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgGrey.png';
+							document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject does not count in the English Baccalaureate (England only)')
+						}
+						if (flags.p8dbl==true){
+							document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgPink.png';
+							if (alias=='ENLA' || alias=='ENLI'){
+								document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject can be double-weighted in Progress 8 calculations - see the explanatory guide for full details (England only)')
+							}
+							else if (alias=='MATH') {
+								document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is double-weighted in Progress 8 calculations (England only)')
+							}
+						}
+						else {
+							document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgGrey.png';
+							document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is not double-weighted in Progress 8 calculations (England only)')
+						}
 					}
-				}
-				reformYear=line.reform_year
-				document.getElementById('definitionContainer').innerHTML=document.getElementById('definitionContainer').innerHTML+definition
-				document.getElementById('contextContainer').innerHTML=document.getElementById('contextContainer').innerHTML+context
-				document.getElementById('reformYearContainer').innerHTML='<ul><li><em>Reform date</em></li><li>England: ' + reformYear.EN +'</li><li>Wales: ' + reformYear.WA +'</li><li>Northern Ireland: ' + reformYear.NI +'</li></ul>'
+					reformYear=line.reform_year
+					document.getElementById('definitionContainer').innerHTML=document.getElementById('definitionContainer').innerHTML+definition
+					document.getElementById('contextContainer').innerHTML=document.getElementById('contextContainer').innerHTML+context
+					document.getElementById('reformYearContainer').innerHTML='<ul><li><em>Reform date</em></li><li>England: ' + reformYear.EN +'</li><li>Wales: ' + reformYear.WA +'</li><li>Northern Ireland: ' + reformYear.NI +'</li></ul>'
 				}
 	        }
 			addthis_share = {

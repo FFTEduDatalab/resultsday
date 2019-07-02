@@ -1,4 +1,4 @@
-	<!-- <div class="section" id="report-banner">
+	<div class="section" id="report-banner">
 		<div class="container">
 			<div class="row center">
 				<div class="col s12">
@@ -6,7 +6,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<footer class="page-footer grey darken-1">
 	<div class="container">
 	  <div class="row">
