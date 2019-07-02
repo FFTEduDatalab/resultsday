@@ -154,6 +154,10 @@ a {
 }
 
 /* Subject pages */
+#back-button {
+	padding: 0px;
+}
+
 #related-subjects-banner .container h5 {
 	text-align: right;
 }

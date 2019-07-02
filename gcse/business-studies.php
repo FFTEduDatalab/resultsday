@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col s12">
-				<a class="btn-flat" onclick="goBack()">< Back</a>
+				<a class="btn-flat" id="back-button" onclick="goBack()">< Back to subject list</a>
 				<h1><span id='subjectNameContainer'></span> | <span id='levelNameContainer'></span></h1>
 			</div>
 		</div>
