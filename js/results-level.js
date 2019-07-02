@@ -28,11 +28,11 @@ var levels=[
 	}
 ]
 
-var name
-var level
-var i
-var j
-var l = levels.length
+var name,
+	level,
+	subjectClass,
+	i,
+	l = levels.length
 
 $(function () {		// needs to be done in two stages like this, as otherwise inner for loop always runs off final i value under js asynchonicity
 	level = window.location.href.split('/')[3].split('.')[0]
@@ -71,10 +71,25 @@ function jsonCallback() {
 
 		data.sort(order);
 
-		let len=data.length
-		for (j = 0; j < len; j++) {
-			var line=data.shift()
-			document.getElementById('subjectListContainer').innerHTML=document.getElementById('subjectListContainer').innerHTML + '<li><a href="' + name + '/' + line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + line.subject_name_clean + '</a></li>'
-		}
+		data.forEach(function(value) {
+			if (value.sort_order == -1) {
+				subjectClass = "class='underline'"
+			}
+			else {
+				subjectClass = ""
+			}
+			var snippet = `
+				<div class="col l4 s6">
+					<div class="card white">
+						<div class="card-content">` +
+							'<h5><a ' + subjectClass + ' href="' + name + '/' + value.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + value.subject_name_clean + '</a></h5>' + `
+						</div>
+					</div>
+				</div>
+			`;
+
+			document.getElementById('subject-cards').innerHTML = document.getElementById('subject-cards').innerHTML + snippet
+		});
+
 	};
 }

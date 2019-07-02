@@ -1,6 +1,7 @@
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
 	font-size: inherit;
 }
@@ -27,6 +28,10 @@
 
 .fft-green-text {
 	color: #96c11f !important;
+}
+
+.underline {
+	text-decoration: underline;
 }
 
 nav {
@@ -81,7 +86,6 @@ nav .brand-logo {
 	.logo-nuffield img {
 		max-width: 186px;
 		max-height: 64px;
-
 	}
 
 	.logo-nuffield {
@@ -142,6 +146,11 @@ a {
 	color: #ffffff;
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
+}
+
+/* Level pages */
+#subject-cards .card {
+	height: 250px;
 }
 
 /* Subject pages */
