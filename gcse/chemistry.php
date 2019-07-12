@@ -83,21 +83,13 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="section fft-blue" id="related-subjects-banner">
-	<div class="container">
 		<div class="row">
 			<div class="col s12">
-				<h5>Explore related subjects:</h5>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="section grey lighten-4">
-	<div class="container">
-		<div class="row">
-			<div class="col s12">
+				<div class="card">
+					<div class="card-content" id="related-subjects-banner">
+						<h5>Explore related subjects:</h5>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

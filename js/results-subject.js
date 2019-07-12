@@ -131,7 +131,6 @@ $(function () {
 						$('#contextBox').hide()
 					}
 					relatedSubjects=line.related_subjects
-					$('#related-subjects-banner').hide()		// XXX
 					if (relatedSubjects==null){
 						$('#related-subjects-banner').hide()
 					}

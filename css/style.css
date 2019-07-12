@@ -137,7 +137,7 @@ a {
 }
 
 #contextBox a {
-	color: #ffffff;
+	color: #f3f3f3;
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
 }
@@ -158,8 +158,13 @@ a {
 	padding: 0px;
 }
 
-#related-subjects-banner .container h5 {
-	text-align: right;
+#related-subjects-banner {
+	background-color: #b1dbed;
+}
+
+#related-subjects-banner h5 {
+	text-align: left;
+	margin-top: 0.656rem;
 }
 
 #related-subjects-banner .container .row {
