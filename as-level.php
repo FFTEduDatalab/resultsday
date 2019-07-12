@@ -9,8 +9,7 @@
 		<div class="row">
 			<div class="col s12">
 			    <ul>
-					<h5><li>Explore trends in national entry and attainment data between 2014 and 2018</h5></li>
-			    	<h5><li><div id='subjectListContainer'></div></li><h5>
+					<h5><li>Explore trends in entries and attainment in:</h5></li>
 			    </ul>
 			</div>
 		</div>
