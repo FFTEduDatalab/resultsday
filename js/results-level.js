@@ -78,15 +78,7 @@ function jsonCallback() {
 			else {
 				subjectClass = ""
 			}
-			var snippet = `
-				<div class="col l4 s6">
-					<div class="card white">
-						<div class="card-content">` +
-							'<h5><a ' + subjectClass + ' href="' + name + '/' + value.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + value.subject_name_clean + '</a></h5>' + `
-						</div>
-					</div>
-				</div>
-			`;
+			var snippet = '<div class="col l4 m6 s12"><div class="card white"><div class="card-content"><h5><a ' + subjectClass + ' href="' + name + '/' + value.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + value.subject_name_clean + '</a></h5></div></div></div>';		// done as a single line as IE can't handle template literals
 
 			document.getElementById('subject-cards').innerHTML = document.getElementById('subject-cards').innerHTML + snippet
 		});
