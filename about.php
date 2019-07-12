@@ -46,21 +46,15 @@
 				<h3 id='credits'>Credits</h3>
 				<ul class='browser-default'>
 					<li>Funding: Nuffield Foundation</li>
-					<li>Design: Geoff Solomon, Philip Nye</li>
+					<li>Design: Philip Nye, Geoff Solomon</li>
 					<li>Data, blogposts: Philip Nye, Dave Thomson</li>
-					<li>User testing: Kat Cole (The Beacon School), Kathryn Cruickshanks (St Ursula’s School), Paddy McGrath (London Academy), Amy Sippitt (Full Fact), Steve Wren (Tadcaster Grammar School), Jerry White (City College Norwich) and others</li>
+					<li>User testing (2018): Kat Cole (The Beacon School), Kathryn Cruickshanks (St Ursula’s School), Paddy McGrath (London Academy), Amy Sippitt (Full Fact), Steve Wren (Tadcaster Grammar School), Jerry White (City College Norwich) and others</li>
 				</ul>
 				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
 				&nbsp
 
 				<h3 id='nuffield'>The Nuffield Foundation</h3>
-				<p>The Nuffield Foundation funds research, analysis, and student programmes that advance educational opportunity and social well-being across the United Kingdom. It is an independent charitable trust established in 1943 by William Morris, Lord Nuffield, the founder of Morris Motors.</p>
-
-				<p>The Foundation works to improve people’s lives, and their ability to participate in society, by understanding the social and economic factors that affect their chances in life. The research it funds aims to improve the design and operation of social policy, particularly in Education, Welfare, and Justice.</p>
-
-				<p>The Foundation’s student programmes – Nuffield Research Placements and Q-Step – provide opportunities for individual students, particularly those from disadvantaged backgrounds, to develop their skills and confidence in quantitative and scientific methods.</p>
-
-				<p>The Nuffield Foundation has funded this project, but the collation and interpretation of the data has been the responsibility of the FFT Education Datalab team. <a href='https://www.nuffieldfoundation.org' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield site', 'Nuffield site');">www.nuffieldfoundation.org</a> | <a href='https://www.twitter.com/NuffieldFound' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield Twitter', 'Nuffield Twitter');">@NuffieldFound</a></p>
+				<p>The Nuffield Foundation is an independent charitable trust with a mission to advance social well-being. It funds research that informs social policy, primarily in education, welfare, and justice. It also funds student programmes that provide opportunities for young people to develop skills in quantitative and qualitative methods. The Nuffield Foundation is the founder and co-funder of the Nuffield Council on Bioethics and the Ada Lovelace Institute. The Foundation has funded this project, but the views expressed are those of the authors and not necessarily the Foundation. Visit <a href='https://www.nuffieldfoundation.org' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield site', 'Nuffield site');">www.nuffieldfoundation.org</a> | <a href='https://www.twitter.com/NuffieldFound' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield Twitter', 'Nuffield Twitter');">@NuffieldFound</a></p>
 				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
 				&nbsp
 
