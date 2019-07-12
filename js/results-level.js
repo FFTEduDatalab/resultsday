@@ -73,7 +73,7 @@ function jsonCallback() {
 		data.sort(order);
 
 		data.forEach(function(value) {
-			if (value.sort_order == -1) {
+			if (value.sort_order != -1) {
 				subjectClass = "class='underline'"
 			}
 			else {
