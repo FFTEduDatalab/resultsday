@@ -55,7 +55,7 @@
 						<img id='p8dblFlagImg' src='/img/p8dblFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This subject is not double-counted in Progress 8 calculations (England only)'>
 					</li>
 					<li class="collection-item" id='alevelFlagContainer'>
-						<div align='right'><a class="material-icons" href='/guide.php?v=20190712#subject_flags' target="_blank">info_outline</a></div>
+						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information (opens in new tab)' href='/guide.php?v=20190712#subject_flags' target="_blank">info_outline</a></div>
 						<img id='facilFlagImg' src='/img/facilFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This is not a facilitating subject'>
 					</li>
 					<li class="collection-item">
