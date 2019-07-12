@@ -16,10 +16,5 @@
 		<div class="row" id="subject-cards"></div>
 	</div>
 </div>
-<script>
-	function runScripts() {
-		$('#report-banner').hide();
-	}
-</script>
 <script src='/js/results-level.js?v=20190712'></script>
 <?php include 'inc/footer.php';?>

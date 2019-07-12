@@ -62,5 +62,9 @@
 		</div>
 	</div>
   </div>
-
+<script>
+	function runScripts() {
+		$('#report-banner').hide();
+	}
+</script>
 <?php include 'inc/footer.php';?>

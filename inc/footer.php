@@ -41,6 +41,11 @@
 		</div>
 	</div>
 	</footer>
+	<script>
+		if (typeof runScripts === 'function') {
+			runScripts();
+		}
+	</script>
 	<script src="/js/materialize.min.js"></script>
 	<script src="/js/init.js?v=20190712"></script>
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7bf17470e79794"></script>
