@@ -200,9 +200,8 @@ a {
 	margin-bottom: 0px;
 }
 
-#report-banner .container .row h5 {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+.page-footer .footer-copyright {
+	background-color: #757575;
 }
 
 .footer-copyright .row {

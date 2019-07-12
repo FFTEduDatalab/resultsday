@@ -36,28 +36,28 @@ var level,
 	levels=[
 		{
 			'name':'A-Level',
-		    'subjectsJSON':'a-level-subjects.json?v=20180904',
-		    'entriesJSON':'a-level-entries.json?v=20180904',
-		    'gradesJSON':'a-level-grades.json?v=20180904',
-		    'textJSON':'a-level-text.json?v=20180904',
+		    'subjectsJSON':'a-level-subjects.json?v=20190712',
+		    'entriesJSON':'a-level-entries.json?v=20190712',
+		    'gradesJSON':'a-level-grades.json?v=20190712',
+		    'textJSON':'a-level-text.json?v=20190712',
 		    'gradesAll':['A*','A or above','B or above','C or above','D or above','E or above','U or above'],
 		    'gradesSelected':['A*','A or above','C or above','E or above']
 		},
 		{
 			'name':'AS-Level',
-		    'subjectsJSON':'as-level-subjects.json?v=20180904',
-		    'entriesJSON':'as-level-entries.json?v=20180904',
-		    'gradesJSON':'as-level-grades.json?v=20180904',
-		    'textJSON':'as-level-text.json?v=20180904',
+		    'subjectsJSON':'as-level-subjects.json?v=20190712',
+		    'entriesJSON':'as-level-entries.json?v=20190712',
+		    'gradesJSON':'as-level-grades.json?v=20190712',
+		    'textJSON':'as-level-text.json?v=20190712',
 			'gradesAll':['A','B or above','C or above','D or above','E or above','U or above'],
 		    'gradesSelected':['A','C or above','E or above']
 		},
 		{
 			'name':'GCSE',
-		    'subjectsJSON':'gcse-subjects.json?v=20180904',
-		    'entriesJSON':'gcse-entries.json?v=20180904',
-		    'gradesJSON':'gcse-grades.json?v=20180904',
-		    'textJSON':'gcse-text.json?v=20180904',
+		    'subjectsJSON':'gcse-subjects.json?v=20190712',
+		    'entriesJSON':'gcse-entries.json?v=20190712',
+		    'gradesJSON':'gcse-grades.json?v=20190712',
+		    'textJSON':'gcse-text.json?v=20190712',
 			'gradesAll':['A/7 or above','C/4 or above','G/1 or above','U or above'],
 		    'gradesSelected':['A/7 or above','C/4 or above','G/1 or above']
 		}
@@ -86,6 +86,7 @@ $(function () {
 		toast_text='GCSE data for 2018 is available at 9.30am on Thursday 23 August and will be added at that point'
 	}
 	M.toast({html: toast_text, displayLength: 'infinity', inDuration:0})
+	$('#report-banner').hide();
 	if (level=='A-Level' || level=='AS-Level'){
 		if (d.getFullYear()>2018 || (d.getFullYear()==2018 && d.getMonth()>7 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()>16 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()>9 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
 			$('#toast-container').hide()
@@ -130,6 +131,7 @@ $(function () {
 						$('#contextBox').hide()
 					}
 					relatedSubjects=line.related_subjects
+					$('#related-subjects-banner').hide()		// XXX
 					if (relatedSubjects==null){
 						$('#related-subjects-banner').hide()
 					}
@@ -140,10 +142,10 @@ $(function () {
 									var lineRelated = dataRelated.shift()
 									if (lineRelated.alias == relatedAlias) {
 										if ( index != array.length - 1 ) {		// final element
-											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + lineRelated.subject_name_clean + '</a>,'
+											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean + '</a>,'
 										}
 										else {
-											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20180904">' + lineRelated.subject_name_clean + '</a>'
+											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean + '</a>'
 										}
 									}
 								}
@@ -228,13 +230,13 @@ $(document).on('click', '#toast-container .toast', function() {
 function goBack() {
 	urlLevel=window.location.href.split('/')[3].split('.')[0]
 	if (urlLevel=='a-level'){
-		window.location.href='/a-level.php?v=20180904';
+		window.location.href='/a-level.php?v=20190712';
 	}
 	else if (urlLevel=='as-level') {
-		window.location.href='/as-level.php?v=20180904';
+		window.location.href='/as-level.php?v=20190712';
 	}
 	else if (urlLevel=='gcse') {
-		window.location.href='/gcse.php?v=20180904';
+		window.location.href='/gcse.php?v=20190712';
 	}
 }
 
@@ -327,7 +329,7 @@ function drawEntriesChart() {
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/entries-chart.js?v=20180904';
+	js.src = '/js/entries-chart.js?v=20190712';
 	document.body.appendChild(js)
 }
 
@@ -336,7 +338,7 @@ function drawGradesChart() {
 	gradesChartColoursArray.push(coloursDict[gender])
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/grades-chart.js?v=20180904';
+	js.src = '/js/grades-chart.js?v=20190712';
 	document.body.appendChild(js)
 }
 

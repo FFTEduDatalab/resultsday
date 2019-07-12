@@ -21,5 +21,5 @@
 		$('#report-banner').hide();
 	}
 </script>
-<script src='/js/results-level.js?v=20180904'></script>
+<script src='/js/results-level.js?v=20190712'></script>
 <?php include 'inc/footer.php';?>
