@@ -158,13 +158,14 @@ a {
 	padding: 0px;
 }
 
-#related-subjects-banner {
-	background-color: #b1dbed;
+#header-section h1 {
+	font-size: 4.2rem;
 }
 
-#related-subjects-banner h5 {
-	text-align: left;
-	margin-top: 0.656rem;
+@media (max-width: 500px) {
+	#header-section h1 {
+		font-size: 3.0rem;
+	}
 }
 
 #related-subjects-banner .container .row {
