@@ -168,14 +168,23 @@ a {
 	}
 }
 
-#related-subjects-banner .container .row {
-	margin-bottom: 0px;
+#related-subjects-section .card {
+	background-color: #b1dbed;
 }
 
-#related-subjects-banner .container .row h5 {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+#related-subjects-section h5 {
+	text-align: left;
+	margin-top: 0.656rem;
 }
+
+#related-subjects-section a {
+    color: rgb(0,0,0,0.87);
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #e6007e;
+	font-weight: 500;
+}
+
 
 /* RSS feed */
 .rss2html-note {

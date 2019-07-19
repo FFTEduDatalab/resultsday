@@ -1,13 +1,13 @@
 <?php include '../inc/header.php';?>
 <div class="section grey lighten-4">
 	<div class="container">
-		<div class="row">
+		<div class="row" id="header-section">
 			<div class="col s12">
 				<a class="btn-flat" id="back-button" onclick="goBack()">< Back to subject list</a>
 				<h1><span id='subjectNameContainer'></span> | <span id='levelNameContainer'></span></h1>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="main-section">
 			<div class="col l8 s12">
 				<div class="card white">
 					<div class="card-content">
@@ -83,10 +83,10 @@
 				</ul>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="related-subjects-section">
 			<div class="col s12">
 				<div class="card">
-					<div class="card-content" id="related-subjects-banner">
+					<div class="card-content">
 						<h5>Explore related subjects:</h5>
 					</div>
 				</div>

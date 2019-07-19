@@ -132,7 +132,7 @@ $(function () {
 					}
 					relatedSubjects=line.related_subjects
 					if (relatedSubjects==null){
-						$('#related-subjects-banner').hide()
+						$('#related-subjects-section').hide()
 					}
 					else {
 						relatedSubjects.forEach(function(relatedAlias, index, array){		// pass the array index and the array itself as well as the array value - relatedAlias - to allow us to check if something is the final element of the array
@@ -141,10 +141,10 @@ $(function () {
 									var lineRelated = dataRelated.shift()
 									if (lineRelated.alias == relatedAlias) {
 										if ( index != array.length - 1 ) {		// final element
-											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean + '</a>,'
+											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean_lc + '</a>,'
 										}
 										else {
-											$('#related-subjects-banner h5')[0].innerHTML = $('#related-subjects-banner h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean + '</a>'
+											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean_lc + '</a>'
 										}
 									}
 								}
