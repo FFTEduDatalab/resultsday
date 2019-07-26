@@ -158,7 +158,14 @@ for level in levels:
 	entries_filename=level['name'].lower()+'-entries.json'
 
 	with open(grades_filename, 'w') as outfile:
-		json.dump(grades_list, outfile, indent=4, separators=(',', ': '))
+		json.dump(grades_list, outfile, separators=(',', ':'))
 
 	with open(entries_filename, 'w') as outfile:
-		json.dump(entries_list, outfile, indent=4, separators=(',', ': '))
+		json.dump(entries_list, outfile, separators=(',', ':'))
+
+	# If pretty printing is required
+	# with open(grades_filename, 'w') as outfile:
+	# 	json.dump(grades_list, outfile, indent=4, separators=(',', ': '))
+	#
+	# with open(entries_filename, 'w') as outfile:
+	# 	json.dump(entries_list, outfile, indent=4, separators=(',', ': '))

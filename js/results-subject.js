@@ -192,7 +192,7 @@ $(function () {
 				description: 'GCSE and A-Level results analysis - FFT Education Datalab',
 				passthrough : {
 					twitter: {
-						via: 'ffteducationdatalab @nuffieldfound',
+						via: 'ffteducationdatalab',
 					}
 				}
 			}
