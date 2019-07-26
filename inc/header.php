@@ -3,6 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://results.ffteducationdatalab.org.uk">
+	<meta name="twitter:title" content="GCSE and A-Level results analysis - FFT Education Datalab">
+	<meta name="twitter:description" content="Explore national trends in GCSE and A-Level entries and grades">
+	<meta name="twitter:image" content="https://results.ffteducationdatalab.org.uk/img/stepped_dots.png">
+	<meta name="twitter:image:alt" content="GCSE and A-Level results analysis logo">
+	<meta name="twitter:site" content="@ffteducationdatalab">
 	<title>GCSE and A-Level results analysis - FFT Education Datalab</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -22,6 +29,7 @@
 		ga('create', 'UA-59588201-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+	<noscript><div class='no-script'><h5>This site requires JavaScript, which is turned off in your browser.</h5></div></noscript>
 </head>
 <body>
 	<div class="container" id="logo-container" style="padding-top: 20px">

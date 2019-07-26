@@ -210,6 +210,11 @@ a {
 	line-height: 35px;
 }
 
+.no-script {
+	background-color: #2daae1;
+	text-align: center;
+}
+
 /* footer.php */
 #report-banner .container .row {
 	margin-bottom: 0px;
