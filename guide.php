@@ -60,7 +60,7 @@
 
 				<h5>Context (certain subjects only)</h5>
 				<p><i class="material-icons">warning</i> Indicated by this symbol, the bottom text box on subject pages provides key context needed to understand the other information presented on the page. Note that this text box only appears where such contextual information exists.</p>
-				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 
 				<h3 id='general-guidance'>General guidance on interpretation</h3>
@@ -80,7 +80,7 @@
 
 				<h5>Technical guidance</h5>
 				<p>A document, setting out in detail the data on which this site is based, together with key information needed to interpret data presented <a href='/technical_documentation.pdf'>can be found here</a> [PDF].</p>
-				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 
 				<h3 id='faq'>FAQ</h3>
@@ -91,8 +91,9 @@
 				<p>Entry and attainment data is provisional data published by the JCQ. Full details of sources used, including sourcing for other information, can be found on the <a href='about.php?v=20190712'>About page</a>.</p>
 
 				<h5 id='scotland'>Why doesn’t Scotland feature in the data?</h5>
-				<p>The education systems of England, Wales and Northern Ireland are broadly similar, with students take a range of qualifications and public examinations, primarily GCSEs, at age 16. Scotland has a distinct system with students typically taking National 5 qualifications, which are considered to be equivalent to GCSEs, at age 16. Results are not available from JCQ.</p>
-				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				<p>The education systems of England, Wales and Northern Ireland are broadly similar, with students taking a range of qualifications and public examinations at age 16 (primarily GCSEs) and post-16 (AS-Levels and A-Levels, among others).</p>
+				<p>Scotland has a distinct system, with students typically taking National 5 qualifications, Highers and Advanced Highers. Results for these qualifications are not available from JCQ.</p>
+				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 			</div>
 		</div>
