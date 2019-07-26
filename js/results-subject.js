@@ -22,8 +22,7 @@ var level,
 	yMax,
 	addthis_share,
 	addthis_config = addthis_config||{},
-	yearMin = 2014,
-	yearMax = 2017,
+	yearMin = 2015,
 	breakdown = 'geography',
 	scope = 'UK',
 	grades = 'Selected',
@@ -78,28 +77,25 @@ $(function () {
 	if (level=='A-Level' || level=='AS-Level'){
 		$('#bSelector').hide()
 		$('#gcseFlagContainer').hide()
-		toast_text='A-Level and AS-Level data for 2018 is available at 9.30am on Thursday 16 August and will be added at that point'
+		toast_text='A-Level and AS-Level data for 2019 is available at 9.30am on Thursday 15 August and will be added at that point'
 	}
 	if (level=='GCSE'){
 		$('#gSelector').hide()
 		$('#alevelFlagContainer').hide()
-		toast_text='GCSE data for 2018 is available at 9.30am on Thursday 23 August and will be added at that point'
+		toast_text='GCSE data for 2019 is available at 9.30am on Thursday 22 August and will be added at that point'
 	}
 	M.toast({html: toast_text, displayLength: 'infinity', inDuration:0})
 	$('#report-banner').hide();
 	if (level=='A-Level' || level=='AS-Level'){
-		if (d.getFullYear()>2018 || (d.getFullYear()==2018 && d.getMonth()>7 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()>16 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()>9 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==16 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
+		if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>7 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()>15 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==15 & d.getHours()>9 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==15 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
 			$('#toast-container').hide()
-			yearMax=2018
 		}
 	}
 	if (level=='GCSE'){
-		if (d.getFullYear()>2018 || (d.getFullYear()==2018 && d.getMonth()>7 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()>23 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==23 & d.getHours()>9 || (d.getFullYear()==2018 && d.getMonth()==7 && d.getDate()==23 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
+		if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>7 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()>22 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==22 & d.getHours()>9 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==22 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
 			$('#toast-container').hide()
-			yearMax=2018
 		}
 	}
-	yearMax=2018
 	gradesChartColoursArray=[]
 	gradesChartColoursArray.push(coloursDict['All students'])
 	subjectsJSON=levelData.subjectsJSON
@@ -192,7 +188,7 @@ $(function () {
 				}
 	        }
 			addthis_share = {
-				title: level + ' results day 2018: Entry and attainment trends in ' + subject_lc,
+				title: level + ' results day 2019: Entry and attainment trends in ' + subject_lc,
 				description: 'GCSE and A-Level results analysis - FFT Education Datalab',
 				passthrough : {
 					twitter: {

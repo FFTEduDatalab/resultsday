@@ -1,6 +1,6 @@
 Highcharts.chart('entriesChartContainer', {
     title: {
-        text: level + ' entries in ' + subject_lc + ', ' + yearMin + '-' + yearMax
+        text: level + ' entries in ' + subject_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
     },
     subtitle: {
         text: entriesChartSubtitle + '<br><em>Number of entries</em>'

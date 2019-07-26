@@ -1,6 +1,6 @@
 Highcharts.chart('gradesChartContainer', {
     title: {
-        text: level + ' grades in ' + subject_lc + ', ' + yearMin + '-' + yearMax
+        text: level + ' grades in ' + subject_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
     },
     subtitle: {
         text: gradesChartSubtitle + '<br><em>Cumulative percentage attaining grade</em>'
