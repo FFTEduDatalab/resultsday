@@ -94,26 +94,35 @@ nav .brand-logo {
 	height: 60px;
 }
 
+/* Toasts */
 #toast-container {
 	bottom: 0%;
 	top: auto;		/* unset does not work in IE */
 	right: auto;		/* unset does not work in IE */
+	left: auto;		/* unset does not work in IE */
 	min-width: 100%;
 }
 
-#toast-container .toast {
+.toast .close {
 	cursor: pointer;
-	background-color: #e6007e !important;
 }
 
-#toast-container .toast::after {
-	font-family: 'Material Icons';
-	content: "close";
+.toast.new-data,
+.toast.early-results {
+	margin-top: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background-color: #e6007e !important;
 	color: #ffffff;
-	font-size: 1.5rem;
-	font-weight: 300;
-	float: right;
-	padding-left: 3rem;
+}
+
+.toast.new-data a,
+.toast.early-results a {
+	color: #ffffff;
+}
+
+.toast.early-results {
+	background-color: #2daae1 !important;
 }
 
 .btn-flat {
@@ -234,4 +243,9 @@ a {
 
 .footer-copyright .row .push-l2 img {
 	margin-left: 4px;
+}
+
+/* Guide page */
+.back-to-top {
+	font-size: 36px;
 }
