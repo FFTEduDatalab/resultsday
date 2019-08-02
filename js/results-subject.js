@@ -317,7 +317,16 @@ function setChartSubtitles() {
         'NI':'Northern Ireland',
         '15':'15-year-olds and younger',
         '16':'16-year-olds',
-        '17':'17-year-olds and older'
+        '17':'17-year-olds and older',
+        'EN15':'15-year-olds and older, England',
+        'EN16':'16-year-olds and older, England',
+        'EN17':'17-year-olds and older, England',
+        'WA15':'15-year-olds and older, Wales',
+        'WA16':'16-year-olds and older, Wales',
+        'WA17':'17-year-olds and older, Wales',
+        'NI15':'15-year-olds and older, Northern Ireland',
+        'NI16':'16-year-olds and older, Northern Ireland',
+        'NI17':'17-year-olds and older, Northern Ireland'
     }
     let gradesDict = {
         'Selected':'selected grades',
@@ -328,13 +337,22 @@ function setChartSubtitles() {
         'Male':'Male students',
         'Female':'Female students',
     }
-    entriesChartSubtitle = 'All students, ' + scopeDict[scope]
-		if (level=='GCSE'){
-			gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + 'key grades'
-		}
-		else{
-			gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + gradesDict[grades]
-		}
+	if (isNaN(Number(scope.slice(0,1))) == 0) {		// age breakdown
+    	entriesChartSubtitle = scopeDict[scope] + ', UK-wide'
+		console.log(entriesChartSubtitle)
+	}
+	else if (isNaN(Number(scope.slice(0,1))) == 1 && isNaN(Number(scope.slice(scope.length-1))) == 1) {		// geography breakdown
+    	entriesChartSubtitle = 'All students, ' + scopeDict[scope]
+	}
+	else {		// age x geography breakdown
+    	entriesChartSubtitle = scopeDict[scope]
+	}
+	if (level=='GCSE'){
+		gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + 'key grades'
+	}
+	else {
+		gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + gradesDict[grades]
+	}
     return entriesChartSubtitle, gradesChartSubtitle
 }
 
