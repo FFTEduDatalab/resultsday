@@ -86,25 +86,6 @@ for level in levels:
 									for grade, rbcol in zip(level['grades'], rbcols):
 										row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
 								rows.append(row)
-							elif scope=='EN16' and rbws.cell(rbrow-1,1).value in ['Male', 'Female', 'Male & Female']:		# collects previous year's results
-								row['alias']=alias
-								row['scope']=scope
-								row['year']=year-1
-								if rbws.cell(rbrow-1,1).value=='Male & Female':
-									row['gender']='All students'
-								else:
-									row['gender']=rbws.cell(rbrow-1,1).value
-								row['entries']=int(rbws.cell(rbrow,2).value)
-								if level['name']!='GCSE' or (level['name']=='GCSE' and filename_split[3]=='keygrades'):		# A-Level, AS-Level and GCSE key grades files
-									rbcol=4
-									for grade in level['grades']:
-										row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
-										rbcol+=1
-								elif level['name']=='GCSE' and filename_split[3]=='ag':		# GCSE all grades files
-									rbcols=[5,7,11,12]		# columns where A, C, G, U values are held
-									for grade, rbcol in zip(level['grades'], rbcols):
-										row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
-								rows.append(row)
 				except Exception as ex:
 					print ex
 
@@ -116,8 +97,6 @@ for level in levels:
 						if entries['name']==gender and entries['alias']==row['alias'] and entries['scope']==row['scope']:
 							data_item=[row['year'],row['entries']]
 							entries['data'].append(data_item)
-							if entries['scope']=='EN16':
-								entries['data']=sorted(entries['data'], key=lambda x: x[0])
 							break
 				else:
 					entries=OrderedDict([])
@@ -136,8 +115,6 @@ for level in levels:
 					if grades['name']==grade and grades['alias']==row['alias'] and grades['scope']==row['scope'] and grades['gender']==row['gender']:
 						data_item=[row['year'],row[grade]]
 						grades['data'].append(data_item)
-						if grades['scope']=='EN16':
-							grades['data']=sorted(grades['data'], key=lambda x: x[0])
 						break
 			else:
 				grades=OrderedDict([])
@@ -157,6 +134,7 @@ for level in levels:
 	grades_filename=level['name'].lower()+'-grades.json'
 	entries_filename=level['name'].lower()+'-entries.json'
 
+	# Minified
 	with open(grades_filename, 'w') as outfile:
 		json.dump(grades_list, outfile, separators=(',', ':'))
 
