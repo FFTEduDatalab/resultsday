@@ -7,6 +7,8 @@ import json
 from xlrd import open_workbook
 from collections import OrderedDict
 
+min_year=2015
+
 levels=[
 	{
 		'name':'A-Level',
@@ -41,11 +43,11 @@ for level in levels:
 		grades_data = json.load(grades_file)
 	for entries in entries_data:
 		if entries['name']=='All students' and entries['scope']=='UK' and entries['alias']=='ALLS':
-			allsubjects_entries=entries
+			allsubjects_entries=entries		# used so that _all subjects_ data is accessible when analysis is being written for each individual subject
 			break
 	for grades in grades_data:
 		if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='C/4 or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']=='ALLS':
-			allsubjects_grades=grades
+			allsubjects_grades=grades		# ditto
 			break
 	for subject in subjects_data:		# not done using zip, as files being read are of different lengths
 		alias=subject['alias']
@@ -54,20 +56,20 @@ for level in levels:
 		texts['subject_name_clean_lc']=subject['subject_name_clean_lc']
 		for entries in entries_data:
 			if entries['name']=='All students' and entries['alias']==alias and entries['scope']=='UK':
-				texts['y0']=entries['data'][0][0]
+				for year in entries['data']:
+					if year[0]>=min_year:
+						texts['y0']=year[0]
+						texts['entries_y0']=year[1]
+						break
 				texts['yn']=entries['data'][-1][0]
 				texts['years']=texts['yn']-texts['y0']+1
 				yn_y0=texts['years']
-				texts['entries_y0']=entries['data'][0][1]
 				texts['entries_yn']=entries['data'][-1][1]
-				texts['allsubjects_y0']=allsubjects_entries['data'][-yn_y0][0]
-				texts['allsubjects_yn']=allsubjects_entries['data'][-1][0]
-				texts['allsubjects_entries_y0']=allsubjects_entries['data'][-yn_y0][1]
+				texts['allsubjects_entries_y0']=allsubjects_entries['data'][-yn_y0][1]		# needs to be based on the same number of years as the subject being looked at, for subjects that have < five years of data
 				texts['allsubjects_entries_yn']=allsubjects_entries['data'][-1][1]
 				break
 		for grades in grades_data:
 			if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='C/4 or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']==alias:
-				texts['highlighted_grades_y0']=grades['data'][0][1]
 				texts['highlighted_grades_yn']=grades['data'][-1][1]
 				texts['allsubjects_highlighted_grades_yn']=allsubjects_grades['data'][-1][1]
 				break
@@ -87,12 +89,19 @@ for level in levels:
 				number_of_years='four'
 			elif texts['years']==5:
 				number_of_years='five'
+			if allsubjects_entries_change>0:
+			    allsubjects_entries_change_sign='+'
+			else:
+				allsubjects_entries_change_sign=''
 			if subject_entries_change>0:
-			    subject_entries_change_sign='increased'
+			    subject_entries_change_sign='+'
+			    subject_entries_change_direction='increased'
 			elif subject_entries_change<0:
-			    subject_entries_change_sign='decreased'
+			    subject_entries_change_sign=''
+			    subject_entries_change_direction='decreased'
 			elif subject_entries_change==0:
-			    subject_entries_change_sign='stayed the same'
+			    subject_entries_change_sign=''
+			    subject_entries_change_direction='stayed the same'
 			if abs(subject_entries_change)>=20:
 			    subject_entries_change_scale='sharply '
 			elif 5<=abs(subject_entries_change)<20:
@@ -123,9 +132,9 @@ for level in levels:
 				if texts['years']==1:
 					texts['analysis']='<p>Across the UK, a ' + highlighted_grades_comparison + ' proportion of students achieved ' + metric + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + ' ' + highlighted_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' compared to ' + str(texts['allsubjects_highlighted_grades_yn']) + '% for all subjects.</p>'
 				else:
-					texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_sign + ' ' + subject_entries_change_scale + 'across the UK over the last ' + number_of_years + ' years. The ' + str(subject_entries_change) + '% change compared to a change of ' + str(allsubjects_entries_change) + '% in all ' + level['name'] + ' entries over the last ' + number_of_years + ' years.</p><p>Across the UK, a ' + highlighted_grades_comparison + ' proportion of students achieved ' + metric + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + ' ' + highlighted_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' compared to ' + str(texts['allsubjects_highlighted_grades_yn']) + '% for all subjects.</p>'
+					texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_direction + ' ' + subject_entries_change_scale + 'across the UK over the last ' + number_of_years + ' years. The ' + subject_entries_change_sign + str(subject_entries_change) + '% change compared to a change of ' + allsubjects_entries_change_sign + str(allsubjects_entries_change) + '% in all ' + level['name'] + ' entries over the last ' + number_of_years + ' years.</p><p>Across the UK, a ' + highlighted_grades_comparison + ' proportion of students achieved ' + metric + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + ' ' + highlighted_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' compared to ' + str(texts['allsubjects_highlighted_grades_yn']) + '% for all subjects.</p>'
 			else:
-				texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_sign + ' by ' + str(abs(subject_entries_change)) + '% across the UK over the last ' + number_of_years + ' years.</p><p>Across the UK, ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + '.</p>'
+				texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_direction + ' by ' + str(abs(subject_entries_change)) + '% across the UK over the last ' + number_of_years + ' years.</p><p>Across the UK, ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + '.</p>'
 
 	texts_list_redux=[]
 	for texts in texts_list:
