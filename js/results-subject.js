@@ -7,6 +7,7 @@ var level,
 	definition,
 	context,
 	relatedSubjects,
+	relatedArray = [],
 	analysis,
 	entriesData,
 	gradesData,
@@ -116,50 +117,57 @@ $(function () {
 	gradesAll=levelData.gradesAll
 	gradesSelected=levelData.gradesSelected
 	$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(data) {
-		let len=data.length
-		if(len>0){
-	        for(let i=0; i<len; i++){
-				var line=data.shift()
-				if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject){
-		            subject=line.subject_name_clean
-					subject_lc=line.subject_name_clean_lc
-					document.getElementById('subjectNameContainer').innerHTML=subject
-					alias=line.alias
-					if (alias=='ALLS'){
+		let len = data.length
+		if (len > 0) {
+	        for (let i = 0; i < len; i++) {
+				var line = data.shift()
+				if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject) {
+		            subject = line.subject_name_clean
+					subject_lc = line.subject_name_clean_lc
+					document.getElementById('subjectNameContainer').innerHTML = subject
+					alias = line.alias
+					if (alias == 'ALLS') {
 						$('#gcseFlagContainer').hide()
 						$('#alevelFlagContainer').hide()
 					}
-					definition=line.definition
-					if (definition==null){
+					definition = line.definition
+					if (definition == null) {
 						$('#definitionContainer').hide()
 					}
-					context=line.context
-					if (context==null){
+					context = line.context
+					if (context == null) {
 						$('#contextBox').hide()
 					}
-					relatedSubjects=line.related_subjects
-					if (relatedSubjects==null){
+					relatedSubjects = line.related_subjects
+					if (relatedSubjects == null) {
 						$('#related-subjects-section').hide()
 					}
 					else {
-						relatedSubjects.forEach(function(relatedAlias, index, array){		// pass the array index and the array itself as well as the array value - relatedAlias - to allow us to check if something is the final element of the array
+						relatedSubjects.forEach(function(relatedAlias, index, array) {		// pass the array index and the array itself as well as the array value - relatedAlias - to allow us to check if something is the final element of the array
 							$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(dataRelated) {
-								for(let j=0; j<len; j++){
+								for (let j = 0; j < len; j++) {		// len here will be the same as above
 									var lineRelated = dataRelated.shift()
 									if (lineRelated.alias == relatedAlias) {
-										if ( index != array.length - 1 ) {		// final element
-											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean_lc + '</a>,'
-										}
-										else {
-											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + lineRelated.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + lineRelated.subject_name_clean_lc + '</a>'
-										}
+										relatedArray.push(lineRelated.subject_name_clean_lc)
+										relatedArray.sort()
 									}
 								}
+								if (relatedArray.length == array.length) {
+									relatedArray.forEach(function(subject_name_clean, innerIndex, innerArray) {
+										if (innerIndex != innerArray.length - 1) {		// final element
+											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + subject_name_clean + '</a>,'
+										}
+										else {
+											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190712">' + subject_name_clean + '</a>'
+										}
+									});
+								};
 							});
 						});
-					}
-					flags=line.flags
-					if (level=='A-Level' || level=='AS-Level'){
+
+					};
+					flags = line.flags
+					if (level == 'A-Level' || level == 'AS-Level'){
 						if (flags.facil==true){
 							document.getElementById('facilFlagImg').src = '/img/facilFlagImgPink.png';
 							document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is a facilitating subject')

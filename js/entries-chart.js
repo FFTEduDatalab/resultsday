@@ -7,7 +7,7 @@ Highcharts.chart('entriesChartContainer', {
     },
     xAxis: {		// set here rather than in theme, so can be set dynamically
         min: yearMin,
-        max: yearMin+4,
+        max: yearMin + 4,
         tickInterval: 1
     },
 	yAxis: {		// "		"
