@@ -18,7 +18,7 @@ var level,
 	entriesJSON,
 	gradesJSON,
 	newDataToastText,
-	earlyResultsToastText="<div class='toast-content'><b>FFT Aspire user?</b> Schools that subscribe to FFT Aspire can use the free Key Stage 4 Early Results Service, which provides an early analysis of their results. <a href='https://fft.org.uk/ks4-early-results/' target='_blank'><em>Click here for more information.</em></a></div><div class='material-icons close'>close</div>",
+	earlyResultsToastText = "<div class='toast-content'><b>FFT Aspire user?</b> Schools that subscribe to FFT Aspire can use the free Key Stage 4 Early Results Service, which provides an early analysis of their results. <a href='https://fft.org.uk/ks4-early-results/' target='_blank'><em>Click here for more information.</em></a></div><div class='material-icons close'>close</div>",
 	textJSON,
 	gradesAll,
 	gradesSelected,
@@ -91,21 +91,24 @@ $(function () {
 	M.toast({html: newDataToastText, classes:'new-data', displayLength: 'infinity', inDuration:0, activationPercent: 0.7})
     $(".toast.early-results").hide();
     $(".toast.new-data").hide();
-    if (localStorage.getItem('newDataState') != 'dismissed'){
+    if (localStorage.getItem('newDataState') != 'dismissed') {
         $(".toast.new-data").show();
     }
-	if (level=='A-Level' || level=='AS-Level'){
+	if (level=='GCSE' && localStorage.getItem('earlyResultsState') != 'dismissed') {
+        $(".toast.early-results").show();
+	}
+	if (level=='A-Level' || level=='AS-Level') {
 		if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>7 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()>15 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==15 & d.getHours()>9 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==15 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
 			$('.toast.new-data').hide()
 		}
 	}
-	if (level=='GCSE'){
-	    if (localStorage.getItem('earlyResultsState') != 'dismissed' && (d.getFullYear()==2019 && (d.getMonth()<8 || (d.getMonth()==8 && d.getDate()<16)))){
-	        $(".toast.early-results").show();
-	    }
+	if (level=='GCSE') {
 		if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>7 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()>22 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==22 & d.getHours()>9 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==22 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
 			$('.toast.new-data').hide()
 		}
+	    if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>8 || (d.getFullYear()==2019 && d.getMonth()==8 && d.getDate()>15))) {
+			$('.toast.early-results').hide()
+	    }
 	}
 	$('#report-banner').hide();
 	gradesChartColoursArray=[]
@@ -298,7 +301,7 @@ function readGradesData() {
 	$.getJSON('/data/output/' + level.toLowerCase() + '/' + gradesJSON, function(data) {
 		gradesData=[]
 		let grades_array=[]
-		if(grades == 'Selected'){
+		if (grades == 'Selected') {
 			grades_array=gradesSelected
 		}
 		else if (grades == 'All') {
