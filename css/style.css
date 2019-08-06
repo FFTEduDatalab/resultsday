@@ -34,6 +34,7 @@
 	text-decoration: underline;
 }
 
+/* Nav */
 nav {
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -50,9 +51,12 @@ nav .brand-logo {
 	font-size: 2.28rem;		/* mirroring h4 */
 }
 
-.dropdown-content li > a,
-.dropdown-content li > span {
-	color: #e6007e;
+.nav-wrapper .fft-pink-text {
+	font-weight: 600;
+}
+
+.sidenav li>a {
+	font-weight: normal;
 }
 
 .select-wrapper input.select-dropdown:focus {

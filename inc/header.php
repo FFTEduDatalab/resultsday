@@ -42,21 +42,21 @@
 			<ul class="right hide-on-med-and-down">
 				<li><a href="/">Home</a></li>
 				<li><a href="/guide.php?v=20190712">Guide</a></li>
-				<li><a class="dropdown-trigger" href="#!" data-target="level-dropdown">A-Level<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a href="/gcse.php?v=20190712">GCSE</a></li>
+				<li><a class="dropdown-trigger fft-pink-text" href="#!" data-target="level-dropdown">A-Level<i class="material-icons right">arrow_drop_down</i></a></li>
+				<li><a class="fft-pink-text" href="/gcse.php?v=20190712">GCSE</a></li>
 				<li><a href="/about.php?v=20190712">About</a></li>
 			</ul>
 			<ul id="level-dropdown" class="dropdown-content">
-				<li><a href="/a-level.php?v=20190712">A-Level</a></li>
-				<li><a href="/as-level.php?v=20190712">AS-Level</a></li>
+				<li><a class="fft-pink-text" href="/a-level.php?v=20190712">A-Level</a></li>
+				<li><a class="fft-pink-text" href="/as-level.php?v=20190712">AS-Level</a></li>
 			</ul>
 			<ul id="nav-mobile" class="sidenav">
 				<li><a class='collapsible-header' href="/"><strong>Results day analysis</strong></a></li>
 				<li><a href="/">Home</a></li>
 				<li><a href="/guide.php?v=20190712">Guide</a></li>
-				<li><a href="/a-level.php?v=20190712">A-Level</a></li>
-				<li><a href="/as-level.php?v=20190712">AS-Level</a></li>
-				<li><a href="/gcse.php?v=20190712">GCSE</a></li>
+				<li><a class="fft-pink-text" href="/a-level.php?v=20190712">A-Level</a></li>
+				<li><a class="fft-pink-text" href="/as-level.php?v=20190712">AS-Level</a></li>
+				<li><a class="fft-pink-text" href="/gcse.php?v=20190712">GCSE</a></li>
 				<li><a href="/about.php?v=20190712">About</a></li>
 			</ul>
 			<a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text"><i class="material-icons">menu</i></a>
