@@ -17,4 +17,5 @@
 	</div>
 </div>
 <script src='/js/results-level.js?v=20190712'></script>
+<script src='/js/toasts.js?v=20190712'></script>
 <?php include 'inc/footer.php';?>

@@ -17,8 +17,6 @@ var level,
 	subjectsJSON,
 	entriesJSON,
 	gradesJSON,
-	newDataToastText,
-	earlyResultsToastText = "<div class='toast-content'><b>FFT Aspire user?</b> Schools that subscribe to FFT Aspire can use the free Key Stage 4 Early Results Service, which provides an early analysis of their results. <a href='https://fft.org.uk/ks4-early-results/' target='_blank'><em>Click here for more information.</em></a></div><div class='material-icons close'>close</div>",
 	textJSON,
 	gradesAll,
 	gradesSelected,
@@ -69,7 +67,7 @@ $(function () {
 	Highcharts.setOptions(Highcharts.theme)
 	addthis_config.data_track_addressbar = false;		// remove addthis address bar and click tracking code
 	addthis_config.data_track_clickback = false;		// "		"
-	urlLevel=window.location.href.split('/')[3].split('.')[0]
+	urlLevel=window.location.href.split('/')[3]
 	urlSubject=window.location.href.split('/')[4].split('.')[0]
 	let levelData=levels.filter(function(levels) {
 		return levels.name.toLowerCase() == urlLevel
@@ -80,35 +78,10 @@ $(function () {
 	if (level=='A-Level' || level=='AS-Level'){
 		$('#bSelector').hide()
 		$('#gcseFlagContainer').hide()
-		newDataToastText="<div class='toast-content'>A-Level and AS-Level data for 2019 is available at 9.30am on Thursday 15 August and will be added at that point</div><div class='material-icons close'>close</div>"
 	}
 	if (level=='GCSE'){
 		$('#gSelector').hide()
 		$('#alevelFlagContainer').hide()
-		newDataToastText="<div class='toast-content'>GCSE data for 2019 is available at 9.30am on Thursday 22 August and will be added at that point</div><div class='material-icons close'>close</div>"
-	}
-	M.toast({html: earlyResultsToastText, classes:'early-results', displayLength: 'infinity', inDuration:0, activationPercent: 0.7})
-	M.toast({html: newDataToastText, classes:'new-data', displayLength: 'infinity', inDuration:0, activationPercent: 0.7})
-    $(".toast.early-results").hide();
-    $(".toast.new-data").hide();
-    if (localStorage.getItem('newDataState') != 'dismissed') {
-        $(".toast.new-data").show();
-    }
-	if (level=='GCSE' && localStorage.getItem('earlyResultsState') != 'dismissed') {
-        $(".toast.early-results").show();
-	}
-	if (level=='A-Level' || level=='AS-Level') {
-		if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>7 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()>15 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==15 & d.getHours()>9 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==15 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
-			$('.toast.new-data').hide()
-		}
-	}
-	if (level=='GCSE') {
-		if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>7 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()>22 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==22 & d.getHours()>9 || (d.getFullYear()==2019 && d.getMonth()==7 && d.getDate()==22 & d.getHours()==9 & d.getMinutes()>=30))))){		// month 7 = August
-			$('.toast.new-data').hide()
-		}
-	    if (d.getFullYear()>2019 || (d.getFullYear()==2019 && d.getMonth()>8 || (d.getFullYear()==2019 && d.getMonth()==8 && d.getDate()>15))) {
-			$('.toast.early-results').hide()
-	    }
 	}
 	$('#report-banner').hide();
 	gradesChartColoursArray=[]
@@ -236,20 +209,6 @@ $(function () {
 	readEntriesData()
 	readGradesData()
 	setChartSubtitles()
-});
-
-$(document).on('click', '#toast-container .early-results .close', function() {
-    $(this).parent().fadeOut(function(){
-        $(this).remove();
-    });
-    localStorage.setItem('earlyResultsState','dismissed')
-});
-
-$(document).on('click', '#toast-container .new-data .close', function() {
-    $(this).parent().fadeOut(function(){
-        $(this).remove();
-    });
-    localStorage.setItem('newDataState','dismissed')
 });
 
 function goBack() {
