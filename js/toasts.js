@@ -61,7 +61,6 @@ $(function () {
         $(".toast.early-results").show();
 	}
 	if ((level == 'index' || level == 'A-Level') && localStorage.getItem('newALevelDataState') != 'dismissed') {
-		console.log('huh')
         $(".toast.new-data.alevel").show();
     }
     if ((level == 'index' || level == 'GCSE') && localStorage.getItem('newGCSEDataState') != 'dismissed') {
