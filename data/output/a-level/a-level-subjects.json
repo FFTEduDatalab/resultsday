@@ -227,8 +227,8 @@
 			"WA": 2017,
 			"NI": 2017
 		},
-		"definition": null,
-		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>"
+		"definition": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>",
+		"context": null
 	},
 	{
 		"alias": "ENLI",
@@ -247,8 +247,8 @@
 			"WA": 2017,
 			"NI": 2018
 		},
-		"definition": null,
-		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>"
+		"definition": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>",
+		"context": null
 	},
 	{
 		"alias": "ENLL",
@@ -267,8 +267,8 @@
 			"WA": 2017,
 			"NI": 2017
 		},
-		"definition": null,
-		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>"
+		"definition": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>",
+		"context": null
 	},
 	{
 		"alias": "FREN",

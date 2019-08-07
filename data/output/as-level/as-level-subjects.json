@@ -227,8 +227,8 @@
 			"WA": 2016,
 			"NI": 2016
 		},
-		"definition": null,
-		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
+		"definition": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>",
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias": "ENLI",
@@ -247,8 +247,8 @@
 			"WA": 2016,
 			"NI": 2017
 		},
-		"definition": null,
-		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
+		"definition": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>",
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias": "ENLL",
@@ -267,8 +267,8 @@
 			"WA": 2016,
 			"NI": 2016
 		},
-		"definition": null,
-		"context": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p><p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
+		"definition": "<p>Comparable data is not available before 2017. Before this point, English was recorded as a single subject, covering English language, English literature, and English language and literature.</p>",
+		"context": "<p>In England, in subjects that have been reformed, AS-Levels have been <em>decoupled</em> from A-Levels, and no longer count towards A-Levels. This has driven substantial decreases in entry numbers. In Wales and Northern Ireland, AS-Levels now count as 40% of the A-Level.</p>"
 	},
 	{
 		"alias": "FREN",
