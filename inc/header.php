@@ -6,7 +6,7 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:url" content="https://results.ffteducationdatalab.org.uk">
 	<meta name="twitter:title" content="GCSE and A-Level results analysis - FFT Education Datalab">
-	<meta name="twitter:description" content="Explore national trends in GCSE and A-Level entries and grades">
+	<meta name="twitter:description" content="Explore trends in GCSE and A-Level entries and grades in every subject">
 	<meta name="twitter:image" content="https://results.ffteducationdatalab.org.uk/img/stepped_dots.png">
 	<meta name="twitter:image:alt" content="GCSE and A-Level results analysis logo">
 	<meta name="twitter:site" content="@ffteducationdatalab">
@@ -22,12 +22,12 @@
 	<script src="https://code.highcharts.com/6/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/6/modules/data.js"></script>
 	<script src="/js/theme.js?v=20190712"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59588201-4"></script>
 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
-		(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-59588201-1', 'auto');
-		ga('send', 'pageview');
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-59588201-4');
 	</script>
 	<noscript><div class='no-script'><h5>This site requires JavaScript, which is turned off in your browser.</h5></div></noscript>
 </head>
