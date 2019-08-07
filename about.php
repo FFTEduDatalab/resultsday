@@ -1,10 +1,5 @@
 <?php include 'inc/header.php';?>
-<script>
-	function runScripts() {
-		$('#report-banner').hide();
-	}
-</script>
-  <div class="section grey lighten-4">
+<div class="section grey lighten-4">
 	<div class="container">
 		<div class="row">
 			<div class="col m6 s12">
@@ -61,10 +56,5 @@
 			</div>
 		</div>
 	</div>
-  </div>
-<script>
-	function runScripts() {
-		$('#report-banner').hide();
-	}
-</script>
+</div>
 <?php include 'inc/footer.php';?>

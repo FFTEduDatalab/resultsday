@@ -1,9 +1,4 @@
 <?php include 'inc/header.php';?>
-<script>
-	function runScripts() {
-		$('#report-banner').hide();
-	}
-</script>
 <div class="section grey lighten-4">
 	<div class="container">
 		<div class="row">
@@ -99,9 +94,4 @@
 		</div>
 	</div>
 </div>
-<script>
-	function runScripts() {
-		$('#report-banner').hide();
-	}
-</script>
 <?php include 'inc/footer.php';?>
