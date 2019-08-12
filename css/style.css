@@ -196,6 +196,15 @@ input {
 	text-overflow: ellipsis;
 }
 
+/* Charts */
+.highcharts-credits {
+	cursor: default;
+	cursor: default !important;
+}
+
+.datalab-logo {
+	cursor: pointer;
+}
 
 /* Related subjects card */
 #related-subjects-section .card {

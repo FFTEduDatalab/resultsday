@@ -1,10 +1,43 @@
+var x,
+	y
+
 Highcharts.theme = {
 	chart: {
+        events: {
+            load: function () {
+				x=this.chartWidth-130
+				y=this.chartHeight-35
+				if (this.chartWidth>=400) {
+			        this.renderer.image('https://ffteducationdatalab.org.uk/wp-content/uploads/2018/03/fft_education_datalab_logo_lo.png', x, y, 125, 30)
+						.attr('class','datalab-logo')
+						.on('click' , function(){location.href='https://ffteducationdatalab.org.uk'})
+			            .add();
+				};
+            },
+            redraw: function () {
+				if (this.chartWidth-130!=x) {		// chart has changed width
+					x=this.chartWidth-130
+					y=this.chartHeight-35
+					if (document.getElementsByClassName('datalab-logo')) {
+						var elements=document.getElementsByClassName('datalab-logo')
+						while (elements.length > 0) {
+							elements[0].parentNode.removeChild(elements[0]);		// yep
+						}
+					};
+					if (this.chartWidth>=400) {
+				        this.renderer.image('https://ffteducationdatalab.org.uk/wp-content/uploads/2018/03/fft_education_datalab_logo_lo.png', x, y, 120, 30)
+							.attr('class','datalab-logo')
+							.on('click' , function(){location.href='https://ffteducationdatalab.org.uk'})
+				            .add();
+					};
+				}
+            }
+        },
+		height: 500,
+		spacingBottom: 40,
 		style: {
 			fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
 		},
-		height:500,
-		spacingBottom: 25
 	},
 	title: {
 		style: {
@@ -49,19 +82,6 @@ Highcharts.theme = {
             }
         }
     },
-    responsive: {
-        rules: [{
-            condition: {
-				maxWidth: 400,
-            },
-            chartOptions: {
-				credits:{
-					href: 'http://results.ffteducationdatalab.org.uk',
-					text: 'Source: http://results.ffteducationdatalab.org.uk'
-				}
-            }
-        }]
-    },
 	exporting: {
           buttons: {
 				contextButton: {
@@ -70,7 +90,12 @@ Highcharts.theme = {
         }
 	},
 	credits:{
-		href: 'http://results.ffteducationdatalab.org.uk',
-		text: 'Source: FFT Education Datalab analysis of JCQ data. Funded by the Nuffield Foundation.'
+		href: null,
+		position: {
+			align: 'left',
+			x: 5,
+			y: -20
+		},
+		text: 'Source: FFT Education Datalab analysis of JCQ data<br>Project funded by the Nuffield Foundation'
 	}
 };
