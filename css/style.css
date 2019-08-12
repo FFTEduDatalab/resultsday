@@ -125,6 +125,11 @@ nav .brand-logo {
 	background-color: #2daae1 !important;
 }
 
+.toast.early-results a {
+	text-decoration: underline;
+	font-style: italic;
+}
+
 .btn-flat {
 	text-transform: none;
 }

@@ -2,7 +2,7 @@ var urlLevel,
 	urlSubject,
 	alevelNewDataToastText,
 	gcseNewDataToastText,
-	earlyResultsToastText = "<div class='toast-content'><b>FFT Aspire user?</b> Schools that subscribe to FFT Aspire can use the free Key Stage 4 Early Results Service, which provides an early analysis of their results. <a href='https://fft.org.uk/ks4-early-results/' target='_blank'><em>Click here for more information.</em></a></div><div class='material-icons close'>close</div>",
+	earlyResultsToastText = "<div class='toast-content'><b>FFT Aspire user?</b> Schools that subscribe to FFT Aspire can use the free Key Stage 4 Early Results Service, which provides an early analysis of their results. <a href='https://fft.org.uk/ks4-early-results/' target='_blank'>Click here for more information.</a></div><div class='material-icons close'>close</div>",
 	levels = [
 		{
 			'name':'A-Level',
