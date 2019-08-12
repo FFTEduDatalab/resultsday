@@ -60,7 +60,7 @@ $(function () {
 	if (urlSubject && level =='GCSE' && localStorage.getItem('earlyResultsState') != 'dismissed') {		// not level directory page
         $(".toast.early-results").show();
 	}
-	if ((level == 'index' || level == 'A-Level') && localStorage.getItem('newALevelDataState') != 'dismissed') {
+	if ((level == 'index' || level == 'A-Level' || level == 'AS-Level') && localStorage.getItem('newALevelDataState') != 'dismissed') {
         $(".toast.new-data.alevel").show();
     }
     if ((level == 'index' || level == 'GCSE') && localStorage.getItem('newGCSEDataState') != 'dismissed') {
