@@ -30,6 +30,11 @@ levels=[
 	}
 ]
 
+os.chdir(os.path.dirname( __file__ ))
+os.chdir('..')
+with open('data\\output\\popn\\popn.json') as popn_file:
+	popn_data = json.load(popn_file)
+
 for level in levels:
 	os.chdir(os.path.dirname( __file__ ))
 	os.chdir('..')
@@ -57,7 +62,7 @@ for level in levels:
 		for entries in entries_data:
 			if entries['name']=='All students' and entries['alias']==alias and entries['scope']=='UK':
 				for year in entries['data']:
-					if year[0]>=min_year:
+					if year[0]>=min_year:		# as we might have entries/grades data that we won't be charting
 						texts['y0']=year[0]
 						texts['entries_y0']=year[1]
 						break
@@ -73,6 +78,31 @@ for level in levels:
 				texts['highlighted_grades_yn']=grades['data'][-1][1]
 				texts['allsubjects_highlighted_grades_yn']=allsubjects_grades['data'][-1][1]
 				break
+		for popn in popn_data:		# relies on what's done in entries loop
+			if level['name']=='A-Level' and popn['scope']=='18':
+				texts['popn_defn']='18'
+				for year in popn['data']:		# need to loop through every year
+					if year[0]==texts['y0']:
+						texts['popn_y0']=year[1]
+					if year[0]==texts['yn']:
+						texts['popn_yn']=year[1]		# done this way rather than by selecting the final year, as we may had added a more recent year of population data than is available at a given time for entries and gradess
+				break
+			if level['name']=='AS-Level' and popn['scope']=='17':
+				texts['popn_defn']='17'
+				for year in popn['data']:		# need to loop through every year
+					if year[0]==texts['y0']:
+						texts['popn_y0']=year[1]
+					if year[0]==texts['yn']:
+						texts['popn_yn']=year[1]		# done this way rather than by selecting the final year, as we may had added a more recent year of population data than is available at a given time for entries and gradess
+				break
+			if level['name']=='GCSE' and popn['scope']=='16':
+				texts['popn_defn']='16'
+				for year in popn['data']:		# need to loop through every year
+					if year[0]==texts['y0']:
+						texts['popn_y0']=year[1]
+					if year[0]==texts['yn']:
+						texts['popn_yn']=year[1]		# done this way rather than by selecting the final year, as we may had added a more recent year of population data than is available at a given time for entries and gradess
+				break
 		texts_list.append(texts)
 
 	# write analysis
@@ -81,6 +111,8 @@ for level in levels:
 		if texts.get('y0') is not None:		# analysis only written for subjects for which we have entries and grades data (i.e. not new subjects which have only been added to subjects data file)
 			allsubjects_entries_change=round((texts['allsubjects_entries_yn']-texts['allsubjects_entries_y0'])*1.0/texts['allsubjects_entries_y0']*100,1)
 			subject_entries_change=round((texts['entries_yn']-texts['entries_y0'])*1.0/texts['entries_y0']*100.0,1)
+			subject_popn_change=round((texts['popn_yn']-texts['popn_y0'])*1.0/texts['popn_y0']*100.0,1)
+			print level['name'], texts['alias'], texts['y0'], texts['yn'], subject_popn_change
 			if texts['years']==2:		# one year handled separately below
 				number_of_years='two'
 			elif texts['years']==3:
@@ -93,6 +125,15 @@ for level in levels:
 			    allsubjects_entries_change_sign='+'
 			else:
 				allsubjects_entries_change_sign=''
+			if subject_popn_change>0:
+			    subject_popn_change_sign='+'
+			    subject_popn_change_direction='increased'
+			elif subject_popn_change<0:
+			    subject_popn_change_sign=''
+			    subject_popn_change_direction='decreased'
+			elif subject_popn_change==0:
+			    subject_popn_change_sign=''
+			    subject_popn_change_direction='stayed the same'
 			if subject_entries_change>0:
 			    subject_entries_change_sign='+'
 			    subject_entries_change_direction='increased'
@@ -132,9 +173,9 @@ for level in levels:
 				if texts['years']==1:
 					texts['analysis']='<p>Across the UK, a ' + highlighted_grades_comparison + ' proportion of students achieved ' + metric + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + ' ' + highlighted_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' compared to ' + str(texts['allsubjects_highlighted_grades_yn']) + '% for all subjects.</p>'
 				else:
-					texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_direction + ' ' + subject_entries_change_scale + 'across the UK over the last ' + number_of_years + ' years. The ' + subject_entries_change_sign + str(subject_entries_change) + '% change compared to a change of ' + allsubjects_entries_change_sign + str(allsubjects_entries_change) + '% in all ' + level['name'] + ' entries over the last ' + number_of_years + ' years.</p><p>Across the UK, a ' + highlighted_grades_comparison + ' proportion of students achieved ' + metric + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + ' ' + highlighted_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' compared to ' + str(texts['allsubjects_highlighted_grades_yn']) + '% for all subjects.</p>'
+					texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_direction + ' ' + subject_entries_change_scale + 'across the UK over the last ' + number_of_years + ' years. The ' + subject_entries_change_sign + str(subject_entries_change) + '% change compared to a change of ' + allsubjects_entries_change_sign + str(allsubjects_entries_change) + '% in all ' + level['name'] + ' entries over the last ' + number_of_years + ' years. Over the same period, the ' + texts['popn_defn'] + '-year-old population has changed by approximately ' + str(subject_popn_change) + '%.</p><p>Across the UK, a ' + highlighted_grades_comparison + ' proportion of students achieved ' + metric + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + ' ' + highlighted_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' compared to ' + str(texts['allsubjects_highlighted_grades_yn']) + '% for all subjects.</p>'
 			else:
-				texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_direction + ' by ' + str(abs(subject_entries_change)) + '% across the UK over the last ' + number_of_years + ' years.</p><p>Across the UK, ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + '.</p>'
+				texts['analysis']='<p>Entries in ' + texts['subject_name_clean_lc'] + ' have ' + subject_entries_change_direction + ' by ' + str(abs(subject_entries_change)) + '% across the UK over the last ' + number_of_years + ' years. Over the same period, the ' + texts['popn_defn'] + '-year-old population has ' + subject_popn_change_direction + " by approximately " + subject_popn_change_sign + str(abs(subject_popn_change)) + '%. </p><p>Across the UK, ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + '.</p>'
 
 	texts_list_redux=[]
 	for texts in texts_list:
