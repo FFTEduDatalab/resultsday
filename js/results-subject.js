@@ -139,7 +139,6 @@ $(function () {
 								};
 							});
 						});
-
 					};
 					flags = line.flags
 					if (level == 'A-Level' || level == 'AS-Level'){
@@ -323,8 +322,7 @@ function setChartSubtitles() {
 }
 
 function drawEntriesChart() {
-	gradesChartColoursArray = []
-	gradesChartColoursArray.push(coloursDict[gender])
+	entriesChartColoursArray = ['#2daae1','#96c11f','#535353']
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
 	js.src = '/js/entries-chart.js?v=20190812';
@@ -354,14 +352,14 @@ $('#breakdownSelector').change(function () {
 	$('#scopeSelector').formSelect()		// re-initialise Materialize select input
 	if (breakdown != 'agecountry' && scope != 'UK') {
 		scope = 'UK'
-		readEntriesData(scope, gender)
-		readGradesData(scope, grades)
+		readEntriesData(scope)
+		readGradesData(scope, gender, grades)
 		setChartSubtitles()
 	}
 	else if (breakdown == 'agecountry') {
 		scope = 'EN16'
-		readEntriesData(scope, gender)
-		readGradesData(scope, grades)
+		readEntriesData(scope)
+		readGradesData(scope, gender, grades)
 		setChartSubtitles()
 	}
 });

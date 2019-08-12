@@ -50,7 +50,6 @@ Highcharts.theme = {
 			color:'#333333'
 		},
 	},
-    colors: ['#2daae1', '#96c11f', '#535353'],
     lang: {
       thousandsSep: ',',
       numericSymbols: null,
