@@ -166,6 +166,6 @@ for level in levels:
 		with open(grades_filename, 'w') as grades_file:
 			json.dump(grades_list, grades_file, separators=(',', ':'))
 		# with open(entries_filename, 'w') as entries_file:		# prettified
-		# 	json.dump(entries_list, outfile, indent=4, separators=(',', ': '))
+		# 	json.dump(entries_list, entries_file, indent=4, separators=(',', ': '))
 		# with open(grades_filename, 'w') as grades_file:
-		# 	json.dump(grades_list, outfile, indent=4, separators=(',', ': '))
+		# 	json.dump(grades_list, grades_file, indent=4, separators=(',', ': '))
