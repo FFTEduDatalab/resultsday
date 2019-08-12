@@ -59,16 +59,6 @@ nav .brand-logo {
 	font-weight: normal;
 }
 
-/*/* Subject pages */
-/* Chart controls */
-.select-wrapper .dropdown-content li > span {
-	color: #e6007e;
-}
-
-.select-wrapper input.select-dropdown:focus {
-	border-bottom: #e6007e 1px solid;
-}
-
 #logo-container {
 	display: flex;
 }
@@ -172,7 +162,8 @@ a {
 	}
 }
 
-/* Subject pages */
+/*/* Subject pages */
+/* General */
 #back-button {
 	padding: 0px;
 }
@@ -187,6 +178,21 @@ a {
 	}
 }
 
+/* Chart controls */
+.select-wrapper .dropdown-content li > span {
+	color: #e6007e;
+}
+
+.select-wrapper input.select-dropdown:focus {
+	border-bottom: #e6007e 1px solid;
+}
+
+input {
+	text-overflow: ellipsis;
+}
+
+
+/* Related subjects card */
 #related-subjects-section .card {
 	background-color: #b1dbed;
 }

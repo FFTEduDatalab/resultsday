@@ -24,16 +24,16 @@ var level,
 	addthis_share,
 	addthis_config = addthis_config||{},
 	yearMin = 2015,
-	breakdown = 'geography',
+	breakdown = 'country',
 	scope = 'UK',
 	grades = 'Selected',
 	gender = 'All students',
 	coloursDict = {
-    'All students':'#535353',
-    'Male':'#2daae1',
-    'Female':'#96c11f'
+	    'All students':'#535353',
+	    'Male':'#2daae1',
+	    'Female':'#96c11f'
 	},
-	levels=[
+	levels = [
 		{
 			'name':'A-Level',
 		    'subjectsJSON':'a-level-subjects.json?v=20190712',
@@ -75,15 +75,14 @@ $(function () {
 	level=levelData.name
 	document.getElementById('levelNameContainer').innerHTML=level
 	var d = new Date();
-	if (level=='A-Level' || level=='AS-Level'){
+	if (level == 'A-Level' || level == 'AS-Level') {
 		$('#bSelector').hide()
 		$('#gcseFlagContainer').hide()
 	}
-	if (level=='GCSE'){
+	if (level == 'GCSE') {
 		$('#gSelector').hide()
 		$('#alevelFlagContainer').hide()
 	}
-	$('#report-banner').hide();
 	gradesChartColoursArray=[]
 	gradesChartColoursArray.push(coloursDict['All students'])
 	subjectsJSON=levelData.subjectsJSON
@@ -228,7 +227,7 @@ function readEntriesData() {
     $.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function(data) {
 		entriesData=[]
 		let len=data.length
-		let dataMax		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain geography/age bracket, to avoid a floating x-axis
+		let dataMax		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
 		if(len>0){
 		for(let i=0; i<len; i++){
 			var line=data.shift()
@@ -285,43 +284,40 @@ function setChartSubtitles() {
         'EN':'England',
         'WA':'Wales',
         'NI':'Northern Ireland',
-        '15':'15-year-olds and younger',
-        '16':'16-year-olds',
-        '17':'17-year-olds and older',
-        'EN15':'15-year-olds and older, England',
-        'EN16':'16-year-olds and older, England',
-        'EN17':'17-year-olds and older, England',
-        'WA15':'15-year-olds and older, Wales',
-        'WA16':'16-year-olds and older, Wales',
-        'WA17':'17-year-olds and older, Wales',
-        'NI15':'15-year-olds and older, Northern Ireland',
-        'NI16':'16-year-olds and older, Northern Ireland',
-        'NI17':'17-year-olds and older, Northern Ireland'
+        '15':'15-year-olds and below, UK-wide',
+        '16':'16-year-olds, UK-wide',
+        '17':'17-year-olds and above, UK-wide',
+        'EN15':'15-year-olds and below, England',
+        'EN16':'16-year-olds, England',
+        'EN17':'17-year-olds and above, England',
+        'WA15':'15-year-olds and below, Wales',
+        'WA16':'16-year-olds, Wales',
+        'WA17':'17-year-olds and above, Wales',
+        'NI15':'15-year-olds and below, Northern Ireland',
+        'NI16':'16-year-olds, Northern Ireland',
+        'NI17':'17-year-olds and above, Northern Ireland'
     }
     let gradesDict = {
-        'Selected':'selected grades',
-        'All':'all grades'
+        'Selected': 'selected grades',
+        'All': 'all grades'
     }
     let genderDict = {
-        'All students':'All students',
-        'Male':'Male students',
-        'Female':'Female students',
+        'All students': 'All ',
+        'Male': 'Male ',
+        'Female': 'Female ',
     }
-	if (isNaN(Number(scope.slice(0,1))) == 0) {		// age breakdown
-    	entriesChartSubtitle = scopeDict[scope] + ', UK-wide'
-		console.log(entriesChartSubtitle)
-	}
-	else if (isNaN(Number(scope.slice(0,1))) == 1 && isNaN(Number(scope.slice(scope.length-1))) == 1) {		// geography breakdown
-    	entriesChartSubtitle = 'All students, ' + scopeDict[scope]
-	}
-	else {		// age x geography breakdown
+	if (isNaN(Number(scope.slice(scope.length-1))) == 0) {		// age breakdown, age x country breakdown
     	entriesChartSubtitle = scopeDict[scope]
+		if (gender == 'All students') {
+			gradesChartSubtitle = scopeDict[scope] + ', ' + gradesDict[grades]
+		}
+		else {
+			gradesChartSubtitle = genderDict[gender] + scopeDict[scope] + ', ' + gradesDict[grades]
+		}
 	}
-	if (level=='GCSE'){
-		gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + 'key grades'
-	}
-	else {
-		gradesChartSubtitle = genderDict[gender] + ', ' + scopeDict[scope] + ', ' + gradesDict[grades]
+	else if (isNaN(Number(scope.slice(scope.length-1))) == 1) {		// country breakdown
+    	entriesChartSubtitle = 'All students, ' + scopeDict[scope]
+		gradesChartSubtitle = genderDict[gender] + ' students, ' + scopeDict[scope] + ', ' + gradesDict[grades]
 	}
     return entriesChartSubtitle, gradesChartSubtitle
 }
@@ -346,17 +342,26 @@ function drawGradesChart() {
 
 $('#breakdownSelector').change(function () {
 	breakdown = $(this).val();
-	if (breakdown == 'geography') {
-		$('#scopeSelector').html('<option value="UK">UK</option><option value="EN">England</option><option value="WA">Wales</option><option value="NI">Northern Ireland</option>');
+	if (breakdown == 'country') {
+		$('#scopeSelector').html('<option value="UK" selected>UK</option><option value="EN">England</option><option value="WA">Wales</option><option value="NI">Northern Ireland</option>');
 	}
 	else if (breakdown == 'age') {
-		$('#scopeSelector').html('<option value="UK">All ages</option><option value="15">15-year-olds and younger</option><option value="16">16-year-olds</option><option value="17">17-year-olds and older</option>');
+		$('#scopeSelector').html('<option value="UK" selected>All ages</option><option value="15">15-year-olds and below</option><option value="16">16-year-olds</option><option value="17">17 and above</option>');
+	}
+	else if (breakdown == 'agecountry') {
+		$('#scopeSelector').html('<option value="EN15">Aged 15 and below, England</option><option value="EN16" selected>Aged 16, England</option><option value="EN17">Aged 17 and above, England</option><option value="WA15">Aged 15 and below, Wales</option><option value="WA16">Aged 16, Wales</option><option value="WA17">Aged 17 and above, Wales</option><option value="NI15">Aged 15 and below, Northern Ireland</option><option value="NI16">Aged 16, Northern Ireland</option><option value="NI17">Aged 17 and above, Northern Ireland</option>');
 	}
 	$('#scopeSelector').formSelect()		// re-initialise Materialize select input
-	if(scope!='UK'){
+	if (breakdown != 'agecountry' && scope != 'UK') {
 		scope = 'UK'
-		readEntriesData(scope, grades, gender)
-		readGradesData(scope, grades, gender)
+		readEntriesData(scope, gender)
+		readGradesData(scope, grades)
+		setChartSubtitles()
+	}
+	else if (breakdown == 'agecountry') {
+		scope = 'EN16'
+		readEntriesData(scope, gender)
+		readGradesData(scope, grades)
 		setChartSubtitles()
 	}
 });

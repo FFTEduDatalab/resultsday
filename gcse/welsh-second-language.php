@@ -13,8 +13,9 @@
 					<div class="card-content">
 						<div class="input-field col s12 m6" id='bSelector'>
 							<select id='breakdownSelector' autocomplete='off'>
-								<option value='geography'>Geography</option>
+								<option value='country'>Country</option>
 								<option value='age'>Age</option>
+								<option value='agecountry'>Age and country (2018-)</option>
 							</select>
 						</div>
 						<div class="input-field col s12 m6">
@@ -30,17 +31,17 @@
 				</div>
 				<div class="card white">
 					<div class="card-content">
-						<div class="input-field col s12 m6" id='gSelector'>
-							<select id='gradesSelector' autocomplete='off' onchange='gradeChartOptionChange()'>
-								<option value='Selected'>Selected grades</option>
-								<option value='All'>All grades</option>
-							</select>
-						</div>
 						<div class="input-field col s12 m6">
 							<select id='genderSelector' autocomplete='off' onchange='gradeChartOptionChange()'>
 								<option value='All students'>All students</option>
 								<option value='Male'>Male</option>
 								<option value='Female'>Female</option>
+							</select>
+						</div>
+						<div class="input-field col s12 m6" id='gSelector'>
+							<select id='gradesSelector' autocomplete='off' onchange='gradeChartOptionChange()'>
+								<option value='Selected'>Selected grades</option>
+								<option value='All'>All grades</option>
 							</select>
 						</div>
 						<div id="gradesChartContainer" class="chartContainer"></div>
