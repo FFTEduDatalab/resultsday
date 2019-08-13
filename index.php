@@ -1,4 +1,4 @@
-<?php include 'inc/header.php';?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/inc/header.php');?>
 <div class="section grey lighten-4">
 	<div class="container">
 		<div class="row">
@@ -24,4 +24,4 @@
 	</div>
 </div>
 <script src='/js/toasts.js?v=20190812'></script>
-<?php include 'inc/footer.php';?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/inc/footer.php');?>
