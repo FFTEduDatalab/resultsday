@@ -1,6 +1,6 @@
 Highcharts.chart('gradesChartContainer', {
     title: {
-        text: level + ' grades in ' + subject_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
+        text: level + ' grades in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
     },
     subtitle: {
         text: gradesChartSubtitle + '<br><em>Cumulative percentage attaining grade</em>'
@@ -19,6 +19,6 @@ Highcharts.chart('gradesChartContainer', {
     },
     series: gradesData,
 	exporting: {
-		filename: (level + '-' + subject + '-' + scope + '-' + gender + '-' + grades + '-grades').replace(/\W+/g, '-').toLowerCase()
+		filename: (level + '-' + subject_name_clean_lc + '-' + scope + '-' + gender + '-' + grades + '-grades').replace(/\W+/g, '-').toLowerCase()
 	}
 });

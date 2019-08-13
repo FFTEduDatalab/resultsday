@@ -1,7 +1,9 @@
-var level,
+var urlLevel,
+	urlSubject,
+	level,
 	alias,
-	subject,
-	subject_lc,
+	subject_name_clean,
+	subject_name_clean_lc = '',
 	flags,
 	reformYear,
 	definition,
@@ -69,11 +71,17 @@ $(function () {
 	addthis_config.data_track_clickback = false;		// "		"
 	urlLevel=window.location.href.split('/')[3]
 	urlSubject=window.location.href.split('/')[4].split('.')[0]
+	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1]) {
+		bespokeAliases = window.location.href.split('sbj=')[1].split(',')
+		bespokeAliases = bespokeAliases.map(function(x){ return x.toUpperCase() })
+	}
 	let levelData=levels.filter(function(levels) {
 		return levels.name.toLowerCase() == urlLevel
 	})[0];
 	level=levelData.name
-	document.getElementById('levelNameContainer').innerHTML=level
+	if (urlSubject != 'bespoke') {
+		document.getElementById('levelNameContainer').innerHTML=level
+	}
 	var d = new Date();
 	if (level == 'A-Level' || level == 'AS-Level') {
 		$('#bSelector').hide()
@@ -91,122 +99,152 @@ $(function () {
 	textJSON=levelData.textJSON
 	gradesAll=levelData.gradesAll
 	gradesSelected=levelData.gradesSelected
-	$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(data) {
-		let len = data.length
-		if (len > 0) {
-	        for (let i = 0; i < len; i++) {
-				var line = data.shift()
-				if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject) {
-		            subject = line.subject_name_clean
-					subject_lc = line.subject_name_clean_lc
-					document.getElementById('subjectNameContainer').innerHTML = subject
-					alias = line.alias
-					if (alias == 'ALLS') {
-						$('#gcseFlagContainer').hide()
-						$('#alevelFlagContainer').hide()
-					}
-					definition = line.definition
-					if (definition == null) {
-						$('#definitionContainer').hide()
-					}
-					context = line.context
-					if (context == null) {
-						$('#contextBox').hide()
-					}
-					relatedSubjects = line.related_subjects
-					if (relatedSubjects == null) {
-						$('#related-subjects-section').hide()
-					}
-					else {
-						relatedSubjects.forEach(function(relatedAlias, index, array) {		// pass the array index and the array itself as well as the array value - relatedAlias - to allow us to check if something is the final element of the array
-							$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(dataRelated) {
-								for (let j = 0; j < len; j++) {		// len here will be the same as above
-									var lineRelated = dataRelated.shift()
-									if (lineRelated.alias == relatedAlias) {
-										relatedArray.push(lineRelated.subject_name_clean_lc)
-										relatedArray.sort()
+	queries = []
+	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1]) {
+		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(data) {
+			let len = data.length
+			if (len > 0) {
+		        for (let i = 0; i < len; i++) {
+					var line = data.shift()
+					bespokeAliases.forEach(function (bespokeAlias) {
+						if (line.alias == bespokeAlias) {		// note contrast with operation in results-subject.js
+							var q = {}
+							q.alias = bespokeAlias
+				            q.subject_name_clean = line.subject_name_clean
+				            q.subject_name_clean_lc = line.subject_name_clean_lc
+							queries.push(q)
+							if (subject_name_clean_lc == '') {
+								subject_name_clean_lc = line.subject_name_clean_lc		// used in the chart title
+							}
+							else {
+								subject_name_clean_lc = subject_name_clean_lc + ', ' + line.subject_name_clean_lc
+							}
+						}
+					})
+				}
+			}
+			readEntriesData()
+			setChartSubtitles()
+		})
+	}
+	else if (urlSubject != 'bespoke') {
+		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(data) {
+			let len = data.length
+			if (len > 0) {
+		        for (let i = 0; i < len; i++) {
+					var line = data.shift()
+					if (line.subject_name_clean.replace(/\W+/g, '-').toLowerCase() == urlSubject) {
+			            subject_name_clean = line.subject_name_clean
+						subject_name_clean_lc = line.subject_name_clean_lc
+						document.getElementById('subjectNameContainer').innerHTML = subject_name_clean
+						alias = line.alias
+						if (alias == 'ALLS') {
+							$('#gcseFlagContainer').hide()
+							$('#alevelFlagContainer').hide()
+						}
+						definition = line.definition
+						if (definition == null) {
+							$('#definitionContainer').hide()
+						}
+						context = line.context
+						if (context == null) {
+							$('#contextBox').hide()
+						}
+						relatedSubjects = line.related_subjects
+						if (relatedSubjects == null) {
+							$('#related-subjects-section').hide()
+						}
+						else {
+							relatedSubjects.forEach(function(relatedAlias, index, array) {		// pass the array index and the array itself as well as the array value - relatedAlias - to allow us to check if something is the final element of the array
+								$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function(dataRelated) {
+									for (let j = 0; j < len; j++) {		// len here will be the same as above
+										var lineRelated = dataRelated.shift()
+										if (lineRelated.alias == relatedAlias) {
+											relatedArray.push(lineRelated.subject_name_clean_lc)
+											relatedArray.sort()
+										}
 									}
-								}
-								if (relatedArray.length == array.length) {
-									relatedArray.forEach(function(subject_name_clean, innerIndex, innerArray) {
-										if (innerIndex != innerArray.length - 1) {		// final element
-											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190812">' + subject_name_clean + '</a>,'
-										}
-										else {
-											$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190812">' + subject_name_clean + '</a>'
-										}
-									});
-								};
+									if (relatedArray.length == array.length) {
+										relatedArray.forEach(function(subject_name_clean, innerIndex, innerArray) {
+											if (innerIndex != innerArray.length - 1) {		// final element
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190812">' + subject_name_clean + '</a>,'
+											}
+											else {
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190812">' + subject_name_clean + '</a>'
+											}
+										});
+									};
+								});
 							});
-						});
-					};
-					flags = line.flags
-					if (level == 'A-Level' || level == 'AS-Level'){
-						if (flags.facil==true){
-							document.getElementById('facilFlagImg').src = '/img/facilFlagImgPink.png';
-							document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is a facilitating subject')
-						}
-						else {
-							document.getElementById('facilFlagImg').src = '/img/facilFlagImgGrey.png';
-							document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is not a facilitating subject')
-						}
-					}
-					else if (level=='GCSE'){
-						if (flags.ebacc==true){
-							document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgPink.png';
-							document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject counts in the English Baccalaureate (England only)')
-						}
-						else {
-							document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgGrey.png';
-							document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject does not count in the English Baccalaureate (England only)')
-						}
-						if (flags.p8dbl==true){
-							document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgPink.png';
-							if (alias=='ENLA' || alias=='ENLI'){
-								document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject can be double-weighted in Progress 8 calculations - see the explanatory guide for full details (England only)')
+						};
+						flags = line.flags
+						if (level == 'A-Level' || level == 'AS-Level'){
+							if (flags.facil==true){
+								document.getElementById('facilFlagImg').src = '/img/facilFlagImgPink.png';
+								document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is a facilitating subject')
 							}
-							else if (alias=='MATH') {
-								document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is double-weighted in Progress 8 calculations (England only)')
+							else {
+								document.getElementById('facilFlagImg').src = '/img/facilFlagImgGrey.png';
+								document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is not a facilitating subject')
 							}
 						}
-						else {
-							document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgGrey.png';
-							document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is not double-weighted in Progress 8 calculations (England only)')
+						else if (level=='GCSE'){
+							if (flags.ebacc==true){
+								document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgPink.png';
+								document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject counts in the English Baccalaureate (England only)')
+							}
+							else {
+								document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgGrey.png';
+								document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject does not count in the English Baccalaureate (England only)')
+							}
+							if (flags.p8dbl==true){
+								document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgPink.png';
+								if (alias=='ENLA' || alias=='ENLI'){
+									document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject can be double-weighted in Progress 8 calculations - see the explanatory guide for full details (England only)')
+								}
+								else if (alias=='MATH') {
+									document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is double-weighted in Progress 8 calculations (England only)')
+								}
+							}
+							else {
+								document.getElementById('p8dblFlagImg').src = '/img/p8dblFlagImgGrey.png';
+								document.getElementById('p8dblFlagImg').setAttribute('data-tooltip', 'This subject is not double-weighted in Progress 8 calculations (England only)')
+							}
+						}
+						reformYear=line.reform_year
+						document.getElementById('definitionContainer').innerHTML=document.getElementById('definitionContainer').innerHTML+definition
+						document.getElementById('contextContainer').innerHTML=document.getElementById('contextContainer').innerHTML+context
+						document.getElementById('reformYearContainer').innerHTML='<ul><li><em>Reform date</em></li><li>England: ' + reformYear.EN +'</li><li>Wales: ' + reformYear.WA +'</li><li>Northern Ireland: ' + reformYear.NI +'</li></ul>'
+					}
+		        }
+				addthis_share = {
+					title: level + ' results day 2019: Entry and attainment trends in ' + subject_name_clean_lc,
+					description: 'GCSE and A-Level results analysis - FFT Education Datalab',
+					passthrough : {
+						twitter: {
+							via: 'ffteducationdatalab',
 						}
 					}
-					reformYear=line.reform_year
-					document.getElementById('definitionContainer').innerHTML=document.getElementById('definitionContainer').innerHTML+definition
-					document.getElementById('contextContainer').innerHTML=document.getElementById('contextContainer').innerHTML+context
-					document.getElementById('reformYearContainer').innerHTML='<ul><li><em>Reform date</em></li><li>England: ' + reformYear.EN +'</li><li>Wales: ' + reformYear.WA +'</li><li>Northern Ireland: ' + reformYear.NI +'</li></ul>'
 				}
-	        }
-			addthis_share = {
-				title: level + ' results day 2019: Entry and attainment trends in ' + subject_lc,
-				description: 'GCSE and A-Level results analysis - FFT Education Datalab',
-				passthrough : {
-					twitter: {
-						via: 'ffteducationdatalab',
+	    	}
+		});
+		$('.tooltipped').tooltip();
+		$.getJSON('/data/output/' + level.toLowerCase() + '/' + textJSON, function(data) {
+			let len=data.length
+			if(len>0){
+				for(let i=0; i<len; i++){
+					var line=data.shift()
+					if (line.alias == alias){
+						analysis=line.analysis
+						document.getElementById('analysisContainer').innerHTML=document.getElementById('analysisContainer').innerHTML+analysis
 					}
 				}
 			}
-    	}
-	});
-	$('.tooltipped').tooltip();
-	$.getJSON('/data/output/' + level.toLowerCase() + '/' + textJSON, function(data) {
-		let len=data.length
-		if(len>0){
-			for(let i=0; i<len; i++){
-				var line=data.shift()
-				if (line.alias == alias){
-					analysis=line.analysis
-					document.getElementById('analysisContainer').innerHTML=document.getElementById('analysisContainer').innerHTML+analysis
-				}
-			}
-		}
-	});
-	readEntriesData()
-	readGradesData()
-	setChartSubtitles()
+		});
+		readEntriesData()
+		readGradesData()
+		setChartSubtitles()
+	}
 });
 
 function goBack() {
@@ -224,32 +262,51 @@ function goBack() {
 
 function readEntriesData() {
     $.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function(data) {
-		entriesData=[]
-		let len=data.length
+		entriesData = []
+		let len = data.length
 		let dataMax		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
-		if(len>0){
-		for(let i=0; i<len; i++){
-			var line=data.shift()
-			if (line.alias == alias && line.scope == scope){
-				entriesData.push(line)
-				if (line.name =='All students'){
-					let dataLen=line.data.length
-					dataMax=0
-					for(let j=0; j<dataLen; j++){
-						if(line.data[j][1]>dataMax){
-							dataMax=line.data[j][1]
+		if (len > 0) {
+			for (let i = 0; i < len; i++) {
+				var line = data.shift()
+				if (urlSubject == 'bespoke') {
+					queries.forEach(function (query) {
+						if (line.alias == query.alias && line.scope == scope) {
+							if (line.name == 'All students') {
+								line.name = query.subject_name_clean		// needs to be called this so that it's used for data series labelling
+								entriesData.push(line)
+								let dataLen = line.data.length
+								dataMax = 0
+								for (let j = 0; j < dataLen; j++) {
+									if (line.data[j][1] > dataMax) {
+										dataMax = line.data[j][1]
+									}
+								}
+							}
+						}
+					})
+				}
+				else {
+					if (line.alias == alias && line.scope == scope){
+						entriesData.push(line)
+						if (line.name =='All students'){
+							let dataLen=line.data.length
+							dataMax=0
+							for(let j=0; j<dataLen; j++){
+								if(line.data[j][1]>dataMax){
+									dataMax=line.data[j][1]
+								}
+							}
 						}
 					}
 				}
 			}
-		}
-		if (dataMax==0){
-			yMax = 10
-		}
-		else {
-			yMax = null
-		}
-		drawEntriesChart()
+			if (dataMax == 0){
+				yMax = 10
+			}
+			else {
+				yMax = null
+			}
+			drawEntriesChart()
 		}
 	});
 };
@@ -322,7 +379,12 @@ function setChartSubtitles() {
 }
 
 function drawEntriesChart() {
-	entriesChartColoursArray = ['#2daae1','#96c11f','#535353']
+	if (queries.length > 0) {
+		entriesChartColoursArray = ['#e6007e', '#2daae1', '#96c11f', '#535353']
+	}
+	else {
+		entriesChartColoursArray = ['#2daae1','#96c11f','#535353']
+	}
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
 	js.src = '/js/entries-chart.js?v=20190812';
@@ -352,14 +414,18 @@ $('#breakdownSelector').change(function () {
 	$('#scopeSelector').formSelect()		// re-initialise Materialize select input
 	if (breakdown != 'agecountry' && scope != 'UK') {
 		scope = 'UK'
-		readEntriesData(scope)
-		readGradesData(scope, gender, grades)
+		readEntriesData()
+		if (urlSubject != 'bespoke') {
+			readGradesData()
+		}
 		setChartSubtitles()
 	}
 	else if (breakdown == 'agecountry') {
 		scope = 'EN16'
-		readEntriesData(scope)
-		readGradesData(scope, gender, grades)
+		readEntriesData()
+		if (urlSubject != 'bespoke') {
+			readGradesData()
+		}
 		setChartSubtitles()
 	}
 });
@@ -367,13 +433,17 @@ $('#breakdownSelector').change(function () {
 function scopeOptionChange() {
 	scope = document.getElementById('scopeSelector').value
 	readEntriesData()
-	readGradesData()
+	if (urlSubject != 'bespoke') {
+		readGradesData()
+	}
 	setChartSubtitles()
 }
 
 function gradeChartOptionChange() {
 	grades = document.getElementById('gradesSelector').value
 	gender = document.getElementById('genderSelector').value
-	readGradesData()
+	if (urlSubject != 'bespoke') {
+		readGradesData()
+	}
 	setChartSubtitles()
 }

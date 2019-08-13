@@ -1,6 +1,6 @@
 Highcharts.chart('entriesChartContainer', {
     title: {
-        text: level + ' entries in ' + subject_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
+        text: level + ' entries in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
     },
     subtitle: {
         text: entriesChartSubtitle + '<br><em>Number of entries</em>'
@@ -16,6 +16,6 @@ Highcharts.chart('entriesChartContainer', {
 	},
     series: entriesData,
 	exporting: {
-		filename: (level + '-' + subject + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
+		filename: (level + '-' + subject_name_clean_lc + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
 	}
 });
