@@ -51,16 +51,16 @@
 			<div class="col l4 s12">
 				<ul class="collection">
 					<li class="collection-item" id='gcseFlagContainer'>
-						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information' href='/guide.php?v=20190812#subject_flags'>info_outline</a></div>
+						<div align='right'><a class="material-icons" data-position="top" href='/guide.php?v=20190812#subject_flags'>info_outline</a></div>
 						<img id='ebaccFlagImg' src='/img/ebaccFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This subject does not count in the English Baccalaureate (England only)'>
 						<img id='p8dblFlagImg' src='/img/p8dblFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This subject is not double-counted in Progress 8 calculations (England only)'>
 					</li>
 					<li class="collection-item" id='alevelFlagContainer'>
-						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information' href='/guide.php?v=20190812#subject_flags'>info_outline</a></div>
+						<div align='right'><a class="material-icons" data-position="top" href='/guide.php?v=20190812#subject_flags'>info_outline</a></div>
 						<img id='facilFlagImg' src='/img/facilFlagImgGrey.png' class='tooltipped' data-position="top" data-tooltip='This is not a facilitating subject'>
 					</li>
 					<li class="collection-item">
-						<div align='right'><a class="material-icons tooltipped" data-position="top" data-tooltip='More information' href='/guide.php?v=20190812#reform_date'>info_outline</a></div>
+						<div align='right'><a class="material-icons" data-position="top" href='/guide.php?v=20190812#reform_date'>info_outline</a></div>
 						<div id='reformYearContainer'></div>
 					</li>
 				</ul>
