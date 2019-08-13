@@ -27,5 +27,5 @@
 		</div>
 	</div>
 </div>
-<script src='/js/results-subject.js?v=20190812'></script>
+<script src='/js/results-subject.js?v=20190813'></script>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/inc/footer.php');?>
