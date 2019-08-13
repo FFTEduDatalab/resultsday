@@ -122,6 +122,14 @@ $(function () {
 					});
 				}
 			}
+			subject_name_clean_lc = subject_name_clean_lc.replace(/, (?=[^,]*$)/, ' and ');		// final occurence
+			if (subject_name_clean_lc.length > 35) {
+				var t = 0;
+				subject_name_clean_lc = subject_name_clean_lc.replace(/,/g, function (match) {
+					t++;
+					return (t === 2) ? ',<br>' : match;
+				});
+			}
 			readEntriesData();
 			setChartSubtitles();
 		});
@@ -258,7 +266,7 @@ function readEntriesData () {
 	$.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function (data) {
 		entriesData = [];
 		let len = data.length;
-		let dataMax;		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
+		let dataMax;// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
 		if (len > 0) {
 			for (let i = 0; i < len; i++) {
 				var line = data.shift();
