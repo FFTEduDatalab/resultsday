@@ -35,7 +35,7 @@
 
 				<h5>Facilitating subjects</h5>
 				<p>Russell Group (<a href='https://russellgroup.ac.uk/for-students/school-and-college-in-the-uk/subject-choices-at-school-and-college/' target="_blank">eligible subjects</a>)</p>
-				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 
 				<h3 id='credits'>Credits</h3>
@@ -45,12 +45,12 @@
 					<li>Data, blogposts: Philip Nye, Dave Thomson</li>
 					<li>User testing (2018): Kat Cole (The Beacon School), Kathryn Cruickshanks (St Ursula’s School), Paddy McGrath (London Academy), Amy Sippitt (Full Fact), Steve Wren (Tadcaster Grammar School), Jerry White (City College Norwich) and others</li>
 				</ul>
-				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 
 				<h3 id='nuffield'>The Nuffield Foundation</h3>
 				<p>The Nuffield Foundation is an independent charitable trust with a mission to advance social well-being. It funds research that informs social policy, primarily in education, welfare, and justice. It also funds student programmes that provide opportunities for young people to develop skills in quantitative and qualitative methods. The Nuffield Foundation is the founder and co-funder of the Nuffield Council on Bioethics and the Ada Lovelace Institute. The Foundation has funded this project, but the views expressed are those of the authors and not necessarily the Foundation. Visit <a href='https://www.nuffieldfoundation.org' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield site', 'Nuffield site');">www.nuffieldfoundation.org</a> | <a href='https://www.twitter.com/NuffieldFound' target="_blank" onclick="ga('send', 'event', 'Outbound link', 'Nuffield Twitter', 'Nuffield Twitter');">@NuffieldFound</a></p>
-				<span style="float:right"><a href="#"><em>Back to the top</em></a></span>
+				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 
 			</div>
