@@ -676,8 +676,8 @@
 	},
 	{
 		"alias": "PERF",
-		"subject_name_clean": "Performing/expressive arts",
-		"subject_name_clean_lc": "performing/expressive arts",
+		"subject_name_clean": "Performing/\u200Bexpressive arts",
+		"subject_name_clean_lc": "performing/\u200Bexpressive arts",
 		"subject_names": ["Performing / Expressive Arts"],
 		"sort_order": 0,
 		"flags": {
