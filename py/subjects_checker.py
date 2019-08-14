@@ -49,7 +49,7 @@ for level in levels:
 			filename_split=filename.split('_')
 			year=int(filename_split[1])
 			scope=filename_split[2].upper()
-			if year==2018:						# XXX
+			if year==2019:						# XXX
 				rb=open_workbook(source_file)
 				rbws=rb.sheet_by_index(0)
 				for rbrow in range(11,rbws.nrows):			# ditching 10 header rows
@@ -67,4 +67,4 @@ for level in levels:
 							print filename +': ' + subject_name + ' not found in ' + level['name'] + ' subjects JSON file'
 	for subject in subjects_data:
 		if subject['present']==False:
-			print subject['subject_name_clean'] + ' not present in ' + level['name'] + ' source data'
+			print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ' not present in ' + level['name'] + ' source data'		# strip out unicode characters - e.g. any zero-width space characters
