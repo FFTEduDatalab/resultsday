@@ -112,7 +112,6 @@ for level in levels:
 			allsubjects_entries_change=round((texts['allsubjects_entries_yn']-texts['allsubjects_entries_y0'])*1.0/texts['allsubjects_entries_y0']*100,1)
 			subject_entries_change=round((texts['entries_yn']-texts['entries_y0'])*1.0/texts['entries_y0']*100.0,1)
 			subject_popn_change=round((texts['popn_yn']-texts['popn_y0'])*1.0/texts['popn_y0']*100.0,1)
-			print level['name'], texts['alias'], texts['y0'], texts['yn'], subject_popn_change
 			if texts['years']==2:		# one year handled separately below
 				number_of_years='two'
 			elif texts['years']==3:
