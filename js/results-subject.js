@@ -379,7 +379,7 @@ function setChartSubtitles () {
 
 function drawEntriesChart () {
 	if (queries.length > 0) {
-		entriesChartColoursArray = ['#e6007e', '#2daae1', '#96c11f', '#535353'];
+		entriesChartColoursArray = ['#e6007e', '#2daae1', '#96c11f', '#535353', '#ea51a5', '#6fc2e7', '#b5d266', '#959595'];
 	} else {
 		entriesChartColoursArray = ['#2daae1', '#96c11f', '#535353'];
 	}
