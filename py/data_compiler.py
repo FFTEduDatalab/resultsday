@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-# NB: This script is somewhere between rebuilding the data from scratch each time, and only adding new years. For a given level, if there are news years then all data for that level is rebuilt from scratch, but data for other levels isn't
+# NB: This script is somewhere between rebuilding the data from scratch each time, and only adding new years. For a given level, if there are new years then all data for that level is rebuilt from scratch, but data for other levels isn't
 
 import os
 import re
