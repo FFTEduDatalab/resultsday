@@ -38,28 +38,28 @@ var urlLevel,
 	levels = [
 		{
 			'name': 'A-Level',
-			'subjectsJSON': 'a-level-subjects.json?v=20190813',
-			'entriesJSON': 'a-level-entries.json?v=20190813',
-			'gradesJSON': 'a-level-grades.json?v=20190813',
-			'textJSON': 'a-level-text.json?v=20190813',
+			'subjectsJSON': 'a-level-subjects.json?v=20190815',
+			'entriesJSON': 'a-level-entries.json?v=20190815',
+			'gradesJSON': 'a-level-grades.json?v=20190815',
+			'textJSON': 'a-level-text.json?v=20190815',
 			'gradesAll': ['A*', 'A or above', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A*', 'A or above', 'C or above', 'E or above']
 		},
 		{
 			'name': 'AS-Level',
-			'subjectsJSON': 'as-level-subjects.json?v=20190813',
-			'entriesJSON': 'as-level-entries.json?v=20190813',
-			'gradesJSON': 'as-level-grades.json?v=20190813',
-			'textJSON': 'as-level-text.json?v=20190813',
+			'subjectsJSON': 'as-level-subjects.json?v=20190815',
+			'entriesJSON': 'as-level-entries.json?v=20190815',
+			'gradesJSON': 'as-level-grades.json?v=20190815',
+			'textJSON': 'as-level-text.json?v=20190815',
 			'gradesAll': ['A', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A', 'C or above', 'E or above']
 		},
 		{
 			'name': 'GCSE',
-			'subjectsJSON': 'gcse-subjects.json?v=20190813',
-			'entriesJSON': 'gcse-entries.json?v=20190813',
-			'gradesJSON': 'gcse-grades.json?v=20190813',
-			'textJSON': 'gcse-text.json?v=20190813',
+			'subjectsJSON': 'gcse-subjects.json?v=20190815',
+			'entriesJSON': 'gcse-entries.json?v=20190815',
+			'gradesJSON': 'gcse-grades.json?v=20190815',
+			'textJSON': 'gcse-text.json?v=20190815',
 			'gradesAll': ['A/7 or above', 'C/4 or above', 'G/1 or above', 'U or above'],
 			'gradesSelected': ['A/7 or above', 'C/4 or above', 'G/1 or above']
 		}
@@ -173,9 +173,9 @@ $(function () {
 									if (relatedArray.length == array.length) {
 										relatedArray.forEach(function (subject_name_clean, innerIndex, innerArray) {
 											if (innerIndex != innerArray.length - 1) {		// final element
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190813">' + subject_name_clean + '</a>,';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190815">' + subject_name_clean + '</a>,';
 											} else {
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190813">' + subject_name_clean + '</a>';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190815">' + subject_name_clean + '</a>';
 											}
 										});
 									}
@@ -252,13 +252,13 @@ $(function () {
 function goBack () {
 	urlLevel = window.location.href.split('/')[3].split('.')[0];
 	if (urlLevel == 'a-level') {
-		window.location.href = '/a-level.php?v=20190813';
+		window.location.href = '/a-level.php?v=20190815';
 	}
 	else if (urlLevel == 'as-level') {
-		window.location.href = '/as-level.php?v=20190813';
+		window.location.href = '/as-level.php?v=20190815';
 	}
 	else if (urlLevel == 'gcse') {
-		window.location.href = '/gcse.php?v=20190813';
+		window.location.href = '/gcse.php?v=20190815';
 	}
 }
 
@@ -385,7 +385,7 @@ function drawEntriesChart () {
 	}
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/entries-chart.js?v=20190813';
+	js.src = '/js/entries-chart.js?v=20190815';
 	document.body.appendChild(js);
 }
 
@@ -394,7 +394,7 @@ function drawGradesChart () {
 	gradesChartColoursArray.push(coloursDict[gender]);
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/grades-chart.js?v=20190813';
+	js.src = '/js/grades-chart.js?v=20190815';
 	document.body.appendChild(js);
 }
 

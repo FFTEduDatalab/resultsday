@@ -6,28 +6,28 @@ var urlLevel,
 	levels = [
 		{
 			'name': 'A-Level',
-			'subjectsJSON': 'a-level-subjects.json?v=20190813',
-			'entriesJSON': 'a-level-entries.json?v=20190813',
-			'gradesJSON': 'a-level-grades.json?v=20190813',
-			'textJSON': 'a-level-text.json?v=20190813',
+			'subjectsJSON': 'a-level-subjects.json?v=20190815',
+			'entriesJSON': 'a-level-entries.json?v=20190815',
+			'gradesJSON': 'a-level-grades.json?v=20190815',
+			'textJSON': 'a-level-text.json?v=20190815',
 			'gradesAll': ['A*', 'A or above', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A*', 'A or above', 'C or above', 'E or above']
 		},
 		{
 			'name': 'AS-Level',
-			'subjectsJSON': 'as-level-subjects.json?v=20190813',
-			'entriesJSON': 'as-level-entries.json?v=20190813',
-			'gradesJSON': 'as-level-grades.json?v=20190813',
-			'textJSON': 'as-level-text.json?v=20190813',
+			'subjectsJSON': 'as-level-subjects.json?v=20190815',
+			'entriesJSON': 'as-level-entries.json?v=20190815',
+			'gradesJSON': 'as-level-grades.json?v=20190815',
+			'textJSON': 'as-level-text.json?v=20190815',
 			'gradesAll': ['A', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A', 'C or above', 'E or above']
 		},
 		{
 			'name': 'GCSE',
-			'subjectsJSON': 'gcse-subjects.json?v=20190813',
-			'entriesJSON': 'gcse-entries.json?v=20190813',
-			'gradesJSON': 'gcse-grades.json?v=20190813',
-			'textJSON': 'gcse-text.json?v=20190813',
+			'subjectsJSON': 'gcse-subjects.json?v=20190815',
+			'entriesJSON': 'gcse-entries.json?v=20190815',
+			'gradesJSON': 'gcse-grades.json?v=20190815',
+			'textJSON': 'gcse-text.json?v=20190815',
 			'gradesAll': ['A/7 or above', 'C/4 or above', 'G/1 or above', 'U or above'],
 			'gradesSelected': ['A/7 or above', 'C/4 or above', 'G/1 or above']
 		}
