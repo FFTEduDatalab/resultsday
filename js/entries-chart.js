@@ -16,6 +16,6 @@ Highcharts.chart('entriesChartContainer', {
 	},
 	series: entriesData,
 	exporting: {
-		filename: (level + '-' + subject_name_clean_lc + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
+		filename: (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
 	}
 });

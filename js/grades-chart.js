@@ -19,6 +19,6 @@ Highcharts.chart('gradesChartContainer', {
 	},
 	series: gradesData,
 	exporting: {
-		filename: (level + '-' + subject_name_clean_lc + '-' + scope + '-' + gender + '-' + grades + '-grades').replace(/\W+/g, '-').toLowerCase()
+		filename: (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-' + gender + '-' + grades + '-grades').replace(/\W+/g, '-').toLowerCase()
 	}
 });
