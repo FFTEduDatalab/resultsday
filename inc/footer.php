@@ -2,7 +2,7 @@
 	<div class="container">
 	  <div class="row">
 	    <div class="col l6 s12">
-			<h5 class="white-text"><a href='/about.php?v=20190815' class="white-text">About</a></h5>
+			<h5 class="white-text"><a href='/about.php?v=20190821' class="white-text">About</a></h5>
 			<ul>
 				<li>Built by FFT Education Datalab, part of FFT.</li>
 				<li>Project funded by the Nuffield Foundation.</li>
@@ -38,7 +38,7 @@
 		}
 	</script>
 	<script src="/js/materialize.min.js"></script>
-	<script src="/js/init.js?v=20190815"></script>
+	<script src="/js/init.js?v=20190821"></script>
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7bf17470e79794"></script>
   </body>
 </html>
