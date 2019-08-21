@@ -23,8 +23,8 @@ var levels = [
 		'entriesJSON': 'gcse-entries.json?v=20190815',
 		'gradesJSON': 'gcse-grades.json?v=20190815',
 		'textJSON': 'gcse-text.json?v=20190815',
-		'gradesAll': ['A/7', 'C/4', 'G/1', 'U'],
-		'gradesSelected': ['A/7', 'C/4', 'G/1']
+		'gradesAll': ['7/A', '4/C', '1/G', 'U'],
+		'gradesSelected': ['7/A', '4/C', '1/G']
 	}
 ];
 

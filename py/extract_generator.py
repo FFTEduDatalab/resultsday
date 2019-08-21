@@ -25,7 +25,7 @@ levels=[
 		'name':'GCSE',
 		'source':'data\\source\\gcse',
 		'output':'data\\output\\gcse',
-		'grades':['A/7 or above','C/4 or above','G/1 or above','U or above']
+		'grades':['7/A or above','4/C or above','1/G or above','U or above']
 	}
 ]
 
@@ -33,8 +33,9 @@ nations=['UK','EN','WA','NI']
 ages=['15','16','17']
 
 # Listing newly reformed subjects
+# target='AS-Level'
 # for level in levels:
-# 	if level['name']=='A-Level':
+# 	if level['name']==target:
 # 		os.chdir(os.path.dirname( __file__ ))
 # 		os.chdir('..')
 # 		os.chdir(level['output'])
@@ -43,47 +44,81 @@ ages=['15','16','17']
 # 			subjects_data = json.load(subjects_file)
 # 		for subject in subjects_data:
 # 			if '2019' in str(subject['reform_year']['EN']) and subject['reform_year']['EN']!='Being discontinued, 2019':		# XXX
-# 				print subject['alias'], subject['subject_name_clean'], subject['reform_year']['EN']
+# 				print subject['alias'], re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']), subject['reform_year']['EN']
 
-# A-Level/AS-Level/GCSE entries, year comparison
-# scope='EN'
-# name='All students'
-# years=[2018,2019]		# XXX
-#
+# Listing EBacc subjects
+# target='GCSE'
 # for level in levels:
-# 	if level['name']=='A-Level':
+# 	if level['name']==target:
 # 		os.chdir(os.path.dirname( __file__ ))
 # 		os.chdir('..')
 # 		os.chdir(level['output'])
+# 		row_list=[]
+# 		with open(level['name'].lower()+'-subjects.json') as subjects_file:
+# 			subjects_data = json.load(subjects_file)
+# 		for subject in subjects_data:
+# 			if subject['flags']['ebacc']==True:
+# 				print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean'])
+
+# Listing discontinued subjects
+# target='GCSE'
+# for level in levels:
+# 	if level['name']==target:
+# 		os.chdir(os.path.dirname( __file__ ))
+# 		os.chdir('..')
+# 		os.chdir(level['output'])
+# 		row_list=[]
+# 		with open(level['name'].lower()+'-subjects.json') as subjects_file:
+# 			subjects_data = json.load(subjects_file)
+# 		for subject in subjects_data:
+# 			if 'Discontinued' in str(subject['reform_year']['EN']):
+# 				print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']), subject['reform_year']['EN']
+
+# A-Level/AS-Level/GCSE entries, year comparison
+# target='AS-Level'
+# scope='EN'
+# name='All students'
+# years=[2015,2016,2017,2018,2019]		# XXX
+#
+# for level in levels:
+# 	if level['name']==target:
+# 		os.chdir(os.path.dirname( __file__ ))
+# 		os.chdir('..')
+# 		os.chdir(level['output'])
+# 		with open(level['name'].lower()+'-subjects.json') as subjects_file:
+# 			subjects_data = json.load(subjects_file)
 # 		with open(level['name'].lower()+'-entries.json') as entries_file:
 # 			entries_data = json.load(entries_file)
 # 		output_dict = [x for x in entries_data if x['name'] == name and x['scope']==scope]
 # 		for item in output_dict:
-# 			string=''
-# 			for year in years:
-# 				if item['data'][0][0]>year:		# add a blank value where year doesn't exist
-# 					string=string + ' '
-# 				for datum in item['data']:
-# 					if datum[0]==year:
-# 						if string=='':
-# 							string=str(datum[1])
-# 						else:
-# 							string=string + ', ' + str(datum[1])
-# 			try:
-# 				if string.rsplit(' ',1)[1]!='0':		# ditch subjects with no entries in most recent year
-# 					print item['alias'] + ', ' + string
-# 			except IndexError:
-# 			    if string!='0':		# ditch subjects with no entries in most recent year
-# 					print item['alias'] + ', ' + string
+# 			for subject in subjects_data:
+# 				if item['alias']==subject['alias']:
+# 					string=''
+# 					for year in years:
+# 						if item['data'][0][0]>year:		# add a blank value where year doesn't exist
+# 							string=string + ' '
+# 						for datum in item['data']:
+# 							if datum[0]==year:
+# 								if string=='':
+# 									string=str(datum[1])
+# 								else:
+# 									string=string + ', ' + str(datum[1])
+# 					try:
+# 						if int(string.rsplit(' ',1)[1])<100 :		# ditch small-entry subjects
+# 							print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ', ' + string
+# 					except IndexError:
+# 					    if int(string)<100:		# ditch small-entry subjects
+# 							print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ', ' + string
 
 # A-Level/AS-Level/GCSE grades, year comparison
+target='GCSE'
 scope='EN'
 gender='All students'
-grade='A or above'		# XXX
-years=[2019]		# XXX
+grade='4/C or above'		# XXX
+years=[2015,2017,2018]		# XXX
 
 for level in levels:
-	if level['name']=='A-Level':
+	if level['name']==target:
 		os.chdir(os.path.dirname( __file__ ))
 		os.chdir('..')
 		os.chdir(level['output'])
@@ -107,18 +142,19 @@ for level in levels:
 									string=string + ', ' + str(datum[1])
 					try:
 						if string.rsplit(' ',1)[1]!='0.0':		# ditch subjects with no grades (and hence no entries) in most recent year
-							print subject['subject_name_clean'] + ', ' + string
+							print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ', ' + string
 					except IndexError:
 					    if string!='0.0':		# ditch subjects with no grades (and hence no entries) in most recent year
-							print subject['subject_name_clean'] + ', ' + string
+							print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ', ' + string
 
-# GCSE, change in entries and grades in facilitating subjects
+# GCSE, change in entries and grades in EBacc subjects
+# target='GCSE'
 # scope='EN'
 # y0=2017		# XXX
 # yn=2018		# XXX
 #
 # for level in levels:
-# 	if level['name']=='GCSE':
+# 	if level['name']==target:
 # 		os.chdir(os.path.dirname( __file__ ))
 # 		os.chdir('..')
 # 		os.chdir(level['output'])
@@ -153,17 +189,17 @@ for level in levels:
 # 						break
 # 				data=[]
 # 				for grades in grades_data:
-# 					if (grades['name']=='A/7 or above' or grades['name']=='C/4 or above') and grades['scope']==scope and grades['gender']=='All students' and grades['alias']==alias:
+# 					if (grades['name']=='7/A or above' or grades['name']=='4/C or above') and grades['scope']==scope and grades['gender']=='All students' and grades['alias']==alias:
 # 						data=grades['data']
 # 						for data_item in data:
 # 							if data_item[0]==y0:
-# 								if grades['name']=='A/7 or above':
+# 								if grades['name']=='7/A or above':
 # 									row['A_y0']=data_item[1]
-# 								elif grades['name']=='C/4 or above':
+# 								elif grades['name']=='4/C or above':
 # 									row['C_y0']=data_item[1]
 # 							if data_item[0]==yn:
-# 								if grades['name']=='A/7 or above':
+# 								if grades['name']=='7/A or above':
 # 									row['A_yn']=data_item[1]
-# 								elif grades['name']=='C/4 or above':
+# 								elif grades['name']=='4/C or above':
 # 									row['C_yn']=data_item[1]
 # 				print row['alias'] + ', ' + row['subject_name_clean'] + ', ' + str(row['entries_y0']) + ', ' + str(row['entries_yn']) + ', ' + str(row['C_y0']) + ', ' + str(row['C_yn'])

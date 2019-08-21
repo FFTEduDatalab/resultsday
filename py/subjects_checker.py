@@ -7,6 +7,7 @@ import json
 from xlrd import open_workbook
 from collections import OrderedDict
 
+target_year=2019		# XXX
 genders = ['Male','Female','All students']
 
 levels=[
@@ -26,7 +27,7 @@ levels=[
 		'name':'GCSE',
 		'source':'data\\source\\gcse',
 		'output':'data\\output\\gcse',
-		'grades':['A/7 or above','C/4 or above','G/1 or above','U or above']
+		'grades':['7/A or above','4/C or above','1/G or above','U or above']
 	}
 ]
 
@@ -49,7 +50,7 @@ for level in levels:
 			filename_split=filename.split('_')
 			year=int(filename_split[1])
 			scope=filename_split[2].upper()
-			if year==2019:						# XXX
+			if year==target_year:
 				rb=open_workbook(source_file)
 				rbws=rb.sheet_by_index(0)
 				for rbrow in range(11,rbws.nrows):			# ditching 10 header rows

@@ -10,8 +10,8 @@ from collections import OrderedDict
 
 min_year=2014
 
-# mode='normal'		# used to control whether only new, more recent years are added to the data, or if the data is written from scratch
-mode='testing'
+mode='normal'		# used to control whether only new, more recent years are added to the data, or if the data is written from scratch
+# mode='testing'
 
 genders = ['Male','Female','All students']
 
@@ -32,7 +32,7 @@ levels=[
 		'name':'GCSE',
 		'source':'data\\source\\gcse',
 		'output':'data\\output\\gcse',
-		'grades':['A/7 or above','C/4 or above','G/1 or above','U or above']
+		'grades':['7/A or above','4/C or above','1/G or above','U or above']
 	}
 ]
 

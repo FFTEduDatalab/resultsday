@@ -26,7 +26,7 @@ levels=[
 		'name':'GCSE',
 		'source':'data\\source\\gcse',
 		'output':'data\\output\\gcse',
-		'grades':['A/7 or above','C/4 or above','G/1 or above','U or above']
+		'grades':['7/A or above','4/C or above','1/G or above','U or above']
 	}
 ]
 
@@ -51,7 +51,7 @@ for level in levels:
 			allsubjects_entries=entries		# used so that _all subjects_ data is accessible when analysis is being written for each individual subject
 			break
 	for grades in grades_data:
-		if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='C/4 or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']=='ALLS':
+		if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='4/C or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']=='ALLS':
 			allsubjects_grades=grades		# ditto
 			break
 	for subject in subjects_data:		# not done using zip, as files being read are of different lengths
@@ -74,7 +74,7 @@ for level in levels:
 				texts['allsubjects_entries_yn']=allsubjects_entries['data'][-1][1]
 				break
 		for grades in grades_data:
-			if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='C/4 or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']==alias:
+			if ((level['name']=='A-Level' and grades['name']=='A or above') or (level['name']=='AS-Level' and grades['name']=='A') or (level['name']=='GCSE' and grades['name']=='4/C or above')) and grades['scope']=='UK' and grades['gender']=='All students' and grades['alias']==alias:
 				texts['highlighted_grades_yn']=grades['data'][-1][1]
 				texts['allsubjects_highlighted_grades_yn']=allsubjects_grades['data'][-1][1]
 				break
@@ -167,7 +167,7 @@ for level in levels:
 				highlighted_grades='A grades'
 			elif level['name']=='GCSE':
 				metric='good passes'
-				highlighted_grades='grade C/4 or higher'
+				highlighted_grades='grade 4/C or higher'
 			if texts['alias']!='ALLS':
 				if texts['years']==1:
 					texts['analysis']='<p>Across the UK, a ' + highlighted_grades_comparison + ' proportion of students achieved ' + metric + ' in ' + texts['subject_name_clean_lc'] + ' in ' + str(texts['yn']) + ' ' + highlighted_grades_comparison_wording + ' all ' + level['name'] + ' subjects. A total of ' + str(texts['highlighted_grades_yn']) + '% of pupils achieved ' + highlighted_grades + ' in ' + texts['subject_name_clean_lc'] + ' compared to ' + str(texts['allsubjects_highlighted_grades_yn']) + '% for all subjects.</p>'

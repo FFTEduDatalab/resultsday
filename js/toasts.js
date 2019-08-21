@@ -28,8 +28,8 @@ var urlLevel,
 			'entriesJSON': 'gcse-entries.json?v=20190815',
 			'gradesJSON': 'gcse-grades.json?v=20190815',
 			'textJSON': 'gcse-text.json?v=20190815',
-			'gradesAll': ['A/7 or above', 'C/4 or above', 'G/1 or above', 'U or above'],
-			'gradesSelected': ['A/7 or above', 'C/4 or above', 'G/1 or above']
+			'gradesAll': ['7/A or above', '4/C or above', '1/G or above', 'U or above'],
+			'gradesSelected': ['7/A or above', '4/C or above', '1/G or above']
 		}
 	];
 
