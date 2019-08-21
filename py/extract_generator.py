@@ -111,11 +111,12 @@ ages=['15','16','17']
 # 							print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ', ' + string
 
 # A-Level/AS-Level/GCSE grades, year comparison
-target='GCSE'
-scope='EN'
+target='GCSE'		# XXX
+scope='EN16'		# XXX
 gender='All students'
 grade='4/C or above'		# XXX
-years=[2015,2017,2018]		# XXX
+exclusions=['LEIS', 'AOTH', 'HSOC', 'HOME', 'MANU', 'HOSP', 'BUSC' ,'WELS']		# XXX
+years=[2018,2019]		# XXX
 
 for level in levels:
 	if level['name']==target:
@@ -126,7 +127,7 @@ for level in levels:
 			subjects_data = json.load(subjects_file)
 		with open(level['name'].lower()+'-grades.json') as grades_file:
 			grades_data = json.load(grades_file)
-		output_dict = [x for x in grades_data if x['gender'] == gender and x['scope']==scope and x['name']==grade and x['alias'] not in ['COMM', 'CRIT', 'GENS', 'ICTX', 'PERF']]		# XXX
+		output_dict = [x for x in grades_data if x['gender'] == gender and x['scope']==scope and x['name']==grade and x['alias'] not in exclusions]
 		for item in output_dict:
 			for subject in subjects_data:
 				if item['alias']==subject['alias']:
