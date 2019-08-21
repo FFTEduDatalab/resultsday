@@ -35,6 +35,33 @@ var urlLevel,
 		'Male': '#2daae1',
 		'Female': '#96c11f'
 	},
+	scopeDict = {
+		'UK': 'UK-wide',
+		'EN': 'England',
+		'WA': 'Wales',
+		'NI': 'Northern Ireland',
+		'15': '15-year-olds and below, UK-wide',
+		'16': '16-year-olds, UK-wide',
+		'17': '17-year-olds and above, UK-wide',
+		'EN15': '15-year-olds and below, England',
+		'EN16': '16-year-olds, England',
+		'EN17': '17-year-olds and above, England',
+		'WA15': '15-year-olds and below, Wales',
+		'WA16': '16-year-olds, Wales',
+		'WA17': '17-year-olds and above, Wales',
+		'NI15': '15-year-olds and below, Northern Ireland',
+		'NI16': '16-year-olds, Northern Ireland',
+		'NI17': '17-year-olds and above, Northern Ireland'
+	},
+	gradesDict = {
+		'Selected': 'selected grades',
+		'All': 'all grades'
+	},
+	genderDict = {
+		'All students': 'All ',
+		'Male': 'Male ',
+		'Female': 'Female ',
+	},
 	levels = [
 		{
 			'name': 'A-Level',
@@ -71,9 +98,15 @@ $(function () {
 	addthis_config.data_track_clickback = false;		// "		"
 	urlLevel = window.location.href.split('/')[3];
 	urlSubject = window.location.href.split('/')[4].split('.')[0];
-	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1]) {
+	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1] && ! window.location.href.split('options=')[1]) {
 		bespokeAliases = window.location.href.split('sbj=')[1].split(',');
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
+	}
+	else if (window.location.href.split('options=')[1]) {
+		bespokeAliases = window.location.href.split('sbj=')[1].split('|')[0].split(',');
+		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
+		bespokeOptions = window.location.href.split('options=')[1].split(',');
+		bespokeOptions = bespokeOptions.map(function (x) { return x.toUpperCase(); });
 	}
 	let levelData = levels.filter(function (levels) {
 		return levels.name.toLowerCase() == urlLevel;
@@ -100,7 +133,7 @@ $(function () {
 	gradesAll = levelData.gradesAll;
 	gradesSelected = levelData.gradesSelected;
 	queries = [];
-	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1]) {
+	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1] && ! window.location.href.split('options=')[1]) {
 		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
 			let len = data.length;
 			if (len > 0) {
@@ -118,6 +151,38 @@ $(function () {
 							} else {
 								subject_name_clean_lc = subject_name_clean_lc + ', ' + line.subject_name_clean_lc;
 							}
+						}
+					});
+				}
+			}
+			subject_name_clean_lc = subject_name_clean_lc.replace(/, (?=[^,]*$)/, ' and ');		// final occurence
+			if (subject_name_clean_lc.length > 35) {
+				var t = 0;
+				subject_name_clean_lc = subject_name_clean_lc.replace(/,/g, function (match) {
+					t++;
+					return (t === 2) ? ',<br>' : match;
+				});
+			}
+			readEntriesData();
+			setChartSubtitles();
+		});
+	}
+	else if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {
+		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
+			let len = data.length;
+			if (len > 0) {
+				for (let i = 0; i < len; i++) {
+					var line = data.shift();
+					bespokeAlias = bespokeAliases[0];		// needs to only be one of these where we're setting options
+					bespokeOptions.forEach(function (bespokeOption) {
+						if (line.alias == bespokeAlias) {		// note contrast with operation in results-subject.js
+							var q = {};
+							q.alias = bespokeAlias;
+							q.scope = bespokeOption;
+							q.subject_name_clean = line.subject_name_clean;
+							q.subject_name_clean_lc = line.subject_name_clean_lc;
+							queries.push(q);
+							subject_name_clean_lc = line.subject_name_clean_lc;		// as there'll only by one subject. Used in the chart title
 						}
 					});
 				}
@@ -270,18 +335,32 @@ function readEntriesData () {
 		if (len > 0) {
 			for (let i = 0; i < len; i++) {
 				var line = data.shift();
-				if (urlSubject == 'bespoke') {
+				if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1] && ! window.location.href.split('options=')[1]) {
 					queries.forEach(function (query) {
-						if (line.alias == query.alias && line.scope == scope) {
-							if (line.name == 'All students') {
-								line.name = query.subject_name_clean;		// needs to be called this so that it's used for data series labelling
-								entriesData.push(line);
-								let dataLen = line.data.length;
-								dataMax = 0;
-								for (let j = 0; j < dataLen; j++) {
-									if (line.data[j][1] > dataMax) {
-										dataMax = line.data[j][1];
-									}
+						if (line.alias == query.alias && line.scope == scope && line.name == 'All students') {
+							line.name = query.subject_name_clean;		// needs to be called this so that it's used for data series labelling
+							entriesData.push(line);
+							let dataLen = line.data.length;
+							dataMax = 0;
+							for (let j = 0; j < dataLen; j++) {
+								if (line.data[j][1] > dataMax) {
+									dataMax = line.data[j][1];
+								}
+							}
+						}
+					});
+				}
+				else if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {
+					scope = '15,16,17';		// used purely in the chart image download title
+					queries.forEach(function (query) {
+						if (line.alias == query.alias && line.scope == query.scope && line.name == 'All students') {
+							line.name = scopeDict[query.scope].split(',')[0];		// needs to be called this so that it's used for data series labelling. Ditches 'UK-wide' from age names
+							entriesData.push(line);
+							let dataLen = line.data.length;
+							dataMax = 0;
+							for (let j = 0; j < dataLen; j++) {
+								if (line.data[j][1] > dataMax) {
+									dataMax = line.data[j][1];
 								}
 							}
 						}
@@ -335,33 +414,6 @@ function readGradesData () {
 }
 
 function setChartSubtitles () {
-	let scopeDict = {
-		'UK': 'UK-wide',
-		'EN': 'England',
-		'WA': 'Wales',
-		'NI': 'Northern Ireland',
-		'15': '15-year-olds and below, UK-wide',
-		'16': '16-year-olds, UK-wide',
-		'17': '17-year-olds and above, UK-wide',
-		'EN15': '15-year-olds and below, England',
-		'EN16': '16-year-olds, England',
-		'EN17': '17-year-olds and above, England',
-		'WA15': '15-year-olds and below, Wales',
-		'WA16': '16-year-olds, Wales',
-		'WA17': '17-year-olds and above, Wales',
-		'NI15': '15-year-olds and below, Northern Ireland',
-		'NI16': '16-year-olds, Northern Ireland',
-		'NI17': '17-year-olds and above, Northern Ireland'
-	};
-	let gradesDict = {
-		'Selected': 'selected grades',
-		'All': 'all grades'
-	};
-	let genderDict = {
-		'All students': 'All ',
-		'Male': 'Male ',
-		'Female': 'Female ',
-	};
 	if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
 		entriesChartSubtitle = scopeDict[scope];
 		if (gender == 'All students') {
