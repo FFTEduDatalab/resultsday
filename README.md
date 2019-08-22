@@ -1,12 +1,12 @@
 # :chart_with_upwards_trend: GCSE and A-Level results day analysis
-Code powering GCSE and A-Level results analysis from FFT Education Datalab and the Nuffield Foundation, [as featured on our 2018 results microsite](https://results.ffteducationdatalab.org.uk/).
+Code powering GCSE and A-Level results analysis from FFT Education Datalab and the Nuffield Foundation, [as featured on our results microsite](https://results.ffteducationdatalab.org.uk/).
 
 For background to the project, refer to [the _About_ page of the results microsite](https://results.ffteducationdatalab.org.uk/about.php).
 
 ## Contents
 * `py`: Four Python files, details of which are provided below
 * `data`: Data files on which the site is based:
-	* `source`: Excel files (`.xls`, `.xlsx`) of entry and grades data for the period 2014-2018 made available by the [Joint Council for Qualifications](https://www.jcq.org.uk/). Filenames take the form `<level>_<year>_<scope>_<grades (GCSE only)>`. Here `scope` refers to the breakdowns by home nation (`UK`, `EN`, `WA`, `NI`), age of entrant (GCSE only; `15`, `16`, `17`) or home nation and age (GCSE only; `EN16` only). `grades` refers to whether datafiles are in terms of A\*-G grades (`ag`), or the key grades at which the 9-1 grade structure and the A*-G grade structure are pegged (`keygrades`).
+	* `source`: Excel files (`.xls`, `.xlsx`) of entry and grades data for the period published by the [Joint Council for Qualifications](https://www.jcq.org.uk/). Filenames take the form `<level>_<year>_<scope>_<grades (GCSE only)>`. Here `scope` refers to the breakdowns by home nation (`UK`, `EN`, `WA`, `NI`), age of entrant (GCSE only; `15`, `16`, `17`) or home nation and age (GCSE only; `EN16` only). `grades` refers to whether datafiles are in terms of A\*-G grades (`ag`), or the key grades at which the 9-1 grade structure and the A*-G grade structure are pegged (`keygrades`).
 	* `output`: For each level, four json files:
 		* `<level>-entries.json`: Compiled entries data produced by `data_compiler.py`, based on the source data files
 		* `<level>-grades.json`: Compiled grades data produced by `data_compiler.py`, based on the source data files
