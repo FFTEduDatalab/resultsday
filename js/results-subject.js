@@ -65,28 +65,28 @@ var urlLevel,
 	levels = [
 		{
 			'name': 'A-Level',
-			'subjectsJSON': 'a-level-subjects.json?v=20190821',
-			'entriesJSON': 'a-level-entries.json?v=20190821',
-			'gradesJSON': 'a-level-grades.json?v=20190821',
-			'textJSON': 'a-level-text.json?v=20190821',
+			'subjectsJSON': 'a-level-subjects.json?v=20190822.2',
+			'entriesJSON': 'a-level-entries.json?v=20190822.2',
+			'gradesJSON': 'a-level-grades.json?v=20190822.2',
+			'textJSON': 'a-level-text.json?v=20190822.2',
 			'gradesAll': ['A*', 'A or above', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A*', 'A or above', 'C or above', 'E or above']
 		},
 		{
 			'name': 'AS-Level',
-			'subjectsJSON': 'as-level-subjects.json?v=20190821',
-			'entriesJSON': 'as-level-entries.json?v=20190821',
-			'gradesJSON': 'as-level-grades.json?v=20190821',
-			'textJSON': 'as-level-text.json?v=20190821',
+			'subjectsJSON': 'as-level-subjects.json?v=20190822.2',
+			'entriesJSON': 'as-level-entries.json?v=20190822.2',
+			'gradesJSON': 'as-level-grades.json?v=20190822.2',
+			'textJSON': 'as-level-text.json?v=20190822.2',
 			'gradesAll': ['A', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A', 'C or above', 'E or above']
 		},
 		{
 			'name': 'GCSE',
-			'subjectsJSON': 'gcse-subjects.json?v=20190821',
-			'entriesJSON': 'gcse-entries.json?v=20190821',
-			'gradesJSON': 'gcse-grades.json?v=20190821',
-			'textJSON': 'gcse-text.json?v=20190821',
+			'subjectsJSON': 'gcse-subjects.json?v=20190822.2',
+			'entriesJSON': 'gcse-entries.json?v=20190822.2',
+			'gradesJSON': 'gcse-grades.json?v=20190822.2',
+			'textJSON': 'gcse-text.json?v=20190822.2',
 			'gradesAll': ['7/A or above', '4/C or above', '1/G or above', 'U or above'],
 			'gradesSelected': ['7/A or above', '4/C or above', '1/G or above']
 		}
@@ -238,9 +238,9 @@ $(function () {
 									if (relatedArray.length == array.length) {
 										relatedArray.forEach(function (subject_name_clean, innerIndex, innerArray) {
 											if (innerIndex != innerArray.length - 1) {		// final element
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190821">' + subject_name_clean + '</a>,';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190822.2">' + subject_name_clean + '</a>,';
 											} else {
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190821">' + subject_name_clean + '</a>';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190822.2">' + subject_name_clean + '</a>';
 											}
 										});
 									}
@@ -317,13 +317,13 @@ $(function () {
 function goBack () {
 	urlLevel = window.location.href.split('/')[3].split('.')[0];
 	if (urlLevel == 'a-level') {
-		window.location.href = '/a-level.php?v=20190821';
+		window.location.href = '/a-level.php?v=20190822.2';
 	}
 	else if (urlLevel == 'as-level') {
-		window.location.href = '/as-level.php?v=20190821';
+		window.location.href = '/as-level.php?v=20190822.2';
 	}
 	else if (urlLevel == 'gcse') {
-		window.location.href = '/gcse.php?v=20190821';
+		window.location.href = '/gcse.php?v=20190822.2';
 	}
 }
 
@@ -437,7 +437,7 @@ function drawEntriesChart () {
 	}
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/entries-chart.js?v=20190821';
+	js.src = '/js/entries-chart.js?v=20190822.2';
 	document.body.appendChild(js);
 }
 
@@ -446,7 +446,7 @@ function drawGradesChart () {
 	gradesChartColoursArray.push(coloursDict[gender]);
 	var js = document.createElement('script');
 	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/grades-chart.js?v=20190821';
+	js.src = '/js/grades-chart.js?v=20190822.2';
 	document.body.appendChild(js);
 }
 

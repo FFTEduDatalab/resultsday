@@ -8,7 +8,7 @@
 		</div>
 		<div class="row">
 			<div class="col s12">
-				<h4>Explore national trends in <a href="a-level.php?v=20190821">A-Level</a>, <a href="as-level.php?v=20190821">AS-Level</a> and <a href="gcse.php?v=20190821">GCSE</a> entries and grades</h4>
+				<h4>Explore national trends in <a href="a-level.php?v=20190822.2.2">A-Level</a>, <a href="as-level.php?v=20190822.2.2">AS-Level</a> and <a href="gcse.php?v=20190822.2.2">GCSE</a> entries and grades</h4>
 			</div>
 		</div>
 		<div class="row">		<!-- feed item title: <h4> tag with class feed-item-title; feed item excerpt: <p> tag with class feed-item-desc -->
@@ -17,11 +17,11 @@
 				<script src="//rss.bloople.net/?url=https%3A%2F%2Fffteducationdatalab.org.uk%2Ftag%2Fresults-2019%2Ffeed&showtitle=false&type=js"></script>
 				<!-- <div id="feed-holding-message">
 					<p class="feed-item-desc">Posts analysing this year's results will appear here once they are published</p>
-					<p class="feed-item-desc">In the meantime, explore this site to see the trends in <a href="a-level.php?v=20190821">A-Level</a>, <a href="as-level.php?v=20190821">AS-Level</a> and <a href="gcse.php?v=20190821">GCSE</a> entries and grades up to 2018</p>
+					<p class="feed-item-desc">In the meantime, explore this site to see the trends in <a href="a-level.php?v=20190822.2.2">A-Level</a>, <a href="as-level.php?v=20190822.2.2">AS-Level</a> and <a href="gcse.php?v=20190822.2.2">GCSE</a> entries and grades up to 2018</p>
 				</div> -->
 			</div>
 		</div>
 	</div>
 </div>
-<script src='/js/toasts.js?v=20190821'></script>
+<script src='/js/toasts.js?v=20190822.2.2'></script>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/inc/footer.php');?>

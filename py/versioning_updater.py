@@ -3,8 +3,8 @@
 
 import os
 
-search_string='?v=20190815'
-target='?v=20190821'
+search_string='?v=20190822'
+target='?v=20190822.2'
 
 directories=['inc','js','templates','a-level','as-level','gcse']
 
