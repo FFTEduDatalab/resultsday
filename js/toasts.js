@@ -65,7 +65,7 @@ $(function () {
 	if ((level == 'index' || level == 'GCSE') && localStorage.getItem('newGCSEDataState') != 'dismissed') {
 		$('.toast.new-data.gcse').show();
 	}
-	if (d.getFullYear() > 2019 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 15))) {
+	if (d.getFullYear() > 2019 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 6))) {
 		$('.toast.early-results').hide();
 	}
 	if (d.getFullYear() > 2019 || (d.getFullYear() == 2019 && d.getMonth() > 7 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() > 15 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() > 9 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
