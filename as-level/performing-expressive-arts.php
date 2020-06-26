@@ -91,3 +91,10 @@
 						<h5>Explore related subjects:</h5>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src='/js/results-subject.js?v=20190822.2'></script>
+<script src='/js/toasts.js?v=20190822.2'></script>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/inc/footer.php');?>
