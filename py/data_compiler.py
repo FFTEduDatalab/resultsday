@@ -84,11 +84,11 @@ for level in levels:
 			year=int(filename_split[1])
 			if year>=min_year:
 				if mode=='normal' and latest_source_year<=latest_output_year:
-					print filename + ' skipped'
+					print(filename + ' skipped')
 					continue		# loop continued rather than broken, so we still get this _skipped_ message
 				needs_saving=1
 				scope=filename_split[2].upper()
-				print filename + ' added'
+				print(filename + ' added')
 				try:
 					rb=open_workbook(source_file)
 					rbws=rb.sheet_by_index(0)
@@ -122,7 +122,7 @@ for level in levels:
 										row[grade]=round(rbws.cell(rbrow,rbcol).value,1)
 								rows.append(row)
 				except Exception as ex:
-					print ex
+					print(ex)
 	for gender in genders:
 		for row in rows:
 			if row['gender']==gender:

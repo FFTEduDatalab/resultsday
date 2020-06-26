@@ -65,7 +65,7 @@ for level in levels:
 									subject['present']=True
 									break
 						else:
-							print filename +': ' + subject_name + ' not found in ' + level['name'] + ' subjects JSON file'
+							print(filename +': ' + subject_name + ' not found in ' + level['name'] + ' subjects JSON file')
 	for subject in subjects_data:
 		if subject['present']==False:
-			print re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ' not present in ' + level['name'] + ' source data'		# strip out unicode characters - e.g. any zero-width space characters
+			print(re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']) + ' not present in ' + level['name'] + ' source data')		# strip out unicode characters - e.g. any zero-width space characters)

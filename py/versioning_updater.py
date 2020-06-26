@@ -11,7 +11,7 @@ directories=['inc','js','templates','a-level','as-level','gcse']
 def check_files_in_directory():
 	for filename in os.listdir(path):
 		if filename.endswith(('.php','.js')):
-			print filename
+			print(filename)
 			lines = []
 			with open(os.path.join(filename)) as infile:
 				for line in infile:
