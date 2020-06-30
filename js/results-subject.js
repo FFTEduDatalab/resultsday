@@ -331,7 +331,7 @@ function readEntriesData () {
 	$.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function (data) {
 		entriesData = [];
 		let len = data.length;
-		let dataMax;// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
+		let dataMax;		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
 		if (len > 0) {
 			for (let i = 0; i < len; i++) {
 				var line = data.shift();
@@ -351,10 +351,10 @@ function readEntriesData () {
 					});
 				}
 				else if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {
-					scope = '15,16,17';		// used purely in the chart image download title
+					scope = '';		// used purely in the chart image download title where bespoke options have been supplied
 					queries.forEach(function (query) {
 						if (line.alias == query.alias && line.scope == query.scope && line.name == 'All students') {
-							line.name = scopeDict[query.scope].split(',')[0];		// needs to be called this so that it's used for data series labelling. Ditches 'UK-wide' from age names
+							line.name = scopeDict[query.scope].split(', UK-wide')[0];		// needs to be called this so that it's used for data series labelling. Ditches 'UK-wide' from age names
 							entriesData.push(line);
 							let dataLen = line.data.length;
 							dataMax = 0;
@@ -364,8 +364,15 @@ function readEntriesData () {
 								}
 							}
 						}
+						if (scope == '') {		// build 'scope' which is used purely in the chart image download title where bespoke options have been supplied
+							scope = query.scope
+						}
+						else {
+							scope = scope + ',' + query.scope
+						}
 					});
-				} else {
+				}
+				else {
 					if (line.alias == alias && line.scope == scope) {
 						entriesData.push(line);
 						if (line.name == 'All students') {
