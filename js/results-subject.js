@@ -136,9 +136,7 @@ var gradesChartOptions = {
 	tooltip: {
 		valueDecimals: 1,
         formatter: function () {
-			console.log(this)
-			return 'dogs'
-			// return '<span class=header>Grade ' + this.x + ', ' + this.series.name.substr(-4) + '</span><br>' + Highcharts.numberFormat(this.y*100,1) + '%';
+			return '<span style="font-size: 10px">' + this.x + '</span><br><span style="color:' + this.series.color + '">●</span> ' + this.series.name + ': <b>' + this.y + '%</b><br/>'		// adding percentage sign to default tooltip
         },
 	},
 	series: null,
