@@ -499,7 +499,7 @@ function readGradesData () {
 				gradesChart = new Highcharts.chart('gradesChartContainer', gradesChartOptions)
 			}
 			else {
-				gradesChart.update(gradesChartOptions)
+				gradesChart.update(gradesChartOptions, null, true)		// oneToOne set to true, so that series are added/removed as necessary
 			}
 		}
 	});
