@@ -13,9 +13,12 @@ var urlLevel,
 	analysis,
 	entriesData,
 	gradesData,
+	entriesChart = {},
+	gradesChart = {},
 	entriesChartSubtitle,
 	gradesChartSubtitle,
-	gradesChartColoursArray,
+	entriesChartColoursArray = ['#2daae1', '#96c11f', '#535353'],
+	gradesChartColoursArray = [],
 	subjectsJSON,
 	entriesJSON,
 	gradesJSON,
@@ -92,6 +95,58 @@ var urlLevel,
 		}
 	];
 
+var entriesChartOptions = {
+	title: {
+		text: null
+	},
+	subtitle: {
+		text: null
+	},
+	colors: null,
+	xAxis: {		// set here rather than in theme, so can be set dynamically
+		min: yearMin,
+		max: yearMin + 4,
+		tickInterval: 1
+	},
+	yAxis: {		// "		"
+		max: yMax
+	},
+	series: null,
+	exporting: {
+		filename: null
+	}
+}
+
+var gradesChartOptions = {
+	title: {
+		text: null
+	},
+	subtitle: {
+		text: null
+	},
+	colors: null,
+	xAxis: {		// set here rather than in theme, so can be set dynamically
+		min: yearMin,
+		max: yearMin + 4,
+		tickInterval: 1
+	},
+	yAxis: {
+		ceiling: 100
+	},
+	tooltip: {
+		valueDecimals: 1,
+        formatter: function () {
+			console.log(this)
+			return 'dogs'
+			// return '<span class=header>Grade ' + this.x + ', ' + this.series.name.substr(-4) + '</span><br>' + Highcharts.numberFormat(this.y*100,1) + '%';
+        },
+	},
+	series: null,
+	exporting: {
+		filename: null
+	}
+}
+
 $(function () {
 	Highcharts.setOptions(Highcharts.theme);
 	addthis_config.data_track_addressbar = false;		// remove addthis address bar and click tracking code
@@ -124,7 +179,6 @@ $(function () {
 		$('#gSelector').hide();
 		$('#alevelFlagContainer').hide();
 	}
-	gradesChartColoursArray = [];
 	gradesChartColoursArray.push(coloursDict['All students']);
 	subjectsJSON = levelData.subjectsJSON;
 	entriesJSON = levelData.entriesJSON;
@@ -134,13 +188,14 @@ $(function () {
 	gradesSelected = levelData.gradesSelected;
 	queries = [];
 	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1] && ! window.location.href.split('options=')[1]) {
+		entriesChartColoursArray = ['#e6007e', '#2daae1', '#96c11f', '#535353', '#ea51a5', '#6fc2e7', '#b5d266', '#959595'];
 		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
 			let len = data.length;
 			if (len > 0) {
 				for (let i = 0; i < len; i++) {
 					var line = data.shift();
 					bespokeAliases.forEach(function (bespokeAlias) {
-						if (line.alias == bespokeAlias) {		// note contrast with operation in results-subject.js
+						if (line.alias == bespokeAlias) {
 							var q = {};
 							q.alias = bespokeAlias;
 							q.subject_name_clean = line.subject_name_clean;
@@ -148,14 +203,15 @@ $(function () {
 							queries.push(q);
 							if (subject_name_clean_lc == '') {
 								subject_name_clean_lc = line.subject_name_clean_lc;		// used in the chart title
-							} else {
-								subject_name_clean_lc = subject_name_clean_lc + ', ' + line.subject_name_clean_lc;
+							}
+							else {
+								subject_name_clean_lc = subject_name_clean_lc + ', ' + line.subject_name_clean_lc;		// building to this with each subject
 							}
 						}
 					});
 				}
 			}
-			subject_name_clean_lc = subject_name_clean_lc.replace(/, (?=[^,]*$)/, ' and ');		// final occurence
+			subject_name_clean_lc = subject_name_clean_lc.replace(/, (?=[^,]*$)/, ' and ');		// final occurence. Only needed here as we have multiple subjects
 			if (subject_name_clean_lc.length > 35) {
 				var t = 0;
 				subject_name_clean_lc = subject_name_clean_lc.replace(/,/g, function (match) {
@@ -164,10 +220,10 @@ $(function () {
 				});
 			}
 			readEntriesData();
-			setChartSubtitles();
 		});
 	}
 	else if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {
+		entriesChartColoursArray = ['#e6007e', '#2daae1', '#96c11f', '#535353', '#ea51a5', '#6fc2e7', '#b5d266', '#959595'];
 		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
 			let len = data.length;
 			if (len > 0) {
@@ -175,7 +231,7 @@ $(function () {
 					var line = data.shift();
 					bespokeAlias = bespokeAliases[0];		// needs to only be one of these where we're setting options
 					bespokeOptions.forEach(function (bespokeOption) {
-						if (line.alias == bespokeAlias) {		// note contrast with operation in results-subject.js
+						if (line.alias == bespokeAlias) {
 							var q = {};
 							q.alias = bespokeAlias;
 							q.scope = bespokeOption;
@@ -187,16 +243,7 @@ $(function () {
 					});
 				}
 			}
-			subject_name_clean_lc = subject_name_clean_lc.replace(/, (?=[^,]*$)/, ' and ');		// final occurence
-			if (subject_name_clean_lc.length > 35) {
-				var t = 0;
-				subject_name_clean_lc = subject_name_clean_lc.replace(/,/g, function (match) {
-					t++;
-					return (t === 2) ? ',<br>' : match;
-				});
-			}
 			readEntriesData();
-			setChartSubtitles();
 		});
 	}
 	else if (urlSubject != 'bespoke') {
@@ -285,7 +332,7 @@ $(function () {
 					}
 				}
 				addthis_share = {
-					title: level + ' results day 2019: Entry and attainment trends in ' + subject_name_clean_lc,
+					title: level + ' results day 2020: Entry and attainment trends in ' + subject_name_clean_lc,
 					description: 'GCSE and A-Level results analysis - FFT Education Datalab',
 					passthrough: {
 						twitter: {
@@ -310,7 +357,6 @@ $(function () {
 		});
 		readEntriesData();
 		readGradesData();
-		setChartSubtitles();
 	}
 });
 
@@ -354,7 +400,7 @@ function readEntriesData () {
 					scope = '';		// used purely in the chart image download title where bespoke options have been supplied
 					queries.forEach(function (query) {
 						if (line.alias == query.alias && line.scope == query.scope && line.name == 'All students') {
-							line.name = scopeDict[query.scope].split(', UK-wide')[0];		// needs to be called this so that it's used for data series labelling. Ditches 'UK-wide' from age names
+							line.name = scopeDict[query.scope];		// needs to be called this so that it's used for data series labelling
 							entriesData.push(line);
 							let dataLen = line.data.length;
 							dataMax = 0;
@@ -389,10 +435,30 @@ function readEntriesData () {
 			}
 			if (dataMax == 0) {
 				yMax = 10;
-			} else {
+			}
+			else {
 				yMax = null;
 			}
-			drawEntriesChart();
+			if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {		// bespoke with options. When multi-subject bespoke charts are made then we want the subtitle to update if the country selector is used
+				entriesChartSubtitle = ''		// only 'Number of entries' - as the series labels best explain the scope in this mode
+			}
+			else if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
+				entriesChartSubtitle = scopeDict[scope];
+			}
+			else if (isNaN(Number(scope.slice(scope.length - 1))) == 1) {		// country breakdown
+				entriesChartSubtitle = 'All students, ' + scopeDict[scope];
+			}
+			entriesChartOptions.series = entriesData
+			entriesChartOptions.title.text = level + ' entries in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
+			entriesChartOptions.subtitle.text = entriesChartSubtitle + '<br><em>Number of entries</em>'
+			entriesChartOptions.colors = entriesChartColoursArray
+			entriesChartOptions.exporting.filename = (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
+			if (Object.keys(entriesChart).length === 0) {
+				entriesChart = new Highcharts.chart('entriesChartContainer', entriesChartOptions)
+			}
+			else {
+				entriesChart.update(entriesChartOptions)
+			}
 		}
 	});
 }
@@ -415,46 +481,30 @@ function readGradesData () {
 					gradesData.push(line);
 				}
 			}
-			drawGradesChart();
+			if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
+				if (gender == 'All students') {
+					gradesChartSubtitle = scopeDict[scope] + ', ' + gradesDict[grades];
+				}
+				else {
+					gradesChartSubtitle = genderDict[gender] + scopeDict[scope] + ', ' + gradesDict[grades];
+				}
+			}
+			else if (isNaN(Number(scope.slice(scope.length - 1))) == 1) {		// country breakdown
+				gradesChartSubtitle = genderDict[gender] + ' students, ' + scopeDict[scope] + ', ' + gradesDict[grades];
+			}
+			gradesChartOptions.series = gradesData
+			gradesChartOptions.title.text = level + ' grades in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
+			gradesChartOptions.subtitle.text = gradesChartSubtitle + '<br><em>Cumulative percentage attaining grade</em>'
+			gradesChartOptions.colors = gradesChartColoursArray
+			gradesChartOptions.exporting.filename = (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-' + gender + '-' + grades + '-grades').replace(/\W+/g, '-').toLowerCase()
+			if (Object.keys(gradesChart).length === 0) {
+				gradesChart = new Highcharts.chart('gradesChartContainer', gradesChartOptions)
+			}
+			else {
+				gradesChart.update(gradesChartOptions)
+			}
 		}
 	});
-}
-
-function setChartSubtitles () {
-	if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
-		entriesChartSubtitle = scopeDict[scope];
-		if (gender == 'All students') {
-			gradesChartSubtitle = scopeDict[scope] + ', ' + gradesDict[grades];
-		} else {
-			gradesChartSubtitle = genderDict[gender] + scopeDict[scope] + ', ' + gradesDict[grades];
-		}
-	}
-	else if (isNaN(Number(scope.slice(scope.length - 1))) == 1) {		// country breakdown
-		entriesChartSubtitle = 'All students, ' + scopeDict[scope];
-		gradesChartSubtitle = genderDict[gender] + ' students, ' + scopeDict[scope] + ', ' + gradesDict[grades];
-	}
-	return entriesChartSubtitle, gradesChartSubtitle;
-}
-
-function drawEntriesChart () {
-	if (queries.length > 0) {
-		entriesChartColoursArray = ['#e6007e', '#2daae1', '#96c11f', '#535353', '#ea51a5', '#6fc2e7', '#b5d266', '#959595'];
-	} else {
-		entriesChartColoursArray = ['#2daae1', '#96c11f', '#535353'];
-	}
-	var js = document.createElement('script');
-	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/entries-chart.js?v=20190822.2';
-	document.body.appendChild(js);
-}
-
-function drawGradesChart () {
-	gradesChartColoursArray = [];
-	gradesChartColoursArray.push(coloursDict[gender]);
-	var js = document.createElement('script');
-	js.setAttribute('type', 'text/javascript');
-	js.src = '/js/grades-chart.js?v=20190822.2';
-	document.body.appendChild(js);
 }
 
 $('#breakdownSelector').change(function () {
@@ -475,7 +525,6 @@ $('#breakdownSelector').change(function () {
 		if (urlSubject != 'bespoke') {
 			readGradesData();
 		}
-		setChartSubtitles();
 	}
 	else if (breakdown == 'agecountry') {
 		scope = 'EN16';
@@ -483,7 +532,6 @@ $('#breakdownSelector').change(function () {
 		if (urlSubject != 'bespoke') {
 			readGradesData();
 		}
-		setChartSubtitles();
 	}
 });
 
@@ -493,14 +541,14 @@ function scopeOptionChange () {
 	if (urlSubject != 'bespoke') {
 		readGradesData();
 	}
-	setChartSubtitles();
 }
 
 function gradeChartOptionChange () {
 	grades = document.getElementById('gradesSelector').value;
 	gender = document.getElementById('genderSelector').value;
+	gradesChartColoursArray = [];
+	gradesChartColoursArray.push(coloursDict[gender]);
 	if (urlSubject != 'bespoke') {
 		readGradesData();
 	}
-	setChartSubtitles();
 }

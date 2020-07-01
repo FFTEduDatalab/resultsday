@@ -3,6 +3,7 @@ var x,
 
 Highcharts.theme = {
 	chart: {
+		animation: false,		// animation upon update - which leads to lines and axes etc. sliding around
 		events: {
 			load: function () {
 				x = this.chartWidth - 130;
@@ -57,6 +58,7 @@ Highcharts.theme = {
 	},
 	plotOptions: {
 		series: {
+			animation: false,
 			marker: {
 				symbol: 'circle'
 			}
