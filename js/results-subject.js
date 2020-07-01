@@ -131,7 +131,7 @@ var gradesChartOptions = {
 		tickInterval: 1
 	},
 	yAxis: {
-		ceiling: 100
+		max: 100
 	},
 	tooltip: {
 		valueDecimals: 1,
