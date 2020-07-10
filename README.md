@@ -55,6 +55,27 @@ Data files are shaped in the format required for use in [Highcharts](https://www
 
 `template_copier.py` almost certainly won't need running on results day - it only needs running after design tweaks to subject pages.
 
+## Producing bespoke charts
+The microsite has the ability to produce two types of bespoke chart. In both cases, only entries charts can be produced, not grade breakdown charts.
+
+### Subject comparison
+This allows comparison of entry trends in multiple subjects.
+
+The URL used is of the form:
+
+* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN,SPAN,GERM
+
+Up to seven subjects can be displayed before series colours repeat.
+
+### Country comparison
+This allows comparison of entry trends in a single subject in the different countries for which we have data (including the UK).
+
+The URL used is of one of the following forms:
+
+* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=UK,EN,WA,NI
+* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=ENLA|options=15,16,17
+* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN,GERM,SPAN|options=EN16,WA16,NI17
+
 ## Licence
 * Python scripts are made available here under the MIT licence - see the `LICENSE` file for full details.
 * Content of [the results day analysis microsite](https://results.ffteducationdatalab.org.uk/) - for example, written analysis of entry numbers and grades for each subject - is made available under a [Creative Commons attribution licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
