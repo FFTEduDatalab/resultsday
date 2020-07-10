@@ -7,8 +7,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -27,8 +26,7 @@
 		"related_subjects": ["CHEM","PHYS"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -46,8 +44,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -66,8 +63,7 @@
 		"related_subjects": ["BIOL","PHYS"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -85,8 +81,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "2017/2018",
@@ -104,8 +99,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Discontinued, 2017",
@@ -123,8 +117,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -142,8 +135,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Discontinued, 2017",
@@ -161,8 +153,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2018,
@@ -180,8 +171,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -199,8 +189,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -219,8 +208,7 @@
 		"related_subjects": ["ENLI","ENLL"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -239,8 +227,7 @@
 		"related_subjects": ["ENLA","ENLL"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -259,8 +246,7 @@
 		"related_subjects": ["ENLA","ENLI"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -279,8 +265,7 @@
 		"related_subjects": ["GERM","SPAN","OMFL"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -298,8 +283,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Discontinued, 2017",
@@ -318,8 +302,7 @@
 		"related_subjects": ["HIST"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -338,8 +321,7 @@
 		"related_subjects": ["FREN","SPAN","OMFL"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -358,8 +340,7 @@
 		"related_subjects": ["GEOG"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -377,8 +358,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Discontinued, 2017",
@@ -396,8 +376,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Discontinued, 2018",
@@ -415,8 +394,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2018,
@@ -435,8 +413,7 @@
 		"related_subjects": ["MATF"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2018,
@@ -455,8 +432,7 @@
 		"related_subjects": ["MATH"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2018,
@@ -474,8 +450,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2018,
@@ -493,8 +468,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -512,8 +486,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Discontinued, 2017",
@@ -531,8 +504,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -551,8 +523,7 @@
 		"related_subjects": ["BIOL","CHEM"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -570,8 +541,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2018,
@@ -589,8 +559,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -608,8 +577,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -627,8 +595,7 @@
 		"sort_order": 0,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2016,
@@ -647,8 +614,7 @@
 		"related_subjects": ["FREN","GERM","OMFL"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2017,
@@ -667,8 +633,7 @@
 		"related_subjects": ["WELS"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Not approved for use in England",
@@ -687,8 +652,7 @@
 		"related_subjects": ["WELF"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Not approved for use in England",
@@ -707,8 +671,7 @@
 		"related_subjects": ["FREN","GERM","SPAN"],
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": true
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "2018/2019/Discontinued, 2018",
@@ -726,8 +689,7 @@
 		"sort_order": 1,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": 2018,
@@ -745,8 +707,7 @@
 		"sort_order": 2,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": false
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "2018",
@@ -764,8 +725,7 @@
 		"sort_order": -1,
 		"flags": {
 			"ebacc": null,
-			"p8dbl": null,
-			"facil": null
+			"p8dbl": null
 		},
 		"reform_year": {
 			"EN": "Various",

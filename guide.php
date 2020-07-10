@@ -15,7 +15,7 @@
 
 				<h3 id='what-each-page-shows'>What each page shows</h3>
 
-				<h5>Charts (all subject pages)</h5>
+				<h5>Charts</h5>
 				<p>Two charts are presented on each page for a subject, the upper chart showing the number of entries and the lower chart showing attainment. The text to the right of the charts provides a summary of the data for the UK as a whole and, where applicable, provides guidance and caveats about interpretation.</p>
 				<p>Each chart can be downloaded as a picture file (JPG or PNG) and the underlying data for each chart can also be downloaded. We hope that users of the site will share these files via blogposts and social media. Use the menu icon in the top right of each chart to do so.</p>
 
@@ -24,36 +24,30 @@
 				<p>For A-Levels and AS-Levels, you can choose to display data for England, Wales, Northern Ireland or the UK as whole. On the lower chart, you can choose to display attainment for boys, girls or all pupils for the selected country. All data for A-Levels relates to entrants of all ages, which will include adult entrants.</p>
 				<p>For GCSEs, you can <strong>either</strong> choose to display data for a country <strong>or</strong> for an age cohort, but not both. In other words, choosing to display 16-year-olds will return data for all 16-year-olds in the UK. On the lower chart, you can choose to display attainment for boys, girls or all pupils for <strong>either</strong> the selected country <strong>or</strong> the selected age cohort.</p>
 
-				<h5 id='subject_flags'>Subject flags (all subject pages, bar <em>All subjects</em>)</h5>
-
-				<h6>Facilitating subjects (A-Levels and AS-Levels only)</h6>
-				<p>Facilitating subjects are the A-Levels which the Russell Group of universities believe leave open a wide range of study options. These are: <strong>English literature</strong>; <strong>maths and further maths</strong>; <strong>biology</strong>; <strong>chemistry</strong>; <strong>physics</strong>; <strong>modern and classical languages</strong>; <strong>geography</strong>; and <strong>history</strong>.</p>
-				<p><img src='/img/facilFlagImgPink.png' height='60' width='60' align='middle'> Facilitating subjects are identified by this symbol.</p>
-				<p><img src='/img/facilFlagImgGrey.png' height='60' width='60' align='middle'> Subjects not considered to be facilitating subjects are identified by this symbol.</p>
-
-				<h6>Progress 8 (GCSEs only)</h6>
+				<h5 id='subject_flags'>Subject flags (GCSE subject pages only)</h5>
+				<h6>Progress 8</h6>
 				<p>Progress 8 was introduced as the headline measure used in secondary school performance tables in England in 2016. It is based on attainment in <strong>English/English literature</strong>; <strong>maths</strong>; <strong>three EBacc subjects</strong> (see below); and <strong>any three other subjects</strong>. It has led to an increase in take-up of EBacc subjects.</p>
 				<p>Results in maths and English carry greater weight in the calculation of Progress 8 than other subjects: maths results are double-weighted, as are the higher of an entrant's English language and English literature results, so long as both subjects have been taken.</p>
 				<p><img src='/img/p8dblFlagImgPink.png' height='60' width='60' align='middle'> Subjects that are double-weighted in Progress 8 are identified by this symbol.</p>
 				<p><img src='/img/p8dblFlagImgGrey.png' height='60' width='60' align='middle'> Subjects that are not double-weighted in Progress 8 are identified by this symbol.</p>
 
-				<h6>EBacc (GCSEs only)</h6>
+				<h6>EBacc</h6>
 				<p>The English Baccalaureate (EBacc) is a performance indicator used in secondary school performance tables in England. It is based on attainment in English/English literature, mathematics, two science subjects (including computing), a humanity (history or geography) and a modern or classical foreign language (the most common of which are French, German and Spanish).</p>
 				<p><img src='/img/ebaccFlagImgPink.png' height='60' width='60' align='middle'> EBacc subjects are identified by this symbol</p>
 				<p><img src='/img/ebaccFlagImgGrey.png' height='60' width='60' align='middle'> Non-EBacc subjects are identified by this symbol.</p>
 
-				<h5 id='reform_date'>Reform date (all subject pages)</h5>
+				<h5 id='reform_date'>Reform date</h5>
 				<p>For each subject or group of subjects, a reform date is given on the right-hand side of the page.</p>
 				<p>Reform dates relate to the date when most students in a given home nation will be entered for reformed versions of the qualifications. Some students may enter qualifications offered by an exam board in a home nation other than the one in which they are taking their examinations.</p>
 				<p>Where a subject is listed as being discontinued, the discontinuation data listed is the final year in which first-time entries are possible. There can still be entries the following year, where resits are taken.</p>
 
-				<h5 id='reform_date'>Definitions (certain subjects only)</h5>
+				<h5 id='reform_date'>Definitions</h5>
 				<p>The first of up to three boxes of text on subject pages provides definitional information. Note that this text box only appears where such a definition is required.</p>
 
-				<h5 id='reform_date'>Explanatory text (all subject pages)</h5>
+				<h5 id='reform_date'>Explanatory text</h5>
 				<p>All subject pages contain explanatory text, that draws trends in entry numbers since 2014, or (where later) the date from which data is available. The text also sets out how attainment in the subject being considered compares to attainment across all subjects at GCSE/AS-Level/A-Level.</p>
 
-				<h5>Context (certain subjects only)</h5>
+				<h5>Context</h5>
 				<p><i class="material-icons">warning</i> Indicated by this symbol, the bottom text box on subject pages provides key context needed to understand the other information presented on the page. Note that this text box only appears where such contextual information exists.</p>
 				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp

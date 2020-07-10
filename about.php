@@ -32,10 +32,6 @@
 
 				<h5>Progress 8 subjects (England only)</h5>
 				<p>Department for Education (<a href='https://www.gov.uk/government/publications/progress-8-school-performance-measure' target="_blank">double-weighted subjects</a>)</p>
-
-				<h5>Facilitating subjects</h5>
-				<p>Russell Group (<a href='https://russellgroup.ac.uk/for-students/school-and-college-in-the-uk/subject-choices-at-school-and-college/' target="_blank">eligible subjects</a>)</p>
-				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 
 				<h3 id='credits'>Credits</h3>

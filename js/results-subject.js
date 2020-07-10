@@ -175,7 +175,6 @@ $(function () {
 	}
 	if (level == 'GCSE') {
 		$('#gSelector').hide();
-		$('#alevelFlagContainer').hide();
 	}
 	gradesChartColoursArray.push(coloursDict['All students']);
 	subjectsJSON = levelData.subjectsJSON;
@@ -257,7 +256,6 @@ $(function () {
 						alias = line.alias;
 						if (alias == 'ALLS') {
 							$('#gcseFlagContainer').hide();
-							$('#alevelFlagContainer').hide();
 						}
 						definition = line.definition;
 						if (definition == null) {
@@ -293,16 +291,7 @@ $(function () {
 							});
 						}
 						flags = line.flags;
-						if (level == 'A-Level' || level == 'AS-Level') {
-							if (flags.facil == true) {
-								document.getElementById('facilFlagImg').src = '/img/facilFlagImgPink.png';
-								document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is a facilitating subject');
-							} else {
-								document.getElementById('facilFlagImg').src = '/img/facilFlagImgGrey.png';
-								document.getElementById('facilFlagImg').setAttribute('data-tooltip', 'This is not a facilitating subject');
-							}
-						}
-						else if (level == 'GCSE') {
+						if (level == 'GCSE') {
 							if (flags.ebacc == true) {
 								document.getElementById('ebaccFlagImg').src = '/img/ebaccFlagImgPink.png';
 								document.getElementById('ebaccFlagImg').setAttribute('data-tooltip', 'This subject counts in the English Baccalaureate (England only)');
