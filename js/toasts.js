@@ -41,15 +41,16 @@ $(function () {
 	}
 	if (urlLevel == '') {
 		level = 'index';
-	} else {
+	}
+	else {
 		let levelData = levels.filter(function (levels) {
 			return levels.name.toLowerCase() == urlLevel;
 		})[0];
 		level = levelData.name;
 	}
 	var d = new Date();
-	alevelNewDataToastText = "<div class='toast-content'>A-Level and AS-Level data for 2019 is available at 9.30am on Thursday 15 August and will be added at that point</div><div class='material-icons close'>close</div>";
-	gcseNewDataToastText = "<div class='toast-content'>GCSE data for 2019 is available at 9.30am on Thursday 22 August and will be added at that point</div><div class='material-icons close'>close</div>";
+	alevelNewDataToastText = "<div class='toast-content'>A-Level and AS-Level data for 2020 is available at 9.30am on Thursday 13 August and will be added at that point</div><div class='material-icons close'>close</div>";
+	gcseNewDataToastText = "<div class='toast-content'>GCSE data for 2020 is available at 9.30am on Thursday 20 August and will be added at that point</div><div class='material-icons close'>close</div>";
 	M.toast({html: earlyResultsToastText, classes: 'early-results', displayLength: 'infinity', inDuration: 0, activationPercent: 0.7});
 	M.toast({html: alevelNewDataToastText, classes: 'new-data alevel', displayLength: 'infinity', inDuration: 0, activationPercent: 0.7});
 	M.toast({html: gcseNewDataToastText, classes: 'new-data gcse', displayLength: 'infinity', inDuration: 0, activationPercent: 0.7});
@@ -68,10 +69,10 @@ $(function () {
 	if (d.getFullYear() > 2019 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 6))) {
 		$('.toast.early-results').hide();
 	}
-	if (d.getFullYear() > 2019 || (d.getFullYear() == 2019 && d.getMonth() > 7 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() > 15 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() > 9 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
+	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 13 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
 		$('.toast.new-data.alevel').hide();
 	}
-	if (d.getFullYear() > 2019 || (d.getFullYear() == 2019 && d.getMonth() > 7 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() > 22 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() == 22 & d.getHours() > 9 || (d.getFullYear() == 2019 && d.getMonth() == 7 && d.getDate() == 22 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
+	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 20 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 22 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 22 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
 		$('.toast.new-data.gcse').hide();
 	}
 });
