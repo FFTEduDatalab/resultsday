@@ -32,6 +32,9 @@
 
 				<h5>Progress 8 subjects (England only)</h5>
 				<p>Department for Education (<a href='https://www.gov.uk/government/publications/progress-8-school-performance-measure' target="_blank">double-weighted subjects</a>)</p>
+
+				<h5>Change in 16-/17-/18-year-old population</h5>
+				<p>Office for National Statistics (<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland' target="_blank">mid-year population estimates</a>)</p>
 				&nbsp
 
 				<h3 id='credits'>Credits</h3>

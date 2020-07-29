@@ -7,7 +7,7 @@ import json
 from xlrd import open_workbook
 from collections import OrderedDict
 
-min_year=2015
+min_year=2015		# XXX
 
 levels=[
 	{
