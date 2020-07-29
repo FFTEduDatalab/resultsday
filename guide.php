@@ -66,9 +66,6 @@
 				<p>Broadly speaking, reformed grades 9-7 correspond to legacy grades A*-A, grades 9-4 correspond to A*-C and 9-1 correspond to A*-G.</p>
 				<p>Consequently, the three lines on the chart showing GCSE attainment represent percentages of pupils achieving grade A/7 (or above), grade C/4 (or above) and grade G/1 (or above).</p>
 				<p>For A-Levels and AS-Levels, where there has been no change in grading structure since 2014, only certain grades are shown on charts - <em>selected grades</em> is the terminology used - though users are able to choose to view <em>all grades</em>.<p>
-
-				<h5>Technical guidance</h5>
-				<p>A document, setting out in detail the data on which this site is based, together with key information needed to interpret data presented <a href='/technical_documentation.pdf'>can be found here</a> [PDF].</p>
 				<span style="float:right"><a href="#" class="material-icons back-to-top">vertical_align_top</a></span>
 				&nbsp
 
