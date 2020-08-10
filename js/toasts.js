@@ -2,7 +2,7 @@ var urlLevel,
 	urlSubject,
 	alevelNewDataToastText,
 	gcseNewDataToastText,
-	earlyResultsToastText = "<div class='toast-content'><b>FFT Aspire user?</b> Schools that subscribe to FFT Aspire can use the free Key Stage 4 Early Results Service, which provides an early analysis of their results. <a href='https://fft.org.uk/ks4-early-results/' target='_blank'>Click here for more information.</a></div><div class='material-icons close'>close</div>",
+	earlyResultsToastText = "<div class='toast-content'><b>FFT Aspire user?</b> Schools that subscribe to FFT Aspire can use the free KS4 and KS5 Early Results Service, which provides an early analysis of their results. <a href='https://fft.org.uk/2020-fft-secondary-results-service/' target='_blank'>Click here for more information.</a></div><div class='material-icons close'>close</div>",
 	levels = [
 		{
 			'name': 'A-Level',
@@ -57,16 +57,16 @@ $(function () {
 	$('.toast.early-results').hide();
 	$('.toast.new-data.alevel').hide();
 	$('.toast.new-data.gcse').hide();
-	if (urlSubject && level == 'GCSE' && localStorage.getItem('earlyResultsState') != 'dismissed') {		// not level directory page
+	if (urlSubject && localStorage.getItem('earlyResultsState') != 'dismissed') {		// not level directory page
 		$('.toast.early-results').show();
 	}
-	if ((level == 'index' || level == 'A-Level' || level == 'AS-Level') && localStorage.getItem('newALevelDataState') != 'dismissed') {
+	if (urlSubject && (level == 'A-Level' || level == 'AS-Level') && localStorage.getItem('newALevelDataState') != 'dismissed') {
 		$('.toast.new-data.alevel').show();
 	}
-	if ((level == 'index' || level == 'GCSE') && localStorage.getItem('newGCSEDataState') != 'dismissed') {
+	if (urlSubject && (level == 'GCSE') && localStorage.getItem('newGCSEDataState') != 'dismissed') {
 		$('.toast.new-data.gcse').show();
 	}
-	if (d.getFullYear() > 2019 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 6))) {
+	if (d.getFullYear() > 2020 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 2))) {
 		$('.toast.early-results').hide();
 	}
 	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 13 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 15 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August

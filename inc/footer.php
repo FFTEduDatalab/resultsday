@@ -45,18 +45,19 @@
 	window.cookieconsent.initialise({
 	"palette": {
 		"popup": {
-		"background": "#535353",
-		"text": "#ffffff"
+			"background": "#535353",
+			"text": "#ffffff"
 		},
 		"button": {
-		"background": "#e6007e",
-		"text": "#ffffff"
+			"background": "#e6007e",
+			"text": "#ffffff"
 		}
 	},
 	"theme": "edgeless",
 	"type": "opt-out",
 	"content": {
-		"href": "https://fft.org.uk/cookies"
+		"href": "https://fft.org.uk/cookies",
+		"message": 'This website uses cookies',
 	}
 	});
 	</script>

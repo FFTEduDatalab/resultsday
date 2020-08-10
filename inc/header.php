@@ -49,7 +49,7 @@
 	</script>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-	<noscript><div class='no-script'><h5>This site requires JavaScript, which is turned off in your browser.</h5></div></noscript>
+<noscript><div class='no-script'><h5>This site requires JavaScript, which is turned off in your browser.</h5></div></noscript>
 </head>
 <body>
 	<div class="container" id="logo-container" style="padding-top: 20px">

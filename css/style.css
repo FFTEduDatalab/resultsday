@@ -88,8 +88,7 @@ nav .brand-logo {
 }
 
 #ebaccFlagImg,
-#p8dblFlagImg,
-#facilFlagImg {
+#p8dblFlagImg {
 	width: 60px;
 	height: 60px;
 }
@@ -101,6 +100,7 @@ nav .brand-logo {
 	right: auto;		/* unset does not work in IE */
 	left: auto;		/* unset does not work in IE */
 	min-width: 100%;
+	z-index: 2;
 }
 
 .toast .close {
@@ -128,6 +128,22 @@ nav .brand-logo {
 .toast.early-results a {
 	text-decoration: underline;
 	font-style: italic;
+}
+
+/* Cookie consent */
+.cc-window {
+	font-size: 1.1rem !important;
+}
+
+@media (min-width: 736px) {		/* seems to be where l>m Materialize breakpoint is */
+	.cc-window {
+		height: 48px;
+	}
+}
+
+.cc-window .cc-message {
+	padding: 10px 25px;
+	margin: auto !important;
 }
 
 .btn-flat {
@@ -198,13 +214,62 @@ input {
 
 /* Charts */
 .highcharts-credits {
-	cursor: default;
 	cursor: default !important;
 }
 
 .datalab-logo {
 	cursor: pointer;
 }
+
+/* Small multiples */
+.card.white.smallMultiple {
+	height: 720px;		/* XXX */
+}
+
+.smallMultiple .card-content {
+	display: inline;
+	padding: unset;		/* remove the padding that normally applies, to bring the title closer to the top of the card */
+}
+
+.smallMultiple .chartContainer {
+	float: left;
+	width: 290px;
+	margin: 0px;
+	background-color: grey;
+}
+
+.smallMultiple .chartContainer:nth-of-type(4n+3) {
+	width: 360px;
+}
+
+.smallMultiple #chartTitle {
+	font-weight: 600;
+	font-size: 20px;
+	color: #333333;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.smallMultiple #chartSubtitle {
+	font-weight: 500;
+	font-size: 16px;
+	color: #333333;
+	text-align: center;
+}
+
+.smallMultiple #chartNotes {
+	font-size: 11px;
+	color: #999999;
+	float: left;
+	padding-left: 5px;
+	padding-top: 13px;		/* making the notes the same height as the logo */
+}
+
+.smallMultiple #chartLogo {
+	float: right;
+	padding-right: 5px;
+}
+
 
 /* Related subjects card */
 #related-subjects-section .card {
