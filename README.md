@@ -69,14 +69,14 @@ The URL used is of the form:
 
 Up to seven subjects can be displayed before series colours repeat.
 
-### Country comparison
-This allows comparison of entry trends in a single subject in the different countries for which we have data (including the UK).
+### Country/age comparison
+This allows comparison of entry trends in a single subject by the different country and age breakdowns for which we have data.
 
 The URL used is of one of the following forms:
 
 * https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=UK,EN,WA,NI
-* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=ENLA|options=15,16,17
-* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN,GERM,SPAN|options=EN16,WA16,NI17
+* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=15,16,17
+* https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=EN16,WA16,NI17
 
 ## Licence
 * Python scripts are made available here under the MIT licence - see the `LICENSE` file for full details.
