@@ -7,7 +7,7 @@ import json
 from xlrd import open_workbook
 from collections import OrderedDict
 
-target_year=2019		# XXX
+target_year=2020		# XXX
 genders = ['Male','Female','All students']
 
 levels=[
