@@ -39,6 +39,26 @@
 	</script>
 	<script src="/js/materialize.min.js"></script>
 	<script src="/js/init.js?v=20190822.2.2"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7bf17470e79794"></script>
+	<script cookie-consent="tracking" type="text/plain" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7bf17470e79794"></script>
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	"palette": {
+		"popup": {
+		"background": "#535353",
+		"text": "#ffffff"
+		},
+		"button": {
+		"background": "#e6007e",
+		"text": "#ffffff"
+		}
+	},
+	"theme": "edgeless",
+	"type": "opt-out",
+	"content": {
+		"href": "https://fft.org.uk/cookies"
+	}
+	});
+	</script>
   </body>
 </html>

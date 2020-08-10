@@ -27,8 +27,28 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'UA-59588201-4');
+
+		function getCookie(name) {
+			var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+			return v ? v[2] : null;
+		}
+
+		var cookieSettingsAccepted = getCookie("cookieconsent_status");
+
+		if (cookieSettingsAccepted !== null && cookieSettingsAccepted === "allow" ) {
+			gtag('config', 'UA-59588201-4');
+			console.log("ga cookie");
+		}
+		else
+		{
+			gtag('config', 'UA-59588201-4', {
+				'client_storage': 'none'
+			});
+			console.log("no ga cookie");
+		}
 	</script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 	<noscript><div class='no-script'><h5>This site requires JavaScript, which is turned off in your browser.</h5></div></noscript>
 </head>
 <body>
