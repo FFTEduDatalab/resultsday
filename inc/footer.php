@@ -38,8 +38,8 @@
 		}
 	</script>
 	<script src="/js/materialize.min.js"></script>
-	<script cookie-consent="tracking" type="text/plain" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7bf17470e79794"></script>
 	<script src="/js/init.js?v=20200811"></script>
+	<script cookie-consent="tracking" type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7bf17470e79794"></script>
 	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 	<script>
 	window.cookieconsent.initialise({
@@ -57,7 +57,7 @@
 	"type": "opt-out",
 	"content": {
 		"href": "https://fft.org.uk/cookies",
-		"message": 'This website uses cookies',
+		"message": 'This website uses cookies to understand usage',
 	}
 	});
 	</script>
