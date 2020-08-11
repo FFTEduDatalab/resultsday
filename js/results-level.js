@@ -1,28 +1,28 @@
 var levels = [
 	{
 		'name': 'A-Level',
-		'subjectsJSON': 'a-level-subjects.json?v=20190822.2',
-		'entriesJSON': 'a-level-entries.json?v=20190822.2',
-		'gradesJSON': 'a-level-grades.json?v=20190822.2',
-		'textJSON': 'a-level-text.json?v=20190822.2',
+		'subjectsJSON': 'a-level-subjects.json?v=20200811',
+		'entriesJSON': 'a-level-entries.json?v=20200811',
+		'gradesJSON': 'a-level-grades.json?v=20200811',
+		'textJSON': 'a-level-text.json?v=20200811',
 		'gradesAll': ['A*', 'A', 'B', 'C', 'D', 'E', 'U'],
 		'gradesSelected': ['A*', 'A', 'C', 'E']
 	},
 	{
 		'name': 'AS-Level',
-		'subjectsJSON': 'as-level-subjects.json?v=20190822.2',
-		'entriesJSON': 'as-level-entries.json?v=20190822.2',
-		'gradesJSON': 'as-level-grades.json?v=20190822.2',
-		'textJSON': 'as-level-text.json?v=20190822.2',
+		'subjectsJSON': 'as-level-subjects.json?v=20200811',
+		'entriesJSON': 'as-level-entries.json?v=20200811',
+		'gradesJSON': 'as-level-grades.json?v=20200811',
+		'textJSON': 'as-level-text.json?v=20200811',
 		'gradesAll': ['A', 'B', 'C', 'D', 'E', 'U'],
 		'gradesSelected': ['A', 'C', 'E']
 	},
 	{
 		'name': 'GCSE',
-		'subjectsJSON': 'gcse-subjects.json?v=20190822.2',
-		'entriesJSON': 'gcse-entries.json?v=20190822.2',
-		'gradesJSON': 'gcse-grades.json?v=20190822.2',
-		'textJSON': 'gcse-text.json?v=20190822.2',
+		'subjectsJSON': 'gcse-subjects.json?v=20200811',
+		'entriesJSON': 'gcse-entries.json?v=20200811',
+		'gradesJSON': 'gcse-grades.json?v=20200811',
+		'textJSON': 'gcse-text.json?v=20200811',
 		'gradesAll': ['7/A', '4/C', '1/G', 'U'],
 		'gradesSelected': ['7/A', '4/C', '1/G']
 	}
@@ -75,7 +75,7 @@ function jsonCallback () {
 			} else {
 				subjectClass = '';
 			}
-			var snippet = '<div class="col l4 m6 s12"><div class="card white"><div class="card-content"><h5><a ' + subjectClass + ' href="' + name + '/' + value.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20190822.2">' + value.subject_name_clean + '</a></h5></div></div></div>';// done as a single line as IE can't handle template literals
+			var snippet = '<div class="col l4 m6 s12"><div class="card white"><div class="card-content"><h5><a ' + subjectClass + ' href="' + name + '/' + value.subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20200811">' + value.subject_name_clean + '</a></h5></div></div></div>';// done as a single line as IE can't handle template literals
 
 			document.getElementById('subject-cards').innerHTML = document.getElementById('subject-cards').innerHTML + snippet;
 		});

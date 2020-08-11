@@ -2,7 +2,7 @@
 	<div class="container">
 	  <div class="row">
 	    <div class="col l6 s12">
-			<h5 class="white-text"><a href='/about.php?v=20190822.2.2' class="white-text">About</a></h5>
+			<h5 class="white-text"><a href='/about.php?v=20200811' class="white-text">About</a></h5>
 			<ul>
 				<li>Built by FFT Education Datalab, part of FFT.</li>
 				<li>Project funded by the Nuffield Foundation.</li>
@@ -38,8 +38,8 @@
 		}
 	</script>
 	<script src="/js/materialize.min.js"></script>
-	<script src="/js/init.js?v=20190822.2.2"></script>
 	<script cookie-consent="tracking" type="text/plain" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7bf17470e79794"></script>
+	<script src="/js/init.js?v=20200811"></script>
 	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 	<script>
 	window.cookieconsent.initialise({

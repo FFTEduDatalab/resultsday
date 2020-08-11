@@ -3,8 +3,8 @@
 
 import os
 
-search_string='?v=20190822'
-target='?v=20190822.2'
+search_string='?v=20190822.2'
+target='?v=20200811'
 
 directories=['inc','js','templates','a-level','as-level','gcse']
 
@@ -13,11 +13,11 @@ def check_files_in_directory():
 		if filename.endswith(('.php','.js')):
 			print(filename)
 			lines = []
-			with open(os.path.join(filename)) as infile:
+			with open(os.path.join(filename), encoding='utf8') as infile:
 				for line in infile:
 					line = line.replace(search_string, target)
 					lines.append(line)
-			with open(os.path.join(filename), 'w') as outfile:
+			with open(os.path.join(filename), 'w', encoding='utf8') as outfile:
 				for line in lines:
 					outfile.write(line)
 
