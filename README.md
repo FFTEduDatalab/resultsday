@@ -78,6 +78,13 @@ The URL used is of one of the following forms:
 * https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=15,16,17
 * https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=EN16,WA16,NI17
 
+### Small multiples
+This allows comparison of entry trends in a multiple subject in a panel of charts.
+
+The URL used is of one of the form:
+
+* https://results.ffteducationdatalab.org.uk/gcse/small_multiple.php?sbj=FREN,GERM,SPAN,PHYS,CHEM,GEOG,HIST,BIOL,MATH,ENLA,ENLI,RELS
+
 ## Licence
 * Python scripts are made available here under the MIT licence - see the `LICENSE` file for full details.
 * Content of [the results day analysis microsite](https://results.ffteducationdatalab.org.uk/) - for example, written analysis of entry numbers and grades for each subject - is made available under a [Creative Commons attribution licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).

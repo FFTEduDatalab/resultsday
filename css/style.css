@@ -223,7 +223,8 @@ input {
 
 /* Small multiples */
 .card.white.smallMultiple {
-	height: 720px;		/* XXX */
+	height: 730px;
+	width: 1320px;
 }
 
 .smallMultiple .card-content {
@@ -233,13 +234,13 @@ input {
 
 .smallMultiple .chartContainer {
 	float: left;
-	width: 290px;
+	width: 300px;
 	margin: 0px;
 	background-color: grey;
 }
 
-.smallMultiple .chartContainer:nth-of-type(4n+3) {
-	width: 360px;
+.smallMultiple .chartContainer.wider {
+	width: 370px;
 }
 
 .smallMultiple #chartTitle {
@@ -255,6 +256,7 @@ input {
 	font-size: 16px;
 	color: #333333;
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 .smallMultiple #chartNotes {

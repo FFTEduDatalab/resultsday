@@ -25,7 +25,6 @@ var urlLevel,
 	textJSON,
 	gradesAll,
 	gradesSelected,
-	yMax,
 	addthis_share,
 	addthis_config = addthis_config || {},
 	yearMin = 2016,
@@ -108,13 +107,70 @@ var entriesChartOptions = {
 		max: yearMin + 4,
 		tickInterval: 1
 	},
-	yAxis: {		// "		"
-		max: yMax
+	yAxis: {
+		max: null
 	},
 	series: null,
 	exporting: {
 		filename: null
 	}
+}
+
+var entriesSmallMultipleOptions = {		// easier to create a new object, with no existing characteristics
+	chart: {
+		events: null,
+		height: 200,
+		style: {
+			fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+		},
+		type: 'area',
+	},
+	credits: {
+		enabled: false
+	},
+	exporting: {
+		enabled: false
+	},
+	lang: {
+		thousandsSep: ',',
+		numericSymbols: null,
+	},
+	plotOptions: {
+		series: {
+			animation: false,
+			label: {
+				enabled: false
+			},
+			marker: {
+				enabled: false
+			},
+			states: {
+				hover: {
+					enabled: false
+				}
+			},
+		},
+	},
+	series: null,
+	subtitle: {
+		text: null
+	},
+	title: {
+		style: {
+			fontSize: 16
+		}
+	},
+	tooltip: {
+		enabled: false
+	},
+	xAxis: {		// set here rather than in theme, so can be set dynamically
+		max: yearMin + 4,
+		min: yearMin,
+		tickInterval: 1
+	},
+	yAxis: {
+		tickInterval: 100000
+	},
 }
 
 var gradesChartOptions = {
@@ -155,17 +211,21 @@ $(function () {
 		bespokeAliases = window.location.href.split('sbj=')[1].split(',');
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
 	}
-	else if (window.location.href.split('options=')[1]) {
+	else if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {
 		bespokeAliases = window.location.href.split('sbj=')[1].split('|')[0].split(',');
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
 		bespokeOptions = window.location.href.split('options=')[1].split(',');
 		bespokeOptions = bespokeOptions.map(function (x) { return x.toUpperCase(); });
 	}
+	else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+		bespokeAliases = window.location.href.split('sbj=')[1].split(',');
+		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
+	}
 	let levelData = levels.filter(function (levels) {
 		return levels.name.toLowerCase() == urlLevel;
 	})[0];
 	level = levelData.name;
-	if (urlSubject != 'bespoke') {
+	if (urlSubject != 'bespoke' && urlSubject != 'small_multiple') {
 		document.getElementById('levelNameContainer').innerHTML = level;
 	}
 	var d = new Date();
@@ -202,7 +262,7 @@ $(function () {
 								subject_name_clean_lc = line.subject_name_clean_lc;		// used in the chart title
 							}
 							else {
-								subject_name_clean_lc = subject_name_clean_lc + ', ' + line.subject_name_clean_lc;		// building to this with each subject
+								subject_name_clean_lc = subject_name_clean_lc + ', ' + line.subject_name_clean_lc;		// adding to this with each subject
 							}
 						}
 					});
@@ -243,7 +303,28 @@ $(function () {
 			readEntriesData();
 		});
 	}
-	else if (urlSubject != 'bespoke') {
+	else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+		entriesChartColoursArray = ['#e6007e'];
+		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
+			let len = data.length;
+			if (len > 0) {
+				for (let i = 0; i < len; i++) {
+					var line = data.shift();
+					bespokeAliases.forEach(function (bespokeAlias) {
+						if (line.alias == bespokeAlias) {
+							var q = {};
+							q.alias = bespokeAlias;
+							q.subject_name_clean = line.subject_name_clean;
+							q.subject_name_clean_lc = line.subject_name_clean_lc;
+							queries.push(q);
+						}
+					});
+				}
+			}
+			readEntriesData();
+		});
+	}
+	else {
 		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
 			let len = data.length;
 			if (len > 0) {
@@ -364,7 +445,7 @@ function readEntriesData () {
 	$.getJSON('/data/output/' + level.toLowerCase() + '/' + entriesJSON, function (data) {
 		entriesData = [];
 		let len = data.length;
-		let dataMax;		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
+		let dataMax = 0;		// used to force entries chart y-axis maximum to be a set value in cases where there have been no entries in a certain country/age bracket, to avoid a floating x-axis
 		if (len > 0) {
 			for (let i = 0; i < len; i++) {
 				var line = data.shift();
@@ -374,7 +455,6 @@ function readEntriesData () {
 							line.name = query.subject_name_clean;		// needs to be called this so that it's used for data series labelling
 							entriesData.push(line);
 							let dataLen = line.data.length;
-							dataMax = 0;
 							for (let j = 0; j < dataLen; j++) {
 								if (line.data[j][1] > dataMax) {
 									dataMax = line.data[j][1];
@@ -390,7 +470,6 @@ function readEntriesData () {
 							line.name = scopeDict[query.scope];		// needs to be called this so that it's used for data series labelling
 							entriesData.push(line);
 							let dataLen = line.data.length;
-							dataMax = 0;
 							for (let j = 0; j < dataLen; j++) {
 								if (line.data[j][1] > dataMax) {
 									dataMax = line.data[j][1];
@@ -405,12 +484,35 @@ function readEntriesData () {
 						}
 					});
 				}
+				else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+					queries.forEach(function (query) {
+						if (line.alias == query.alias && line.scope == scope && line.name == 'All students') {
+							line.name = query.subject_name_clean;		// needs to be called this so that it's used for data series labelling
+							entriesData.push(line);
+							let dataLen = line.data.length;
+							for (let j = 0; j < dataLen; j++) {
+								if (line.data[j][1] > dataMax) {
+									dataMax = line.data[j][1];
+								}
+							}
+						}
+					});
+					function compare(a, b) {		// sort array of objects
+						if (a.name < b.name){
+							return -1;
+						}
+						if (a.name > b.name){
+							return 1;
+						}
+						return 0;
+					}
+					entriesData.sort(compare);		// we need to sort subjects, as they aren't fully sorted in the entries data
+				}
 				else {
 					if (line.alias == alias && line.scope == scope) {
 						entriesData.push(line);
 						if (line.name == 'All students') {
 							let dataLen = line.data.length;
-							dataMax = 0;
 							for (let j = 0; j < dataLen; j++) {
 								if (line.data[j][1] > dataMax) {
 									dataMax = line.data[j][1];
@@ -420,31 +522,62 @@ function readEntriesData () {
 					}
 				}
 			}
-			if (dataMax == 0) {
-				yMax = 10;
+			if (urlSubject != 'small_multiple') {
+				entriesChartOptions.colors = entriesChartColoursArray
+				entriesChartOptions.exporting.filename = (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
+				entriesChartOptions.series = entriesData
+				entriesChartOptions.title.text = level + ' entries in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
+				if (dataMax < 10) {
+					entriesChartOptions.yAxis.max = 10;
+				}
+				else {
+					entriesChartOptions.yAxis.max = null;		// needed to reset axis range after moving from a position where it has been set to 10
+				}
+				if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {		// bespoke with options. When multi-subject bespoke charts are made then we want the subtitle to update if the country selector is used
+					entriesChartSubtitle = ''		// only 'Number of entries' - as the series labels best explain the scope in this mode
+				}
+				else if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
+					entriesChartSubtitle = scopeDict[scope];
+				}
+				else if (isNaN(Number(scope.slice(scope.length - 1))) == 1) {		// country breakdown
+					entriesChartSubtitle = 'All students, ' + scopeDict[scope];
+				}
+				entriesChartOptions.subtitle.text = entriesChartSubtitle + '<br><em>Number of entries</em>'
+				entriesChartOptions.exporting.filename = (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
+				if (Object.keys(entriesChart).length === 0) {
+					entriesChart = new Highcharts.chart('entriesChartContainer', entriesChartOptions)
+				}
+				else {
+					entriesChart.update(entriesChartOptions)
+				}
 			}
-			else {
-				yMax = null;
-			}
-			if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {		// bespoke with options. When multi-subject bespoke charts are made then we want the subtitle to update if the country selector is used
-				entriesChartSubtitle = ''		// only 'Number of entries' - as the series labels best explain the scope in this mode
-			}
-			else if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
-				entriesChartSubtitle = scopeDict[scope];
-			}
-			else if (isNaN(Number(scope.slice(scope.length - 1))) == 1) {		// country breakdown
-				entriesChartSubtitle = 'All students, ' + scopeDict[scope];
-			}
-			entriesChartOptions.series = entriesData
-			entriesChartOptions.title.text = level + ' entries in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
-			entriesChartOptions.subtitle.text = entriesChartSubtitle + '<br><em>Number of entries</em>'
-			entriesChartOptions.colors = entriesChartColoursArray
-			entriesChartOptions.exporting.filename = (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
-			if (Object.keys(entriesChart).length === 0) {
-				entriesChart = new Highcharts.chart('entriesChartContainer', entriesChartOptions)
-			}
-			else {
-				entriesChart.update(entriesChartOptions)
+			else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+				entriesSmallMultipleOptions.colors = entriesChartColoursArray
+				document.getElementById('chartTitle').innerHTML = level + ' entries in selected EBacc subjects, ' + yearMin + '-2020'
+				document.getElementById('chartSubtitle').innerHTML = 'All students, ' + scopeDict[scope];
+				entriesSmallMultipleOptions.yAxis.max = dataMax
+				entriesData.forEach((item, i) => {
+					entriesSmallMultipleOptions.series = [item]
+					if (i % 4 === 0) {		// left-most column of 4x3 grid
+						entriesSmallMultipleOptions.yAxis.labels = {enabled: true}
+						entriesSmallMultipleOptions.chart.marginLeft = 80
+						entriesSmallMultipleOptions.chart.width = 370
+					}
+					else {
+						entriesSmallMultipleOptions.yAxis.labels = {enabled: false}
+						entriesSmallMultipleOptions.chart.marginLeft = null		// seems to be set to 100 without this line
+						entriesSmallMultipleOptions.chart.width = 300
+					}
+					if (i >= 8) {		// bottom row of 4x3 grid
+						entriesSmallMultipleOptions.xAxis.labels = {enabled: true}
+					}
+					else {
+						entriesSmallMultipleOptions.xAxis.labels = {enabled: false}
+					}
+					entriesSmallMultipleOptions.title.text = item.name
+					new Highcharts.chart('smallMultipleChartContainer'+ i, entriesSmallMultipleOptions)
+				});
+
 			}
 		}
 	});
