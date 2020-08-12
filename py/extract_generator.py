@@ -44,7 +44,7 @@ for level in levels:
 			subjects_data = json.load(subjects_file)
 		for subject in subjects_data:
 			if subject['flags']['ebacc']==True:
-				print(re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']))
+				print(re.sub(r'[^\x00-\x7F]',' ', subject['subject_name_clean']))		# strip out unicode characters - e.g. any zero-width space characters)
 
 # Listing discontinued subjects
 target='GCSE'

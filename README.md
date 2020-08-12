@@ -42,13 +42,13 @@ Data files are shaped in the format required for use in [Highcharts](https://www
 ## Instructions
 1. Bring in and rename any new source data files, following the naming convention `<level>_<year>_<scope>_<grades (GCSE only)>`
 1. `subjects_checker.py`
-	1. Update script to look at most recent year for which data is available (see line marked `XXX`)
+	1. Update `target-year` in script (most recent year for which data is available)
 	1. Run
 	1. (If required) Update `-subject.json` files
 	1. (If required) Re-run
 1. Run `data_compiler.py`
-1. Run `analysis_writer.py`
-	1. Update script to start at the same start year as that used in charts (see line marked `XXX`)
+1. `analysis_writer.py`
+	1. Update `min-year` in script to match the start year used in charts
 	1. Run
 1. (If required) Run `extract_generator.py`
 1. `versioning_updater.py`

@@ -3,8 +3,8 @@
 
 import os
 
-search_string='?v=20190822.2'
-target='?v=20200811'
+search_string='?v=20200811'
+replacement_value='?v=20200812'
 
 directories=['inc','js','templates','a-level','as-level','gcse']
 
@@ -15,7 +15,7 @@ def check_files_in_directory():
 			lines = []
 			with open(os.path.join(filename), encoding='utf8') as infile:
 				for line in infile:
-					line = line.replace(search_string, target)
+					line = line.replace(search_string, replacement_value)
 					lines.append(line)
 			with open(os.path.join(filename), 'w', encoding='utf8') as outfile:
 				for line in lines:
