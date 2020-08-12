@@ -207,7 +207,7 @@ $(function () {
 	addthis_config.data_track_clickback = false;		// "		"
 	urlLevel = window.location.href.split('/')[3];
 	urlSubject = window.location.href.split('/')[4].split('.')[0];
-	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1] && ! window.location.href.split('options=')[1]) {
+	if (urlSubject == 'bespoke' && ! window.location.href.split('options=')[1]) {
 		bespokeAliases = window.location.href.split('sbj=')[1].split(',');
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
 	}
@@ -217,9 +217,15 @@ $(function () {
 		bespokeOptions = window.location.href.split('options=')[1].split(',');
 		bespokeOptions = bespokeOptions.map(function (x) { return x.toUpperCase(); });
 	}
-	else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+	else if (urlSubject == 'small_multiple' && ! window.location.href.split('options=')[1]) {
 		bespokeAliases = window.location.href.split('sbj=')[1].split(',');
+		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });		// options are optional
+	}
+	else if (urlSubject == 'small_multiple' && window.location.href.split('options=')[1]) {
+		bespokeAliases = window.location.href.split('sbj=')[1].split('|')[0].split(',');
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
+		bespokeOptions = window.location.href.split('options=')[1].split(',');
+		bespokeOptions = bespokeOptions.map(function (x) { return x.toUpperCase(); });
 	}
 	let levelData = levels.filter(function (levels) {
 		return levels.name.toLowerCase() == urlLevel;
@@ -244,14 +250,14 @@ $(function () {
 	gradesAll = levelData.gradesAll;
 	gradesSelected = levelData.gradesSelected;
 	queries = [];
-	if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1] && ! window.location.href.split('options=')[1]) {
+	if (urlSubject == 'bespoke' && ! window.location.href.split('options=')[1]) {
 		entriesChartColoursArray = ['#e6007e', '#2daae1', '#96c11f', '#535353', '#ea51a5', '#6fc2e7', '#b5d266', '#959595'];
 		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
 			let len = data.length;
 			if (len > 0) {
 				for (let i = 0; i < len; i++) {
 					var line = data.shift();
-					bespokeAliases.forEach(function (bespokeAlias) {
+					bespokeAliases.forEach(function (bespokeAlias) {		// no filter applied to scope, as in these cases we'll keep the dropdown selectors operable
 						if (line.alias == bespokeAlias) {
 							var q = {};
 							q.alias = bespokeAlias;
@@ -303,7 +309,7 @@ $(function () {
 			readEntriesData();
 		});
 	}
-	else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+	else if (urlSubject == 'small_multiple' && ! window.location.href.split('options=')[1]) {
 		entriesChartColoursArray = ['#e6007e'];
 		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
 			let len = data.length;
@@ -319,6 +325,31 @@ $(function () {
 							queries.push(q);
 						}
 					});
+				}
+			}
+			readEntriesData();
+		});
+	}
+	else if (urlSubject == 'small_multiple' && window.location.href.split('options=')[1]) {
+		entriesChartColoursArray = ['#e6007e'];
+		$.getJSON('/data/output/' + level.toLowerCase() + '/' + subjectsJSON, function (data) {
+			let len = data.length;
+			if (len > 0) {
+				for (let i = 0; i < len; i++) {
+					var line = data.shift();
+					bespokeAliases.forEach(function (bespokeAlias) {
+						bespokeOptions.forEach(function (bespokeOption) {
+							if (line.alias == bespokeAlias) {
+								var q = {};
+								q.alias = bespokeAlias;
+								q.scope = bespokeOption;
+								q.subject_name_clean = line.subject_name_clean;
+								q.subject_name_clean_lc = line.subject_name_clean_lc;
+								queries.push(q);
+								subject_name_clean_lc = line.subject_name_clean_lc;		// as there'll only by one subject. Used in the chart title
+							}
+						});
+					})
 				}
 			}
 			readEntriesData();
@@ -449,7 +480,7 @@ function readEntriesData () {
 		if (len > 0) {
 			for (let i = 0; i < len; i++) {
 				var line = data.shift();
-				if (urlSubject == 'bespoke' && window.location.href.split('sbj=')[1] && ! window.location.href.split('options=')[1]) {
+				if (urlSubject == 'bespoke' && ! window.location.href.split('options=')[1]) {
 					queries.forEach(function (query) {
 						if (line.alias == query.alias && line.scope == scope && line.name == 'All students') {
 							line.name = query.subject_name_clean;		// needs to be called this so that it's used for data series labelling
@@ -484,10 +515,10 @@ function readEntriesData () {
 						}
 					});
 				}
-				else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+				else if (urlSubject == 'small_multiple' && ! window.location.href.split('options=')[1]) {
 					queries.forEach(function (query) {
 						if (line.alias == query.alias && line.scope == scope && line.name == 'All students') {
-							line.name = query.subject_name_clean;		// needs to be called this so that it's used for data series labelling
+							line.name = query.subject_name_clean;		// needs to be called this so that it's used for small multiple titling
 							entriesData.push(line);
 							let dataLen = line.data.length;
 							for (let j = 0; j < dataLen; j++) {
@@ -496,6 +527,31 @@ function readEntriesData () {
 								}
 							}
 						}
+					});
+					function compare(a, b) {		// sort array of objects
+						if (a.name < b.name){
+							return -1;
+						}
+						if (a.name > b.name){
+							return 1;
+						}
+						return 0;
+					}
+					entriesData.sort(compare);		// we need to sort subjects, as they aren't fully sorted in the entries data
+				}
+				else if (urlSubject == 'small_multiple' && window.location.href.split('options=')[1]) {
+					queries.forEach(function (query) {
+						if (line.alias == query.alias && line.scope == query.scope && line.name == 'All students') {
+							line.name = query.subject_name_clean;		// needs to be called this so that it's used for small multiple titling
+							entriesData.push(line);
+							let dataLen = line.data.length;
+							for (let j = 0; j < dataLen; j++) {
+								if (line.data[j][1] > dataMax) {
+									dataMax = line.data[j][1];
+								}
+							}
+						}
+						scope = query.scope
 					});
 					function compare(a, b) {		// sort array of objects
 						if (a.name < b.name){
@@ -551,10 +607,15 @@ function readEntriesData () {
 					entriesChart.update(entriesChartOptions)
 				}
 			}
-			else if (urlSubject == 'small_multiple' && window.location.href.split('sbj=')[1]) {
+			else if (urlSubject == 'small_multiple') {
 				entriesSmallMultipleOptions.colors = entriesChartColoursArray
 				document.getElementById('chartTitle').innerHTML = level + ' entries in selected EBacc subjects, ' + yearMin + '-2020'
-				document.getElementById('chartSubtitle').innerHTML = 'All students, ' + scopeDict[scope];
+				if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
+					document.getElementById('chartSubtitle').innerHTML = scopeDict[scope];
+				}
+				else if (isNaN(Number(scope.slice(scope.length - 1))) == 1) {		// country breakdown
+					document.getElementById('chartSubtitle').innerHTML = 'All students, ' + scopeDict[scope];
+				}
 				entriesSmallMultipleOptions.yAxis.max = dataMax
 				entriesData.forEach((item, i) => {
 					entriesSmallMultipleOptions.series = [item]

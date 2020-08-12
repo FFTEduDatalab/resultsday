@@ -79,11 +79,14 @@ The URL used is of one of the following forms:
 * https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=EN16,WA16,NI17
 
 ### Small multiples
-This allows comparison of entry trends in a multiple subject in a panel of charts.
+This allows comparison of entry trends in multiple subjects in a panel of charts.
 
 The URL used is of one of the form:
 
 * https://results.ffteducationdatalab.org.uk/gcse/small_multiple.php?sbj=FREN,GERM,SPAN,PHYS,CHEM,GEOG,HIST,BIOL,MATH,ENLA,ENLI,RELS
+* https://results.ffteducationdatalab.org.uk/gcse/small_multiple.php?sbj=FREN,GERM,SPAN,PHYS,CHEM,GEOG,HIST,BIOL,MATH,ENLA,ENLI,RELS|options=EN16
+
+Only a single option can be specified, where this functionality is used.
 
 ## Licence
 * Python scripts are made available here under the MIT licence - see the `LICENSE` file for full details.
