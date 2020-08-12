@@ -212,7 +212,7 @@ $(function () {
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
 	}
 	else if (urlSubject == 'bespoke' && window.location.href.split('options=')[1]) {
-		bespokeAliases = window.location.href.split('sbj=')[1].split('|')[0].split(',');
+		bespokeAliases = window.location.href.split('sbj=')[1].split(/\||%7C/)[0].split(',');		// | or its URL-encoded form
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
 		bespokeOptions = window.location.href.split('options=')[1].split(',');
 		bespokeOptions = bespokeOptions.map(function (x) { return x.toUpperCase(); });
@@ -222,7 +222,7 @@ $(function () {
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });		// options are optional
 	}
 	else if (urlSubject == 'small_multiple' && window.location.href.split('options=')[1]) {
-		bespokeAliases = window.location.href.split('sbj=')[1].split('|')[0].split(',');
+		bespokeAliases = window.location.href.split('sbj=')[1].split(/\||%7C/)[0].split(',');
 		bespokeAliases = bespokeAliases.map(function (x) { return x.toUpperCase(); });
 		bespokeOptions = window.location.href.split('options=')[1].split(',');
 		bespokeOptions = bespokeOptions.map(function (x) { return x.toUpperCase(); });
