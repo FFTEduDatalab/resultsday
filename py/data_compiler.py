@@ -8,7 +8,7 @@ import json
 from xlrd import open_workbook
 from collections import OrderedDict
 
-min_year=2014
+min_year=2020
 
 mode='normal'		# used to control whether only new, more recent years are added to the data, or if the data is written from scratch
 # mode='testing'
@@ -110,7 +110,10 @@ for level in levels:
 									row['gender']='All students'
 								else:
 									row['gender']=rbws.cell(rbrow,1).value
-								row['entries']=int(rbws.cell(rbrow,2).value)
+								if rbws.cell(rbrow,2).value==' - ':
+									row['entries']=5		# apply a dummy value where the true number is suppressed
+								else:
+									row['entries']=int(rbws.cell(rbrow,2).value)
 								if level['name']!='GCSE' or (level['name']=='GCSE' and filename_split[3]=='keygrades'):		# A-Level, AS-Level and GCSE key grades files
 									rbcol=4
 									for grade in level['grades']:
