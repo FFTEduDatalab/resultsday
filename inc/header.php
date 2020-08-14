@@ -13,7 +13,7 @@
 	<title>GCSE and A-Level results analysis - FFT Education Datalab</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="/css/style.css?v=20200811" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="/css/style.css?v=20200813" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://code.highcharts.com/6/highcharts.js"></script>
@@ -21,7 +21,7 @@
 	<script src="https://code.highcharts.com/6/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/6/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/6/modules/data.js"></script>
-	<script src="/js/theme.js?v=20200811"></script>
+	<script src="/js/theme.js?v=20200813"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59588201-4"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -62,23 +62,23 @@
 			<a id="title-container" class="brand-logo hide-on-med-and-down" href="/">Results day analysis</a>
 			<ul class="right hide-on-med-and-down">
 				<li><a href="/">Home</a></li>
-				<li><a href="/guide.php?v=20200811">Guide</a></li>
+				<li><a href="/guide.php?v=20200813">Guide</a></li>
 				<li><a class="dropdown-trigger fft-pink-text" href="#!" data-target="level-dropdown">A-Level<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a class="fft-pink-text" href="/gcse.php?v=20200811">GCSE</a></li>
-				<li><a href="/about.php?v=20200811">About</a></li>
+				<li><a class="fft-pink-text" href="/gcse.php?v=20200813">GCSE</a></li>
+				<li><a href="/about.php?v=20200813">About</a></li>
 			</ul>
 			<ul id="level-dropdown" class="dropdown-content">
-				<li><a class="fft-pink-text" href="/a-level.php?v=20200811">A-Level</a></li>
-				<li><a class="fft-pink-text" href="/as-level.php?v=20200811">AS-Level</a></li>
+				<li><a class="fft-pink-text" href="/a-level.php?v=20200813">A-Level</a></li>
+				<li><a class="fft-pink-text" href="/as-level.php?v=20200813">AS-Level</a></li>
 			</ul>
 			<ul id="nav-mobile" class="sidenav">
 				<li><a class='collapsible-header' href="/"><strong>Results day analysis</strong></a></li>
 				<li><a href="/">Home</a></li>
-				<li><a href="/guide.php?v=20200811">Guide</a></li>
-				<li><a class="fft-pink-text" href="/a-level.php?v=20200811">A-Level</a></li>
-				<li><a class="fft-pink-text" href="/as-level.php?v=20200811">AS-Level</a></li>
-				<li><a class="fft-pink-text" href="/gcse.php?v=20200811">GCSE</a></li>
-				<li><a href="/about.php?v=20200811">About</a></li>
+				<li><a href="/guide.php?v=20200813">Guide</a></li>
+				<li><a class="fft-pink-text" href="/a-level.php?v=20200813">A-Level</a></li>
+				<li><a class="fft-pink-text" href="/as-level.php?v=20200813">AS-Level</a></li>
+				<li><a class="fft-pink-text" href="/gcse.php?v=20200813">GCSE</a></li>
+				<li><a href="/about.php?v=20200813">About</a></li>
 			</ul>
 			<a href="#" data-target="nav-mobile" class="sidenav-trigger grey-text"><i class="material-icons">menu</i></a>
 		</div>

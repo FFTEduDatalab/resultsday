@@ -8,7 +8,7 @@ import json
 from xlrd import open_workbook
 from collections import OrderedDict
 
-min_year=2020
+min_year=2014
 
 mode='normal'		# used to control whether only new, more recent years are added to the data, or if the data is written from scratch
 # mode='testing'
