@@ -113,7 +113,7 @@ gender='All students'
 grade='A or above'
 exclusions=[]
 # exclusions=['LEIS', 'AOTH', 'HSOC', 'HOME', 'MANU', 'HOSP', 'BUSC' ,'WELS', 'WELF', 'IRIS', 'PERF', 'ECON', 'ENGI', 'OSCI']		# discontinued/low entry
-years=[2019,2020]
+years=[2019, 2020]
 
 for level in levels:
 	if level['name']==target:
@@ -152,17 +152,17 @@ target = 'A-Level'
 scope = 'EN'
 gender = 'All students'
 exclusions = ['COMM','CRIT','GENS','ICTX','IRIS','PERF','WELF','WELS','AOTH']		# discontinued/low entry
-years = [2020, 2020]
+years = [2019, 2020]
 
 grade_dict = {
 	'subject': None,
 	'grade': None,
-	'pct_2020': None,
+	'pct_2019': None,
 	'pct_2020': None,
 }
 
 previous_pct_dict = {
-	2020: 0,
+	2019: 0,
 	2020: 0,
 }
 
@@ -188,8 +188,8 @@ for level in levels:
 					for year in years:
 						for datum in item['data']:
 							if datum[0]==year:
-								if year == 2020:
-									grade_dict_working['pct_2020'] = round((datum[1] - previous_pct_dict[year])/100.0, 3)		# producing non-cumulative data
+								if year == 2019:
+									grade_dict_working['pct_2019'] = round((datum[1] - previous_pct_dict[year])/100.0, 3)		# producing non-cumulative data
 								if year == 2020:
 									grade_dict_working['pct_2020'] = round((datum[1] - previous_pct_dict[year])/100.0, 3)
 								previous_pct_dict[year] = datum[1]
