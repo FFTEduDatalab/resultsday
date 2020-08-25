@@ -16,6 +16,6 @@
 		<div class="row" id="subject-cards"></div>
 	</div>
 </div>
-<script src='/js/results-level.js?v=20200818'></script>
-<script src='/js/toasts.js?v=20200818'></script>
+<script src='/js/results-level.js?v=20200825'></script>
+<script src='/js/toasts.js?v=20200825'></script>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/inc/footer.php');?>

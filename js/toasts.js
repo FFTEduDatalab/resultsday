@@ -6,28 +6,28 @@ var urlLevel,
 	levels = [
 		{
 			'name': 'A-Level',
-			'subjectsJSON': 'a-level-subjects.json?v=20200818',
-			'entriesJSON': 'a-level-entries.json?v=20200818',
-			'gradesJSON': 'a-level-grades.json?v=20200818',
-			'textJSON': 'a-level-text.json?v=20200818',
+			'subjectsJSON': 'a-level-subjects.json?v=20200825',
+			'entriesJSON': 'a-level-entries.json?v=20200825',
+			'gradesJSON': 'a-level-grades.json?v=20200825',
+			'textJSON': 'a-level-text.json?v=20200825',
 			'gradesAll': ['A*', 'A or above', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A*', 'A or above', 'C or above', 'E or above']
 		},
 		{
 			'name': 'AS-Level',
-			'subjectsJSON': 'as-level-subjects.json?v=20200818',
-			'entriesJSON': 'as-level-entries.json?v=20200818',
-			'gradesJSON': 'as-level-grades.json?v=20200818',
-			'textJSON': 'as-level-text.json?v=20200818',
+			'subjectsJSON': 'as-level-subjects.json?v=20200825',
+			'entriesJSON': 'as-level-entries.json?v=20200825',
+			'gradesJSON': 'as-level-grades.json?v=20200825',
+			'textJSON': 'as-level-text.json?v=20200825',
 			'gradesAll': ['A', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A', 'C or above', 'E or above']
 		},
 		{
 			'name': 'GCSE',
-			'subjectsJSON': 'gcse-subjects.json?v=20200818',
-			'entriesJSON': 'gcse-entries.json?v=20200818',
-			'gradesJSON': 'gcse-grades.json?v=20200818',
-			'textJSON': 'gcse-text.json?v=20200818',
+			'subjectsJSON': 'gcse-subjects.json?v=20200825',
+			'entriesJSON': 'gcse-entries.json?v=20200825',
+			'gradesJSON': 'gcse-grades.json?v=20200825',
+			'textJSON': 'gcse-text.json?v=20200825',
 			'gradesAll': ['7/A or above', '4/C or above', '1/G or above', 'U or above'],
 			'gradesSelected': ['7/A or above', '4/C or above', '1/G or above']
 		}
@@ -49,8 +49,8 @@ $(function () {
 		level = levelData.name;
 	}
 	var d = new Date();
-	alevelNewDataToastText = "<div class='toast-content'>A-Level and AS-Level data for 2020 is available at 9.30am on Thursday 13 August and will be added at that point</div><div class='material-icons close'>close</div>";
-	gcseNewDataToastText = "<div class='toast-content'>GCSE data for 2020 is not yet available, but will be added when it is released</div><div class='material-icons close'>close</div>";
+	alevelNewDataToastText = "<div class='toast-content'>A-Level and AS-Level data for 2020 is that issued on Thursday 13 August - before a change in awarding approach. It will be replaced when revised national figures become available.</div>";
+	gcseNewDataToastText = "<div class='toast-content'>National GCSE data for 2020 has not been published yet by the Joint Council for Qualifications, but will be added to this site when it is released.</div><div class='material-icons close'>close</div>";
 	M.toast({html: earlyResultsToastText, classes: 'early-results', displayLength: 'infinity', inDuration: 0, activationPercent: 0.7});
 	M.toast({html: alevelNewDataToastText, classes: 'new-data alevel', displayLength: 'infinity', inDuration: 0, activationPercent: 0.7});
 	M.toast({html: gcseNewDataToastText, classes: 'new-data gcse', displayLength: 'infinity', inDuration: 0, activationPercent: 0.7});
@@ -60,18 +60,18 @@ $(function () {
 	if (urlSubject && localStorage.getItem('earlyResultsState') != 'dismissed') {		// not level directory page
 		$('.toast.early-results').show();
 	}
-	if (urlSubject && (level == 'A-Level' || level == 'AS-Level') && localStorage.getItem('newALevelDataState') != 'dismissed') {
+	if (urlSubject && (level == 'A-Level' || level == 'AS-Level')) {
 		$('.toast.new-data.alevel').show();
 	}
 	if (urlSubject && (level == 'GCSE') && localStorage.getItem('newGCSEDataState') != 'dismissed') {
 		$('.toast.new-data.gcse').show();
 	}
-	if (d.getFullYear() > 2020 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 2))) {
+	if (d.getFullYear() > 2020 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 4))) {
 		$('.toast.early-results').hide();
 	}
-	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 13 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
-		$('.toast.new-data.alevel').hide();
-	}
+	// if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 13 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
+	// 	$('.toast.new-data.alevel').hide();
+	// }
 	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 31 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 31 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 31 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
 		$('.toast.new-data.gcse').hide();
 	}

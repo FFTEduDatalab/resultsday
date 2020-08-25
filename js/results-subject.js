@@ -67,28 +67,28 @@ var urlLevel,
 	levels = [
 		{
 			'name': 'A-Level',
-			'subjectsJSON': 'a-level-subjects.json?v=20200818',
-			'entriesJSON': 'a-level-entries.json?v=20200818',
-			'gradesJSON': 'a-level-grades.json?v=20200818',
-			'textJSON': 'a-level-text.json?v=20200818',
+			'subjectsJSON': 'a-level-subjects.json?v=20200825',
+			'entriesJSON': 'a-level-entries.json?v=20200825',
+			'gradesJSON': 'a-level-grades.json?v=20200825',
+			'textJSON': 'a-level-text.json?v=20200825',
 			'gradesAll': ['A*', 'A or above', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A*', 'A or above', 'C or above', 'E or above']
 		},
 		{
 			'name': 'AS-Level',
-			'subjectsJSON': 'as-level-subjects.json?v=20200818',
-			'entriesJSON': 'as-level-entries.json?v=20200818',
-			'gradesJSON': 'as-level-grades.json?v=20200818',
-			'textJSON': 'as-level-text.json?v=20200818',
+			'subjectsJSON': 'as-level-subjects.json?v=20200825',
+			'entriesJSON': 'as-level-entries.json?v=20200825',
+			'gradesJSON': 'as-level-grades.json?v=20200825',
+			'textJSON': 'as-level-text.json?v=20200825',
 			'gradesAll': ['A', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A', 'C or above', 'E or above']
 		},
 		{
 			'name': 'GCSE',
-			'subjectsJSON': 'gcse-subjects.json?v=20200818',
-			'entriesJSON': 'gcse-entries.json?v=20200818',
-			'gradesJSON': 'gcse-grades.json?v=20200818',
-			'textJSON': 'gcse-text.json?v=20200818',
+			'subjectsJSON': 'gcse-subjects.json?v=20200825',
+			'entriesJSON': 'gcse-entries.json?v=20200825',
+			'gradesJSON': 'gcse-grades.json?v=20200825',
+			'textJSON': 'gcse-text.json?v=20200825',
 			'gradesAll': ['7/A or above', '4/C or above', '1/G or above', 'U or above'],
 			'gradesSelected': ['7/A or above', '4/C or above', '1/G or above']
 		}
@@ -393,9 +393,9 @@ $(function () {
 									if (relatedArray.length == array.length) {
 										relatedArray.forEach(function (subject_name_clean, innerIndex, innerArray) {
 											if (innerIndex != innerArray.length - 1) {		// final element
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20200818">' + subject_name_clean + '</a>,';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20200825">' + subject_name_clean + '</a>,';
 											} else {
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20200818">' + subject_name_clean + '</a>';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20200825">' + subject_name_clean + '</a>';
 											}
 										});
 									}
@@ -462,13 +462,13 @@ $(function () {
 function goBack () {
 	urlLevel = window.location.href.split('/')[3].split('.')[0];
 	if (urlLevel == 'a-level') {
-		window.location.href = '/a-level.php?v=20200818';
+		window.location.href = '/a-level.php?v=20200825';
 	}
 	else if (urlLevel == 'as-level') {
-		window.location.href = '/as-level.php?v=20200818';
+		window.location.href = '/as-level.php?v=20200825';
 	}
 	else if (urlLevel == 'gcse') {
-		window.location.href = '/gcse.php?v=20200818';
+		window.location.href = '/gcse.php?v=20200825';
 	}
 }
 
