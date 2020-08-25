@@ -18,7 +18,7 @@
 		"context": "<p>Grades were awarded following a different process in 2020 after public exams were cancelled in all constituent countries of the UK.</p><p>In Wales, entry numbers in all subjects have been affected by a change in school performance measures. From summer 2019, pupils' first entries, rather than best entries, are counted. This is likely to have had the effect of disincentivising Year 10 entries in 2018.</p>"
 	},
 	{
-		"alias": "ASCH",
+		"alias": "ASCI",
 		"subject_name_clean": "Additional science",
 		"subject_name_clean_lc": "additional science",
 		"subject_names": ["Additional Science"],

@@ -1,20 +1,5 @@
--- /css/
--- /img/
--- /inc/
--- /js/
--- /templates/
--- /a-level/
--- /as-level/
--- /gcse/
-404.php
-.dropbox
--- *.php
--- *.png
--- *.pdf
--- template_copier.py
--- versioning_updater.py
 todo.txt
-2015_2018.csv
-README_EXTRA.MD
-desktop.ini
-dual_axes_test.xlsx
+404.php
+-- desktop.ini
+temp.py
+graphic.php
