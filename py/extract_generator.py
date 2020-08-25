@@ -151,7 +151,8 @@ for level in levels:
 target = 'A-Level'
 scope = 'EN'
 gender = 'All students'
-exclusions = ['COMM','CRIT','GENS','ICTX','IRIS','PERF','WELF','WELS','AOTH']		# discontinued/low entry
+exclusions = ['COMM','CRIT','GENS','ICTX','IRIS','PERF','WELF','WELS','AOTH']		# discontinued/low entry A-Levels
+# exclusions = ['ASCI','FSCI','BUSC','CONS','HSOC','HOME','HOSP','HUMA','ICTX','IRIS','LEIS','MANU','MATN','MATA','PERF','PREP','SCIE','WELF','WELS','WELL','OTEC','AOTH']		# discontinued/low entry GCSEs
 years = [2019, 2020]
 
 grade_dict = {
@@ -184,7 +185,7 @@ for level in levels:
 				grade_dict_working = grade_dict.copy()
 				grade_dict_working['subject'] = subject['subject_name_clean']
 				if item['alias']==subject['alias']:
-					grade_dict_working['grade'] = re.sub(r' or above','', item['name'])		# as we're producing non-cumulative data
+					grade_dict_working['grade'] = item['name'].partition(' ')[0].partition('/')[0]		# removes 'or above' part of string (as we're producing non-cumulative data) and pulls out just the numeric grade at GCSE
 					for year in years:
 						for datum in item['data']:
 							if datum[0]==year:
