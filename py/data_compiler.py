@@ -110,7 +110,7 @@ for level in levels:
 									row['gender']='All students'
 								else:
 									row['gender']=rbws.cell(rbrow,1).value
-								if rbws.cell(rbrow,2).value==' - ':
+								if str(rbws.cell(rbrow,2).value).strip()=='-':
 									row['entries']=5		# apply a dummy value where the true number is suppressed
 								else:
 									row['entries']=int(rbws.cell(rbrow,2).value)

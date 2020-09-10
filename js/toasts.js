@@ -6,28 +6,28 @@ var urlLevel,
 	levels = [
 		{
 			'name': 'A-Level',
-			'subjectsJSON': 'a-level-subjects.json?v=20200825',
-			'entriesJSON': 'a-level-entries.json?v=20200825',
-			'gradesJSON': 'a-level-grades.json?v=20200825',
-			'textJSON': 'a-level-text.json?v=20200825',
+			'subjectsJSON': 'a-level-subjects.json?v=20200910',
+			'entriesJSON': 'a-level-entries.json?v=20200910',
+			'gradesJSON': 'a-level-grades.json?v=20200910',
+			'textJSON': 'a-level-text.json?v=20200910',
 			'gradesAll': ['A*', 'A or above', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A*', 'A or above', 'C or above', 'E or above']
 		},
 		{
 			'name': 'AS-Level',
-			'subjectsJSON': 'as-level-subjects.json?v=20200825',
-			'entriesJSON': 'as-level-entries.json?v=20200825',
-			'gradesJSON': 'as-level-grades.json?v=20200825',
-			'textJSON': 'as-level-text.json?v=20200825',
+			'subjectsJSON': 'as-level-subjects.json?v=20200910',
+			'entriesJSON': 'as-level-entries.json?v=20200910',
+			'gradesJSON': 'as-level-grades.json?v=20200910',
+			'textJSON': 'as-level-text.json?v=20200910',
 			'gradesAll': ['A', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A', 'C or above', 'E or above']
 		},
 		{
 			'name': 'GCSE',
-			'subjectsJSON': 'gcse-subjects.json?v=20200825',
-			'entriesJSON': 'gcse-entries.json?v=20200825',
-			'gradesJSON': 'gcse-grades.json?v=20200825',
-			'textJSON': 'gcse-text.json?v=20200825',
+			'subjectsJSON': 'gcse-subjects.json?v=20200910',
+			'entriesJSON': 'gcse-entries.json?v=20200910',
+			'gradesJSON': 'gcse-grades.json?v=20200910',
+			'textJSON': 'gcse-text.json?v=20200910',
 			'gradesAll': ['7/A or above', '4/C or above', '1/G or above', 'U or above'],
 			'gradesSelected': ['7/A or above', '4/C or above', '1/G or above']
 		}
@@ -60,19 +60,19 @@ $(function () {
 	if (urlSubject && localStorage.getItem('earlyResultsState') != 'dismissed') {		// not level directory page
 		$('.toast.early-results').show();
 	}
-	if (urlSubject && (level == 'A-Level' || level == 'AS-Level')) {
+	if (urlSubject && (level == 'A-Level' || level == 'AS-Level') && localStorage.getItem('newALevelDataState') != 'dismissed') {
 		$('.toast.new-data.alevel').show();
 	}
 	if (urlSubject && (level == 'GCSE') && localStorage.getItem('newGCSEDataState') != 'dismissed') {
 		$('.toast.new-data.gcse').show();
 	}
-	if (d.getFullYear() > 2020 || (d.getFullYear() == 2019 && d.getMonth() > 8 || (d.getFullYear() == 2019 && d.getMonth() == 8 && d.getDate() > 4))) {
+	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 8 || (d.getFullYear() == 2020 && d.getMonth() == 8 && d.getDate() > 11))) {
 		$('.toast.early-results').hide();
 	}
-	// if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 13 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
-	// 	$('.toast.new-data.alevel').hide();
-	// }
-	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 31 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 31 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 31 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
+	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 13 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 13 & d.getHours() == 9 & d.getMinutes() >= 30))))) {		// month 7 = August
+		$('.toast.new-data.alevel').hide();
+	}
+	if (d.getFullYear() > 2020 || (d.getFullYear() == 2020 && d.getMonth() > 7 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() > 20 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 20 & d.getHours() > 9 || (d.getFullYear() == 2020 && d.getMonth() == 7 && d.getDate() == 20 & d.getHours() == 9 & d.getMinutes() >= 30))))) {
 		$('.toast.new-data.gcse').hide();
 	}
 });
