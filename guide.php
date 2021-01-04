@@ -18,6 +18,7 @@
 				<h5>Charts</h5>
 				<p>Two charts are presented on each page for a subject, the upper chart showing the number of entries and the lower chart showing attainment. The text to the right of the charts provides a summary of the data for the UK as a whole and, where applicable, provides guidance and caveats about interpretation.</p>
 				<p>Each chart can be downloaded as a picture file (JPG or PNG) and the underlying data for each chart can also be downloaded. We hope that users of the site will share these files via blogposts and social media. Use the menu icon in the top right of each chart to do so.</p>
+				<p>Starting in 2020, where entry numbers are smaller than 10, in some cases the exact number of entries is suppressed in the source data. In these cases, in the entries chart the subject is shown as having five entries.</p>
 
 				<h6>Drop-down controls</h6>
 				<p>The contents of the charts can be changed using the drop-downs above them. Note that the drop-down above the upper chart, which shows number of entries, also controls the lower chart, which shows attainment.</p>
