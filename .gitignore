@@ -3,3 +3,5 @@ todo.txt
 -- desktop.ini
 temp.py
 graphic.php
+~*.xls		-- created when files are in use
+~*.xlsx

@@ -50,4 +50,5 @@ for level in levels:
 		subject_name_url=re.sub('\W+', '-', subject['subject_name_clean']).lower()
 		copy('subject_page_template.php', path + '\\' + level['name'].lower() + '\\' + subject_name_url + '.php')
 	# bespoke pages
+	copy('small_multiple_page_template.php', path + '\\' + level['name'].lower() + '\\small_multiple.php')
 	copy('bespoke_page_template.php', path + '\\' + level['name'].lower() + '\\bespoke.php')

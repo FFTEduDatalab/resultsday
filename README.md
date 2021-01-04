@@ -58,7 +58,7 @@ Data files are shaped in the format required for use in [Highcharts](https://www
 `template_copier.py` almost certainly won't need running on results day - it only needs running after design tweaks to subject pages.
 
 ## Producing bespoke charts
-The microsite has the ability to produce two types of bespoke chart. In both cases, only entries charts can be produced, not grade breakdown charts.
+The microsite has the ability to produce three types of bespoke chart. In each case, only entries charts can be produced, not grade breakdown charts.
 
 ### Subject comparison
 This allows comparison of entry trends in multiple subjects.
@@ -79,14 +79,16 @@ The URL used is of one of the following forms:
 * https://results.ffteducationdatalab.org.uk/gcse/bespoke.php?sbj=FREN|options=EN16,WA16,NI17
 
 ### Small multiples
-This allows comparison of entry trends in multiple subjects in a panel of charts.
+This allows comparison of entry trends in multiple subjects in a panel of charts, either for all students in the UK or for a single country or age breakdown for which we have data.
 
-The URL used is of one of the form:
+The URL used is of one of the following forms:
 
 * https://results.ffteducationdatalab.org.uk/gcse/small_multiple.php?sbj=FREN,GERM,SPAN,PHYS,CHEM,GEOG,HIST,BIOL,MATH,ENLA,ENLI,RELS
 * https://results.ffteducationdatalab.org.uk/gcse/small_multiple.php?sbj=FREN,GERM,SPAN,PHYS,CHEM,GEOG,HIST,BIOL,MATH,ENLA,ENLI,RELS|options=EN16
 
 Only a single option can be specified, where this functionality is used.
+
+NB: The small multiple functionality is under active development and is currently only optimised for larger monitors.
 
 ## Licence
 * Python scripts are made available here under the MIT licence - see the `LICENSE` file for full details.
