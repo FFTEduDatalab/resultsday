@@ -88,7 +88,7 @@ The URL used is of one of the following forms:
 
 Only a single option can be specified, where this functionality is used.
 
-NB: The small multiple functionality is under active development and is currently only optimised for larger monitors.
+NB: The small multiple functionality is under active development and is currently only optimised for larger monitors. The ability to set the chart title by way of a parameter has also not been implemented.
 
 ## Licence
 * Python scripts are made available here under the MIT licence - see the `LICENSE` file for full details.
