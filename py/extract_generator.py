@@ -35,8 +35,9 @@ ages = ['15', '16', '17']
 target = 'GCSE'
 for level in levels:
     if level['name'] == target:
-        os.chdir(os.path.dirname(__file__))
-        os.chdir('..')
+        #os.chdir(os.path.dirname(__file__))
+        #os.chdir('..')
+        os.chdir("S:\\Results day\\microsite")
         os.chdir(level['output'])
         row_list = []
         with open(level['name'].lower()+'-subjects.json') as subjects_file:
@@ -50,8 +51,9 @@ for level in levels:
 target = 'GCSE'
 for level in levels:
     if level['name'] == target:
-        os.chdir(os.path.dirname(__file__))
-        os.chdir('..')
+        #os.chdir(os.path.dirname(__file__))
+        #os.chdir('..')
+        os.chdir("S:\\Results day\\microsite")
         os.chdir(level['output'])
         row_list = []
         with open(level['name'].lower()+'-subjects.json') as subjects_file:
@@ -65,12 +67,13 @@ for level in levels:
 target = 'A-Level'
 scope = 'EN'
 name = 'All students'
-years = [2019, 2020]
+years = [2019, 2021, 2022, 2023, 2024]
 
 for level in levels:
     if level['name'] == target:
-        os.chdir(os.path.dirname(__file__))
-        os.chdir('..')
+        #os.chdir(os.path.dirname(__file__))
+        #os.chdir('..')
+        os.chdir("S:\\Results day\\microsite")
         os.chdir(level['output'])
         with open(level['name'].lower()+'-subjects.json') as subjects_file:
             subjects_data = json.load(subjects_file)
@@ -88,8 +91,11 @@ for level in levels:
                         for datum in item['data']:
                             if datum[0] == year:
                                 if string == '':
-                                    entries_y0 = datum[1]
+                                    entries_y0 = datum[1] if datum[1] is not None else '0'
                                     string = str(datum[1])
+                                elif datum[1] is None:
+                                    string = string + ', 0'
+                                    entries_change = 0
                                 else:
                                     string = string + ', ' + str(datum[1])
                                     try:
@@ -111,12 +117,13 @@ gender = 'All students'
 grade = 'A or above'
 exclusions = []
 # exclusions = ['LEIS', 'AOTH', 'HSOC', 'HOME', 'MANU', 'HOSP', 'BUSC' , 'WELS', 'WELF', 'IRIS', 'PERF', 'ECON', 'ENGI', 'OSCI']        # discontinued/low entry
-years = [2019, 2020]
+years = [2019, 2021, 2022, 2023, 2024]
 
 for level in levels:
     if level['name'] == target:
-        os.chdir(os.path.dirname(__file__))
-        os.chdir('..')
+        #os.chdir(os.path.dirname(__file__))
+        #os.chdir('..')
+        os.chdir("S:\\Results day\\microsite")
         os.chdir(level['output'])
         with open(level['name'].lower()+'-subjects.json') as subjects_file:
             subjects_data = json.load(subjects_file)
@@ -151,26 +158,34 @@ scope = 'EN'
 gender = 'All students'
 exclusions = ['COMM', 'CRIT', 'GENS', 'ICTX', 'IRIS', 'PERF', 'WELF', 'WELS', 'AOTH']        # discontinued/low entry A-Levels
 # exclusions = ['ASCI', 'FSCI', 'BUSC', 'CONS', 'HSOC', 'HOME', 'HOSP', 'HUMA', 'ICTX', 'IRIS', 'LEIS', 'MANU', 'MATN', 'MATA', 'PERF', 'PREP', 'SCIE', 'WELF', 'WELS', 'WELL', 'OTEC', 'AOTH']        # discontinued/low entry GCSEs
-years = [2019, 2020]
+years = [2019, 2021, 2022, 2023, 2024]
 
 grade_dict = {
     'subject': None,
     'grade': None,
     'pct_2019': None,
     'pct_2020': None,
+    'pct_2021': None,
+    'pct_2022': None,
+    'pct_2023': None,
+    'pct_2024': None
 }
 
 previous_pct_dict = {
     2019: 0,
-    2020: 0,
+    2021: 0,
+    2022: 0,
+    2023: 0,
+    2024: 0
 }
 
 grades_list = []
 
 for level in levels:
     if level['name'] == target:
-        os.chdir(os.path.dirname(__file__))
-        os.chdir('..')
+        #os.chdir(os.path.dirname(__file__))
+        #os.chdir('..')
+        os.chdir("S:\\Results day\\microsite")
         os.chdir(level['output'])
         with open(level['name'].lower()+'-subjects.json') as subjects_file:
             subjects_data = json.load(subjects_file)
@@ -187,10 +202,10 @@ for level in levels:
                     for year in years:
                         for datum in item['data']:
                             if datum[0] == year:
-                                if year == 2019:
-                                    grade_dict_working['pct_2019'] = round((datum[1] - previous_pct_dict[year])/100.0, 3)        # producing non-cumulative data
-                                if year == 2020:
-                                    grade_dict_working['pct_2020'] = round((datum[1] - previous_pct_dict[year])/100.0, 3)
+                                if year in years:
+                                    grade_dict_working['pct_'+str(year)] = round((datum[1] - previous_pct_dict[year])/100.0, 3)        # producing non-cumulative data
+                                #if year == 2020:
+                                #    grade_dict_working['pct_2020'] = round((datum[1] - previous_pct_dict[year])/100.0, 3)
                                 previous_pct_dict[year] = datum[1]
                     grades_list.append(grade_dict_working)
         with open('subjectgrade.json', 'w') as grades_file:        # prettified
@@ -202,13 +217,14 @@ target = 'GCSE'
 # criteria = 'All'
 criteria = 'Not discontinued'
 scope = 'EN'
-y0 = 2018
-yn = 2019
+y0 = 2019
+yn = 2024
 
 for level in levels:
     if level['name'] == target:
-        os.chdir(os.path.dirname(__file__))
-        os.chdir('..')
+        #os.chdir(os.path.dirname(__file__))
+        #os.chdir('..')
+        os.chdir("S:\\Results day\\microsite")
         os.chdir(level['output'])
         row_list = []
         with open(level['name'].lower()+'-subjects.json') as subjects_file:
@@ -237,15 +253,19 @@ for level in levels:
                                 data = entries['data']
                                 for data_item in data:
                                     if data_item[0] == y0:
-                                        if row['entries_y0'] == '':
+                                        if data_item[1] == None:
+                                            pass
+                                        elif row['entries_y0'] == '':
                                             row['entries_y0'] = data_item[1]
                                         else:
                                             row['entries_y0'] = int(row['entries_y0'])+data_item[1]
                                     if data_item[0] == yn:
-                                        if row['entries_yn'] == '':
+                                        if data_item[1] == None:
+                                            pass
+                                        elif row['entries_yn'] == '':
                                             row['entries_yn'] = data_item[1]
                                         else:
                                             row['entries_yn'] = int(row['entries_yn'])+data_item[1]
                                 break
                         data = []
-            print(row['subject_name_clean'] + ', ' + str(row['entries_y0']) + ', ' + str(row['entries_yn']) + ', ' + str(round((row['entries_yn']-row['entries_y0'])*100.0/row['entries_y0'], 1)) + '%')
+            #print(row['subject_name_clean'] + ', ' + str(row['entries_y0']) + ', ' + str(row['entries_yn']) + ', ' + str(round((row['entries_yn']-row['entries_y0'])*100.0/row['entries_y0'], 1)) + '%')

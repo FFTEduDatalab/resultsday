@@ -5,7 +5,7 @@ import os
 import json
 from collections import OrderedDict
 
-min_year = 2016
+min_year = 2019
 
 levels = [
     {
@@ -28,14 +28,16 @@ levels = [
     }
 ]
 
-os.chdir(os.path.dirname(__file__))
-os.chdir('..')
+#os.chdir(os.path.dirname(__file__))
+#os.chdir('..')
+os.chdir("S:\\Results day\\microsite")
 with open('data\\output\\popn\\popn.json') as popn_file:
     popn_data = json.load(popn_file)
 
 for level in levels:
-    os.chdir(os.path.dirname(__file__))
-    os.chdir('..')
+    #os.chdir(os.path.dirname(__file__))
+    #os.chdir('..')
+    os.chdir("S:\\Results day\\microsite")
     os.chdir(level['output'])
     texts_list = []
     with open(level['name'].lower() + '-subjects.json') as subjects_file:
@@ -106,10 +108,10 @@ for level in levels:
     # write analysis
     for texts in texts_list:
         texts['analysis'] = ''
-        if texts.get('y0') is not None:        # analysis only written for subjects for which we have entries and grades data (i.e. not new subjects which have only been added to subjects data file)
+        if texts.get('y0') is not None and texts['entries_y0'] > 0:        # analysis only written for subjects for which we have entries and grades data (i.e. not new subjects which have only been added to subjects data file)
             allsubjects_entries_change = round((texts['allsubjects_entries_yn'] - texts['allsubjects_entries_y0'])*1.0/texts['allsubjects_entries_y0']*100, 1)
             subject_entries_change = round((texts['entries_yn']-texts['entries_y0'])*1.0/texts['entries_y0']*100.0, 1)
-            subject_popn_change = round((texts['popn_yn']-texts['popn_y0'])*1.0/texts['popn_y0']*100.0, 1)
+            subject_popn_change = round((texts['popn_yn']-texts['popn_y0'])*1.0/texts['popn_y0']*100.0, 1) if 'popn_yn' in texts else 0
             if texts['years'] == 2:        # one year handled separately below
                 number_of_years = 'two'
             elif texts['years'] == 3:
@@ -118,6 +120,10 @@ for level in levels:
                 number_of_years = 'four'
             elif texts['years'] == 5:
                 number_of_years = 'five'
+            elif texts['years'] == 6:
+                number_of_years = 'six'
+            elif texts['years'] == 7:
+                number_of_years = 'seven'
             if allsubjects_entries_change > 0:
                 allsubjects_entries_change_sign = '+'
             else:
@@ -180,8 +186,9 @@ for level in levels:
         texts_list_redux.append(texts_redux)
 
     # write to json file
-    os.chdir(os.path.dirname(__file__))
-    os.chdir('..')
+    #os.chdir(os.path.dirname(__file__))
+    #os.chdir('..')
+    os.chdir("S:\\Results day\\microsite")
     os.chdir(level['output'])
 
     text_filename = level['name'].lower()+'-text.json'

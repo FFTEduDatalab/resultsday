@@ -7,7 +7,7 @@ import json
 from xlrd import open_workbook
 from collections import OrderedDict
 
-target_year = 2020
+target_year = 2024
 genders = ['Male', 'Female', 'All students']
 
 levels = [
@@ -32,15 +32,17 @@ levels = [
 ]
 
 for level in levels:
-    os.chdir(os.path.dirname(__file__))
-    os.chdir('..')
+    #os.chdir(os.path.dirname(__file__))
+    #os.chdir('..')
+    os.chdir("S:\\Results day\\microsite")
     os.chdir(level['output'])
     with open(level['name'].lower()+'-subjects.json') as subjects_file:
         subjects_data = json.load(subjects_file)
     for subject in subjects_data:
         subject['present'] = False
-    os.chdir(os.path.dirname(__file__))
-    os.chdir('..')
+    #os.chdir(os.path.dirname(__file__))
+    #os.chdir('..')
+    os.chdir("S:\\Results day\\microsite")
     os.chdir(level['source'])
     row = OrderedDict([])
     rows = []
@@ -51,6 +53,7 @@ for level in levels:
             year = int(filename_split[1])
             scope = filename_split[2].upper()
             if year == target_year:
+                print source_file
                 rb = open_workbook(source_file)
                 rbws = rb.sheet_by_index(0)
                 for rbrow in range(11, rbws.nrows):            # ditching 10 header rows

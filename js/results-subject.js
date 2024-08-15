@@ -28,6 +28,7 @@ var urlLevel,
 	addthis_share,
 	addthis_config = addthis_config || {},
 	yearMin = 2016,
+	yearMax = 2024,
 	breakdown = 'country',
 	scope = 'UK',
 	grades = 'Selected',
@@ -67,28 +68,28 @@ var urlLevel,
 	levels = [
 		{
 			'name': 'A-Level',
-			'subjectsJSON': 'a-level-subjects.json?v=20200923',
-			'entriesJSON': 'a-level-entries.json?v=20200923',
-			'gradesJSON': 'a-level-grades.json?v=20200923',
-			'textJSON': 'a-level-text.json?v=20200923',
+			'subjectsJSON': 'a-level-subjects.json?v=20240815',
+			'entriesJSON': 'a-level-entries.json?v=20240815',
+			'gradesJSON': 'a-level-grades.json?v=20240815',
+			'textJSON': 'a-level-text.json?v=20240815',
 			'gradesAll': ['A*', 'A or above', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A*', 'A or above', 'C or above', 'E or above']
 		},
 		{
 			'name': 'AS-Level',
-			'subjectsJSON': 'as-level-subjects.json?v=20200923',
-			'entriesJSON': 'as-level-entries.json?v=20200923',
-			'gradesJSON': 'as-level-grades.json?v=20200923',
-			'textJSON': 'as-level-text.json?v=20200923',
+			'subjectsJSON': 'as-level-subjects.json?v=20240815',
+			'entriesJSON': 'as-level-entries.json?v=20240815',
+			'gradesJSON': 'as-level-grades.json?v=20240815',
+			'textJSON': 'as-level-text.json?v=20240815',
 			'gradesAll': ['A', 'B or above', 'C or above', 'D or above', 'E or above', 'U or above'],
 			'gradesSelected': ['A', 'C or above', 'E or above']
 		},
 		{
 			'name': 'GCSE',
-			'subjectsJSON': 'gcse-subjects.json?v=20200923',
-			'entriesJSON': 'gcse-entries.json?v=20200923',
-			'gradesJSON': 'gcse-grades.json?v=20200923',
-			'textJSON': 'gcse-text.json?v=20200923',
+			'subjectsJSON': 'gcse-subjects.json?v=20240815',
+			'entriesJSON': 'gcse-entries.json?v=20240815',
+			'gradesJSON': 'gcse-grades.json?v=20240815',
+			'textJSON': 'gcse-text.json?v=20240815',
 			'gradesAll': ['7/A or above', '4/C or above', '1/G or above', 'U or above'],
 			'gradesSelected': ['7/A or above', '4/C or above', '1/G or above']
 		}
@@ -104,7 +105,7 @@ var entriesChartOptions = {
 	colors: null,
 	xAxis: {		// set here rather than in theme, so can be set dynamically
 		min: yearMin,
-		max: yearMin + 4,
+		max: yearMax,
 		tickInterval: 1
 	},
 	yAxis: {
@@ -164,7 +165,7 @@ var entriesSmallMultipleOptions = {		// easier to create a new object, with no e
 		enabled: false
 	},
 	xAxis: {		// set here rather than in theme, so can be set dynamically
-		max: yearMin + 4,
+		max: yearMax,
 		min: yearMin,
 		tickInterval: 1
 	},
@@ -183,7 +184,7 @@ var gradesChartOptions = {
 	colors: null,
 	xAxis: {		// set here rather than in theme, so can be set dynamically
 		min: yearMin,
-		max: yearMin + 4,
+		max: yearMax,
 		tickInterval: 1
 	},
 	yAxis: {
@@ -393,9 +394,9 @@ $(function () {
 									if (relatedArray.length == array.length) {
 										relatedArray.forEach(function (subject_name_clean, innerIndex, innerArray) {
 											if (innerIndex != innerArray.length - 1) {		// final element
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20200923">' + subject_name_clean + '</a>,';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20240815">' + subject_name_clean + '</a>,';
 											} else {
-												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20200923">' + subject_name_clean + '</a>';
+												$('#related-subjects-section h5')[0].innerHTML = $('#related-subjects-section h5')[0].innerHTML + ' <a href="/' + level.toLowerCase() + '/' + subject_name_clean.replace(/\W+/g, '-').toLowerCase() + '.php?v=20240815">' + subject_name_clean + '</a>';
 											}
 										});
 									}
@@ -431,7 +432,7 @@ $(function () {
 					}
 				}
 				addthis_share = {
-					title: level + ' results day 2020: Entry and attainment trends in ' + subject_name_clean_lc,
+					title: level + ' results day ' + yearMax + ': Entry and attainment trends in ' + subject_name_clean_lc,
 					description: 'GCSE and A-Level results analysis - FFT Education Datalab',
 					passthrough: {
 						twitter: {
@@ -462,13 +463,13 @@ $(function () {
 function goBack () {
 	urlLevel = window.location.href.split('/')[3].split('.')[0];
 	if (urlLevel == 'a-level') {
-		window.location.href = '/a-level.php?v=20200923';
+		window.location.href = '/a-level.php?v=20240815';
 	}
 	else if (urlLevel == 'as-level') {
-		window.location.href = '/as-level.php?v=20200923';
+		window.location.href = '/as-level.php?v=20240815';
 	}
 	else if (urlLevel == 'gcse') {
-		window.location.href = '/gcse.php?v=20200923';
+		window.location.href = '/gcse.php?v=20240815';
 	}
 }
 
@@ -582,7 +583,7 @@ function readEntriesData () {
 				entriesChartOptions.colors = entriesChartColoursArray
 				entriesChartOptions.exporting.filename = (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-entries').replace(/\W+/g, '-').toLowerCase()
 				entriesChartOptions.series = entriesData
-				entriesChartOptions.title.text = level + ' entries in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
+				entriesChartOptions.title.text = level + ' entries in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMax)
 				if (dataMax < 10) {
 					entriesChartOptions.yAxis.max = 10;
 				}
@@ -609,7 +610,7 @@ function readEntriesData () {
 			}
 			else if (urlSubject == 'small_multiple') {
 				entriesSmallMultipleOptions.colors = entriesChartColoursArray
-				document.getElementById('chartTitle').innerHTML = level + ' entries in selected EBacc subjects, ' + yearMin + '-2020'
+				document.getElementById('chartTitle').innerHTML = level + ' entries in selected EBacc subjects, ' + yearMin + '-' + yearMax
 				if (isNaN(Number(scope.slice(scope.length - 1))) == 0) {		// age breakdown, age x country breakdown
 					document.getElementById('chartSubtitle').innerHTML = scopeDict[scope];
 				}
@@ -674,7 +675,7 @@ function readGradesData () {
 				gradesChartSubtitle = genderDict[gender] + ' students, ' + scopeDict[scope] + ', ' + gradesDict[grades];
 			}
 			gradesChartOptions.series = gradesData
-			gradesChartOptions.title.text = level + ' grades in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMin + 4)
+			gradesChartOptions.title.text = level + ' grades in ' + subject_name_clean_lc + ', ' + yearMin + '-' + Number(yearMax)
 			gradesChartOptions.subtitle.text = gradesChartSubtitle + '<br><em>Cumulative percentage attaining grade</em>'
 			gradesChartOptions.colors = gradesChartColoursArray
 			gradesChartOptions.exporting.filename = (level + '-' + subject_name_clean_lc.replace(/br/, '') + '-' + scope + '-' + gender + '-' + grades + '-grades').replace(/\W+/g, '-').toLowerCase()
