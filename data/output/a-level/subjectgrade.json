@@ -1,0 +1,2172 @@
+[
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.215, 
+        "pct_2022": 0.187, 
+        "pct_2023": 0.13, 
+        "pct_2024": 0.139, 
+        "grade": "A*", 
+        "pct_2019": 0.122, 
+        "subject": "Art and design subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.25, 
+        "pct_2022": 0.198, 
+        "pct_2023": 0.178, 
+        "pct_2024": 0.181, 
+        "grade": "A", 
+        "pct_2019": 0.155, 
+        "subject": "Art and design subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.288, 
+        "pct_2022": 0.317, 
+        "pct_2023": 0.315, 
+        "pct_2024": 0.316, 
+        "grade": "B", 
+        "pct_2019": 0.327, 
+        "subject": "Art and design subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.178, 
+        "pct_2022": 0.201, 
+        "pct_2023": 0.227, 
+        "pct_2024": 0.223, 
+        "grade": "C", 
+        "pct_2019": 0.244, 
+        "subject": "Art and design subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.05, 
+        "pct_2022": 0.07, 
+        "pct_2023": 0.103, 
+        "pct_2024": 0.098, 
+        "grade": "D", 
+        "pct_2019": 0.108, 
+        "subject": "Art and design subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.016, 
+        "pct_2022": 0.022, 
+        "pct_2023": 0.037, 
+        "pct_2024": 0.034, 
+        "grade": "E", 
+        "pct_2019": 0.035, 
+        "subject": "Art and design subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.003, 
+        "pct_2022": 0.005, 
+        "pct_2023": 0.01, 
+        "pct_2024": 0.009, 
+        "grade": "U", 
+        "pct_2019": 0.009, 
+        "subject": "Art and design subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.182, 
+        "pct_2022": 0.128, 
+        "pct_2023": 0.084, 
+        "pct_2024": 0.089, 
+        "grade": "A*", 
+        "pct_2019": 0.066, 
+        "subject": "Biology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.259, 
+        "pct_2022": 0.21, 
+        "pct_2023": 0.175, 
+        "pct_2024": 0.182, 
+        "grade": "A", 
+        "pct_2019": 0.169, 
+        "subject": "Biology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.24, 
+        "pct_2022": 0.214, 
+        "pct_2023": 0.214, 
+        "pct_2024": 0.21, 
+        "grade": "B", 
+        "pct_2019": 0.204, 
+        "subject": "Biology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.18, 
+        "pct_2022": 0.198, 
+        "pct_2023": 0.201, 
+        "pct_2024": 0.209, 
+        "grade": "C", 
+        "pct_2019": 0.224, 
+        "subject": "Biology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.095, 
+        "pct_2022": 0.147, 
+        "pct_2023": 0.17, 
+        "pct_2024": 0.162, 
+        "grade": "D", 
+        "pct_2019": 0.191, 
+        "subject": "Biology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.039, 
+        "pct_2022": 0.08, 
+        "pct_2023": 0.111, 
+        "pct_2024": 0.1, 
+        "grade": "E", 
+        "pct_2019": 0.105, 
+        "subject": "Biology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.005, 
+        "pct_2022": 0.023, 
+        "pct_2023": 0.045, 
+        "pct_2024": 0.048, 
+        "grade": "U", 
+        "pct_2019": 0.041, 
+        "subject": "Biology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.101, 
+        "pct_2022": 0.073, 
+        "pct_2023": 0.039, 
+        "pct_2024": 0.04, 
+        "grade": "A*", 
+        "pct_2019": 0.031, 
+        "subject": "Business studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.215, 
+        "pct_2022": 0.171, 
+        "pct_2023": 0.113, 
+        "pct_2024": 0.115, 
+        "grade": "A", 
+        "pct_2019": 0.11, 
+        "subject": "Business studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.305, 
+        "pct_2022": 0.348, 
+        "pct_2023": 0.304, 
+        "pct_2024": 0.295, 
+        "grade": "B", 
+        "pct_2019": 0.29, 
+        "subject": "Business studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.244, 
+        "pct_2022": 0.24, 
+        "pct_2023": 0.289, 
+        "pct_2024": 0.292, 
+        "grade": "C", 
+        "pct_2019": 0.304, 
+        "subject": "Business studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.096, 
+        "pct_2022": 0.114, 
+        "pct_2023": 0.168, 
+        "pct_2024": 0.171, 
+        "grade": "D", 
+        "pct_2019": 0.178, 
+        "subject": "Business studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.034, 
+        "pct_2022": 0.04, 
+        "pct_2023": 0.063, 
+        "pct_2024": 0.064, 
+        "grade": "E", 
+        "pct_2019": 0.065, 
+        "subject": "Business studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.005, 
+        "pct_2022": 0.014, 
+        "pct_2023": 0.024, 
+        "pct_2024": 0.023, 
+        "grade": "U", 
+        "pct_2019": 0.022, 
+        "subject": "Business studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.19, 
+        "pct_2022": 0.136, 
+        "pct_2023": 0.089, 
+        "pct_2024": 0.095, 
+        "grade": "A*", 
+        "pct_2019": 0.072, 
+        "subject": "Chemistry"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.286, 
+        "pct_2022": 0.244, 
+        "pct_2023": 0.222, 
+        "pct_2024": 0.227, 
+        "grade": "A", 
+        "pct_2019": 0.212, 
+        "subject": "Chemistry"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.223, 
+        "pct_2022": 0.203, 
+        "pct_2023": 0.216, 
+        "pct_2024": 0.226, 
+        "grade": "B", 
+        "pct_2019": 0.23, 
+        "subject": "Chemistry"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.16, 
+        "pct_2022": 0.171, 
+        "pct_2023": 0.18, 
+        "pct_2024": 0.181, 
+        "grade": "C", 
+        "pct_2019": 0.2, 
+        "subject": "Chemistry"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.089, 
+        "pct_2022": 0.134, 
+        "pct_2023": 0.148, 
+        "pct_2024": 0.134, 
+        "grade": "D", 
+        "pct_2019": 0.152, 
+        "subject": "Chemistry"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.046, 
+        "pct_2022": 0.086, 
+        "pct_2023": 0.102, 
+        "pct_2024": 0.091, 
+        "grade": "E", 
+        "pct_2019": 0.093, 
+        "subject": "Chemistry"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.006, 
+        "pct_2022": 0.026, 
+        "pct_2023": 0.043, 
+        "pct_2024": 0.046, 
+        "grade": "U", 
+        "pct_2019": 0.041, 
+        "subject": "Chemistry"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.314, 
+        "pct_2022": 0.246, 
+        "pct_2023": 0.103, 
+        "pct_2024": 0.102, 
+        "grade": "A*", 
+        "pct_2019": 0.093, 
+        "subject": "Classical subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.294, 
+        "pct_2022": 0.272, 
+        "pct_2023": 0.25, 
+        "pct_2024": 0.24, 
+        "grade": "A", 
+        "pct_2019": 0.251, 
+        "subject": "Classical subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.223, 
+        "pct_2022": 0.254, 
+        "pct_2023": 0.305, 
+        "pct_2024": 0.306, 
+        "grade": "B", 
+        "pct_2019": 0.306, 
+        "subject": "Classical subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.124, 
+        "pct_2022": 0.146, 
+        "pct_2023": 0.208, 
+        "pct_2024": 0.214, 
+        "grade": "C", 
+        "pct_2019": 0.218, 
+        "subject": "Classical subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.036, 
+        "pct_2022": 0.057, 
+        "pct_2023": 0.091, 
+        "pct_2024": 0.094, 
+        "grade": "D", 
+        "pct_2019": 0.096, 
+        "subject": "Classical subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.007, 
+        "pct_2022": 0.019, 
+        "pct_2023": 0.033, 
+        "pct_2024": 0.034, 
+        "grade": "E", 
+        "pct_2019": 0.028, 
+        "subject": "Classical subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.002, 
+        "pct_2022": 0.006, 
+        "pct_2023": 0.01, 
+        "pct_2024": 0.01, 
+        "grade": "U", 
+        "pct_2019": 0.008, 
+        "subject": "Classical subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.198, 
+        "pct_2022": 0.144, 
+        "pct_2023": 0.05, 
+        "pct_2024": 0.057, 
+        "grade": "A*", 
+        "pct_2019": 0.033, 
+        "subject": "Computing"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.242, 
+        "pct_2022": 0.207, 
+        "pct_2023": 0.167, 
+        "pct_2024": 0.181, 
+        "grade": "A", 
+        "pct_2019": 0.143, 
+        "subject": "Computing"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.243, 
+        "pct_2022": 0.225, 
+        "pct_2023": 0.221, 
+        "pct_2024": 0.218, 
+        "grade": "B", 
+        "pct_2019": 0.223, 
+        "subject": "Computing"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.188, 
+        "pct_2022": 0.185, 
+        "pct_2023": 0.215, 
+        "pct_2024": 0.211, 
+        "grade": "C", 
+        "pct_2019": 0.23, 
+        "subject": "Computing"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.089, 
+        "pct_2022": 0.144, 
+        "pct_2023": 0.178, 
+        "pct_2024": 0.178, 
+        "grade": "D", 
+        "pct_2019": 0.203, 
+        "subject": "Computing"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.035, 
+        "pct_2022": 0.069, 
+        "pct_2023": 0.116, 
+        "pct_2024": 0.106, 
+        "grade": "E", 
+        "pct_2019": 0.115, 
+        "subject": "Computing"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.005, 
+        "pct_2022": 0.026, 
+        "pct_2023": 0.053, 
+        "pct_2024": 0.049, 
+        "grade": "U", 
+        "pct_2019": 0.053, 
+        "subject": "Computing"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.185, 
+        "pct_2022": 0.127, 
+        "pct_2023": 0.054, 
+        "pct_2024": 0.063, 
+        "grade": "A*", 
+        "pct_2019": 0.045, 
+        "subject": "Design and technology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.235, 
+        "pct_2022": 0.177, 
+        "pct_2023": 0.113, 
+        "pct_2024": 0.128, 
+        "grade": "A", 
+        "pct_2019": 0.114, 
+        "subject": "Design and technology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.264, 
+        "pct_2022": 0.266, 
+        "pct_2023": 0.239, 
+        "pct_2024": 0.263, 
+        "grade": "B", 
+        "pct_2019": 0.236, 
+        "subject": "Design and technology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.191, 
+        "pct_2022": 0.238, 
+        "pct_2023": 0.268, 
+        "pct_2024": 0.257, 
+        "grade": "C", 
+        "pct_2019": 0.28, 
+        "subject": "Design and technology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.086, 
+        "pct_2022": 0.128, 
+        "pct_2023": 0.195, 
+        "pct_2024": 0.172, 
+        "grade": "D", 
+        "pct_2019": 0.207, 
+        "subject": "Design and technology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.033, 
+        "pct_2022": 0.046, 
+        "pct_2023": 0.096, 
+        "pct_2024": 0.085, 
+        "grade": "E", 
+        "pct_2019": 0.089, 
+        "subject": "Design and technology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.006, 
+        "pct_2022": 0.018, 
+        "pct_2023": 0.035, 
+        "pct_2024": 0.032, 
+        "grade": "U", 
+        "pct_2019": 0.029, 
+        "subject": "Design and technology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.204, 
+        "pct_2022": 0.149, 
+        "pct_2023": 0.054, 
+        "pct_2024": 0.06, 
+        "grade": "A*", 
+        "pct_2019": 0.043, 
+        "subject": "Drama"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.279, 
+        "pct_2022": 0.234, 
+        "pct_2023": 0.154, 
+        "pct_2024": 0.158, 
+        "grade": "A", 
+        "pct_2019": 0.137, 
+        "subject": "Drama"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.297, 
+        "pct_2022": 0.333, 
+        "pct_2023": 0.347, 
+        "pct_2024": 0.375, 
+        "grade": "B", 
+        "pct_2019": 0.326, 
+        "subject": "Drama"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.168, 
+        "pct_2022": 0.194, 
+        "pct_2023": 0.273, 
+        "pct_2024": 0.271, 
+        "grade": "C", 
+        "pct_2019": 0.304, 
+        "subject": "Drama"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.043, 
+        "pct_2022": 0.068, 
+        "pct_2023": 0.131, 
+        "pct_2024": 0.102, 
+        "grade": "D", 
+        "pct_2019": 0.143, 
+        "subject": "Drama"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.007, 
+        "pct_2022": 0.017, 
+        "pct_2023": 0.033, 
+        "pct_2024": 0.029, 
+        "grade": "E", 
+        "pct_2019": 0.04, 
+        "subject": "Drama"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.002, 
+        "pct_2022": 0.005, 
+        "pct_2023": 0.008, 
+        "pct_2024": 0.005, 
+        "grade": "U", 
+        "pct_2019": 0.007, 
+        "subject": "Drama"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.185, 
+        "pct_2022": 0.135, 
+        "pct_2023": 0.073, 
+        "pct_2024": 0.076, 
+        "grade": "A*", 
+        "pct_2019": 0.065, 
+        "subject": "Economics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.28, 
+        "pct_2022": 0.246, 
+        "pct_2023": 0.217, 
+        "pct_2024": 0.226, 
+        "grade": "A", 
+        "pct_2019": 0.222, 
+        "subject": "Economics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.265, 
+        "pct_2022": 0.285, 
+        "pct_2023": 0.289, 
+        "pct_2024": 0.291, 
+        "grade": "B", 
+        "pct_2019": 0.289, 
+        "subject": "Economics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.173, 
+        "pct_2022": 0.194, 
+        "pct_2023": 0.222, 
+        "pct_2024": 0.221, 
+        "grade": "C", 
+        "pct_2019": 0.231, 
+        "subject": "Economics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.068, 
+        "pct_2022": 0.093, 
+        "pct_2023": 0.126, 
+        "pct_2024": 0.118, 
+        "grade": "D", 
+        "pct_2019": 0.129, 
+        "subject": "Economics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.025, 
+        "pct_2022": 0.034, 
+        "pct_2023": 0.053, 
+        "pct_2024": 0.049, 
+        "grade": "E", 
+        "pct_2019": 0.046, 
+        "subject": "Economics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.004, 
+        "pct_2022": 0.013, 
+        "pct_2023": 0.02, 
+        "pct_2024": 0.019, 
+        "grade": "U", 
+        "pct_2019": 0.018, 
+        "subject": "Economics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.078, 
+        "pct_2022": 0.062, 
+        "pct_2023": 0.024, 
+        "pct_2024": 0.023, 
+        "grade": "A*", 
+        "pct_2019": 0.018, 
+        "subject": "English language"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.197, 
+        "pct_2022": 0.162, 
+        "pct_2023": 0.098, 
+        "pct_2024": 0.092, 
+        "grade": "A", 
+        "pct_2019": 0.095, 
+        "subject": "English language"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.328, 
+        "pct_2022": 0.353, 
+        "pct_2023": 0.32, 
+        "pct_2024": 0.308, 
+        "grade": "B", 
+        "pct_2019": 0.313, 
+        "subject": "English language"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.276, 
+        "pct_2022": 0.28, 
+        "pct_2023": 0.349, 
+        "pct_2024": 0.341, 
+        "grade": "C", 
+        "pct_2019": 0.363, 
+        "subject": "English language"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.093, 
+        "pct_2022": 0.112, 
+        "pct_2023": 0.166, 
+        "pct_2024": 0.179, 
+        "grade": "D", 
+        "pct_2019": 0.171, 
+        "subject": "English language"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.025, 
+        "pct_2022": 0.025, 
+        "pct_2023": 0.035, 
+        "pct_2024": 0.047, 
+        "grade": "E", 
+        "pct_2019": 0.033, 
+        "subject": "English language"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.003, 
+        "pct_2022": 0.006, 
+        "pct_2023": 0.008, 
+        "pct_2024": 0.01, 
+        "grade": "U", 
+        "pct_2019": 0.007, 
+        "subject": "English language"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.2, 
+        "pct_2022": 0.165, 
+        "pct_2023": 0.1, 
+        "pct_2024": 0.098, 
+        "grade": "A*", 
+        "pct_2019": 0.086, 
+        "subject": "English literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.24, 
+        "pct_2022": 0.202, 
+        "pct_2023": 0.154, 
+        "pct_2024": 0.154, 
+        "grade": "A", 
+        "pct_2019": 0.155, 
+        "subject": "English literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.281, 
+        "pct_2022": 0.305, 
+        "pct_2023": 0.322, 
+        "pct_2024": 0.32, 
+        "grade": "B", 
+        "pct_2019": 0.288, 
+        "subject": "English literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.196, 
+        "pct_2022": 0.21, 
+        "pct_2023": 0.253, 
+        "pct_2024": 0.257, 
+        "grade": "C", 
+        "pct_2019": 0.271, 
+        "subject": "English literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.065, 
+        "pct_2022": 0.088, 
+        "pct_2023": 0.126, 
+        "pct_2024": 0.127, 
+        "grade": "D", 
+        "pct_2019": 0.153, 
+        "subject": "English literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.016, 
+        "pct_2022": 0.023, 
+        "pct_2023": 0.037, 
+        "pct_2024": 0.036, 
+        "grade": "E", 
+        "pct_2019": 0.04, 
+        "subject": "English literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.002, 
+        "pct_2022": 0.007, 
+        "pct_2023": 0.008, 
+        "pct_2024": 0.008, 
+        "grade": "U", 
+        "pct_2019": 0.007, 
+        "subject": "English literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.111, 
+        "pct_2022": 0.09, 
+        "pct_2023": 0.042, 
+        "pct_2024": 0.042, 
+        "grade": "A*", 
+        "pct_2019": 0.029, 
+        "subject": "English language and literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.199, 
+        "pct_2022": 0.16, 
+        "pct_2023": 0.104, 
+        "pct_2024": 0.101, 
+        "grade": "A", 
+        "pct_2019": 0.092, 
+        "subject": "English language and literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.317, 
+        "pct_2022": 0.347, 
+        "pct_2023": 0.306, 
+        "pct_2024": 0.299, 
+        "grade": "B", 
+        "pct_2019": 0.286, 
+        "subject": "English language and literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.259, 
+        "pct_2022": 0.264, 
+        "pct_2023": 0.335, 
+        "pct_2024": 0.325, 
+        "grade": "C", 
+        "pct_2019": 0.348, 
+        "subject": "English language and literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.092, 
+        "pct_2022": 0.103, 
+        "pct_2023": 0.164, 
+        "pct_2024": 0.179, 
+        "grade": "D", 
+        "pct_2019": 0.196, 
+        "subject": "English language and literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.019, 
+        "pct_2022": 0.028, 
+        "pct_2023": 0.041, 
+        "pct_2024": 0.043, 
+        "grade": "E", 
+        "pct_2019": 0.041, 
+        "subject": "English language and literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.003, 
+        "pct_2022": 0.008, 
+        "pct_2023": 0.008, 
+        "pct_2024": 0.011, 
+        "grade": "U", 
+        "pct_2019": 0.008, 
+        "subject": "English language and literature"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.264, 
+        "pct_2022": 0.201, 
+        "pct_2023": 0.106, 
+        "pct_2024": 0.12, 
+        "grade": "A*", 
+        "pct_2019": 0.097, 
+        "subject": "French"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.333, 
+        "pct_2022": 0.3, 
+        "pct_2023": 0.27, 
+        "pct_2024": 0.271, 
+        "grade": "A", 
+        "pct_2019": 0.267, 
+        "subject": "French"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.23, 
+        "pct_2022": 0.239, 
+        "pct_2023": 0.286, 
+        "pct_2024": 0.293, 
+        "grade": "B", 
+        "pct_2019": 0.304, 
+        "subject": "French"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.121, 
+        "pct_2022": 0.149, 
+        "pct_2023": 0.18, 
+        "pct_2024": 0.182, 
+        "grade": "C", 
+        "pct_2019": 0.184, 
+        "subject": "French"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.039, 
+        "pct_2022": 0.078, 
+        "pct_2023": 0.105, 
+        "pct_2024": 0.087, 
+        "grade": "D", 
+        "pct_2019": 0.096, 
+        "subject": "French"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.011, 
+        "pct_2022": 0.026, 
+        "pct_2023": 0.039, 
+        "pct_2024": 0.033, 
+        "grade": "E", 
+        "pct_2019": 0.04, 
+        "subject": "French"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.002, 
+        "pct_2022": 0.007, 
+        "pct_2023": 0.014, 
+        "pct_2024": 0.014, 
+        "grade": "U", 
+        "pct_2019": 0.012, 
+        "subject": "French"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.155, 
+        "pct_2022": 0.11, 
+        "pct_2023": 0.058, 
+        "pct_2024": 0.061, 
+        "grade": "A*", 
+        "pct_2019": 0.052, 
+        "subject": "Geography"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.256, 
+        "pct_2022": 0.221, 
+        "pct_2023": 0.179, 
+        "pct_2024": 0.181, 
+        "grade": "A", 
+        "pct_2019": 0.181, 
+        "subject": "Geography"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.276, 
+        "pct_2022": 0.306, 
+        "pct_2023": 0.296, 
+        "pct_2024": 0.295, 
+        "grade": "B", 
+        "pct_2019": 0.293, 
+        "subject": "Geography"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.201, 
+        "pct_2022": 0.219, 
+        "pct_2023": 0.257, 
+        "pct_2024": 0.25, 
+        "grade": "C", 
+        "pct_2019": 0.266, 
+        "subject": "Geography"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.083, 
+        "pct_2022": 0.1, 
+        "pct_2023": 0.141, 
+        "pct_2024": 0.141, 
+        "grade": "D", 
+        "pct_2019": 0.147, 
+        "subject": "Geography"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.026, 
+        "pct_2022": 0.034, 
+        "pct_2023": 0.051, 
+        "pct_2024": 0.055, 
+        "grade": "E", 
+        "pct_2019": 0.047, 
+        "subject": "Geography"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.003, 
+        "pct_2022": 0.01, 
+        "pct_2023": 0.018, 
+        "pct_2024": 0.017, 
+        "grade": "U", 
+        "pct_2019": 0.014, 
+        "subject": "Geography"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.341, 
+        "pct_2022": 0.266, 
+        "pct_2023": 0.141, 
+        "pct_2024": 0.16, 
+        "grade": "A*", 
+        "pct_2019": 0.121, 
+        "subject": "German"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.335, 
+        "pct_2022": 0.314, 
+        "pct_2023": 0.303, 
+        "pct_2024": 0.311, 
+        "grade": "A", 
+        "pct_2019": 0.283, 
+        "subject": "German"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.194, 
+        "pct_2022": 0.204, 
+        "pct_2023": 0.258, 
+        "pct_2024": 0.256, 
+        "grade": "B", 
+        "pct_2019": 0.245, 
+        "subject": "German"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.093, 
+        "pct_2022": 0.13, 
+        "pct_2023": 0.171, 
+        "pct_2024": 0.154, 
+        "grade": "C", 
+        "pct_2019": 0.193, 
+        "subject": "German"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.029, 
+        "pct_2022": 0.063, 
+        "pct_2023": 0.088, 
+        "pct_2024": 0.085, 
+        "grade": "D", 
+        "pct_2019": 0.112, 
+        "subject": "German"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.008, 
+        "pct_2022": 0.02, 
+        "pct_2023": 0.034, 
+        "pct_2024": 0.026, 
+        "grade": "E", 
+        "pct_2019": 0.041, 
+        "subject": "German"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.0, 
+        "pct_2022": 0.003, 
+        "pct_2023": 0.005, 
+        "pct_2024": 0.008, 
+        "grade": "U", 
+        "pct_2019": 0.005, 
+        "subject": "German"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.16, 
+        "pct_2022": 0.121, 
+        "pct_2023": 0.055, 
+        "pct_2024": 0.057, 
+        "grade": "A*", 
+        "pct_2019": 0.049, 
+        "subject": "History"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.269, 
+        "pct_2022": 0.226, 
+        "pct_2023": 0.186, 
+        "pct_2024": 0.186, 
+        "grade": "A", 
+        "pct_2019": 0.176, 
+        "subject": "History"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.287, 
+        "pct_2022": 0.316, 
+        "pct_2023": 0.314, 
+        "pct_2024": 0.313, 
+        "grade": "B", 
+        "pct_2019": 0.31, 
+        "subject": "History"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.193, 
+        "pct_2022": 0.212, 
+        "pct_2023": 0.248, 
+        "pct_2024": 0.256, 
+        "grade": "C", 
+        "pct_2019": 0.27, 
+        "subject": "History"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.069, 
+        "pct_2022": 0.091, 
+        "pct_2023": 0.135, 
+        "pct_2024": 0.134, 
+        "grade": "D", 
+        "pct_2019": 0.14, 
+        "subject": "History"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.019, 
+        "pct_2022": 0.026, 
+        "pct_2023": 0.048, 
+        "pct_2024": 0.042, 
+        "grade": "E", 
+        "pct_2019": 0.044, 
+        "subject": "History"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.003, 
+        "pct_2022": 0.008, 
+        "pct_2023": 0.014, 
+        "pct_2024": 0.012, 
+        "grade": "U", 
+        "pct_2019": 0.011, 
+        "subject": "History"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.103, 
+        "pct_2022": 0.08, 
+        "pct_2023": 0.047, 
+        "pct_2024": 0.047, 
+        "grade": "A*", 
+        "pct_2019": 0.041, 
+        "subject": "Law"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.212, 
+        "pct_2022": 0.17, 
+        "pct_2023": 0.116, 
+        "pct_2024": 0.12, 
+        "grade": "A", 
+        "pct_2019": 0.119, 
+        "subject": "Law"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.279, 
+        "pct_2022": 0.24, 
+        "pct_2023": 0.234, 
+        "pct_2024": 0.225, 
+        "grade": "B", 
+        "pct_2019": 0.238, 
+        "subject": "Law"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.235, 
+        "pct_2022": 0.223, 
+        "pct_2023": 0.243, 
+        "pct_2024": 0.241, 
+        "grade": "C", 
+        "pct_2019": 0.275, 
+        "subject": "Law"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.116, 
+        "pct_2022": 0.171, 
+        "pct_2023": 0.196, 
+        "pct_2024": 0.2, 
+        "grade": "D", 
+        "pct_2019": 0.193, 
+        "subject": "Law"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.047, 
+        "pct_2022": 0.091, 
+        "pct_2023": 0.12, 
+        "pct_2024": 0.124, 
+        "grade": "E", 
+        "pct_2019": 0.096, 
+        "subject": "Law"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.008, 
+        "pct_2022": 0.025, 
+        "pct_2023": 0.044, 
+        "pct_2024": 0.043, 
+        "grade": "U", 
+        "pct_2019": 0.038, 
+        "subject": "Law"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.283, 
+        "pct_2022": 0.228, 
+        "pct_2023": 0.165, 
+        "pct_2024": 0.167, 
+        "grade": "A*", 
+        "pct_2019": 0.163, 
+        "subject": "Mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.261, 
+        "pct_2022": 0.244, 
+        "pct_2023": 0.245, 
+        "pct_2024": 0.248, 
+        "grade": "A", 
+        "pct_2019": 0.242, 
+        "subject": "Mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.183, 
+        "pct_2022": 0.162, 
+        "pct_2023": 0.192, 
+        "pct_2024": 0.193, 
+        "grade": "B", 
+        "pct_2019": 0.179, 
+        "subject": "Mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.132, 
+        "pct_2022": 0.151, 
+        "pct_2023": 0.158, 
+        "pct_2024": 0.153, 
+        "grade": "C", 
+        "pct_2019": 0.167, 
+        "subject": "Mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.083, 
+        "pct_2022": 0.12, 
+        "pct_2023": 0.123, 
+        "pct_2024": 0.119, 
+        "grade": "D", 
+        "pct_2019": 0.135, 
+        "subject": "Mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.048, 
+        "pct_2022": 0.073, 
+        "pct_2023": 0.081, 
+        "pct_2024": 0.08, 
+        "grade": "E", 
+        "pct_2019": 0.082, 
+        "subject": "Mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.01, 
+        "pct_2022": 0.022, 
+        "pct_2023": 0.036, 
+        "pct_2024": 0.04, 
+        "grade": "U", 
+        "pct_2019": 0.032, 
+        "subject": "Mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.489, 
+        "pct_2022": 0.397, 
+        "pct_2023": 0.283, 
+        "pct_2024": 0.284, 
+        "grade": "A*", 
+        "pct_2019": 0.24, 
+        "subject": "Further mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.262, 
+        "pct_2022": 0.275, 
+        "pct_2023": 0.298, 
+        "pct_2024": 0.299, 
+        "grade": "A", 
+        "pct_2019": 0.291, 
+        "subject": "Further mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.132, 
+        "pct_2022": 0.155, 
+        "pct_2023": 0.187, 
+        "pct_2024": 0.208, 
+        "grade": "B", 
+        "pct_2019": 0.201, 
+        "subject": "Further mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.07, 
+        "pct_2022": 0.093, 
+        "pct_2023": 0.117, 
+        "pct_2024": 0.107, 
+        "grade": "C", 
+        "pct_2019": 0.132, 
+        "subject": "Further mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.029, 
+        "pct_2022": 0.05, 
+        "pct_2023": 0.063, 
+        "pct_2024": 0.056, 
+        "grade": "D", 
+        "pct_2019": 0.078, 
+        "subject": "Further mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.014, 
+        "pct_2022": 0.02, 
+        "pct_2023": 0.033, 
+        "pct_2024": 0.028, 
+        "grade": "E", 
+        "pct_2019": 0.036, 
+        "subject": "Further mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.004, 
+        "pct_2022": 0.01, 
+        "pct_2023": 0.019, 
+        "pct_2024": 0.018, 
+        "grade": "U", 
+        "pct_2019": 0.022, 
+        "subject": "Further mathematics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.079, 
+        "pct_2022": 0.063, 
+        "pct_2023": 0.02, 
+        "pct_2024": 0.022, 
+        "grade": "A*", 
+        "pct_2019": 0.015, 
+        "subject": "Media/film/TV studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.213, 
+        "pct_2022": 0.172, 
+        "pct_2023": 0.106, 
+        "pct_2024": 0.112, 
+        "grade": "A", 
+        "pct_2019": 0.095, 
+        "subject": "Media/film/TV studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.332, 
+        "pct_2022": 0.38, 
+        "pct_2023": 0.356, 
+        "pct_2024": 0.348, 
+        "grade": "B", 
+        "pct_2019": 0.336, 
+        "subject": "Media/film/TV studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.263, 
+        "pct_2022": 0.26, 
+        "pct_2023": 0.325, 
+        "pct_2024": 0.322, 
+        "grade": "C", 
+        "pct_2019": 0.356, 
+        "subject": "Media/film/TV studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.086, 
+        "pct_2022": 0.095, 
+        "pct_2023": 0.145, 
+        "pct_2024": 0.147, 
+        "grade": "D", 
+        "pct_2019": 0.155, 
+        "subject": "Media/film/TV studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.022, 
+        "pct_2022": 0.022, 
+        "pct_2023": 0.037, 
+        "pct_2024": 0.04, 
+        "grade": "E", 
+        "pct_2019": 0.034, 
+        "subject": "Media/film/TV studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.005, 
+        "pct_2022": 0.008, 
+        "pct_2023": 0.011, 
+        "pct_2024": 0.009, 
+        "grade": "U", 
+        "pct_2019": 0.009, 
+        "subject": "Media/film/TV studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.241, 
+        "pct_2022": 0.173, 
+        "pct_2023": 0.064, 
+        "pct_2024": 0.07, 
+        "grade": "A*", 
+        "pct_2019": 0.043, 
+        "subject": "Music"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.304, 
+        "pct_2022": 0.249, 
+        "pct_2023": 0.168, 
+        "pct_2024": 0.172, 
+        "grade": "A", 
+        "pct_2019": 0.15, 
+        "subject": "Music"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.244, 
+        "pct_2022": 0.252, 
+        "pct_2023": 0.265, 
+        "pct_2024": 0.282, 
+        "grade": "B", 
+        "pct_2019": 0.266, 
+        "subject": "Music"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.139, 
+        "pct_2022": 0.181, 
+        "pct_2023": 0.252, 
+        "pct_2024": 0.245, 
+        "grade": "C", 
+        "pct_2019": 0.275, 
+        "subject": "Music"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.051, 
+        "pct_2022": 0.098, 
+        "pct_2023": 0.152, 
+        "pct_2024": 0.155, 
+        "grade": "D", 
+        "pct_2019": 0.178, 
+        "subject": "Music"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.019, 
+        "pct_2022": 0.035, 
+        "pct_2023": 0.075, 
+        "pct_2024": 0.057, 
+        "grade": "E", 
+        "pct_2019": 0.069, 
+        "subject": "Music"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.002, 
+        "pct_2022": 0.012, 
+        "pct_2023": 0.024, 
+        "pct_2024": 0.019, 
+        "grade": "U", 
+        "pct_2019": 0.019, 
+        "subject": "Music"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.18, 
+        "pct_2022": 0.124, 
+        "pct_2023": 0.05, 
+        "pct_2024": 0.052, 
+        "grade": "A*", 
+        "pct_2019": 0.039, 
+        "subject": "Physical education"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.243, 
+        "pct_2022": 0.184, 
+        "pct_2023": 0.118, 
+        "pct_2024": 0.122, 
+        "grade": "A", 
+        "pct_2019": 0.108, 
+        "subject": "Physical education"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.268, 
+        "pct_2022": 0.261, 
+        "pct_2023": 0.248, 
+        "pct_2024": 0.25, 
+        "grade": "B", 
+        "pct_2019": 0.25, 
+        "subject": "Physical education"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.202, 
+        "pct_2022": 0.225, 
+        "pct_2023": 0.258, 
+        "pct_2024": 0.26, 
+        "grade": "C", 
+        "pct_2019": 0.278, 
+        "subject": "Physical education"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.077, 
+        "pct_2022": 0.134, 
+        "pct_2023": 0.192, 
+        "pct_2024": 0.192, 
+        "grade": "D", 
+        "pct_2019": 0.198, 
+        "subject": "Physical education"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.028, 
+        "pct_2022": 0.055, 
+        "pct_2023": 0.099, 
+        "pct_2024": 0.09, 
+        "grade": "E", 
+        "pct_2019": 0.095, 
+        "subject": "Physical education"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.002, 
+        "pct_2022": 0.017, 
+        "pct_2023": 0.035, 
+        "pct_2024": 0.034, 
+        "grade": "U", 
+        "pct_2019": 0.032, 
+        "subject": "Physical education"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.216, 
+        "pct_2022": 0.164, 
+        "pct_2023": 0.108, 
+        "pct_2024": 0.112, 
+        "grade": "A*", 
+        "pct_2019": 0.085, 
+        "subject": "Physics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.245, 
+        "pct_2022": 0.221, 
+        "pct_2023": 0.2, 
+        "pct_2024": 0.203, 
+        "grade": "A", 
+        "pct_2019": 0.19, 
+        "subject": "Physics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.22, 
+        "pct_2022": 0.207, 
+        "pct_2023": 0.196, 
+        "pct_2024": 0.194, 
+        "grade": "B", 
+        "pct_2019": 0.224, 
+        "subject": "Physics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.167, 
+        "pct_2022": 0.178, 
+        "pct_2023": 0.181, 
+        "pct_2024": 0.183, 
+        "grade": "C", 
+        "pct_2019": 0.201, 
+        "subject": "Physics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.095, 
+        "pct_2022": 0.131, 
+        "pct_2023": 0.155, 
+        "pct_2024": 0.159, 
+        "grade": "D", 
+        "pct_2019": 0.159, 
+        "subject": "Physics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.05, 
+        "pct_2022": 0.074, 
+        "pct_2023": 0.111, 
+        "pct_2024": 0.102, 
+        "grade": "E", 
+        "pct_2019": 0.093, 
+        "subject": "Physics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.007, 
+        "pct_2022": 0.025, 
+        "pct_2023": 0.049, 
+        "pct_2024": 0.047, 
+        "grade": "U", 
+        "pct_2019": 0.048, 
+        "subject": "Physics"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.195, 
+        "pct_2022": 0.15, 
+        "pct_2023": 0.082, 
+        "pct_2024": 0.086, 
+        "grade": "A*", 
+        "pct_2019": 0.068, 
+        "subject": "Political studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.269, 
+        "pct_2022": 0.24, 
+        "pct_2023": 0.192, 
+        "pct_2024": 0.197, 
+        "grade": "A", 
+        "pct_2019": 0.192, 
+        "subject": "Political studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.262, 
+        "pct_2022": 0.293, 
+        "pct_2023": 0.286, 
+        "pct_2024": 0.288, 
+        "grade": "B", 
+        "pct_2019": 0.293, 
+        "subject": "Political studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.178, 
+        "pct_2022": 0.188, 
+        "pct_2023": 0.23, 
+        "pct_2024": 0.217, 
+        "grade": "C", 
+        "pct_2019": 0.246, 
+        "subject": "Political studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.068, 
+        "pct_2022": 0.088, 
+        "pct_2023": 0.128, 
+        "pct_2024": 0.131, 
+        "grade": "D", 
+        "pct_2019": 0.131, 
+        "subject": "Political studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.024, 
+        "pct_2022": 0.029, 
+        "pct_2023": 0.06, 
+        "pct_2024": 0.059, 
+        "grade": "E", 
+        "pct_2019": 0.05, 
+        "subject": "Political studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.004, 
+        "pct_2022": 0.012, 
+        "pct_2023": 0.022, 
+        "pct_2024": 0.022, 
+        "grade": "U", 
+        "pct_2019": 0.02, 
+        "subject": "Political studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.139, 
+        "pct_2022": 0.104, 
+        "pct_2023": 0.056, 
+        "pct_2024": 0.058, 
+        "grade": "A*", 
+        "pct_2019": 0.042, 
+        "subject": "Psychology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.23, 
+        "pct_2022": 0.182, 
+        "pct_2023": 0.132, 
+        "pct_2024": 0.135, 
+        "grade": "A", 
+        "pct_2019": 0.123, 
+        "subject": "Psychology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.274, 
+        "pct_2022": 0.282, 
+        "pct_2023": 0.256, 
+        "pct_2024": 0.266, 
+        "grade": "B", 
+        "pct_2019": 0.264, 
+        "subject": "Psychology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.212, 
+        "pct_2022": 0.225, 
+        "pct_2023": 0.253, 
+        "pct_2024": 0.25, 
+        "grade": "C", 
+        "pct_2019": 0.278, 
+        "subject": "Psychology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.099, 
+        "pct_2022": 0.133, 
+        "pct_2023": 0.175, 
+        "pct_2024": 0.169, 
+        "grade": "D", 
+        "pct_2019": 0.18, 
+        "subject": "Psychology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.04, 
+        "pct_2022": 0.056, 
+        "pct_2023": 0.094, 
+        "pct_2024": 0.088, 
+        "grade": "E", 
+        "pct_2019": 0.084, 
+        "subject": "Psychology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.006, 
+        "pct_2022": 0.018, 
+        "pct_2023": 0.034, 
+        "pct_2024": 0.034, 
+        "grade": "U", 
+        "pct_2019": 0.029, 
+        "subject": "Psychology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.164, 
+        "pct_2022": 0.125, 
+        "pct_2023": 0.059, 
+        "pct_2024": 0.061, 
+        "grade": "A*", 
+        "pct_2019": 0.042, 
+        "subject": "Religious studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.272, 
+        "pct_2022": 0.231, 
+        "pct_2023": 0.195, 
+        "pct_2024": 0.195, 
+        "grade": "A", 
+        "pct_2019": 0.173, 
+        "subject": "Religious studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.287, 
+        "pct_2022": 0.32, 
+        "pct_2023": 0.299, 
+        "pct_2024": 0.289, 
+        "grade": "B", 
+        "pct_2019": 0.283, 
+        "subject": "Religious studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.19, 
+        "pct_2022": 0.2, 
+        "pct_2023": 0.237, 
+        "pct_2024": 0.236, 
+        "grade": "C", 
+        "pct_2019": 0.261, 
+        "subject": "Religious studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.062, 
+        "pct_2022": 0.085, 
+        "pct_2023": 0.132, 
+        "pct_2024": 0.141, 
+        "grade": "D", 
+        "pct_2019": 0.159, 
+        "subject": "Religious studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.022, 
+        "pct_2022": 0.029, 
+        "pct_2023": 0.058, 
+        "pct_2024": 0.059, 
+        "grade": "E", 
+        "pct_2019": 0.063, 
+        "subject": "Religious studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.003, 
+        "pct_2022": 0.01, 
+        "pct_2023": 0.02, 
+        "pct_2024": 0.019, 
+        "grade": "U", 
+        "pct_2019": 0.019, 
+        "subject": "Religious studies"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.108, 
+        "pct_2022": 0.09, 
+        "pct_2023": 0.055, 
+        "pct_2024": 0.053, 
+        "grade": "A*", 
+        "pct_2019": 0.047, 
+        "subject": "Sociology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.213, 
+        "pct_2022": 0.175, 
+        "pct_2023": 0.131, 
+        "pct_2024": 0.126, 
+        "grade": "A", 
+        "pct_2019": 0.134, 
+        "subject": "Sociology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.302, 
+        "pct_2022": 0.308, 
+        "pct_2023": 0.296, 
+        "pct_2024": 0.282, 
+        "grade": "B", 
+        "pct_2019": 0.289, 
+        "subject": "Sociology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.242, 
+        "pct_2022": 0.248, 
+        "pct_2023": 0.279, 
+        "pct_2024": 0.281, 
+        "grade": "C", 
+        "pct_2019": 0.292, 
+        "subject": "Sociology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.096, 
+        "pct_2022": 0.123, 
+        "pct_2023": 0.158, 
+        "pct_2024": 0.169, 
+        "grade": "D", 
+        "pct_2019": 0.164, 
+        "subject": "Sociology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.033, 
+        "pct_2022": 0.042, 
+        "pct_2023": 0.059, 
+        "pct_2024": 0.067, 
+        "grade": "E", 
+        "pct_2019": 0.054, 
+        "subject": "Sociology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.006, 
+        "pct_2022": 0.014, 
+        "pct_2023": 0.022, 
+        "pct_2024": 0.022, 
+        "grade": "U", 
+        "pct_2019": 0.02, 
+        "subject": "Sociology"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.316, 
+        "pct_2022": 0.225, 
+        "pct_2023": 0.1, 
+        "pct_2024": 0.109, 
+        "grade": "A*", 
+        "pct_2019": 0.1, 
+        "subject": "Spanish"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.317, 
+        "pct_2022": 0.281, 
+        "pct_2023": 0.25, 
+        "pct_2024": 0.257, 
+        "grade": "A", 
+        "pct_2019": 0.249, 
+        "subject": "Spanish"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.217, 
+        "pct_2022": 0.239, 
+        "pct_2023": 0.294, 
+        "pct_2024": 0.284, 
+        "grade": "B", 
+        "pct_2019": 0.287, 
+        "subject": "Spanish"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.111, 
+        "pct_2022": 0.148, 
+        "pct_2023": 0.195, 
+        "pct_2024": 0.192, 
+        "grade": "C", 
+        "pct_2019": 0.21, 
+        "subject": "Spanish"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.03, 
+        "pct_2022": 0.075, 
+        "pct_2023": 0.105, 
+        "pct_2024": 0.108, 
+        "grade": "D", 
+        "pct_2019": 0.107, 
+        "subject": "Spanish"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.008, 
+        "pct_2022": 0.027, 
+        "pct_2023": 0.044, 
+        "pct_2024": 0.037, 
+        "grade": "E", 
+        "pct_2019": 0.038, 
+        "subject": "Spanish"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.001, 
+        "pct_2022": 0.005, 
+        "pct_2023": 0.012, 
+        "pct_2024": 0.013, 
+        "grade": "U", 
+        "pct_2019": 0.009, 
+        "subject": "Spanish"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.507, 
+        "pct_2022": 0.391, 
+        "pct_2023": 0.235, 
+        "pct_2024": 0.386, 
+        "grade": "A*", 
+        "pct_2019": 0.177, 
+        "subject": "Other modern languages"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.315, 
+        "pct_2022": 0.325, 
+        "pct_2023": 0.372, 
+        "pct_2024": 0.299, 
+        "grade": "A", 
+        "pct_2019": 0.338, 
+        "subject": "Other modern languages"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.123, 
+        "pct_2022": 0.172, 
+        "pct_2023": 0.235, 
+        "pct_2024": 0.185, 
+        "grade": "B", 
+        "pct_2019": 0.266, 
+        "subject": "Other modern languages"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.042, 
+        "pct_2022": 0.06, 
+        "pct_2023": 0.092, 
+        "pct_2024": 0.073, 
+        "grade": "C", 
+        "pct_2019": 0.12, 
+        "subject": "Other modern languages"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.008, 
+        "pct_2022": 0.025, 
+        "pct_2023": 0.036, 
+        "pct_2024": 0.034, 
+        "grade": "D", 
+        "pct_2019": 0.055, 
+        "subject": "Other modern languages"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.002, 
+        "pct_2022": 0.015, 
+        "pct_2023": 0.018, 
+        "pct_2024": 0.013, 
+        "grade": "E", 
+        "pct_2019": 0.023, 
+        "subject": "Other modern languages"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.003, 
+        "pct_2022": 0.012, 
+        "pct_2023": 0.012, 
+        "pct_2024": 0.01, 
+        "grade": "U", 
+        "pct_2019": 0.021, 
+        "subject": "Other modern languages"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.164, 
+        "pct_2022": 0.159, 
+        "pct_2023": 0.126, 
+        "pct_2024": 0.12, 
+        "grade": "A*", 
+        "pct_2019": 0.077, 
+        "subject": "Other sciences"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.264, 
+        "pct_2022": 0.227, 
+        "pct_2023": 0.186, 
+        "pct_2024": 0.185, 
+        "grade": "A", 
+        "pct_2019": 0.195, 
+        "subject": "Other sciences"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.217, 
+        "pct_2022": 0.207, 
+        "pct_2023": 0.209, 
+        "pct_2024": 0.214, 
+        "grade": "B", 
+        "pct_2019": 0.219, 
+        "subject": "Other sciences"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.201, 
+        "pct_2022": 0.178, 
+        "pct_2023": 0.203, 
+        "pct_2024": 0.203, 
+        "grade": "C", 
+        "pct_2019": 0.233, 
+        "subject": "Other sciences"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.105, 
+        "pct_2022": 0.155, 
+        "pct_2023": 0.165, 
+        "pct_2024": 0.157, 
+        "grade": "D", 
+        "pct_2019": 0.165, 
+        "subject": "Other sciences"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.043, 
+        "pct_2022": 0.06, 
+        "pct_2023": 0.08, 
+        "pct_2024": 0.091, 
+        "grade": "E", 
+        "pct_2019": 0.093, 
+        "subject": "Other sciences"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.006, 
+        "pct_2022": 0.014, 
+        "pct_2023": 0.031, 
+        "pct_2024": 0.03, 
+        "grade": "U", 
+        "pct_2019": 0.018, 
+        "subject": "Other sciences"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.191, 
+        "pct_2022": 0.145, 
+        "pct_2023": 0.086, 
+        "pct_2024": 0.093, 
+        "grade": "A*", 
+        "pct_2019": 0.077, 
+        "subject": "All subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.252, 
+        "pct_2022": 0.214, 
+        "pct_2023": 0.179, 
+        "pct_2024": 0.183, 
+        "grade": "A", 
+        "pct_2019": 0.175, 
+        "subject": "All subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.255, 
+        "pct_2022": 0.263, 
+        "pct_2023": 0.262, 
+        "pct_2024": 0.26, 
+        "grade": "B", 
+        "pct_2019": 0.259, 
+        "subject": "All subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.184, 
+        "pct_2022": 0.199, 
+        "pct_2023": 0.227, 
+        "pct_2024": 0.224, 
+        "grade": "C", 
+        "pct_2019": 0.244, 
+        "subject": "All subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.08, 
+        "pct_2022": 0.113, 
+        "pct_2023": 0.145, 
+        "pct_2024": 0.142, 
+        "grade": "D", 
+        "pct_2019": 0.153, 
+        "subject": "All subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.033, 
+        "pct_2022": 0.05, 
+        "pct_2023": 0.073, 
+        "pct_2024": 0.069, 
+        "grade": "E", 
+        "pct_2019": 0.067, 
+        "subject": "All subjects"
+    }, 
+    {
+        "pct_2020": null, 
+        "pct_2021": 0.005, 
+        "pct_2022": 0.016, 
+        "pct_2023": 0.028, 
+        "pct_2024": 0.029, 
+        "grade": "U", 
+        "pct_2019": 0.025, 
+        "subject": "All subjects"
+    }
+]
